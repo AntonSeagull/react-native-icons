@@ -14,7 +14,6 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "src",
     "lib",
     "android",
     "ios",
@@ -56,7 +55,7 @@
   "bugs": {
     "url": "https://github.com/AntonSeagull/react-native-icons/issues"
   },
-  "homepage": "https://github.com/AntonSeagull/react-native-icons#readme",
+  "homepage": "https://antonseagull.com/react-native-icons",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

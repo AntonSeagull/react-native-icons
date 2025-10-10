@@ -18,6 +18,18 @@
 - 📱 **React Native SVG** - powered by react-native-svg
 - 🎨 **Customizable** - change size, color, and style
 
+## 🔍 Icon Browser
+
+**Browse and search all 43,125+ icons easily!**
+
+Visit **[antonseagull.com/react-native-icons](https://antonseagull.com/react-native-icons)** to:
+
+- 🔎 Search icons by name or keywords
+- 👀 Preview icons before using them
+- 📋 Copy import statements with one click
+- 🎨 View all available icon packs
+- ⚡ Find the perfect icon for your app quickly
+
 ## 📦 Installation
 
 ```bash
@@ -221,6 +233,18 @@ This library includes icons from the following projects:
 - 🎯 **Поддержка TypeScript** - полные определения типов
 - 📱 **React Native SVG** - работает на react-native-svg
 - 🎨 **Настраиваемость** - изменяйте размер, цвет и стиль
+
+## 🔍 Браузер иконок
+
+**Удобный поиск по всем 43,125+ иконкам!**
+
+Посетите **[antonseagull.com/react-native-icons](https://antonseagull.com/react-native-icons)** чтобы:
+
+- 🔎 Искать иконки по названию или ключевым словам
+- 👀 Предпросматривать иконки перед использованием
+- 📋 Копировать импорты одним кликом
+- 🎨 Просматривать все доступные наборы иконок
+- ⚡ Быстро находить идеальную иконку для вашего приложения
 
 ## 📦 Установка
 
