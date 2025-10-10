@@ -1,0 +1,35 @@
+import { GenIcon } from '../utils';
+
+const icon = {
+  "tag": "svg",
+  "attr": {
+    "class": "lucide lucide-power-circle",
+    "xmlns": "http://www.w3.org/2000/svg",
+    "width": "24",
+    "height": "24",
+    "viewBox": "0 0 24 24",
+    "fill": "none",
+    "stroke": "currentColor",
+    "stroke-width": "2",
+    "stroke-linecap": "round",
+    "stroke-linejoin": "round"
+  },
+  "child": [
+    {
+      "tag": "path",
+      "attr": {
+        "d": "M12 7v4"
+      },
+      "child": []
+    },
+    {
+      "tag": "path",
+      "attr": {
+        "d": "M7.998 9.003a5 5 0 1 0 8-.005"
+      },
+      "child": []
+    }
+  ]
+};
+
+export default GenIcon(icon);

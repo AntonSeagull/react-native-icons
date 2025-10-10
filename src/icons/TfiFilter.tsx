@@ -1,0 +1,25 @@
+import { GenIcon } from '../utils';
+
+const icon = {
+  "tag": "svg",
+  "attr": {
+    "version": "1.1",
+    "xmlns": "http://www.w3.org/2000/svg",
+    "xmlns:xlink": "http://www.w3.org/1999/xlink",
+    "width": "17",
+    "height": "17",
+    "viewBox": "0 0 17 17"
+  },
+  "child": [
+    {
+      "tag": "path",
+      "attr": {
+        "d": "M0.54 0l6.46 9.229v7.771h3v-7.771l6.46-9.229h-15.92zM9 8.914v7.086h-1v-7.086l-5.54-7.914h12.080l-5.54 7.914z",
+        "fill": "#000000"
+      },
+      "child": []
+    }
+  ]
+};
+
+export default GenIcon(icon);
