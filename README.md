@@ -1,6 +1,6 @@
-# react-native-icons
+# react-native-icons-svg
 
-[![npm version](https://img.shields.io/npm/v/react-native-icons.svg)](https://www.npmjs.com/package/react-native-icons)
+[![npm version](https://img.shields.io/npm/v/react-native-icons-svg.svg)](https://www.npmjs.com/package/react-native-icons-svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 [English](#english) | [Русский](#русский)
@@ -21,13 +21,13 @@
 ## 📦 Installation
 
 ```bash
-npm install react-native-icons react-native-svg
+npm install react-native-icons-svg react-native-svg
 ```
 
 or
 
 ```bash
-yarn add react-native-icons react-native-svg
+yarn add react-native-icons-svg react-native-svg
 ```
 
 > **Note**: `react-native-svg` is a peer dependency and must be installed separately.
@@ -41,7 +41,7 @@ Import only the icons you need using **named imports**:
 ```jsx
 import React from 'react';
 import { View } from 'react-native';
-import { AiFillHeart, AiFillStar, AiOutlineUser } from 'react-native-icons';
+import { AiFillHeart, AiFillStar, AiOutlineUser } from 'react-native-icons-svg';
 
 export default function App() {
   return (
@@ -62,7 +62,7 @@ export default function App() {
 
 ```jsx
 // ❌ BAD: This imports ALL 43,125 icons!
-import * as Icons from 'react-native-icons';
+import * as Icons from 'react-native-icons-svg';
 
 function App() {
   return <Icons.AiFillHeart size={48} />;
@@ -75,7 +75,7 @@ function App() {
 
 ```jsx
 // ❌ BAD: This includes all icons in your bundle!
-export * from 'react-native-icons';
+export * from 'react-native-icons-svg';
 ```
 
 ## 📖 Icon Props
@@ -140,7 +140,7 @@ This library is **fully optimized for tree-shaking**. Modern bundlers (Metro, We
 ### Basic Example
 
 ```jsx
-import { AiFillHeart } from 'react-native-icons';
+import { AiFillHeart } from 'react-native-icons-svg';
 
 <AiFillHeart size={24} color="red" />;
 ```
@@ -148,7 +148,7 @@ import { AiFillHeart } from 'react-native-icons';
 ### With Custom Styles
 
 ```jsx
-import { AiFillStar } from 'react-native-icons';
+import { AiFillStar } from 'react-native-icons-svg';
 
 <AiFillStar
   size={32}
@@ -165,7 +165,7 @@ import { AiFillStar } from 'react-native-icons';
 ### Dynamic Icon Selection
 
 ```jsx
-import { AiFillHeart, AiOutlineHeart } from 'react-native-icons';
+import { AiFillHeart, AiOutlineHeart } from 'react-native-icons-svg';
 
 function FavoriteButton({ isFavorite }) {
   const Icon = isFavorite ? AiFillHeart : AiOutlineHeart;
@@ -211,7 +211,7 @@ This library includes icons from the following projects:
 
 <a name="русский"></a>
 
-# react-native-icons (Русская версия)
+# react-native-icons-svg (Русская версия)
 
 ## 🌟 Возможности
 
@@ -225,13 +225,13 @@ This library includes icons from the following projects:
 ## 📦 Установка
 
 ```bash
-npm install react-native-icons react-native-svg
+npm install react-native-icons-svg react-native-svg
 ```
 
 или
 
 ```bash
-yarn add react-native-icons react-native-svg
+yarn add react-native-icons-svg react-native-svg
 ```
 
 > **Внимание**: `react-native-svg` является peer dependency и должен быть установлен отдельно.
@@ -245,7 +245,7 @@ yarn add react-native-icons react-native-svg
 ```jsx
 import React from 'react';
 import { View } from 'react-native';
-import { AiFillHeart, AiFillStar, AiOutlineUser } from 'react-native-icons';
+import { AiFillHeart, AiFillStar, AiOutlineUser } from 'react-native-icons-svg';
 
 export default function App() {
   return (
@@ -266,7 +266,7 @@ export default function App() {
 
 ```jsx
 // ❌ ПЛОХО: Это импортирует ВСЕ 43,125 иконок!
-import * as Icons from 'react-native-icons';
+import * as Icons from 'react-native-icons-svg';
 
 function App() {
   return <Icons.AiFillHeart size={48} />;
@@ -279,7 +279,7 @@ function App() {
 
 ```jsx
 // ❌ ПЛОХО: Это включает все иконки в ваш бандл!
-export * from 'react-native-icons';
+export * from 'react-native-icons-svg';
 ```
 
 ## 📖 Свойства иконок
@@ -344,7 +344,7 @@ export * from 'react-native-icons';
 ### Базовый пример
 
 ```jsx
-import { AiFillHeart } from 'react-native-icons';
+import { AiFillHeart } from 'react-native-icons-svg';
 
 <AiFillHeart size={24} color="red" />;
 ```
@@ -352,7 +352,7 @@ import { AiFillHeart } from 'react-native-icons';
 ### С пользовательскими стилями
 
 ```jsx
-import { AiFillStar } from 'react-native-icons';
+import { AiFillStar } from 'react-native-icons-svg';
 
 <AiFillStar
   size={32}
@@ -369,7 +369,7 @@ import { AiFillStar } from 'react-native-icons';
 ### Динамический выбор иконки
 
 ```jsx
-import { AiFillHeart, AiOutlineHeart } from 'react-native-icons';
+import { AiFillHeart, AiOutlineHeart } from 'react-native-icons-svg';
 
 function FavoriteButton({ isFavorite }) {
   const Icon = isFavorite ? AiFillHeart : AiOutlineHeart;
@@ -394,17 +394,17 @@ npm run prepare
 
 ```jsx
 // ✅ Импортируйте только то, что нужно
-import { AiFillHeart, AiFillStar } from 'react-native-icons';
+import { AiFillHeart, AiFillStar } from 'react-native-icons-svg';
 ```
 
 ### ❌ НЕ ДЕЛАЙТЕ:
 
 ```jsx
 // ❌ Не импортируйте всё
-import * as Icons from 'react-native-icons';
+import * as Icons from 'react-native-icons-svg';
 
 // ❌ Не реэкспортируйте всё
-export * from 'react-native-icons';
+export * from 'react-native-icons-svg';
 ```
 
 ## 📄 Лицензия
