@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-10-11T02:50:32.816Z
+// Generated on 2025-10-11T10:33:49.009Z
 // Total icons: 317
 
 export { GoAccessibility } from './GoAccessibility';

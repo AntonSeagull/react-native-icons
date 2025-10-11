@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-10-11T02:50:32.752Z
+// Generated on 2025-10-11T10:33:48.945Z
 // Total icons: 1611
 
 export { FaAccessibleIcon } from './FaAccessibleIcon';

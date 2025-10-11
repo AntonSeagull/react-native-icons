@@ -1,0 +1,32 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const MdSignalWifiConnectedNoInternet2 = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 24 24"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M0,0h24v24H0V0z" fill="none" />
+          <Path d="M18.31,12h2.67L24,8.98C20.93,5.9,16.69,4,12,4C7.31,4,3.07,5.9,0,8.98l4.23,4.24 C6.22,11.23,8.97,10,12,10C14.35,10,16.52,10.74,18.31,12z" />
+          <Path d="M12,10c-3.03,0-5.78,1.23-7.77,3.22L12,21v-9h6.32C16.52,10.74,14.35,10,12,10z M21,15.41L19.59,14l-2.09,2.09L15.41,14 L14,15.41l2.09,2.09L14,19.59L15.41,21l2.09-2.08L19.59,21L21,19.59l-2.08-2.09L21,15.41z" />
+        </G>
+      </Svg>
+    );
+  }
+

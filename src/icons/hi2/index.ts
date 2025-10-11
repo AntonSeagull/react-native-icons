@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-10-11T02:50:32.846Z
+// Generated on 2025-10-11T10:33:49.036Z
 // Total icons: 972
 
 export { HiAcademicCap } from './HiAcademicCap';

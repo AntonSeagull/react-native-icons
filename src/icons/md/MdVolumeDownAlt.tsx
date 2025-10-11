@@ -1,0 +1,30 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const MdVolumeDownAlt = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 24 24"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M14,7.97v8.05c1.48-0.73,2.5-2.25,2.5-4.02S15.48,8.71,14,7.97z M3,9v6h4l5,5V4L7,9H3z" />
+        </G>
+      </Svg>
+    );
+  }
+

@@ -1,6 +1,6 @@
 {
   "name": "react-native-icons-svg",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "SVG React icons of popular icon packs",
   "main": "./lib/module/index.js",
   "sideEffects": false,
@@ -150,6 +150,11 @@
       "source": "./src/icons/wi/index.ts",
       "types": "./lib/typescript/src/icons/wi/index.d.ts",
       "default": "./lib/module/icons/wi/index.js"
+    },
+     "./md": {
+      "source": "./src/icons/md/index.ts",
+      "types": "./lib/typescript/src/icons/md/index.d.ts",
+      "default": "./lib/module/icons/md/index.js"
     },
     "./package.json": "./package.json"
   },

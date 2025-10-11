@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-10-11T02:50:33.221Z
+// Generated on 2025-10-11T10:33:49.450Z
 // Total icons: 219
 
 export { WiAlien } from './WiAlien';
