@@ -4,6 +4,7 @@
     G,
     Path,
     Svg,
+    Line
 } from 'react-native-svg';
  import type { IconProps } from '../../types';
 
@@ -11,7 +12,8 @@
 
    const {
             size = 24,
-            color = 'black'
+            color = 'black',
+            rotate = 0,
         } = props;
 
     return (
@@ -20,15 +22,16 @@
         width={size}
         height={size}
         fill="none"
+        transform={`rotate(${rotate}, 12, 12)`}
       >
-        <G fill={color}>
-          <Path d="M20 22H4" />
-          <Path d="M15.5 18V21" />
-          <Path d="M8 21.5V18" />
-          <Path d="M12 19C16.9706 19 21 14.9706 21 10C21 5.02944 16.9706 1 12 1C7.02944 1 3 5.02944 3 10C3 14.9706 7.02944 19 12 19Z" />
-          <Path d="M12 16C15.3137 16 18 13.3137 18 10C18 6.68629 15.3137 4 12 4C8.68629 4 6 6.68629 6 10C6 13.3137 8.68629 16 12 16Z" />
-          <Path d="M12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14Z" />
-          <Path d="M12 11C12.5523 11 13 10.5523 13 10C13 9.44772 12.5523 9 12 9C11.4477 9 11 9.44772 11 10C11 10.5523 11.4477 11 12 11Z" />
+        <G fill={color} stroke={color}>
+          <Path  d="M20 22H4" strokeWidth="2" strokeLinecap="round" />
+          <Path  d="M15.5 18V21" strokeWidth="2" />
+          <Path  d="M8 21.5V18" strokeWidth="2" />
+          <Path  d="M12 19C16.9706 19 21 14.9706 21 10C21 5.02944 16.9706 1 12 1C7.02944 1 3 5.02944 3 10C3 14.9706 7.02944 19 12 19Z" fillRule="evenodd" clipRule="evenodd" strokeWidth="2" />
+          <Path  d="M12 16C15.3137 16 18 13.3137 18 10C18 6.68629 15.3137 4 12 4C8.68629 4 6 6.68629 6 10C6 13.3137 8.68629 16 12 16Z" fillRule="evenodd" clipRule="evenodd" strokeWidth="2" />
+          <Path  d="M12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14Z" fillRule="evenodd" clipRule="evenodd" strokeWidth="2" />
+          <Path  d="M12 11C12.5523 11 13 10.5523 13 10C13 9.44772 12.5523 9 12 9C11.4477 9 11 9.44772 11 10C11 10.5523 11.4477 11 12 11Z" fillRule="evenodd" clipRule="evenodd" strokeWidth="2" />
         </G>
       </Svg>
     );

@@ -4,6 +4,7 @@
     G,
     Path,
     Svg,
+    Line
 } from 'react-native-svg';
  import type { IconProps } from '../../types';
 
@@ -11,7 +12,8 @@
 
    const {
             size = 24,
-            color = 'black'
+            color = 'black',
+            rotate = 0,
         } = props;
 
     return (
@@ -20,9 +22,10 @@
         width={size}
         height={size}
         fill="none"
+        transform={`rotate(${rotate}, 256, 256)`}
       >
-        <G fill={color}>
-          <Path d="M112 144.836l-9 48V279h18v-86.164l-9-48zm36 0l-9 48V279h18v-86.164l-9-48zm216 0l-9 48V279h18v-86.164l-9-48zm36 0l-9 48V279h18v-86.164l-9-48zm-360 64l-9 48V279h18v-22.164l-9-48zm36 0l-9 48V279h18v-22.164l-9-48zm108 0l-9 48V279h18v-22.164l-9-48zm36 0l-9 48V279h18v-22.164l-9-48zm36 0l-9 48V279h18v-22.164l-9-48zm36 0l-9 48V279h18v-22.164l-9-48zm36 0l-9 48V279h18v-22.164l-9-48zm108 0l-9 48V279h18v-22.164l-9-48zm36 0l-9 48V279h18v-22.164l-9-48zM18 297v16h138.96v-16H18zm156.96 0v16h162.005v-16H174.96zm180.005 0v16H494v-16H354.965zM31 331v156h18V331H31zm36 0v156h18V331H67zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18z" fill="#000" />
+        <G fill={color} stroke={color}>
+          <Path  d="M112 144.836l-9 48V279h18v-86.164l-9-48zm36 0l-9 48V279h18v-86.164l-9-48zm216 0l-9 48V279h18v-86.164l-9-48zm36 0l-9 48V279h18v-86.164l-9-48zm-360 64l-9 48V279h18v-22.164l-9-48zm36 0l-9 48V279h18v-22.164l-9-48zm108 0l-9 48V279h18v-22.164l-9-48zm36 0l-9 48V279h18v-22.164l-9-48zm36 0l-9 48V279h18v-22.164l-9-48zm36 0l-9 48V279h18v-22.164l-9-48zm36 0l-9 48V279h18v-22.164l-9-48zm108 0l-9 48V279h18v-22.164l-9-48zm36 0l-9 48V279h18v-22.164l-9-48zM18 297v16h138.96v-16H18zm156.96 0v16h162.005v-16H174.96zm180.005 0v16H494v-16H354.965zM31 331v156h18V331H31zm36 0v156h18V331H67zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18zm36 0v156h18V331h-18z" />
         </G>
       </Svg>
     );

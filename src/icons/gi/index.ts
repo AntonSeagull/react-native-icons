@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-10-11T10:33:49.005Z
+// Generated on 2025-10-11T23:12:54.861Z
 // Total icons: 4038
 
 export { GiAbacus } from './GiAbacus';

@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-10-11T10:33:48.875Z
+// Generated on 2025-10-11T23:12:54.733Z
 // Total icons: 1634
 
 export { BiAbacus } from './BiAbacus';

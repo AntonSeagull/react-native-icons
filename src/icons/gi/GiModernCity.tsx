@@ -4,6 +4,7 @@
     G,
     Path,
     Svg,
+    Line
 } from 'react-native-svg';
  import type { IconProps } from '../../types';
 
@@ -11,7 +12,8 @@
 
    const {
             size = 24,
-            color = 'black'
+            color = 'black',
+            rotate = 0,
         } = props;
 
     return (
@@ -20,9 +22,10 @@
         width={size}
         height={size}
         fill="none"
+        transform={`rotate(${rotate}, 256, 256)`}
       >
-        <G fill={color}>
-          <Path d="M217 25v30h30V25h-30zm48 0v30h30V25h-30zm48 0v30h30V25h-30zm-96 48v46h30V73h-30zm48 0v46h30V73h-30zm48 0v46h30V73h-30zm-96 64v46h30v-46h-30zm48 0v46h30v-46h-30zm48 0v46h30v-46h-30zm174 6.508l-94 53.715V215h94v-71.492zM217 201v46h30v-46h-30zm48 0v46h30v-46h-30zm48 0v46h30v-46h-30zm80 32v110h94V233h-94zM39 256v23h18v-23H39zm178 9v46h30v-46h-30zm48 0v46h30v-46h-30zm48 0v46h30v-46h-30zM37.562 297l-7 14h146.875l-7-14H37.563zM25 329v158h23v-23h32v23h48v-23h32v23h23V329H25zm192 0v46h30v-46h-30zm48 0v46h30v-46h-30zm48 0v46h30v-46h-30zM48 352h32v16H48v-16zm80 0h32v16h-32v-16zm265 9v126h31v-23h32v23h31V361h-94zM48 384h32v16H48v-16zm80 0h32v16h-32v-16zm89 9v46h30v-46h-30zm48 0v46h30v-46h-30zm48 0v46h30v-46h-30zM48 416h32v16H48v-16zm80 0h32v16h-32v-16zm89 41v30h30v-30h-30zm48 0v30h30v-30h-30zm48 0v30h30v-30h-30z" fill="#000" />
+        <G fill={color} stroke={color}>
+          <Path  d="M217 25v30h30V25h-30zm48 0v30h30V25h-30zm48 0v30h30V25h-30zm-96 48v46h30V73h-30zm48 0v46h30V73h-30zm48 0v46h30V73h-30zm-96 64v46h30v-46h-30zm48 0v46h30v-46h-30zm48 0v46h30v-46h-30zm174 6.508l-94 53.715V215h94v-71.492zM217 201v46h30v-46h-30zm48 0v46h30v-46h-30zm48 0v46h30v-46h-30zm80 32v110h94V233h-94zM39 256v23h18v-23H39zm178 9v46h30v-46h-30zm48 0v46h30v-46h-30zm48 0v46h30v-46h-30zM37.562 297l-7 14h146.875l-7-14H37.563zM25 329v158h23v-23h32v23h48v-23h32v23h23V329H25zm192 0v46h30v-46h-30zm48 0v46h30v-46h-30zm48 0v46h30v-46h-30zM48 352h32v16H48v-16zm80 0h32v16h-32v-16zm265 9v126h31v-23h32v23h31V361h-94zM48 384h32v16H48v-16zm80 0h32v16h-32v-16zm89 9v46h30v-46h-30zm48 0v46h30v-46h-30zm48 0v46h30v-46h-30zM48 416h32v16H48v-16zm80 0h32v16h-32v-16zm89 41v30h30v-30h-30zm48 0v30h30v-30h-30zm48 0v30h30v-30h-30z" />
         </G>
       </Svg>
     );

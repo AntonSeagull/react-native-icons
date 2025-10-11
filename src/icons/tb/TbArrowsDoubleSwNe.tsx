@@ -4,6 +4,7 @@
     G,
     Path,
     Svg,
+    Line
 } from 'react-native-svg';
  import type { IconProps } from '../../types';
 
@@ -11,7 +12,8 @@
 
    const {
             size = 24,
-            color = 'black'
+            color = 'black',
+            rotate = 0,
         } = props;
 
     return (
@@ -20,12 +22,13 @@
         width={size}
         height={size}
         fill="none"
+        transform={`rotate(${rotate}, 12, 12)`}
       >
-        <G fill={color}>
-          <Path d="M14 3l-11 11" />
-          <Path d="M3 10v4h4" />
-          <Path d="M17 10h4v4" />
-          <Path d="M10 21l11 -11" />
+        <G fill={color} stroke={color}>
+          <Path  d="M14 3l-11 11" />
+          <Path  d="M3 10v4h4" />
+          <Path  d="M17 10h4v4" />
+          <Path  d="M10 21l11 -11" />
         </G>
       </Svg>
     );
