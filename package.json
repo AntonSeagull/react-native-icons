@@ -14,22 +14,16 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "lib",
-    "android",
-    "ios",
-    "cpp",
-    "*.podspec",
-    "react-native.config.js",
-    "!ios/build",
-    "!android/build",
-    "!android/gradle",
-    "!android/gradlew",
-    "!android/gradlew.bat",
-    "!android/local.properties",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
-    "!**/.*"
+    "lib/module/index.js",
+    "lib/module/index.js.map",
+    "lib/module/utils.js",
+    "lib/module/utils.js.map",
+    "lib/module/package.json",
+    "lib/typescript/src/index.d.ts",
+    "lib/typescript/src/index.d.ts.map",
+    "lib/typescript/src/utils.d.ts",
+    "lib/typescript/src/utils.d.ts.map",
+    "lib/typescript/package.json"
   ],
   "scripts": {
     "example": "yarn workspace react-native-icons-example",
