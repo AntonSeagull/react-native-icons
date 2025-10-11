@@ -1,0 +1,30 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const PiColumnsFill = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 256 256"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M120,48V208a16,16,0,0,1-16,16H64a16,16,0,0,1-16-16V48A16,16,0,0,1,64,32h40A16,16,0,0,1,120,48Zm72-16H152a16,16,0,0,0-16,16V208a16,16,0,0,0,16,16h40a16,16,0,0,0,16-16V48A16,16,0,0,0,192,32Z" />
+        </G>
+      </Svg>
+    );
+  }
+

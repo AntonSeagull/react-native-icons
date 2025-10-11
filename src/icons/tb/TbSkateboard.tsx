@@ -1,0 +1,32 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const TbSkateboard = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 24 24"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M7 15m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+          <Path d="M17 15m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+          <Path d="M3 9a2 1 0 0 0 2 1h14a2 1 0 0 0 2 -1" />
+        </G>
+      </Svg>
+    );
+  }
+

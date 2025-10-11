@@ -1,0 +1,34 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const LuLigature = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 24 24"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M14 12h2v8" />
+          <Path d="M14 20h4" />
+          <Path d="M6 12h4" />
+          <Path d="M6 20h4" />
+          <Path d="M8 20V8a4 4 0 0 1 7.464-2" />
+        </G>
+      </Svg>
+    );
+  }
+

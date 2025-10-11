@@ -1,0 +1,33 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const TbRewindBackward60 = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 24 24"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M19.007 16.466a6 6 0 0 0 -4.007 -10.466h-11" />
+          <Path d="M7 9l-3 -3l3 -3" />
+          <Path d="M12 15.5v3a1.5 1.5 0 0 0 3 0v-3a1.5 1.5 0 0 0 -3 0z" />
+          <Path d="M9 14h-2a1 1 0 0 0 -1 1v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1 -1v-1a1 1 0 0 0 -1 -1h-2" />
+        </G>
+      </Svg>
+    );
+  }
+

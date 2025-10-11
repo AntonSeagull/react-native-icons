@@ -1,0 +1,32 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const TbBrandGumroad = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 24 24"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M21 12a9 9 0 1 1 -18 0a9 9 0 0 1 18 0z" />
+          <Path d="M13.5 13h2.5v3" />
+          <Path d="M15.024 9.382a4 4 0 1 0 -3.024 6.618c1.862 0 2.554 -1.278 3 -3" />
+        </G>
+      </Svg>
+    );
+  }
+

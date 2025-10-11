@@ -1,0 +1,33 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const LuPowerOff = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 24 24"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M18.36 6.64A9 9 0 0 1 20.77 15" />
+          <Path d="M6.16 6.16a9 9 0 1 0 12.68 12.68" />
+          <Path d="M12 2v4" />
+          <Path d="m2 2 20 20" />
+        </G>
+      </Svg>
+    );
+  }
+

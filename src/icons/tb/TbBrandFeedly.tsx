@@ -1,0 +1,33 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const TbBrandFeedly = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 24 24"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M7.833 12.278l4.445 -4.445" />
+          <Path d="M10.055 14.5l2.223 -2.222" />
+          <Path d="M12.278 16.722l.555 -.555" />
+          <Path d="M19.828 14.828a4 4 0 0 0 0 -5.656l-5 -5a4 4 0 0 0 -5.656 0l-5 5a4 4 0 0 0 0 5.656l6.171 6.172h3.314l6.171 -6.172z" />
+        </G>
+      </Svg>
+    );
+  }
+

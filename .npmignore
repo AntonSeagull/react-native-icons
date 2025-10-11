@@ -1,0 +1,42 @@
+# Exclude source maps to reduce file count
+*.map
+
+# Exclude source icon files (they are inlined in pack files)
+src/icons/
+
+# Exclude development files
+src/
+example/
+.github/
+.vscode/
+*.log
+node_modules/
+scripts/
+
+# Exclude config files
+.eslintrc
+.prettierrc
+tsconfig.json
+tsconfig.build.json
+babel.config.js
+lefthook.yml
+.editorconfig
+eslint.config.mjs
+
+# Exclude test files
+__tests__/
+*.test.ts
+*.test.tsx
+*.test.js
+*.test.jsx
+*.spec.ts
+*.spec.tsx
+*.spec.js
+*.spec.jsx
+
+# Exclude documentation
+*.md
+!README.md
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+

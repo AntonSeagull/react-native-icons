@@ -1,0 +1,30 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const GiPieChart = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 512 512"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M290.352 13.213l-11.475 218.984 204.68-78.584a219.242 219.284 0 0 0-193.205-140.4zm-51.39 47.566A219.242 219.284 0 0 0 38.59 206.24a219.242 219.284 0 0 0 77.3 250.918 219.242 219.284 0 0 0 262.49-3.092 219.242 219.284 0 0 0 71.366-252.67l-204.682 78.583 12.24-218.943a219.242 219.284 0 0 0-18.34-.258z" fill="#000" />
+        </G>
+      </Svg>
+    );
+  }
+

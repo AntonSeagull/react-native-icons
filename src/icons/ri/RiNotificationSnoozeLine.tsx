@@ -1,0 +1,30 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const RiNotificationSnoozeLine = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 24 24"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M22 17H20V10C20 5.58172 16.4183 2 12 2C7.58172 2 4 5.58172 4 10V17H2V19H22V17ZM18 10V17H6V10C6 6.68629 8.68629 4 12 4C15.3137 4 18 6.68629 18 10ZM15 23V21H9V23H15ZM9 9H12.5858L9 12.5858V15H15V13H11.4142L15 9.41421V7H9V9Z" />
+        </G>
+      </Svg>
+    );
+  }
+

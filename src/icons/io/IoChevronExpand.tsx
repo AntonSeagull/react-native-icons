@@ -1,0 +1,31 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const IoChevronExpand = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 512 512"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M136 208L256 104L376 208" fill="none" />
+          <Path d="M136 304L256 408L376 304" fill="none" />
+        </G>
+      </Svg>
+    );
+  }
+

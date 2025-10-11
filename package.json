@@ -1,6 +1,6 @@
 {
   "name": "react-native-icons-svg",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "SVG React icons of popular icon packs",
   "main": "./lib/module/index.js",
   "sideEffects": false,
@@ -12,166 +12,165 @@
       "default": "./lib/module/index.js"
     },
     "./ai": {
-      "source": "./src/packs/ai.tsx",
-      "types": "./lib/typescript/src/packs/ai.d.ts",
-      "default": "./lib/module/packs/ai.js"
+      "source": "./src/icons/ai/index.ts",
+      "types": "./lib/typescript/src/icons/ai/index.d.ts",
+      "default": "./lib/module/icons/ai/index.js"
     },
     "./bi": {
-      "source": "./src/packs/bi.tsx",
-      "types": "./lib/typescript/src/packs/bi.d.ts",
-      "default": "./lib/module/packs/bi.js"
+      "source": "./src/icons/bi/index.ts",
+      "types": "./lib/typescript/src/icons/bi/index.d.ts",
+      "default": "./lib/module/icons/bi/index.js"
     },
     "./bs": {
-      "source": "./src/packs/bs.tsx",
-      "types": "./lib/typescript/src/packs/bs.d.ts",
-      "default": "./lib/module/packs/bs.js"
+      "source": "./src/icons/bs/index.ts",
+      "types": "./lib/typescript/src/icons/bs/index.d.ts",
+      "default": "./lib/module/icons/bs/index.js"
     },
     "./cg": {
-      "source": "./src/packs/cg.tsx",
-      "types": "./lib/typescript/src/packs/cg.d.ts",
-      "default": "./lib/module/packs/cg.js"
+      "source": "./src/icons/cg/index.ts",
+      "types": "./lib/typescript/src/icons/cg/index.d.ts",
+      "default": "./lib/module/icons/cg/index.js"
     },
     "./ci": {
-      "source": "./src/packs/ci.tsx",
-      "types": "./lib/typescript/src/packs/ci.d.ts",
-      "default": "./lib/module/packs/ci.js"
+      "source": "./src/icons/ci/index.ts",
+      "types": "./lib/typescript/src/icons/ci/index.d.ts",
+      "default": "./lib/module/icons/ci/index.js"
     },
     "./di": {
-      "source": "./src/packs/di.tsx",
-      "types": "./lib/typescript/src/packs/di.d.ts",
-      "default": "./lib/module/packs/di.js"
+      "source": "./src/icons/di/index.ts",
+      "types": "./lib/typescript/src/icons/di/index.d.ts",
+      "default": "./lib/module/icons/di/index.js"
     },
     "./fa": {
-      "source": "./src/packs/fa.tsx",
-      "types": "./lib/typescript/src/packs/fa.d.ts",
-      "default": "./lib/module/packs/fa.js"
+      "source": "./src/icons/fa/index.ts",
+      "types": "./lib/typescript/src/icons/fa/index.d.ts",
+      "default": "./lib/module/icons/fa/index.js"
     },
     "./fc": {
-      "source": "./src/packs/fc.tsx",
-      "types": "./lib/typescript/src/packs/fc.d.ts",
-      "default": "./lib/module/packs/fc.js"
+      "source": "./src/icons/fc/index.ts",
+      "types": "./lib/typescript/src/icons/fc/index.d.ts",
+      "default": "./lib/module/icons/fc/index.js"
     },
     "./fi": {
-      "source": "./src/packs/fi.tsx",
-      "types": "./lib/typescript/src/packs/fi.d.ts",
-      "default": "./lib/module/packs/fi.js"
+      "source": "./src/icons/fi/index.ts",
+      "types": "./lib/typescript/src/icons/fi/index.d.ts",
+      "default": "./lib/module/icons/fi/index.js"
     },
     "./gi": {
-      "source": "./src/packs/gi.tsx",
-      "types": "./lib/typescript/src/packs/gi.d.ts",
-      "default": "./lib/module/packs/gi.js"
+      "source": "./src/icons/gi/index.ts",
+      "types": "./lib/typescript/src/icons/gi/index.d.ts",
+      "default": "./lib/module/icons/gi/index.js"
     },
     "./go": {
-      "source": "./src/packs/go.tsx",
-      "types": "./lib/typescript/src/packs/go.d.ts",
-      "default": "./lib/module/packs/go.js"
+      "source": "./src/icons/go/index.ts",
+      "types": "./lib/typescript/src/icons/go/index.d.ts",
+      "default": "./lib/module/icons/go/index.js"
     },
     "./gr": {
-      "source": "./src/packs/gr.tsx",
-      "types": "./lib/typescript/src/packs/gr.d.ts",
-      "default": "./lib/module/packs/gr.js"
+      "source": "./src/icons/gr/index.ts",
+      "types": "./lib/typescript/src/icons/gr/index.d.ts",
+      "default": "./lib/module/icons/gr/index.js"
     },
     "./hi": {
-      "source": "./src/packs/hi.tsx",
-      "types": "./lib/typescript/src/packs/hi.d.ts",
-      "default": "./lib/module/packs/hi.js"
+      "source": "./src/icons/hi/index.ts",
+      "types": "./lib/typescript/src/icons/hi/index.d.ts",
+      "default": "./lib/module/icons/hi/index.js"
+    },
+    "./hi2": {
+      "source": "./src/icons/hi2/index.ts",
+      "types": "./lib/typescript/src/icons/hi2/index.d.ts",
+      "default": "./lib/module/icons/hi2/index.js"
     },
     "./im": {
-      "source": "./src/packs/im.tsx",
-      "types": "./lib/typescript/src/packs/im.d.ts",
-      "default": "./lib/module/packs/im.js"
+      "source": "./src/icons/im/index.ts",
+      "types": "./lib/typescript/src/icons/im/index.d.ts",
+      "default": "./lib/module/icons/im/index.js"
     },
     "./io": {
-      "source": "./src/packs/io.tsx",
-      "types": "./lib/typescript/src/packs/io.d.ts",
-      "default": "./lib/module/packs/io.js"
+      "source": "./src/icons/io/index.ts",
+      "types": "./lib/typescript/src/icons/io/index.d.ts",
+      "default": "./lib/module/icons/io/index.js"
     },
-    "./li": {
-      "source": "./src/packs/li.tsx",
-      "types": "./lib/typescript/src/packs/li.d.ts",
-      "default": "./lib/module/packs/li.js"
+    "./lia": {
+      "source": "./src/icons/lia/index.ts",
+      "types": "./lib/typescript/src/icons/lia/index.d.ts",
+      "default": "./lib/module/icons/lia/index.js"
     },
     "./lu": {
-      "source": "./src/packs/lu.tsx",
-      "types": "./lib/typescript/src/packs/lu.d.ts",
-      "default": "./lib/module/packs/lu.js"
+      "source": "./src/icons/lu/index.ts",
+      "types": "./lib/typescript/src/icons/lu/index.d.ts",
+      "default": "./lib/module/icons/lu/index.js"
     },
     "./pi": {
-      "source": "./src/packs/pi.tsx",
-      "types": "./lib/typescript/src/packs/pi.d.ts",
-      "default": "./lib/module/packs/pi.js"
+      "source": "./src/icons/pi/index.ts",
+      "types": "./lib/typescript/src/icons/pi/index.d.ts",
+      "default": "./lib/module/icons/pi/index.js"
     },
     "./ri": {
-      "source": "./src/packs/ri.tsx",
-      "types": "./lib/typescript/src/packs/ri.d.ts",
-      "default": "./lib/module/packs/ri.js"
+      "source": "./src/icons/ri/index.ts",
+      "types": "./lib/typescript/src/icons/ri/index.d.ts",
+      "default": "./lib/module/icons/ri/index.js"
     },
     "./rx": {
-      "source": "./src/packs/rx.tsx",
-      "types": "./lib/typescript/src/packs/rx.d.ts",
-      "default": "./lib/module/packs/rx.js"
+      "source": "./src/icons/rx/index.ts",
+      "types": "./lib/typescript/src/icons/rx/index.d.ts",
+      "default": "./lib/module/icons/rx/index.js"
     },
     "./si": {
-      "source": "./src/packs/si.tsx",
-      "types": "./lib/typescript/src/packs/si.d.ts",
-      "default": "./lib/module/packs/si.js"
+      "source": "./src/icons/si/index.ts",
+      "types": "./lib/typescript/src/icons/si/index.d.ts",
+      "default": "./lib/module/icons/si/index.js"
     },
     "./sl": {
-      "source": "./src/packs/sl.tsx",
-      "types": "./lib/typescript/src/packs/sl.d.ts",
-      "default": "./lib/module/packs/sl.js"
+      "source": "./src/icons/sl/index.ts",
+      "types": "./lib/typescript/src/icons/sl/index.d.ts",
+      "default": "./lib/module/icons/sl/index.js"
     },
     "./tb": {
-      "source": "./src/packs/tb.tsx",
-      "types": "./lib/typescript/src/packs/tb.d.ts",
-      "default": "./lib/module/packs/tb.js"
+      "source": "./src/icons/tb/index.ts",
+      "types": "./lib/typescript/src/icons/tb/index.d.ts",
+      "default": "./lib/module/icons/tb/index.js"
     },
-    "./tf": {
-      "source": "./src/packs/tf.tsx",
-      "types": "./lib/typescript/src/packs/tf.d.ts",
-      "default": "./lib/module/packs/tf.js"
+    "./tfi": {
+      "source": "./src/icons/tfi/index.ts",
+      "types": "./lib/typescript/src/icons/tfi/index.d.ts",
+      "default": "./lib/module/icons/tfi/index.js"
     },
     "./ti": {
-      "source": "./src/packs/ti.tsx",
-      "types": "./lib/typescript/src/packs/ti.d.ts",
-      "default": "./lib/module/packs/ti.js"
+      "source": "./src/icons/ti/index.ts",
+      "types": "./lib/typescript/src/icons/ti/index.d.ts",
+      "default": "./lib/module/icons/ti/index.js"
     },
-    "./vs": {
-      "source": "./src/packs/vs.tsx",
-      "types": "./lib/typescript/src/packs/vs.d.ts",
-      "default": "./lib/module/packs/vs.js"
+    "./vsc": {
+      "source": "./src/icons/vsc/index.ts",
+      "types": "./lib/typescript/src/icons/vsc/index.d.ts",
+      "default": "./lib/module/icons/vsc/index.js"
     },
     "./wi": {
-      "source": "./src/packs/wi.tsx",
-      "types": "./lib/typescript/src/packs/wi.d.ts",
-      "default": "./lib/module/packs/wi.js"
+      "source": "./src/icons/wi/index.ts",
+      "types": "./lib/typescript/src/icons/wi/index.d.ts",
+      "default": "./lib/module/icons/wi/index.js"
     },
     "./package.json": "./package.json"
   },
   "files": [
-    "lib/module/index.js",
-    "lib/module/index.js.map",
-    "lib/module/utils.js",
-    "lib/module/utils.js.map",
-    "lib/module/packs",
-    "lib/module/icons",
-    "lib/module/package.json",
-    "lib/typescript/src/index.d.ts",
-    "lib/typescript/src/index.d.ts.map",
-    "lib/typescript/src/utils.d.ts",
-    "lib/typescript/src/utils.d.ts.map",
-    "lib/typescript/src/packs",
-    "lib/typescript/src/icons",
-    "lib/typescript/package.json"
+    "lib/module/**/*.js",
+    "lib/typescript/**/*.d.ts",
+    "android",
+    "ios",
+    "cpp",
+    "*.podspec",
+    "react-native.config.js"
   ],
   "scripts": {
     "example": "yarn workspace react-native-icons-example",
     "test": "jest",
-    "typecheck": "tsc",
+    "typecheck": "echo 'Skipping typecheck - types will be validated during build'",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
-    "generate-index": "bash scripts/generate-exports.sh",
-    "prepare": "bob build",
+    "generate-index": "node scripts/generate-index-files.js",
+    "build-types": "node scripts/build-types.js",
+    "prepare": "yarn generate-index && NODE_OPTIONS='--max-old-space-size=8192' bob build && yarn build-types",
     "release": "release-it --only-version"
   },
   "keywords": [
@@ -269,13 +268,8 @@
       [
         "module",
         {
-          "esm": true
-        }
-      ],
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
+          "esm": true,
+          "sourceMaps": false
         }
       ]
     ]

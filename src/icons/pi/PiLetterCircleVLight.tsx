@@ -1,0 +1,30 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const PiLetterCircleVLight = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 256 256"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M128,26A102,102,0,1,0,230,128,102.12,102.12,0,0,0,128,26Zm0,192a90,90,0,1,1,90-90A90.1,90.1,0,0,1,128,218ZM165.57,98.23l-32,80a6,6,0,0,1-11.14,0l-32-80a6,6,0,1,1,11.14-4.46L128,159.84l26.43-66.07a6,6,0,0,1,11.14,4.46Z" />
+        </G>
+      </Svg>
+    );
+  }
+

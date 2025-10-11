@@ -1,0 +1,33 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const TbClearFormatting = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 24 24"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M17 15l4 4m0 -4l-4 4" />
+          <Path d="M7 6v-1h11v1" />
+          <Path d="M7 19l4 0" />
+          <Path d="M13 5l-4 14" />
+        </G>
+      </Svg>
+    );
+  }
+

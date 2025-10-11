@@ -3,7 +3,7 @@
     "rootDir": ".",
     "paths": {
       "react-native-icons-svg": [
-        "./src"
+        "./src/index"
       ]
     },
     "allowUnreachableCode": false,
@@ -31,6 +31,17 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "ESNext",
-    "verbatimModuleSyntax": true
-  }
+    "verbatimModuleSyntax": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./node_modules/.cache/tsconfig.tsbuildinfo"
+  },
+  "include": [
+    "src/**/*.tsx",
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "example"
+  ]
 }

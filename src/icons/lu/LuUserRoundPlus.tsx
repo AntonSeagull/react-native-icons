@@ -1,0 +1,32 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const LuUserRoundPlus = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 24 24"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M2 21a8 8 0 0 1 13.292-6" />
+          <Path d="M19 16v6" />
+          <Path d="M22 19h-6" />
+        </G>
+      </Svg>
+    );
+  }
+

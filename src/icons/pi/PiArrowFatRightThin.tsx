@@ -1,0 +1,30 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const PiArrowFatRightThin = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 256 256"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M234.83,125.17l-96-96A4,4,0,0,0,132,32V76H48A12,12,0,0,0,36,88v80a12,12,0,0,0,12,12h84v44a4,4,0,0,0,2.47,3.7,4,4,0,0,0,4.36-.87l96-96A4,4,0,0,0,234.83,125.17ZM140,214.34V176a4,4,0,0,0-4-4H48a4,4,0,0,1-4-4V88a4,4,0,0,1,4-4h88a4,4,0,0,0,4-4V41.66L226.34,128Z" />
+        </G>
+      </Svg>
+    );
+  }
+

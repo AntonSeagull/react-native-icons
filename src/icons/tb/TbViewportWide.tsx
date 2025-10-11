@@ -1,0 +1,35 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const TbViewportWide = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 24 24"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M10 12h-7l3 -3" />
+          <Path d="M6 15l-3 -3" />
+          <Path d="M14 12h7l-3 -3" />
+          <Path d="M18 15l3 -3" />
+          <Path d="M3 6v-1a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v1" />
+          <Path d="M3 18v1a2 2 0 0 0 2 2h14a2 2 0 0 0 2 -2v-1" />
+        </G>
+      </Svg>
+    );
+  }
+

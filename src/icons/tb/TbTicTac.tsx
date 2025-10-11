@@ -1,0 +1,37 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const TbTicTac = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 24 24"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="M6 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+          <Path d="M3 12h18" />
+          <Path d="M12 3v18" />
+          <Path d="M4 16l4 4" />
+          <Path d="M4 20l4 -4" />
+          <Path d="M16 4l4 4" />
+          <Path d="M16 8l4 -4" />
+          <Path d="M18 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+        </G>
+      </Svg>
+    );
+  }
+

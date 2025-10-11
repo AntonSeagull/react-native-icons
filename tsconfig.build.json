@@ -1,4 +1,13 @@
 {
   "extends": "./tsconfig",
-  "exclude": ["example", "lib"]
+  "compilerOptions": {
+    "declarationMap": false,
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true
+  },
+  "exclude": [
+    "example",
+    "lib"
+  ]
 }

@@ -1,0 +1,33 @@
+
+
+  import {
+    G,
+    Path,
+    Svg,
+} from 'react-native-svg';
+ import type { IconProps } from '../../types';
+
+  export const LuChartNetwork = (props: IconProps) => {
+
+   const {
+            size = 24,
+            color = 'black'
+        } = props;
+
+    return (
+      <Svg
+        viewBox="0 0 24 24"
+        width={size}
+        height={size}
+        fill="none"
+      >
+        <G fill={color}>
+          <Path d="m13.11 7.664 1.78 2.672" />
+          <Path d="m14.162 12.788-3.324 1.424" />
+          <Path d="m20 4-6.06 1.515" />
+          <Path d="M3 3v16a2 2 0 0 0 2 2h16" />
+        </G>
+      </Svg>
+    );
+  }
+
