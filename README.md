@@ -46,15 +46,19 @@ yarn add react-native-icons-svg react-native-svg
 
 ## 🚀 Usage
 
-### ✅ Best Practice (Fastest IDE Performance)
+### ✅ Correct Usage
 
-Import from **specific icon packs** for the best IDE experience:
+Import from **specific icon packs** - this is the **only** way to import icons:
 
 ```jsx
 import React from 'react';
 import { View } from 'react-native';
-// Import from specific packs - faster autocomplete & IDE performance
-import { AiFillHeart, AiFillStar, AiOutlineUser } from 'react-native-icons-svg/ai';
+// Import from specific packs - this is the only supported method
+import {
+  AiFillHeart,
+  AiFillStar,
+  AiOutlineUser,
+} from 'react-native-icons-svg/ai';
 import { BsFillStarFill } from 'react-native-icons-svg/bs';
 import { FaUser } from 'react-native-icons-svg/fa';
 
@@ -70,26 +74,25 @@ export default function App() {
 ```
 
 ✅ **Bundle size**: ~7-10 KB (only 3 icons + utilities)  
-✅ **IDE Performance**: Fast autocomplete (loads only ~800-9000 icons per pack vs all 43,125)
-
-### ✅ Alternative (Also Good)
-
-Import from the main entry point:
-
-```jsx
-import { AiFillHeart, AiFillStar, AiOutlineUser } from 'react-native-icons-svg';
-```
-
-✅ **Bundle size**: ~7-10 KB (only 3 icons + utilities)  
-⚠️ **IDE Performance**: Slower autocomplete (loads all 43,125 icon names)
+✅ **IDE Performance**: Fast autocomplete (loads only ~800-9000 icons per pack)
 
 ### ❌ Incorrect Usage (Avoid)
+
+**DON'T** try to import from the main entry point:
+
+```jsx
+// ❌ WRONG: This doesn't work - main entry only exports types!
+import { AiFillHeart } from 'react-native-icons-svg';
+
+// ✅ CORRECT: Import from specific pack
+import { AiFillHeart } from 'react-native-icons-svg/ai';
+```
 
 **DON'T** import the entire library:
 
 ```jsx
 // ❌ BAD: This imports ALL 43,125 icons!
-import * as Icons from 'react-native-icons-svg';
+import * as Icons from 'react-native-icons-svg/ai';
 
 function App() {
   return <Icons.AiFillHeart size={48} />;
@@ -97,13 +100,6 @@ function App() {
 ```
 
 ❌ **Bundle size**: ~687 MB (all icons included)
-
-**DON'T** re-export everything:
-
-```jsx
-// ❌ BAD: This includes all icons in your bundle!
-export * from 'react-native-icons-svg';
-```
 
 ## 📖 Icon Props
 
@@ -126,23 +122,39 @@ All icons accept the following props:
 
 The library includes **43,125+** icons from popular icon packs:
 
-| Icon Pack             | Prefix | Import Path               | Examples                          | Count   |
-| --------------------- | ------ | ------------------------- | --------------------------------- | ------- |
-| Ant Design Icons      | `Ai`   | `/ai`                     | `AiFillHeart`, `AiOutlineUser`    | 822     |
-| Bootstrap Icons       | `Bs`   | `/bs`                     | `BsFillStarFill`, `BsCheckCircle` | 2,658   |
-| Font Awesome          | `Fa`   | `/fa`                     | `FaUser`, `FaHome`                | 2,794   |
-| Feather               | `Fi`   | `/fi`                     | `FiHome`, `FiUser`                | 162     |
-| Game Icons            | `Gi`   | `/gi`                     | `GiSword`, `GiShield`             | 4,040   |
-| Heroicons             | `Hi`   | `/hi`                     | `HiHome`, `HiUser`                | 1,212   |
-| Ionicons              | `Io`   | `/io`                     | `IoHome`, `IoHeart`               | 1,164   |
-| Phosphor Icons        | `Pi`   | `/pi`                     | `PiHeart`, `PiStar`               | 9,074   |
-| Remix Icon            | `Ri`   | `/ri`                     | `RiHome`, `RiUser`                | 3,020   |
-| Tabler Icons          | `Tb`   | `/tb`                     | `TbHome`, `TbUser`                | 5,755   |
-| Lucide Icons          | `Lu`   | `/lu`                     | `LuHome`, `LuUser`                | 1,768   |
-| Simple Icons          | `Si`   | `/si`                     | `SiReact`, `SiTypescript`         | 3,276   |
-| And 15 more...        | -      | -                         | -                                 | 43,125+ |
+| Icon Pack             | Prefix | Import Path | Examples                          | Count |
+| --------------------- | ------ | ----------- | --------------------------------- | ----- |
+| Phosphor Icons        | `Pi`   | `/pi`       | `PiHeart`, `PiStar`               | 9,072 |
+| Tabler Icons          | `Tb`   | `/tb`       | `TbHome`, `TbUser`                | 5,754 |
+| Material Design Icons | `Md`   | `/md`       | `MdHome`, `MdStar`                | 4,339 |
+| Game Icons            | `Gi`   | `/gi`       | `GiSword`, `GiShield`             | 4,038 |
+| Simple Icons          | `Si`   | `/si`       | `SiReact`, `SiTypescript`         | 3,274 |
+| Remix Icon            | `Ri`   | `/ri`       | `RiHome`, `RiUser`                | 3,020 |
+| Bootstrap Icons       | `Bs`   | `/bs`       | `BsFillStarFill`, `BsCheckCircle` | 2,656 |
+| Lucide Icons          | `Lu`   | `/lu`       | `LuHome`, `LuUser`                | 1,637 |
+| Font Awesome          | `Fa`   | `/fa`       | `FaUser`, `FaHome`                | 1,611 |
+| Box Icons             | `Bi`   | `/bi`       | `BiHeart`, `BiStar`               | 1,634 |
+| Line Awesome          | `Lia`  | `/lia`      | `LiaHomeSolid`, `LiaUser`         | 1,544 |
+| Ionicons              | `Io`   | `/io`       | `IoHome`, `IoHeart`               | 1,357 |
+| Heroicons v2          | `Hi2`  | `/hi2`      | `Hi2Home`, `Hi2User`              | 972   |
+| Ant Design Icons      | `Ai`   | `/ai`       | `AiFillHeart`, `AiOutlineUser`    | 831   |
+| CSS.gg                | `Cg`   | `/cg`       | `CgHome`, `CgUser`                | 704   |
+| Grommet Icons         | `Gr`   | `/gr`       | `GrHome`, `GrUser`                | 635   |
+| Heroicons v1          | `Hi`   | `/hi`       | `HiHome`, `HiUser`                | 460   |
+| VS Code Icons         | `Vsc`  | `/vsc`      | `VscHome`, `VscFile`              | 466   |
+| IcoMoon Free          | `Im`   | `/im`       | `ImHome`, `ImUser`                | 415   |
+| Themify Icons         | `Tfi`  | `/tfi`      | `TfiHome`, `TfiUser`              | 352   |
+| Typicons              | `Ti`   | `/ti`       | `TiHome`, `TiUser`                | 336   |
+| Flat Color Icons      | `Fc`   | `/fc`       | `FcHome`, `FcIdea`                | 329   |
+| Radix Icons           | `Rx`   | `/rx`       | `RxHome`, `RxComponent`           | 318   |
+| Golang Icons          | `Go`   | `/go`       | `GoHome`, `GoGear`                | 317   |
+| Circum Icons          | `Ci`   | `/ci`       | `CiHome`, `CiUser`                | 288   |
+| Feather               | `Fi`   | `/fi`       | `FiHome`, `FiUser`                | 287   |
+| Weather Icons         | `Wi`   | `/wi`       | `WiDaySunny`, `WiRain`            | 219   |
+| Dev Icons             | `Di`   | `/di`       | `DiReact`, `DiJavascript`         | 192   |
+| Simple Line Icons     | `Sl`   | `/sl`       | `SlHome`, `SlUser`                | 189   |
 
-💡 **Pro Tip**: Use specific import paths (e.g., `/ai`, `/bs`) for better IDE performance!
+> **Note**: All icons must be imported from their specific pack paths (e.g., `/ai`, `/bs`). The main entry point only exports types.
 
 ## 🌲 Tree-Shaking
 
@@ -168,7 +180,7 @@ This library is **fully optimized for tree-shaking**. Modern bundlers (Metro, We
 ### Basic Example
 
 ```jsx
-import { AiFillHeart } from 'react-native-icons-svg';
+import { AiFillHeart } from 'react-native-icons-svg/ai';
 
 <AiFillHeart size={24} color="red" />;
 ```
@@ -176,7 +188,7 @@ import { AiFillHeart } from 'react-native-icons-svg';
 ### With Custom Styles
 
 ```jsx
-import { AiFillStar } from 'react-native-icons-svg';
+import { AiFillStar } from 'react-native-icons-svg/ai';
 
 <AiFillStar
   size={32}
@@ -193,7 +205,7 @@ import { AiFillStar } from 'react-native-icons-svg';
 ### Dynamic Icon Selection
 
 ```jsx
-import { AiFillHeart, AiOutlineHeart } from 'react-native-icons-svg';
+import { AiFillHeart, AiOutlineHeart } from 'react-native-icons-svg/ai';
 
 function FavoriteButton({ isFavorite }) {
   const Icon = isFavorite ? AiFillHeart : AiOutlineHeart;
@@ -278,15 +290,19 @@ yarn add react-native-icons-svg react-native-svg
 
 ## 🚀 Использование
 
-### ✅ Лучшая практика (Максимальная производительность IDE)
+### ✅ Правильное использование
 
-Импортируйте из **конкретных наборов иконок** для лучшей работы IDE:
+Импортируйте из **конкретных наборов иконок** - это **единственный** способ импорта иконок:
 
 ```jsx
 import React from 'react';
 import { View } from 'react-native';
-// Импорт из конкретных наборов - быстрый автокомплит и производительность IDE
-import { AiFillHeart, AiFillStar, AiOutlineUser } from 'react-native-icons-svg/ai';
+// Импорт из конкретных наборов - это единственный поддерживаемый способ
+import {
+  AiFillHeart,
+  AiFillStar,
+  AiOutlineUser,
+} from 'react-native-icons-svg/ai';
 import { BsFillStarFill } from 'react-native-icons-svg/bs';
 import { FaUser } from 'react-native-icons-svg/fa';
 
@@ -302,26 +318,25 @@ export default function App() {
 ```
 
 ✅ **Размер бандла**: ~7-10 КБ (только 3 иконки + утилиты)  
-✅ **Производительность IDE**: Быстрый автокомплит (загружает только ~800-9000 иконок пака вместо всех 43,125)
-
-### ✅ Альтернативный способ (Тоже хорошо)
-
-Импорт из главной точки входа:
-
-```jsx
-import { AiFillHeart, AiFillStar, AiOutlineUser } from 'react-native-icons-svg';
-```
-
-✅ **Размер бандла**: ~7-10 КБ (только 3 иконки + утилиты)  
-⚠️ **Производительность IDE**: Медленный автокомплит (загружает все 43,125 названий иконок)
+✅ **Производительность IDE**: Быстрый автокомплит (загружает только ~800-9000 иконок пака)
 
 ### ❌ Неправильное использование (Избегайте)
+
+**НЕ ПЫТАЙТЕСЬ** импортировать из главной точки входа:
+
+```jsx
+// ❌ НЕПРАВИЛЬНО: Это не работает - главная точка входа экспортирует только типы!
+import { AiFillHeart } from 'react-native-icons-svg';
+
+// ✅ ПРАВИЛЬНО: Импортируйте из конкретного пака
+import { AiFillHeart } from 'react-native-icons-svg/ai';
+```
 
 **НЕ ИМПОРТИРУЙТЕ** всю библиотеку целиком:
 
 ```jsx
 // ❌ ПЛОХО: Это импортирует ВСЕ 43,125 иконок!
-import * as Icons from 'react-native-icons-svg';
+import * as Icons from 'react-native-icons-svg/ai';
 
 function App() {
   return <Icons.AiFillHeart size={48} />;
@@ -329,13 +344,6 @@ function App() {
 ```
 
 ❌ **Размер бандла**: ~687 МБ (все иконки включены)
-
-**НЕ РЕЭКСПОРТИРУЙТЕ** все иконки:
-
-```jsx
-// ❌ ПЛОХО: Это включает все иконки в ваш бандл!
-export * from 'react-native-icons-svg';
-```
 
 ## 📖 Свойства иконок
 
@@ -360,21 +368,37 @@ export * from 'react-native-icons-svg';
 
 | Набор иконок          | Префикс | Путь импорта | Примеры                           | Количество |
 | --------------------- | ------- | ------------ | --------------------------------- | ---------- |
-| Ant Design Icons      | `Ai`    | `/ai`        | `AiFillHeart`, `AiOutlineUser`    | 822        |
-| Bootstrap Icons       | `Bs`    | `/bs`        | `BsFillStarFill`, `BsCheckCircle` | 2,658      |
-| Font Awesome          | `Fa`    | `/fa`        | `FaUser`, `FaHome`                | 2,794      |
-| Feather               | `Fi`    | `/fi`        | `FiHome`, `FiUser`                | 162        |
-| Game Icons            | `Gi`    | `/gi`        | `GiSword`, `GiShield`             | 4,040      |
-| Heroicons             | `Hi`    | `/hi`        | `HiHome`, `HiUser`                | 1,212      |
-| Ionicons              | `Io`    | `/io`        | `IoHome`, `IoHeart`               | 1,164      |
-| Phosphor Icons        | `Pi`    | `/pi`        | `PiHeart`, `PiStar`               | 9,074      |
+| Phosphor Icons        | `Pi`    | `/pi`        | `PiHeart`, `PiStar`               | 9,072      |
+| Tabler Icons          | `Tb`    | `/tb`        | `TbHome`, `TbUser`                | 5,754      |
+| Material Design Icons | `Md`    | `/md`        | `MdHome`, `MdStar`                | 4,339      |
+| Game Icons            | `Gi`    | `/gi`        | `GiSword`, `GiShield`             | 4,038      |
+| Simple Icons          | `Si`    | `/si`        | `SiReact`, `SiTypescript`         | 3,274      |
 | Remix Icon            | `Ri`    | `/ri`        | `RiHome`, `RiUser`                | 3,020      |
-| Tabler Icons          | `Tb`    | `/tb`        | `TbHome`, `TbUser`                | 5,755      |
-| Lucide Icons          | `Lu`    | `/lu`        | `LuHome`, `LuUser`                | 1,768      |
-| Simple Icons          | `Si`    | `/si`        | `SiReact`, `SiTypescript`         | 3,276      |
-| И еще 15...           | -       | -            | -                                 | 43,125+    |
+| Bootstrap Icons       | `Bs`    | `/bs`        | `BsFillStarFill`, `BsCheckCircle` | 2,656      |
+| Lucide Icons          | `Lu`    | `/lu`        | `LuHome`, `LuUser`                | 1,637      |
+| Font Awesome          | `Fa`    | `/fa`        | `FaUser`, `FaHome`                | 1,611      |
+| Box Icons             | `Bi`    | `/bi`        | `BiHeart`, `BiStar`               | 1,634      |
+| Line Awesome          | `Lia`   | `/lia`       | `LiaHomeSolid`, `LiaUser`         | 1,544      |
+| Ionicons              | `Io`    | `/io`        | `IoHome`, `IoHeart`               | 1,357      |
+| Heroicons v2          | `Hi2`   | `/hi2`       | `Hi2Home`, `Hi2User`              | 972        |
+| Ant Design Icons      | `Ai`    | `/ai`        | `AiFillHeart`, `AiOutlineUser`    | 831        |
+| CSS.gg                | `Cg`    | `/cg`        | `CgHome`, `CgUser`                | 704        |
+| Grommet Icons         | `Gr`    | `/gr`        | `GrHome`, `GrUser`                | 635        |
+| Heroicons v1          | `Hi`    | `/hi`        | `HiHome`, `HiUser`                | 460        |
+| VS Code Icons         | `Vsc`   | `/vsc`       | `VscHome`, `VscFile`              | 466        |
+| IcoMoon Free          | `Im`    | `/im`        | `ImHome`, `ImUser`                | 415        |
+| Themify Icons         | `Tfi`   | `/tfi`       | `TfiHome`, `TfiUser`              | 352        |
+| Typicons              | `Ti`    | `/ti`        | `TiHome`, `TiUser`                | 336        |
+| Flat Color Icons      | `Fc`    | `/fc`        | `FcHome`, `FcIdea`                | 329        |
+| Radix Icons           | `Rx`    | `/rx`        | `RxHome`, `RxComponent`           | 318        |
+| Golang Icons          | `Go`    | `/go`        | `GoHome`, `GoGear`                | 317        |
+| Circum Icons          | `Ci`    | `/ci`        | `CiHome`, `CiUser`                | 288        |
+| Feather               | `Fi`    | `/fi`        | `FiHome`, `FiUser`                | 287        |
+| Weather Icons         | `Wi`    | `/wi`        | `WiDaySunny`, `WiRain`            | 219        |
+| Dev Icons             | `Di`    | `/di`        | `DiReact`, `DiJavascript`         | 192        |
+| Simple Line Icons     | `Sl`    | `/sl`        | `SlHome`, `SlUser`                | 189        |
 
-💡 **Совет**: Используйте конкретные пути импорта (например, `/ai`, `/bs`) для лучшей производительности IDE!
+> **Внимание**: Все иконки должны импортироваться из путей конкретных паков (например, `/ai`, `/bs`). Главная точка входа экспортирует только типы.
 
 ## 🌲 Tree-Shaking
 
@@ -400,7 +424,7 @@ export * from 'react-native-icons-svg';
 ### Базовый пример
 
 ```jsx
-import { AiFillHeart } from 'react-native-icons-svg';
+import { AiFillHeart } from 'react-native-icons-svg/ai';
 
 <AiFillHeart size={24} color="red" />;
 ```
@@ -408,7 +432,7 @@ import { AiFillHeart } from 'react-native-icons-svg';
 ### С пользовательскими стилями
 
 ```jsx
-import { AiFillStar } from 'react-native-icons-svg';
+import { AiFillStar } from 'react-native-icons-svg/ai';
 
 <AiFillStar
   size={32}
@@ -425,7 +449,7 @@ import { AiFillStar } from 'react-native-icons-svg';
 ### Динамический выбор иконки
 
 ```jsx
-import { AiFillHeart, AiOutlineHeart } from 'react-native-icons-svg';
+import { AiFillHeart, AiOutlineHeart } from 'react-native-icons-svg/ai';
 
 function FavoriteButton({ isFavorite }) {
   const Icon = isFavorite ? AiFillHeart : AiOutlineHeart;
@@ -446,24 +470,22 @@ npm run prepare
 
 ## ⚠️ Важные замечания
 
-### ✅ ДЕЛАЙТЕ:
+### ✅ ПРАВИЛЬНО:
 
 ```jsx
-// ✅ Лучший способ - импорт из конкретных паков (быстрая IDE)
+// ✅ Единственный правильный способ - импорт из конкретных паков
 import { AiFillHeart, AiFillStar } from 'react-native-icons-svg/ai';
-
-// ✅ Или импортируйте из главного файла (работает, но медленнее IDE)
-import { AiFillHeart, AiFillStar } from 'react-native-icons-svg';
+import { BsFillStarFill } from 'react-native-icons-svg/bs';
 ```
 
-### ❌ НЕ ДЕЛАЙТЕ:
+### ❌ НЕПРАВИЛЬНО:
 
 ```jsx
-// ❌ Не импортируйте всё
-import * as Icons from 'react-native-icons-svg';
+// ❌ Это НЕ работает - главная точка входа экспортирует только типы!
+import { AiFillHeart } from 'react-native-icons-svg';
 
-// ❌ Не реэкспортируйте всё
-export * from 'react-native-icons-svg';
+// ❌ Не импортируйте всё
+import * as Icons from 'react-native-icons-svg/ai';
 ```
 
 ## 📄 Лицензия
