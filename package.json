@@ -1,6 +1,6 @@
 {
   "name": "react-native-icons-svg",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "SVG React icons of popular icon packs",
   "main": "./lib/module/index.js",
   "sideEffects": false,
@@ -11,6 +11,141 @@
       "types": "./lib/typescript/src/index.d.ts",
       "default": "./lib/module/index.js"
     },
+    "./ai": {
+      "source": "./src/packs/ai.tsx",
+      "types": "./lib/typescript/src/packs/ai.d.ts",
+      "default": "./lib/module/packs/ai.js"
+    },
+    "./bi": {
+      "source": "./src/packs/bi.tsx",
+      "types": "./lib/typescript/src/packs/bi.d.ts",
+      "default": "./lib/module/packs/bi.js"
+    },
+    "./bs": {
+      "source": "./src/packs/bs.tsx",
+      "types": "./lib/typescript/src/packs/bs.d.ts",
+      "default": "./lib/module/packs/bs.js"
+    },
+    "./cg": {
+      "source": "./src/packs/cg.tsx",
+      "types": "./lib/typescript/src/packs/cg.d.ts",
+      "default": "./lib/module/packs/cg.js"
+    },
+    "./ci": {
+      "source": "./src/packs/ci.tsx",
+      "types": "./lib/typescript/src/packs/ci.d.ts",
+      "default": "./lib/module/packs/ci.js"
+    },
+    "./di": {
+      "source": "./src/packs/di.tsx",
+      "types": "./lib/typescript/src/packs/di.d.ts",
+      "default": "./lib/module/packs/di.js"
+    },
+    "./fa": {
+      "source": "./src/packs/fa.tsx",
+      "types": "./lib/typescript/src/packs/fa.d.ts",
+      "default": "./lib/module/packs/fa.js"
+    },
+    "./fc": {
+      "source": "./src/packs/fc.tsx",
+      "types": "./lib/typescript/src/packs/fc.d.ts",
+      "default": "./lib/module/packs/fc.js"
+    },
+    "./fi": {
+      "source": "./src/packs/fi.tsx",
+      "types": "./lib/typescript/src/packs/fi.d.ts",
+      "default": "./lib/module/packs/fi.js"
+    },
+    "./gi": {
+      "source": "./src/packs/gi.tsx",
+      "types": "./lib/typescript/src/packs/gi.d.ts",
+      "default": "./lib/module/packs/gi.js"
+    },
+    "./go": {
+      "source": "./src/packs/go.tsx",
+      "types": "./lib/typescript/src/packs/go.d.ts",
+      "default": "./lib/module/packs/go.js"
+    },
+    "./gr": {
+      "source": "./src/packs/gr.tsx",
+      "types": "./lib/typescript/src/packs/gr.d.ts",
+      "default": "./lib/module/packs/gr.js"
+    },
+    "./hi": {
+      "source": "./src/packs/hi.tsx",
+      "types": "./lib/typescript/src/packs/hi.d.ts",
+      "default": "./lib/module/packs/hi.js"
+    },
+    "./im": {
+      "source": "./src/packs/im.tsx",
+      "types": "./lib/typescript/src/packs/im.d.ts",
+      "default": "./lib/module/packs/im.js"
+    },
+    "./io": {
+      "source": "./src/packs/io.tsx",
+      "types": "./lib/typescript/src/packs/io.d.ts",
+      "default": "./lib/module/packs/io.js"
+    },
+    "./li": {
+      "source": "./src/packs/li.tsx",
+      "types": "./lib/typescript/src/packs/li.d.ts",
+      "default": "./lib/module/packs/li.js"
+    },
+    "./lu": {
+      "source": "./src/packs/lu.tsx",
+      "types": "./lib/typescript/src/packs/lu.d.ts",
+      "default": "./lib/module/packs/lu.js"
+    },
+    "./pi": {
+      "source": "./src/packs/pi.tsx",
+      "types": "./lib/typescript/src/packs/pi.d.ts",
+      "default": "./lib/module/packs/pi.js"
+    },
+    "./ri": {
+      "source": "./src/packs/ri.tsx",
+      "types": "./lib/typescript/src/packs/ri.d.ts",
+      "default": "./lib/module/packs/ri.js"
+    },
+    "./rx": {
+      "source": "./src/packs/rx.tsx",
+      "types": "./lib/typescript/src/packs/rx.d.ts",
+      "default": "./lib/module/packs/rx.js"
+    },
+    "./si": {
+      "source": "./src/packs/si.tsx",
+      "types": "./lib/typescript/src/packs/si.d.ts",
+      "default": "./lib/module/packs/si.js"
+    },
+    "./sl": {
+      "source": "./src/packs/sl.tsx",
+      "types": "./lib/typescript/src/packs/sl.d.ts",
+      "default": "./lib/module/packs/sl.js"
+    },
+    "./tb": {
+      "source": "./src/packs/tb.tsx",
+      "types": "./lib/typescript/src/packs/tb.d.ts",
+      "default": "./lib/module/packs/tb.js"
+    },
+    "./tf": {
+      "source": "./src/packs/tf.tsx",
+      "types": "./lib/typescript/src/packs/tf.d.ts",
+      "default": "./lib/module/packs/tf.js"
+    },
+    "./ti": {
+      "source": "./src/packs/ti.tsx",
+      "types": "./lib/typescript/src/packs/ti.d.ts",
+      "default": "./lib/module/packs/ti.js"
+    },
+    "./vs": {
+      "source": "./src/packs/vs.tsx",
+      "types": "./lib/typescript/src/packs/vs.d.ts",
+      "default": "./lib/module/packs/vs.js"
+    },
+    "./wi": {
+      "source": "./src/packs/wi.tsx",
+      "types": "./lib/typescript/src/packs/wi.d.ts",
+      "default": "./lib/module/packs/wi.js"
+    },
     "./package.json": "./package.json"
   },
   "files": [
@@ -18,11 +153,15 @@
     "lib/module/index.js.map",
     "lib/module/utils.js",
     "lib/module/utils.js.map",
+    "lib/module/packs",
+    "lib/module/icons",
     "lib/module/package.json",
     "lib/typescript/src/index.d.ts",
     "lib/typescript/src/index.d.ts.map",
     "lib/typescript/src/utils.d.ts",
     "lib/typescript/src/utils.d.ts.map",
+    "lib/typescript/src/packs",
+    "lib/typescript/src/icons",
     "lib/typescript/package.json"
   ],
   "scripts": {
@@ -31,7 +170,7 @@
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
-    "generate-index": "bash scripts/generate-index.sh",
+    "generate-index": "bash scripts/generate-exports.sh",
     "prepare": "bob build",
     "release": "release-it --only-version"
   },
