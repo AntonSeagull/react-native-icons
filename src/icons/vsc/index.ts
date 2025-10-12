@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-10-11T23:12:55.290Z
+// Generated on 2025-10-12T00:29:47.091Z
 // Total icons: 466
 
 export { VscAccount } from './VscAccount';

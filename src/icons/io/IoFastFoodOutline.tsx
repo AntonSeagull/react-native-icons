@@ -4,7 +4,9 @@
     G,
     Path,
     Svg,
-    Line
+    Line,
+    Circle,
+    Polyline
 } from 'react-native-svg';
  import type { IconProps } from '../../types';
 
@@ -25,6 +27,7 @@
         transform={`rotate(${rotate}, 256, 256)`}
       >
         <G fill={color} stroke={color}>
+          <Polyline  points="368 112 384 48 431 32" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
           <Line  x1="241" y1="112" x2="248.44" y2="175.97" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
           <Line  x1="224" y1="112" x2="480" y2="112" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
           <Path  d="M322,416c0,35.35-20.65,64-56,64H134c-35.35,0-56-28.65-56-64" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />

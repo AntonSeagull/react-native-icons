@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-10-11T23:12:55.284Z
+// Generated on 2025-10-12T00:29:47.085Z
 // Total icons: 336
 
 export { TiAdjustBrightness } from './TiAdjustBrightness';

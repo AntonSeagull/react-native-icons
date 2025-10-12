@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-10-11T23:12:55.280Z
+// Generated on 2025-10-12T00:29:47.081Z
 // Total icons: 352
 
 export { TfiAgenda } from './TfiAgenda';

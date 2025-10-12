@@ -4,7 +4,9 @@
     G,
     Path,
     Svg,
-    Line
+    Line,
+    Circle,
+    Polyline
 } from 'react-native-svg';
  import type { IconProps } from '../../types';
 
@@ -30,6 +32,7 @@
           <Path  fill="#607D8B" d="M38,35l5,5h3V18h-3l-5,5V35z" />
           <Path  fill="#546E7A" d="M22,35H8c-1.1,0-2-0.9-2-2V23c0-1.1,0.9-2,2-2h14c1.1,0,2,0.9,2,2v10C24,34.1,23.1,35,22,35z" />
           <Path  fill="#263238" d="M41,13h-4c-0.6,0-1-0.4-1-1V8c0-0.6,0.4-1,1-1h4c1.7,0,3,1.3,3,3v0C44,11.7,42.7,13,41,13z" />
+          <Circle  cx="19.5" cy="25.5" r="1.5" />
         </G>
       </Svg>
     );

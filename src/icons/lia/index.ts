@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-10-11T23:12:54.933Z
+// Generated on 2025-10-12T00:29:46.741Z
 // Total icons: 1544
 
 export { LiaAccessibleIcon } from './LiaAccessibleIcon';

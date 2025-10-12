@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-10-11T23:12:55.276Z
+// Generated on 2025-10-12T00:29:47.076Z
 // Total icons: 5754
 
 export { TbAB } from './TbAB';
