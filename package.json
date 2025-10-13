@@ -1,6 +1,6 @@
 {
   "name": "react-native-icons-svg",
-  "version": "0.1.14",
+  "version": "0.1.18",
   "description": "SVG React icons of popular icon packs",
   "main": "./lib/module/index.js",
   "sideEffects": false,
@@ -160,7 +160,38 @@
   },
   "files": [
     "lib/module/**/*.js",
+    "lib/module/**/package.json",
     "lib/typescript/**/*.d.ts",
+    "lib/typescript/**/package.json",
+    "ai",
+    "bi",
+    "bs",
+    "cg",
+    "ci",
+    "di",
+    "fa",
+    "fc",
+    "fi",
+    "gi",
+    "go",
+    "gr",
+    "hi",
+    "hi2",
+    "im",
+    "io",
+    "lia",
+    "lu",
+    "md",
+    "pi",
+    "ri",
+    "rx",
+    "si",
+    "sl",
+    "tb",
+    "tfi",
+    "ti",
+    "vsc",
+    "wi",
     "android",
     "ios",
     "cpp",
@@ -175,7 +206,8 @@
     "clean": "del-cli lib",
     "generate-index": "node scripts/generate-index-files.js",
     "build-types": "node scripts/build-types.js",
-    "prepare": "yarn generate-index && NODE_OPTIONS='--max-old-space-size=8192' bob build && yarn build-types",
+    "generate-package-json": "node scripts/generate-package-json.js",
+    "prepare": "yarn generate-index && NODE_OPTIONS='--max-old-space-size=8192' bob build && yarn build-types && yarn generate-package-json",
     "release": "release-it --only-version"
   },
   "keywords": [
@@ -222,7 +254,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-svg": ">=13.0.0"
   },
   "workspaces": [
     "example"
@@ -284,7 +317,9 @@
     "type": "library",
     "version": "0.54.5"
   },
-  "dependencies": {
-    "react-native-svg": "^15.14.0"
+  "peerDependenciesMeta": {
+    "react-native-svg": {
+      "optional": false
+    }
   }
 }

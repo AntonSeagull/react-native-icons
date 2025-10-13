@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-10-12T00:29:47.005Z
+// Generated on 2025-10-13T08:45:19.993Z
 // Total icons: 3274
 
 export { Si } from './Si';
