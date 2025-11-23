@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-11-23T17:45:49.525Z
+// Generated on 2025-11-23T18:05:32.864Z
 // Total icons: 415
 
 export { Im } from './Im';

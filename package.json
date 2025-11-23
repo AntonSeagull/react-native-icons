@@ -1,6 +1,6 @@
 {
   "name": "react-native-icons-svg",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "description": "SVG React icons of popular icon packs",
   "main": "./lib/module/index.js",
   "sideEffects": false,

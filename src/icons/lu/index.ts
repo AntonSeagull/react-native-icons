@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-11-23T17:45:49.998Z
+// Generated on 2025-11-23T18:05:33.117Z
 // Total icons: 1637
 
 export { LuAArrowDown } from './LuAArrowDown';

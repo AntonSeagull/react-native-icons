@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-11-23T17:45:48.533Z
+// Generated on 2025-11-23T18:05:32.249Z
 // Total icons: 192
 
 export { DiAndroid } from './DiAndroid';

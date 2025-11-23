@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-11-23T17:45:49.267Z
+// Generated on 2025-11-23T18:05:32.719Z
 // Total icons: 635
 
 export { GrAccessibility } from './GrAccessibility';

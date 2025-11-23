@@ -28,14 +28,11 @@ const indexDts = `export type { IconProps } from './types';
 `;
 fs.writeFileSync(path.join(libTypesSrcDir, 'index.d.ts'), indexDts);
 
-// Create types.d.ts
-const typesDts = `import type { SvgProps } from 'react-native-svg';
-
-export interface IconProps extends Omit<SvgProps, 'width' | 'height' | 'viewBox'> {
-  size?: number;
-  color?: string;
-}
-`;
+// Create types.d.ts by reading from source file
+const typesSourcePath = path.join(srcDir, 'types.tsx');
+const typesSourceContent = fs.readFileSync(typesSourcePath, 'utf-8');
+// Convert .tsx to .d.ts format (just use the content as-is since it's already type-only)
+const typesDts = typesSourceContent;
 fs.writeFileSync(path.join(libTypesSrcDir, 'types.d.ts'), typesDts);
 
 // Generate icon pack type definitions

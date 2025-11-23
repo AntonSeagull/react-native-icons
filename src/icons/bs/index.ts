@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-11-23T17:45:48.437Z
+// Generated on 2025-11-23T18:05:32.179Z
 // Total icons: 2656
 
 export { Bs } from './Bs';

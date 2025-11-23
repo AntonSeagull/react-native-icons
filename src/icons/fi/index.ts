@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-11-23T17:45:48.713Z
+// Generated on 2025-11-23T18:05:32.386Z
 // Total icons: 287
 
 export { FiActivity } from './FiActivity';

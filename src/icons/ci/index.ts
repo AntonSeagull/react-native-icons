@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-11-23T17:45:48.516Z
+// Generated on 2025-11-23T18:05:32.236Z
 // Total icons: 288
 
 export { CiAirportSign1 } from './CiAirportSign1';
