@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaCopyrightSolid = (props: IconProps) => {
+export const LiaCopyrightSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 16 3 C 8.832031 3 3 8.832031 3 16 C 3 23.167969 8.832031 29 16 29 C 23.167969 29 29 23.167969 29 16 C 29 8.832031 23.167969 3 16 3 Z M 16 5 C 22.085938 5 27 9.914063 27 16 C 27 22.085938 22.085938 27 16 27 C 9.914063 27 5 22.085938 5 16 C 5 9.914063 9.914063 5 16 5 Z M 15.90625 10 C 12.582031 10 9.90625 12.675781 9.90625 16 C 9.90625 19.324219 12.582031 22 15.90625 22 C 18.304688 22 20.355469 20.5625 21.3125 18.53125 L 19.5 17.6875 C 18.855469 19.058594 17.507813 20 15.90625 20 C 13.628906 20 11.90625 18.277344 11.90625 16 C 11.90625 13.722656 13.628906 12 15.90625 12 C 17.507813 12 18.855469 12.941406 19.5 14.3125 L 21.3125 13.46875 C 20.355469 11.4375 18.304688 10 15.90625 10 Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M16 3C8.832 3 3 8.832 3 16s5.832 13 13 13 13-5.832 13-13S23.168 3 16 3m0 2c6.086 0 11 4.914 11 11s-4.914 11-11 11S5 22.086 5 16 9.914 5 16 5m-.094 5c-3.324 0-6 2.676-6 6s2.676 6 6 6c2.399 0 4.45-1.437 5.406-3.469l-1.812-.843C18.855 19.058 17.508 20 15.906 20c-2.277 0-4-1.723-4-4s1.723-4 4-4c1.602 0 2.95.941 3.594 2.313l1.813-.844C20.355 11.438 18.305 10 15.906 10" />
+      </G>
+    </Svg>
+  );
+};

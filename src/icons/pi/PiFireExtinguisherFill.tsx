@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiFireExtinguisherFill = (props: IconProps) => {
+export const PiFireExtinguisherFill = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M218.3,48.34l-60.68-18.2,30-15A8,8,0,0,0,180.42.85L134,24.05a80.08,80.08,0,0,0-78,80V208a8,8,0,0,0,16,0V176H88v56a16,16,0,0,0,16,16h64a16,16,0,0,0,16-16V104a48.07,48.07,0,0,0-40-47.32V42.75l69.7,20.91a8,8,0,1,0,4.6-15.32ZM72,160V104a64.07,64.07,0,0,1,56-63.48V56.68A48.07,48.07,0,0,0,88,104v56Zm96-56v56H104V104a32,32,0,0,1,64,0Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m218.3 48.34-60.68-18.2 30-15a8 8 0 0 0-7.2-14.29L134 24.05a80.08 80.08 0 0 0-78 80V208a8 8 0 0 0 16 0v-32h16v56a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16V104a48.07 48.07 0 0 0-40-47.32V42.75l69.7 20.91a8 8 0 1 0 4.6-15.32M72 160v-56a64.07 64.07 0 0 1 56-63.48v16.16A48.07 48.07 0 0 0 88 104v56Zm96-56v56h-64v-56a32 32 0 0 1 64 0" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const RiPencilRulerLine = (props: IconProps) => {
+export const RiPencilRulerLine = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M5 8V20H9V8H5ZM3 7L7 2L11 7V22H3V7ZM19 16V14H16V12H19V10H17V8H19V6H15V20H19V18H17V16H19ZM14 4H20C20.5523 4 21 4.44772 21 5V21C21 21.5523 20.5523 22 20 22H14C13.4477 22 13 21.5523 13 21V5C13 4.44772 13.4477 4 14 4Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M5 8v12h4V8zM3 7l4-5 4 5v15H3zm16 9v-2h-3v-2h3v-2h-2V8h2V6h-4v14h4v-2h-2v-2zM14 4h6a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1" />
+      </G>
+    </Svg>
+  );
+};

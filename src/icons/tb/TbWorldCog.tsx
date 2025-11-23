@@ -1,46 +1,36 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TbWorldCog = (props: IconProps) => {
+export const TbWorldCog = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M21 12a9 9 0 1 0 -8.979 9" />
-          <Path  d="M3.6 9h16.8" />
-          <Path  d="M3.6 15h8.9" />
-          <Path  d="M11.5 3a17 17 0 0 0 0 18" />
-          <Path  d="M12.5 3a16.992 16.992 0 0 1 2.522 10.376" />
-          <Path  d="M19.001 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-          <Path  d="M19.001 15.5v1.5" />
-          <Path  d="M19.001 21v1.5" />
-          <Path  d="M22.032 17.25l-1.299 .75" />
-          <Path  d="M17.27 20l-1.3 .75" />
-          <Path  d="M15.97 17.25l1.3 .75" />
-          <Path  d="M20.733 20l1.3 .75" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M21 12a9 9 0 1 0-8.979 9M3.6 9h16.8M3.6 15h8.9" />
+        <Path d="M11.5 3a17 17 0 0 0 0 18M12.5 3a17 17 0 0 1 2.522 10.376M17.001 19a2 2 0 1 0 4 0 2 2 0 1 0-4 0M19.001 15.5V17M19.001 21v1.5M22.032 17.25l-1.299.75M17.27 20l-1.3.75M15.97 17.25l1.3.75M20.733 20l1.3.75" />
+      </G>
+    </Svg>
+  );
+};

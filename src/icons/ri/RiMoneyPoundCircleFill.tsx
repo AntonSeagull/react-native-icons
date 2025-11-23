@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const RiMoneyPoundCircleFill = (props: IconProps) => {
+export const RiMoneyPoundCircleFill = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M12.0049 22.0027C6.48204 22.0027 2.00488 17.5256 2.00488 12.0027C2.00488 6.4799 6.48204 2.00275 12.0049 2.00275C17.5277 2.00275 22.0049 6.4799 22.0049 12.0027C22.0049 17.5256 17.5277 22.0027 12.0049 22.0027ZM9.00488 13.0027V15.0027H8.00488V17.0027H16.0049V15.0027H11.0049V13.0027H14.0049V11.0027H11.0049V10.0027C11.0049 9.17432 11.6765 8.50275 12.5049 8.50275C13.0329 8.50275 13.4971 8.77553 13.7644 9.18786L15.7509 8.69125C15.2319 7.40804 13.9741 6.50275 12.5049 6.50275C10.5719 6.50275 9.00488 8.06975 9.00488 10.0027V11.0027H8.00488V13.0027H9.00488Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M12.005 22.003c-5.523 0-10-4.477-10-10s4.477-10 10-10 10 4.477 10 10-4.477 10-10 10m-3-9v2h-1v2h8v-2h-5v-2h3v-2h-3v-1a1.5 1.5 0 0 1 2.76-.815l1.986-.497a3.501 3.501 0 0 0-6.746 1.312v1h-1v2z" />
+      </G>
+    </Svg>
+  );
+};

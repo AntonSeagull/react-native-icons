@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const SiLibreofficewriter = (props: IconProps) => {
+export const SiLibreofficewriter = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M22 0v7l-7-7h7zm0 9v12c0 1.662-1.338 3-3 3H5c-1.662 0-3-1.338-3-3V3c0-1.662 1.338-3 3-3h8l9 9zM6 10h5V9H6v1zm0 2h5v-1H6v1zm0 2h5v-1H6v1zm5 3H6v1h5v-1zm7-2H6v1h12v-1zm0-6h-6v5h6V9zm-1.5 2a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM14 11l-1 2h3l-2-2z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M22 0v7l-7-7zm0 9v12c0 1.662-1.338 3-3 3H5c-1.662 0-3-1.338-3-3V3c0-1.662 1.338-3 3-3h8zM6 10h5V9H6zm0 2h5v-1H6zm0 2h5v-1H6zm5 3H6v1h5zm7-2H6v1h12zm0-6h-6v5h6zm-1.5 2a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M14 11l-1 2h3z" />
+      </G>
+    </Svg>
+  );
+};

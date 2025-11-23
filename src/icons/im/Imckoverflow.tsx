@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const Imckoverflow = (props: IconProps) => {
+export const Imckoverflow = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 16 16"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8, 8)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M16 10v6h-16v-6h2v4h12v-4zM3 11h10v2h-10zM3.237 8.835l0.433-1.953 9.763 2.164-0.433 1.953zM4.37 4.821l0.845-1.813 9.063 4.226-0.845 1.813zM15.496 5.648l-1.218 1.587-7.934-6.088 0.88-1.147h0.91z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 16 16"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8, 8)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M16 10v6H0v-6h2v4h12v-4zM3 11h10v2H3zm.237-2.165.433-1.953 9.763 2.164L13 10.999zM4.37 4.821l.845-1.813 9.063 4.226-.845 1.813zm11.126.827-1.218 1.587-7.934-6.088L7.224 0h.91z" />
+      </G>
+    </Svg>
+  );
+};

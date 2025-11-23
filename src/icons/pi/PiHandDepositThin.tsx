@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiHandDepositThin = (props: IconProps) => {
+export const PiHandDepositThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M124,25.66V128a4,4,0,0,1-8,0V25.66L90.83,50.83a4,4,0,0,1-5.66-5.66l32-32a4,4,0,0,1,5.66,0l32,32a4,4,0,0,1-5.66,5.66Zm64,100.12V96a12,12,0,0,0-12-12H160a4,4,0,0,0,0,8h16a4,4,0,0,1,4,4v92.9l-3.27-5A24,24,0,0,0,135.22,208a1.22,1.22,0,0,0,.12.19l22.26,34a4,4,0,1,0,6.69-4.38l-22.2-33.9A16,16,0,0,1,169.86,188l.12.19,10.67,16.31a4,4,0,0,0,7.35-2.19V135.47a78.83,78.83,0,0,1,32,63.18V240a4,4,0,0,0,8,0V198.65A86.84,86.84,0,0,0,188,125.78ZM80,84H64A12,12,0,0,0,52,96V200a4,4,0,0,0,8,0V96a4,4,0,0,1,4-4H80a4,4,0,0,0,0-8Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M124 25.66V128a4 4 0 0 1-8 0V25.66L90.83 50.83a4 4 0 0 1-5.66-5.66l32-32a4 4 0 0 1 5.66 0l32 32a4 4 0 0 1-5.66 5.66Zm64 100.12V96a12 12 0 0 0-12-12h-16a4 4 0 0 0 0 8h16a4 4 0 0 1 4 4v92.9l-3.27-5a24 24 0 0 0-41.51 24.1 1.2 1.2 0 0 0 .12.19l22.26 34a4 4 0 1 0 6.69-4.38l-22.2-33.9A16 16 0 0 1 169.86 188l.12.19 10.67 16.31a4 4 0 0 0 7.35-2.19v-66.84a78.83 78.83 0 0 1 32 63.18V240a4 4 0 0 0 8 0v-41.35a86.84 86.84 0 0 0-40-72.87M80 84H64a12 12 0 0 0-12 12v104a4 4 0 0 0 8 0V96a4 4 0 0 1 4-4h16a4 4 0 0 0 0-8" />
+      </G>
+    </Svg>
+  );
+};

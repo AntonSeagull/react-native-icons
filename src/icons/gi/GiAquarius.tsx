@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiAquarius = (props: IconProps) => {
+export const GiAquarius = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M301.313 68.906l-88.875 69.438-35.157-68.156-141.218 93.406v85.72l108.626-76.69 39.437 67 93.03-65.06 34.658 69.28 93.343-68.094 67.97 78.563 1.28-112.75L426.5 70.438 337.437 137l-36.125-68.094zm0 194.125l-88.875 69.44-35.157-68.126L36.063 357.72v85.717L144.69 366.75l39.437 67 93.03-65.063 34.658 69.282 93.343-68.064 67.97 78.53 1.28-112.748-47.906-71.094-89.063 66.53-36.125-68.093z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m301.313 68.906-88.875 69.438-35.157-68.156-141.218 93.406v85.72l108.626-76.69 39.437 67 93.03-65.06 34.658 69.28 93.343-68.094 67.97 78.563 1.28-112.75L426.5 70.438 337.437 137zm0 194.125-88.875 69.44-35.157-68.126L36.063 357.72v85.717L144.69 366.75l39.437 67 93.03-65.063 34.658 69.282 93.343-68.064 67.97 78.53 1.28-112.748-47.906-71.094-89.063 66.53-36.125-68.093z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TfiBookmarkAlt = (props: IconProps) => {
+export const TfiBookmarkAlt = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 17 17"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8.5, 8.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M10.027 10.074v-10.074h-6.054v10.077l3.021-2.053 3.033 2.050zM4.973 8.188v-7.188h4.055v7.191l-2.037-1.376-2.018 1.373zM16 1.007v14.993h-15v-14.993h1.974v1h-0.974v12.993h13v-12.993h-4.005v-1h5.005z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 17 17"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8.5, 8.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M10.027 10.074V0H3.973v10.077l3.021-2.053zM4.973 8.188V1h4.055v7.191L6.991 6.815zM16 1.007V16H1V1.007h1.974v1H2V15h13V2.007h-4.005v-1z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const RiAliensLine = (props: IconProps) => {
+export const RiAliensLine = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M12 2C16.6944 2 20.5 5.80558 20.5 10.5C20.5 17 15 22.5 12 22.5C9 22.5 3.5 17 3.5 10.5C3.5 5.80558 7.30558 2 12 2ZM12 4C8.41015 4 5.5 6.91015 5.5 10.5C5.5 15.2938 9.665 20.5 12 20.5C14.335 20.5 18.5 15.2938 18.5 10.5C18.5 6.91015 15.5899 4 12 4ZM17.5 11C17.6603 11 17.8186 11.0084 17.9746 11.0247C17.9916 11.1812 18 11.3396 18 11.5C18 13.9853 15.9853 16 13.5 16C13.3396 16 13.1812 15.9916 13.0252 15.9752C13.0084 15.8186 13 15.6603 13 15.5C13 13.0147 15.0147 11 17.5 11ZM6.5 11C8.98528 11 11 13.0147 11 15.5C11 15.6603 10.9916 15.8186 10.9753 15.9746C10.8186 15.9916 10.6603 16 10.5 16C8.01472 16 6 13.9853 6 11.5C6 11.3396 6.00839 11.1812 6.02475 11.0252C6.18121 11.0084 6.33963 11 6.5 11Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M12 2a8.5 8.5 0 0 1 8.5 8.5c0 6.5-5.5 12-8.5 12s-8.5-5.5-8.5-12A8.5 8.5 0 0 1 12 2m0 2a6.5 6.5 0 0 0-6.5 6.5c0 4.794 4.165 10 6.5 10s6.5-5.206 6.5-10A6.5 6.5 0 0 0 12 4m5.5 7q.24 0 .475.025.025.235.025.475a4.5 4.5 0 0 1-4.975 4.475A4.5 4.5 0 0 1 17.5 11m-11 0a4.5 4.5 0 0 1 4.475 4.975 4.5 4.5 0 0 1-4.95-4.95Q6.259 11 6.5 11" />
+      </G>
+    </Svg>
+  );
+};

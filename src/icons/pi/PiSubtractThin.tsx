@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiSubtractThin = (props: IconProps) => {
+export const PiSubtractThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M171.17,84.82a76,76,0,1,0-86.35,86.35,76,76,0,1,0,86.35-86.35ZM228,160a68.63,68.63,0,0,1-1.27,13.07l-57.34-57.34A76,76,0,0,0,172,96c0-1,0-2-.07-2.94A67.79,67.79,0,0,1,228,160Zm-81.19-7.54,58.33,58.34A68.14,68.14,0,0,1,182,224.33l-57.78-57.78A76.35,76.35,0,0,0,146.81,152.46Zm5.65-5.65a76.35,76.35,0,0,0,14.09-22.6L224.33,182a68.14,68.14,0,0,1-13.53,23.15ZM28,96a68,68,0,1,1,68,68A68.07,68.07,0,0,1,28,96Zm65.06,75.93c1,0,2,.07,2.94.07a76,76,0,0,0,19.73-2.61l57.34,57.34A68.63,68.63,0,0,1,160,228,67.79,67.79,0,0,1,93.06,171.93Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M171.17 84.82a76 76 0 1 0-86.35 86.35 76 76 0 1 0 86.35-86.35M228 160a68.6 68.6 0 0 1-1.27 13.07l-57.34-57.34A76 76 0 0 0 172 96c0-1 0-2-.07-2.94A67.79 67.79 0 0 1 228 160m-81.19-7.54 58.33 58.34A68.1 68.1 0 0 1 182 224.33l-57.78-57.78a76.4 76.4 0 0 0 22.59-14.09m5.65-5.65a76.4 76.4 0 0 0 14.09-22.6L224.33 182a68.1 68.1 0 0 1-13.53 23.15ZM28 96a68 68 0 1 1 68 68 68.07 68.07 0 0 1-68-68m65.06 75.93c1 0 2 .07 2.94.07a76 76 0 0 0 19.73-2.61l57.34 57.34A68.6 68.6 0 0 1 160 228a67.79 67.79 0 0 1-66.94-56.07" />
+      </G>
+    </Svg>
+  );
+};

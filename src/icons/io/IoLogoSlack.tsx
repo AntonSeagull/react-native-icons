@@ -1,42 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const IoLogoSlack = (props: IconProps) => {
+export const IoLogoSlack = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M126.12,315.1A47.06,47.06,0,1,1,79.06,268h47.06Z" />
-          <Path  d="M149.84,315.1a47.06,47.06,0,0,1,94.12,0V432.94a47.06,47.06,0,1,1-94.12,0Z" />
-          <Path  d="M196.9,126.12A47.06,47.06,0,1,1,244,79.06v47.06Z" />
-          <Path  d="M196.9,149.84a47.06,47.06,0,0,1,0,94.12H79.06a47.06,47.06,0,0,1,0-94.12Z" />
-          <Path  d="M385.88,196.9A47.06,47.06,0,1,1,432.94,244H385.88Z" />
-          <Path  d="M362.16,196.9a47.06,47.06,0,0,1-94.12,0V79.06a47.06,47.06,0,1,1,94.12,0Z" />
-          <Path  d="M315.1,385.88A47.06,47.06,0,1,1,268,432.94V385.88Z" />
-          <Path  d="M315.1,362.16a47.06,47.06,0,0,1,0-94.12H432.94a47.06,47.06,0,1,1,0,94.12Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M126.12 315.1A47.06 47.06 0 1 1 79.06 268h47.06ZM149.84 315.1a47.06 47.06 0 0 1 94.12 0v117.84a47.06 47.06 0 1 1-94.12 0ZM196.9 126.12A47.06 47.06 0 1 1 244 79.06v47.06ZM196.9 149.84a47.06 47.06 0 0 1 0 94.12H79.06a47.06 47.06 0 0 1 0-94.12ZM385.88 196.9a47.06 47.06 0 1 1 47.06 47.1h-47.06ZM362.16 196.9a47.06 47.06 0 0 1-94.12 0V79.06a47.06 47.06 0 1 1 94.12 0ZM315.1 385.88a47.06 47.06 0 1 1-47.1 47.06v-47.06ZM315.1 362.16a47.06 47.06 0 0 1 0-94.12h117.84a47.06 47.06 0 1 1 0 94.12Z" />
+      </G>
+    </Svg>
+  );
+};

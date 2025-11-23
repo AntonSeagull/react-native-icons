@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const SiSifive = (props: IconProps) => {
+export const SiSifive = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M2.9056 12.4076 6.0245 2.737h11.9511l1.2129 3.7623H8.6317l-.6751 2.1342h11.92l1.792 5.5583L12 21.319l-9.1888-6.7771h6.2049l2.9565 2.1805 5.8505-4.3125-14.9175-.0023zM19.4166.4426H4.5835L0 14.7306l12 8.8268 12-8.8298L19.4165.4427z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m2.906 12.408 3.118-9.671h11.952l1.213 3.762H8.632l-.675 2.135h11.92l1.792 5.558L12 21.319l-9.189-6.777h6.205l2.957 2.18 5.85-4.312zM19.416.443H4.585L0 14.73l12 8.826 12-8.83z" />
+      </G>
+    </Svg>
+  );
+};

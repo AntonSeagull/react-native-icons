@@ -1,49 +1,40 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LuBrainCog = (props: IconProps) => {
+export const LuBrainCog = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Circle  cx="12" cy="12" r="3" />
-          <Path  d="m10.852 14.772-.383.923" />
-          <Path  d="m10.852 9.228-.383-.923" />
-          <Path  d="m13.148 14.772.382.924" />
-          <Path  d="m13.531 8.305-.383.923" />
-          <Path  d="m14.772 10.852.923-.383" />
-          <Path  d="m14.772 13.148.923.383" />
-          <Path  d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 0 0-5.63-1.446 3 3 0 0 0-.368 1.571 4 4 0 0 0-2.525 5.771" />
-          <Path  d="M17.998 5.125a4 4 0 0 1 2.525 5.771" />
-          <Path  d="M19.505 10.294a4 4 0 0 1-1.5 7.706" />
-          <Path  d="M4.032 17.483A4 4 0 0 0 11.464 20c.18-.311.892-.311 1.072 0a4 4 0 0 0 7.432-2.516" />
-          <Path  d="M4.5 10.291A4 4 0 0 0 6 18" />
-          <Path  d="M6.002 5.125a3 3 0 0 0 .4 1.375" />
-          <Path  d="m9.228 10.852-.923-.383" />
-          <Path  d="m9.228 13.148-.923.383" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m10.852 14.772-.383.923M10.852 9.228l-.383-.923M13.148 14.772l.382.924M13.531 8.305l-.383.923M14.772 10.852l.923-.383M14.772 13.148l.923.383M17.598 6.5A3 3 0 1 0 12 5a3 3 0 0 0-5.63-1.446 3 3 0 0 0-.368 1.571 4 4 0 0 0-2.525 5.771" />
+        <Path d="M17.998 5.125a4 4 0 0 1 2.525 5.771" />
+        <Path d="M19.505 10.294a4 4 0 0 1-1.5 7.706" />
+        <Path d="M4.032 17.483A4 4 0 0 0 11.464 20c.18-.311.892-.311 1.072 0a4 4 0 0 0 7.432-2.516" />
+        <Path d="M4.5 10.291A4 4 0 0 0 6 18M6.002 5.125a3 3 0 0 0 .4 1.375M9.228 10.852l-.923-.383M9.228 13.148l-.923.383" />
+        <Circle cx={12} cy={12} r={3} />
+      </G>
+    </Svg>
+  );
+};

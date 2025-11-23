@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const RiMoonFoggyFill = (props: IconProps) => {
+export const RiMoonFoggyFill = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M16 20.3345V18H14V14H3.33238C3.11567 13.2034 3 12.3652 3 11.5C3 6.93954 6.21346 3.1296 10.4996 2.211C10.1765 3.07941 10 4.01909 10 5.00001C10 9.41829 13.5817 13 18 13C19.4531 13 20.8157 12.6126 21.9902 11.9354C21.8178 15.7576 19.3867 18.9916 16 20.3345ZM7 20H14V22H7V20ZM2 16H12V18H2V16Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M16 20.335V18h-2v-4H3.332A9.5 9.5 0 0 1 3 11.5c0-4.56 3.213-8.37 7.5-9.289a8 8 0 0 0 11.49 9.724 9.5 9.5 0 0 1-5.99 8.4M7 20h7v2H7zm-5-4h10v2H2z" />
+      </G>
+    </Svg>
+  );
+};

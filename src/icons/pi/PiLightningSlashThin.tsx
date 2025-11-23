@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiLightningSlashThin = (props: IconProps) => {
+export const PiLightningSlashThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M51,37.31A4,4,0,0,0,45,42.69L86.77,88.6,45.08,133.27a4,4,0,0,0,1.52,6.47l60.81,22.81L92.08,239.22a4,4,0,0,0,6.84,3.51l64.83-69.46L205,218.69a4,4,0,1,0,5.92-5.38ZM102.68,227l13.24-66.2a4,4,0,0,0-2.52-4.53L55,134.36,92.17,94.54l66.18,72.79Zm8.71-158.9a4,4,0,0,1-.2-5.65l45.89-49.16a4,4,0,0,1,6.84,3.51L148.59,93.45l60.81,22.8a4,4,0,0,1,2.49,2.84,4,4,0,0,1-1,3.64l-22.3,23.89a4,4,0,0,1-5.85-5.45L201,121.64,142.6,99.74a4,4,0,0,1-2.52-4.52L153.32,29,117,67.89A4,4,0,0,1,111.39,68.08Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M51 37.31a4 4 0 0 0-6 5.38L86.77 88.6l-41.69 44.67a4 4 0 0 0 1.52 6.47l60.81 22.81-15.33 76.67a4 4 0 0 0 6.84 3.51l64.83-69.46L205 218.69a4 4 0 1 0 5.92-5.38ZM102.68 227l13.24-66.2a4 4 0 0 0-2.52-4.53L55 134.36l37.17-39.82 66.18 72.79Zm8.71-158.9a4 4 0 0 1-.2-5.65l45.89-49.16a4 4 0 0 1 6.84 3.51l-15.33 76.65 60.81 22.8a4 4 0 0 1 2.49 2.84 4 4 0 0 1-1 3.64l-22.3 23.89a4 4 0 0 1-5.85-5.45L201 121.64l-58.4-21.9a4 4 0 0 1-2.52-4.52L153.32 29 117 67.89a4 4 0 0 1-5.61.19Z" />
+      </G>
+    </Svg>
+  );
+};

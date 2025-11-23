@@ -1,37 +1,36 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const CgDisplayFlex = (props: IconProps) => {
+export const CgDisplayFlex = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M6 17V7H8V17H6Z" fill="currentColor" />
-          <Path  d="M16 7V17H18V7H16Z" fill="currentColor" />
-          <Path  d="M2 3H22V21H2V3ZM4 5V19H20V5H4Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="currentColor" d="M6 17V7h2v10zM16 7v10h2V7z" />
+        <Path fill="currentColor" fillRule="evenodd" d="M2 3h20v18H2zm2 2v14h16V5z" clipRule="evenodd" />
+      </G>
+    </Svg>
+  );
+};

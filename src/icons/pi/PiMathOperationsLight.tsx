@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiMathOperationsLight = (props: IconProps) => {
+export const PiMathOperationsLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M110,72a6,6,0,0,1-6,6H40a6,6,0,0,1,0-12h64A6,6,0,0,1,110,72Zm-6,106H78V152a6,6,0,0,0-12,0v26H40a6,6,0,0,0,0,12H66v26a6,6,0,0,0,12,0V190h26a6,6,0,0,0,0-12Zm48-4h64a6,6,0,0,0,0-12H152a6,6,0,0,0,0,12Zm64,20H152a6,6,0,0,0,0,12h64a6,6,0,0,0,0-12Zm-60.24-93.76a6,6,0,0,0,8.48,0L184,80.49l19.76,19.75a6,6,0,0,0,8.48-8.48L192.49,72l19.75-19.76a6,6,0,0,0-8.48-8.48L184,63.51,164.24,43.76a6,6,0,0,0-8.48,8.48L175.51,72,155.76,91.76A6,6,0,0,0,155.76,100.24Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M110 72a6 6 0 0 1-6 6H40a6 6 0 0 1 0-12h64a6 6 0 0 1 6 6m-6 106H78v-26a6 6 0 0 0-12 0v26H40a6 6 0 0 0 0 12h26v26a6 6 0 0 0 12 0v-26h26a6 6 0 0 0 0-12m48-4h64a6 6 0 0 0 0-12h-64a6 6 0 0 0 0 12m64 20h-64a6 6 0 0 0 0 12h64a6 6 0 0 0 0-12m-60.24-93.76a6 6 0 0 0 8.48 0L184 80.49l19.76 19.75a6 6 0 0 0 8.48-8.48L192.49 72l19.75-19.76a6 6 0 0 0-8.48-8.48L184 63.51l-19.76-19.75a6 6 0 0 0-8.48 8.48L175.51 72l-19.75 19.76a6 6 0 0 0 0 8.48" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,42 +1,42 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FcCustomerSupport = (props: IconProps) => {
+export const FcCustomerSupport = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 48 48"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 24, 24)`}
-      >
-        <G fill={color} stroke={color}>
-          <Circle  fill="#784719" cx="33.5" cy="21.5" r="1.5" />
-          <Circle  fill="#37474F" cx="37" cy="33" r="2" />
-          <Circle  fill="#37474F" cx="21" cy="23" r="7" />
-          <Circle  fill="#546E7A" cx="21" cy="23" r="4" />
-          <Path  fill="#FFB74D" d="M29,43v-4.6l2.6,0.5c2.9,0.6,5.6-1.5,5.8-4.4L38,28l2.9-1.2c1-0.4,1.4-1.6,0.8-2.6L38,18 c-0.6-7.6-4.9-15-16-15C10.6,3,5,11.4,5,20c0,3.7,1.3,6.9,3.3,9.6c1.8,2.5,2.7,5.5,2.7,8.5l0,4.8H29z" />
-          <Path  fill="#FF5722" d="M21.4,3C12.3,3,5,10.3,5,19.4c0,11.1,6,11.4,6,18.6l2.6-0.9c2.1-0.7,3.9-2.3,4.7-4.4l2.8-6.8L27,23v-6 c0,0,7-3.8,7-10.3C31,4.2,25.7,3,21.4,3z" />
-          <Path  d="M21,2.1c-0.6,0-1,0.4-1,1v13.9c0,0.6,0.4,1,1,1s1-0.4,1-1V3.1C22,2.5,21.6,2.1,21,2.1z" />
-          <Path  d="M36.9,31.9c-7.9,0-10.3-4.9-10.4-5.1c-0.2-0.5-0.8-0.7-1.3-0.5c-0.5,0.2-0.7,0.8-0.5,1.3 c0.1,0.3,3,6.3,12.2,6.3c0.6,0,1-0.4,1-1S37.4,31.9,36.9,31.9z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 48 48"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 24, 24)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="#FFB74D" d="M29 43v-4.6l2.6.5c2.9.6 5.6-1.5 5.8-4.4L38 28l2.9-1.2c1-.4 1.4-1.6.8-2.6L38 18c-.6-7.6-4.9-15-16-15C10.6 3 5 11.4 5 20c0 3.7 1.3 6.9 3.3 9.6 1.8 2.5 2.7 5.5 2.7 8.5v4.8h18z" />
+        <Path fill="#FF9800" d="M29 43v-4.6L22 37v6z" />
+        <Circle cx={33.5} cy={21.5} r={1.5} fill="#784719" />
+        <Path fill="#FF5722" d="M21.4 3C12.3 3 5 10.3 5 19.4c0 11.1 6 11.4 6 18.6l2.6-.9c2.1-.7 3.9-2.3 4.7-4.4l2.8-6.8L27 23v-6s7-3.8 7-10.3C31 4.2 25.7 3 21.4 3" />
+        <Path d="M21 2.1c-.6 0-1 .4-1 1V17c0 .6.4 1 1 1s1-.4 1-1V3.1c0-.6-.4-1-1-1M36.9 31.9c-7.9 0-10.3-4.9-10.4-5.1-.2-.5-.8-.7-1.3-.5s-.7.8-.5 1.3c.1.3 3 6.3 12.2 6.3.6 0 1-.4 1-1s-.5-1-1-1" />
+        <Circle cx={37} cy={33} r={2} fill="#37474F" />
+        <Circle cx={21} cy={23} r={7} fill="#37474F" />
+        <Circle cx={21} cy={23} r={4} fill="#546E7A" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiCliffCrossing = (props: IconProps) => {
+export const GiCliffCrossing = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M194.8 103.5l-5.6 17c49.1 16.4 84.5 16.4 133.6 0l-5.6-17c-46.9 15.6-75.5 15.6-122.4 0zM25 121.9V487h158V339.7l-15.5 46.6-23.3-99.7 34.4 17.8-11.7-47.9 15-120.4-96.71-8.8-13.61 46.4L59.39 125 25 121.9zm462 0l-156.8 14.2 30.9 232.4L331.5 487h68.3l-12.2-48.7 39.2-3.7-20.4 52.4H487v-86.2L466.1 328l20.9 1.4V121.9zm-16.8 102.2l-15.8 41.2-26.5-11.2-29.7 31.4-19.2-44.9 91.2-16.5zM42.95 402.7l120.35 17.6-32.9 41.3-40.26-29.1-21.74 47.7-25.45-77.5z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m194.8 103.5-5.6 17c49.1 16.4 84.5 16.4 133.6 0l-5.6-17c-46.9 15.6-75.5 15.6-122.4 0M25 121.9V487h158V339.7l-15.5 46.6-23.3-99.7 34.4 17.8-11.7-47.9 15-120.4-96.71-8.8-13.61 46.4L59.39 125zm462 0-156.8 14.2 30.9 232.4L331.5 487h68.3l-12.2-48.7 39.2-3.7-20.4 52.4H487v-86.2L466.1 328l20.9 1.4zm-16.8 102.2-15.8 41.2-26.5-11.2-29.7 31.4-19.2-44.9zM42.95 402.7l120.35 17.6-32.9 41.3-40.26-29.1-21.74 47.7z" />
+      </G>
+    </Svg>
+  );
+};

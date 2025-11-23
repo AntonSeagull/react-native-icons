@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiShovelThin = (props: IconProps) => {
+export const PiShovelThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M242.83,61.17l-48-48a4,4,0,0,0-5.66,5.66L210.34,40l-76.68,76.69L96.49,79.51a12,12,0,0,0-17,0l-56,56A11.93,11.93,0,0,0,20,144v80a12,12,0,0,0,12,12h80a12,12,0,0,0,8.49-3.51l56-56a12,12,0,0,0,0-17l-37.18-37.17L216,45.66l21.17,21.17a4,4,0,1,0,5.66-5.66Zm-72,104a4,4,0,0,1,0,5.66l-56,56A4,4,0,0,1,112,228H32a4,4,0,0,1-4-4V144a4,4,0,0,1,1.17-2.83l56-56a4,4,0,0,1,5.66,0L128,122.34,85.17,165.17a4,4,0,0,0,5.66,5.66L133.66,128Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m242.83 61.17-48-48a4 4 0 0 0-5.66 5.66L210.34 40l-76.68 76.69-37.17-37.18a12 12 0 0 0-17 0l-56 56A11.93 11.93 0 0 0 20 144v80a12 12 0 0 0 12 12h80a12 12 0 0 0 8.49-3.51l56-56a12 12 0 0 0 0-17l-37.18-37.17L216 45.66l21.17 21.17a4 4 0 1 0 5.66-5.66m-72 104a4 4 0 0 1 0 5.66l-56 56A4 4 0 0 1 112 228H32a4 4 0 0 1-4-4v-80a4 4 0 0 1 1.17-2.83l56-56a4 4 0 0 1 5.66 0L128 122.34l-42.83 42.83a4 4 0 0 0 5.66 5.66L133.66 128Z" />
+      </G>
+    </Svg>
+  );
+};

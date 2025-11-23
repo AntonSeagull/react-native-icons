@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiFlipHorizontalLight = (props: IconProps) => {
+export const PiFlipHorizontalLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M106.78,26.29A13.88,13.88,0,0,0,91.1,34.55s0,.08,0,.12l-64,159.94A14,14,0,0,0,40,214h64a14,14,0,0,0,14-14V40A13.87,13.87,0,0,0,106.78,26.29ZM106,200a2,2,0,0,1-2,2H40a2,2,0,0,1-1.85-2.78l.05-.11,64-159.92A2,2,0,0,1,106,40Zm122.92-5.39-64-159.94s0-.08,0-.12A14,14,0,0,0,138,40V200a14,14,0,0,0,14,14h64a14,14,0,0,0,12.93-19.39Zm-11.26,6.49a1.93,1.93,0,0,1-1.67.9H152a2,2,0,0,1-2-2V40a1.82,1.82,0,0,1,1.6-2,2.62,2.62,0,0,1,.54-.06,1.76,1.76,0,0,1,1.69,1.2l64,159.92.05.11A2,2,0,0,1,217.66,201.1Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M106.78 26.29a13.88 13.88 0 0 0-15.68 8.26s0 .08 0 .12l-64 159.94A14 14 0 0 0 40 214h64a14 14 0 0 0 14-14V40a13.87 13.87 0 0 0-11.22-13.71M106 200a2 2 0 0 1-2 2H40a2 2 0 0 1-1.85-2.78l.05-.11 64-159.92a2 2 0 0 1 3.8.81Zm122.92-5.39-64-159.94v-.12A14 14 0 0 0 138 40v160a14 14 0 0 0 14 14h64a14 14 0 0 0 12.93-19.39Zm-11.26 6.49a1.93 1.93 0 0 1-1.67.9H152a2 2 0 0 1-2-2V40a1.82 1.82 0 0 1 1.6-2 2.6 2.6 0 0 1 .54-.06 1.76 1.76 0 0 1 1.69 1.2l64 159.92.05.11a2 2 0 0 1-.22 1.93" />
+      </G>
+    </Svg>
+  );
+};

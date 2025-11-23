@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiSelectionBackgroundBold = (props: IconProps) => {
+export const PiSelectionBackgroundBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M156,80H48a20,20,0,0,0-20,20V208a20,20,0,0,0,20,20H156a20,20,0,0,0,20-20V100A20,20,0,0,0,156,80Zm-4,124H52V104H152ZM132,40a12,12,0,0,1,12-12h16a12,12,0,0,1,0,24H144A12,12,0,0,1,132,40Zm96,8v8a12,12,0,0,1-24,0V52h-4a12,12,0,0,1,0-24h8A20,20,0,0,1,228,48Zm0,48v16a12,12,0,0,1-24,0V96a12,12,0,0,1,24,0Zm0,56v8a20,20,0,0,1-20,20h-8a12,12,0,0,1,0-24h4v-4a12,12,0,0,1,24,0ZM76,56V48A20,20,0,0,1,96,28h8a12,12,0,0,1,0,24h-4v4a12,12,0,0,1-24,0Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M156 80H48a20 20 0 0 0-20 20v108a20 20 0 0 0 20 20h108a20 20 0 0 0 20-20V100a20 20 0 0 0-20-20m-4 124H52V104h100ZM132 40a12 12 0 0 1 12-12h16a12 12 0 0 1 0 24h-16a12 12 0 0 1-12-12m96 8v8a12 12 0 0 1-24 0v-4h-4a12 12 0 0 1 0-24h8a20 20 0 0 1 20 20m0 48v16a12 12 0 0 1-24 0V96a12 12 0 0 1 24 0m0 56v8a20 20 0 0 1-20 20h-8a12 12 0 0 1 0-24h4v-4a12 12 0 0 1 24 0M76 56v-8a20 20 0 0 1 20-20h8a12 12 0 0 1 0 24h-4v4a12 12 0 0 1-24 0" />
+      </G>
+    </Svg>
+  );
+};

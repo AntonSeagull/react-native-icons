@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TfiLayoutCtaRight = (props: IconProps) => {
+export const TfiLayoutCtaRight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 17 17"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8.5, 8.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M0 3v11h17v-11h-17zM16 13h-15v-9h15v9zM14 8h-10v-1h10v1zM9 9h5v2h-5v-2z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 17 17"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8.5, 8.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M0 3v11h17V3zm16 10H1V4h15zm-2-5H4V7h10zM9 9h5v2H9z" />
+      </G>
+    </Svg>
+  );
+};

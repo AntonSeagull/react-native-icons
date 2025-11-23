@@ -1,37 +1,36 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const CiMedicalMask = (props: IconProps) => {
+export const CiMedicalMask = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M21.435,12.53H19.5V9.17h1.94a.5.5,0,0,0,.5-.5.5.5,0,0,0-.5-.5H19.5V7.23A2.5,2.5,0,0,0,17,4.73H7a2.507,2.507,0,0,0-2.5,2.5v.94H2.565a.5.5,0,0,0-.5.5.5.5,0,0,0,.5.5H4.5v3.36H2.565a.5.5,0,0,0-.5.5.5.5,0,0,0,.5.5H4.5v.33a4.283,4.283,0,0,0,2.43,3.84l1.74.82a7.79,7.79,0,0,0,6.67,0l1.73-.82h.01a4.274,4.274,0,0,0,2.42-3.84v-.33h1.94a.5.5,0,0,0,.5-.5A.5.5,0,0,0,21.435,12.53ZM18.5,13.86a3.238,3.238,0,0,1-1.85,2.93l-1.73.82a6.767,6.767,0,0,1-5.83,0l-1.73-.82A3.248,3.248,0,0,1,5.5,13.86V7.23A1.5,1.5,0,0,1,7,5.73H17a1.5,1.5,0,0,1,1.5,1.5Z" />
-          <Path  d="M14.5,14.534h-5a.5.5,0,0,1,0-1h5a.5.5,0,0,1,0,1Z" />
-          <Path  d="M16,10.168H8a.5.5,0,1,1,0-1h8a.5.5,0,0,1,0,1Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M21.435 12.53H19.5V9.17h1.94a.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5H19.5v-.94a2.5 2.5 0 0 0-2.5-2.5H7a2.507 2.507 0 0 0-2.5 2.5v.94H2.565a.5.5 0 0 0-.5.5.5.5 0 0 0 .5.5H4.5v3.36H2.565a.5.5 0 0 0-.5.5.5.5 0 0 0 .5.5H4.5v.33a4.28 4.28 0 0 0 2.43 3.84l1.74.82a7.79 7.79 0 0 0 6.67 0l1.73-.82h.01a4.27 4.27 0 0 0 2.42-3.84v-.33h1.94a.5.5 0 0 0 .5-.5.5.5 0 0 0-.505-.5M18.5 13.86a3.24 3.24 0 0 1-1.85 2.93l-1.73.82a6.77 6.77 0 0 1-5.83 0l-1.73-.82a3.25 3.25 0 0 1-1.86-2.93V7.23A1.5 1.5 0 0 1 7 5.73h10a1.5 1.5 0 0 1 1.5 1.5Z" />
+        <Path d="M14.5 14.534h-5a.5.5 0 0 1 0-1h5a.5.5 0 0 1 0 1M16 10.168H8a.5.5 0 1 1 0-1h8a.5.5 0 0 1 0 1" />
+      </G>
+    </Svg>
+  );
+};

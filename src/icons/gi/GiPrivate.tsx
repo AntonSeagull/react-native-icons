@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiPrivate = (props: IconProps) => {
+export const GiPrivate = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M255.977 147.306C285.345 194.92 349.612 272.93 406 311.866v52.592c-52.596-39.175-105.228-92.47-140.56-145.47l-9.44-14.16-9.44 14.16c-35.446 53.17-87.448 106.787-140.56 145.706v-52.89c55.382-38.943 120.38-116.82 149.977-164.498z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M255.977 147.306C285.345 194.92 349.612 272.93 406 311.866v52.592c-52.596-39.175-105.228-92.47-140.56-145.47l-9.44-14.16-9.44 14.16c-35.446 53.17-87.448 106.787-140.56 145.706v-52.89c55.382-38.943 120.38-116.82 149.977-164.498" />
+      </G>
+    </Svg>
+  );
+};

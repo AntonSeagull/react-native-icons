@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiSwirledShell = (props: IconProps) => {
+export const GiSwirledShell = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M477.02 283.53l-23.338 168.596-120.823-64.287 19.638-88.924zm-4.953-28.205l-82.372-132.09-82.893 89.128 42.711 72.504zM365.623 110.01l-140.96-50.136-4.137 115.327 75.487 26.853zm-158.758 65.346l-16.654-107.38L72.903 131.91l75.975 73.551zm-67.171 43.635l-76.87-54.12L26 281.035l94.478-4.857zM43.666 321.713l65.223 85.991 45.154-71.366-31.928-42.6zm127.649 24.632l-13.204 71.352 93.372-11.528-35.625-65.002zm57.931-16.63l51.942 32.37 8.63-85.684-54.99 14.104zm.152-51.805l41.678-25.176-54.839-37.302-14.706 48.982z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m477.02 283.53-23.338 168.596-120.823-64.287 19.638-88.924zm-4.953-28.205-82.372-132.09-82.893 89.128 42.711 72.504zM365.623 110.01l-140.96-50.136-4.137 115.327 75.487 26.853zm-158.758 65.346-16.654-107.38L72.903 131.91l75.975 73.551zm-67.171 43.635-76.87-54.12L26 281.035l94.478-4.857zM43.666 321.713l65.223 85.991 45.154-71.366-31.928-42.6zm127.649 24.632-13.204 71.352 93.372-11.528-35.625-65.002zm57.931-16.63 51.942 32.37 8.63-85.684-54.99 14.104zm.152-51.805 41.678-25.176-54.839-37.302-14.706 48.982z" />
+      </G>
+    </Svg>
+  );
+};

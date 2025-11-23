@@ -1,39 +1,40 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FcMakeDecision = (props: IconProps) => {
+export const FcMakeDecision = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 48 48"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 24, 24)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  fill="#FF5722" d="M28.9,24.4c0,0.2,0.1,0.4,0.1,0.6c0,2.8-2.2,5-5,5s-5-2.2-5-5s2.2-5,5-5c0.7,0,1.4,0.2,2,0.4v-4.2 c-0.6-0.1-1.3-0.2-2-0.2c-5,0-9,4-9,9s4,9,9,9s9-4,9-9c0-1.2-0.2-2.4-0.7-3.4L28.9,24.4z" />
-          <Circle  cx="38" cy="26" r="4" />
-          <Circle  cx="10" cy="26" r="4" />
-          <Path  d="M39,19c0-12.7-30-8.3-30,0c0,1.8,0,8.2,0,10c0,8.3,6.7,15,15,15s15-6.7,15-15C39,27.2,39,20.8,39,19z" />
-          <Path  d="M24,4C15.2,4,8,11.2,8,20c0,1.2,0,3.5,0,3.5l2.1,0.6V19l19.5-6.3l8.2,6.3v5.1l2.1-0.6c0,0,0-2.3,0-3.5 C40,12.5,34.6,4,24,4z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 48 48"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 24, 24)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Circle cx={38} cy={26} r={4} />
+        <Circle cx={10} cy={26} r={4} />
+        <Path d="M39 19c0-12.7-30-8.3-30 0v10c0 8.3 6.7 15 15 15s15-6.7 15-15z" />
+        <Path d="M24 4C15.2 4 8 11.2 8 20v3.5l2.1.6V19l19.5-6.3 8.2 6.3v5.1l2.1-.6V20C40 12.5 34.6 4 24 4" />
+        <Path fill="#FF5722" d="M24 23.5v-11l6.6 5.5z" />
+        <Path fill="#FF5722" d="M28.9 24.4c0 .2.1.4.1.6 0 2.8-2.2 5-5 5s-5-2.2-5-5 2.2-5 5-5c.7 0 1.4.2 2 .4v-4.2c-.6-.1-1.3-.2-2-.2-5 0-9 4-9 9s4 9 9 9 9-4 9-9c0-1.2-.2-2.4-.7-3.4z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaBlenderSolid = (props: IconProps) => {
+export const LiaBlenderSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 8 5 C 6.346 5 5 6.346 5 8 L 5 13 C 5 14.654 6.346 16 8 16 L 11.242188 16 L 11.869141 21.013672 C 10.276981 21.083943 9 22.390848 9 24 L 9 27 L 26 27 L 26 24 C 26 22.432317 24.786487 21.155867 23.251953 21.025391 L 26.957031 5 L 14 5 L 9.8671875 5 L 8 5 z M 8 7 L 10.117188 7 L 10.992188 14 L 8 14 C 7.449 14 7 13.551 7 13 L 7 8 C 7 7.449 7.449 7 8 7 z M 12.132812 7 L 14 7 L 24.441406 7 L 23.978516 9 L 19 9 L 19 11 L 23.517578 11 L 23.054688 13 L 19 13 L 19 15 L 22.591797 15 L 22.128906 17 L 19 17 L 19 19 L 21.667969 19 L 21.205078 21 L 13.882812 21 L 12.132812 7 z M 12 23 L 23 23 C 23.551 23 24 23.449 24 24 L 24 25 L 11 25 L 11 24 C 11 23.449 11.449 23 12 23 z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M8 5C6.346 5 5 6.346 5 8v5c0 1.654 1.346 3 3 3h3.242l.627 5.014A2.997 2.997 0 0 0 9 24v3h17v-3c0-1.568-1.214-2.844-2.748-2.975L26.957 5H8m0 2h2.117l.875 7H8c-.551 0-1-.449-1-1V8c0-.551.449-1 1-1m4.133 0H24.44l-.462 2H19v2h4.518l-.463 2H19v2h3.592l-.463 2H19v2h2.668l-.463 2h-7.322zM12 23h11c.551 0 1 .449 1 1v1H11v-1c0-.551.449-1 1-1" />
+      </G>
+    </Svg>
+  );
+};

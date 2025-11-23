@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TfiRss = (props: IconProps) => {
+export const TfiRss = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 17 17"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8.5, 8.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M9.969 14h-1c0-3.233-2.678-5.863-5.969-5.863v-1c3.843 0 6.969 3.079 6.969 6.863zM3 3.5v1c5.327 0 9.5 4.173 9.5 9.5h1c0-5.888-4.612-10.5-10.5-10.5zM6 12.501c0-0.827-0.671-1.501-1.497-1.501-0.829 0-1.503 0.674-1.503 1.501s0.674 1.5 1.503 1.5c0.826 0 1.497-0.673 1.497-1.5zM5 12.501c0 0.275-0.223 0.5-0.497 0.5-0.277 0-0.503-0.225-0.503-0.5 0-0.276 0.226-0.501 0.503-0.501 0.274 0 0.497 0.225 0.497 0.501zM17 15.5v-14c0-0.827-0.673-1.5-1.5-1.5h-14c-0.827 0-1.5 0.673-1.5 1.5v14c0 0.827 0.673 1.5 1.5 1.5h14c0.827 0 1.5-0.673 1.5-1.5zM15.5 1c0.276 0 0.5 0.225 0.5 0.5v14c0 0.275-0.224 0.5-0.5 0.5h-14c-0.276 0-0.5-0.225-0.5-0.5v-14c0-0.275 0.224-0.5 0.5-0.5h14z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 17 17"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8.5, 8.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M9.969 14h-1c0-3.233-2.678-5.863-5.969-5.863v-1c3.843 0 6.969 3.079 6.969 6.863M3 3.5v1c5.327 0 9.5 4.173 9.5 9.5h1C13.5 8.112 8.888 3.5 3 3.5m3 9.001a1.5 1.5 0 1 0-3.002 0A1.5 1.5 0 0 0 6 12.5m-1 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M17 15.5v-14c0-.827-.673-1.5-1.5-1.5h-14C.673 0 0 .673 0 1.5v14c0 .827.673 1.5 1.5 1.5h14c.827 0 1.5-.673 1.5-1.5M15.5 1a.5.5 0 0 1 .5.5v14a.5.5 0 0 1-.5.5h-14a.5.5 0 0 1-.5-.5v-14a.5.5 0 0 1 .5-.5z" />
+      </G>
+    </Svg>
+  );
+};

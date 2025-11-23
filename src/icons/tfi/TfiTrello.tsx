@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TfiTrello = (props: IconProps) => {
+export const TfiTrello = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 17 17"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8.5, 8.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M16.5 15.833c0 0.365-0.302 0.667-0.667 0.667h-14.666c-0.364 0-0.667-0.302-0.667-0.667v-14.666c0-0.365 0.302-0.667 0.667-0.667h14.667c0.364 0 0.667 0.302 0.667 0.667v14.666zM7.833 2.5c0-0.188-0.146-0.333-0.333-0.333h-5c-0.188 0-0.333 0.146-0.333 0.333v10.667c0 0.187 0.146 0.333 0.333 0.333h5c0.188 0 0.333-0.146 0.333-0.333v-10.667zM14.833 2.5c0-0.188-0.146-0.333-0.333-0.333h-5c-0.188 0-0.333 0.146-0.333 0.333v6.667c0 0.187 0.145 0.333 0.333 0.333h5c0.188 0 0.333-0.146 0.333-0.333v-6.667z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 17 17"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8.5, 8.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M16.5 15.833a.67.67 0 0 1-.667.667H1.167a.67.67 0 0 1-.667-.667V1.167C.5.802.802.5 1.167.5h14.667c.364 0 .667.302.667.667v14.666zM7.833 2.5a.33.33 0 0 0-.333-.333h-5a.33.33 0 0 0-.333.333v10.667a.33.33 0 0 0 .333.333h5a.33.33 0 0 0 .333-.333zm7 0a.33.33 0 0 0-.333-.333h-5a.33.33 0 0 0-.333.333v6.667c0 .187.145.333.333.333h5a.33.33 0 0 0 .333-.333z" />
+      </G>
+    </Svg>
+  );
+};

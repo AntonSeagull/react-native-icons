@@ -1,39 +1,62 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const IoWomanOutline = (props: IconProps) => {
+export const IoWomanOutline = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Circle  cx="256" cy="56" r="40" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
-          <Polyline  points="208 192 160 352 352 352 304 192" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Path  d="M208,368V472a23.73,23.73,0,0,0,24,24h0a23.73,23.73,0,0,0,24-24" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
-          <Path  d="M256,368V472a23.73,23.73,0,0,0,24,24h0a23.73,23.73,0,0,0,24-24V368" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
-          <Path  d="M183,274a23.73,23.73,0,0,1-29.84,16.18h0a23.72,23.72,0,0,1-16.17-29.84l25-84.28A44.85,44.85,0,0,1,205,144H307a44.85,44.85,0,0,1,43,32.08l25,84.28a23.72,23.72,0,0,1-16.17,29.84h0A23.73,23.73,0,0,1,329.05,274" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M208 368v104a23.73 23.73 0 0 0 24 24h0a23.73 23.73 0 0 0 24-24" style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinecap: "round",
+        strokeMiterlimit: 10,
+        strokeWidth: 32
+        }} />
+        <Path d="M256 368v104a23.73 23.73 0 0 0 24 24h0a23.73 23.73 0 0 0 24-24V368M183 274a23.73 23.73 0 0 1-29.84 16.18h0a23.72 23.72 0 0 1-16.17-29.84l25-84.28A44.85 44.85 0 0 1 205 144h102a44.85 44.85 0 0 1 43 32.08l25 84.28a23.72 23.72 0 0 1-16.17 29.84h0a23.73 23.73 0 0 1-29.78-16.2" style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinecap: "round",
+        strokeMiterlimit: 10,
+        strokeWidth: 32
+        }} />
+        <Circle cx={256} cy={56} r={40} style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinecap: "round",
+        strokeMiterlimit: 10,
+        strokeWidth: 32
+        }} />
+        <Path d="m208 192-48 160h192l-48-160" style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: 32
+        }} />
+      </G>
+    </Svg>
+  );
+};

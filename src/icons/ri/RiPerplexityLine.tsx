@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const RiPerplexityLine = (props: IconProps) => {
+export const RiPerplexityLine = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M7.17267 3.26011L5.5 1.7395V4.00005V7.50005H4H3V8.50005V16.0001V17.0001H4H5.5V20.0001V22.2606L7.17267 20.74L11 17.2606V22.0001H13V17.2606L16.8273 20.74L18.5 22.2606V20.0001V17.0001H20H21V16.0001V8.50005V7.50005H20H18.5V4.00005V1.7395L16.8273 3.26011L13 6.7395V2.00005H11V6.7395L7.17267 3.26011ZM16.5 7.50005H15.1366L16.5 6.26061V7.50005ZM8.86339 7.50005H7.5V6.26061L8.86339 7.50005ZM9.96339 9.50005L5.82733 13.2601L5.5 13.5577V14.0001V15.0001H5V9.50005H9.96339ZM14.0366 9.50005H19V15.0001H18.5V14.0001V13.5577L18.1727 13.2601L14.0366 9.50005ZM7.5 14.4424L11 11.2606V14.5577L7.5 17.7395V14.4424ZM13 11.2606L16.5 14.4424V17.7395L13 14.5577V11.2606Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M7.173 3.26 5.5 1.74V7.5H3V17h2.5v5.26l1.673-1.52L11 17.26V22h2v-4.74l3.827 3.48 1.673 1.52V17H21V7.5h-2.5V1.74l-1.673 1.52L13 6.74V2h-2v4.74zM16.5 7.5h-1.363L16.5 6.26zm-7.637 0H7.5V6.26zm1.1 2-4.136 3.76-.327.298V15H5V9.5zm4.074 0H19V15h-.5v-1.442l-.327-.298zM7.5 14.442l3.5-3.181v3.297L7.5 17.74zm5.5-3.181 3.5 3.181v3.297L13 14.558z" />
+      </G>
+    </Svg>
+  );
+};

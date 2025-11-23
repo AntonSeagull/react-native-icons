@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TiDownloadOutline = (props: IconProps) => {
+export const TiDownloadOutline = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M20.986 17c0-.105-.004-.211-.038-.316l-2-6c-.136-.409-.516-.684-.948-.684h-.561l.682-.678c1.17-1.17 1.17-3.072 0-4.242-.81-.812-2.068-1.078-3.121-.709v-1.371c0-1.654-1.346-3-3-3s-3 1.346-3 3v1.371c-1.052-.369-2.311-.103-3.121.709-1.17 1.17-1.17 3.072.002 4.244l.68.676h-.561c-.432 0-.812.275-.948.684l-2 6c-.034.105-.038.211-.038.316-.014 0-.014 5-.014 5 0 .553.447 1 1 1h16c.553 0 1-.447 1-1 0 0 0-5-.014-5zm-13.693-10.506c.189-.187.439-.293.707-.293s.518.104.707.293l2.293 2.293v-5.787c0-.552.448-1 1-1s1 .448 1 1v5.787l2.293-2.293c.379-.377 1.035-.377 1.414 0 .391.39.391 1.023.002 1.412l-4.709 4.684-4.707-4.682c-.391-.388-.391-1.024 0-1.414zm-.572 5.506h1.852l3.429 3.41 3.428-3.41h1.852l1.667 5h-13.894l1.666-5zm12.279 9h-14v-3h14v3z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M20.986 17c0-.105-.004-.211-.038-.316l-2-6A1 1 0 0 0 18 10h-.561l.682-.678a3 3 0 0 0 0-4.242c-.81-.812-2.068-1.078-3.121-.709V3c0-1.654-1.346-3-3-3S9 1.346 9 3v1.371c-1.052-.369-2.311-.103-3.121.709a3.003 3.003 0 0 0 .002 4.244l.68.676H6a1 1 0 0 0-.948.684l-2 6a1 1 0 0 0-.038.316C3 17 3 22 3 22a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1s0-5-.014-5M7.293 6.494a1 1 0 0 1 1.414 0L11 8.787V3a1 1 0 0 1 2 0v5.787l2.293-2.293a1.025 1.025 0 0 1 1.414 0 1 1 0 0 1 .002 1.412L12 12.59 7.293 7.908a1 1 0 0 1 0-1.414M6.721 12h1.852l3.429 3.41L15.43 12h1.852l1.667 5H5.055zM19 21H5v-3h14z" />
+      </G>
+    </Svg>
+  );
+};

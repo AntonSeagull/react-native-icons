@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaLevelUpAltSolid = (props: IconProps) => {
+export const LiaLevelUpAltSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 17 4 L 16.28125 4.6875 L 7.78125 13.1875 L 9.21875 14.626953 L 16 7.84375 L 16 26 L 6 26 L 6 28 L 16 28 L 18 28 L 18 7.84375 L 24.78125 14.625 L 26.21875 13.1875 L 17.71875 4.6875 L 17 4 z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m17 4-.719.688-8.5 8.5 1.438 1.439L16 7.844V26H6v2h12V7.844l6.781 6.781 1.438-1.437-8.5-8.5z" />
+      </G>
+    </Svg>
+  );
+};

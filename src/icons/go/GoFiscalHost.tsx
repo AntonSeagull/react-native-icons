@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GoFiscalHost = (props: IconProps) => {
+export const GoFiscalHost = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M2 3.75C2 2.784 2.784 2 3.75 2h16.5c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0 1 20.25 20H19v.25a1 1 0 1 1-2 0V20H6.997v.25a1 1 0 1 1-2 0V20H3.75A1.75 1.75 0 0 1 2 18.25V3.75Zm1.75-.25a.25.25 0 0 0-.25.25v14.5c0 .138.112.25.25.25h16.5a.25.25 0 0 0 .25-.25V3.75a.25.25 0 0 0-.25-.25H3.75ZM14.318 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6 8.5A.75.75 0 1 0 6 10h1.5v2H6a.75.75 0 0 0 0 1.5h1.5V15A1.5 1.5 0 0 0 9 16.5h8a1.5 1.5 0 0 0 1.5-1.5V7A1.5 1.5 0 0 0 17 5.5H9A1.5 1.5 0 0 0 7.5 7v1.5H6ZM9 10a.75.75 0 0 0 0-1.5V7h8v8H9v-1.5A.75.75 0 0 0 9 12v-2Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M2 3.75C2 2.784 2.784 2 3.75 2h16.5c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0 1 20.25 20H19v.25a1 1 0 1 1-2 0V20H6.997v.25a1 1 0 1 1-2 0V20H3.75A1.75 1.75 0 0 1 2 18.25zm1.75-.25a.25.25 0 0 0-.25.25v14.5c0 .138.112.25.25.25h16.5a.25.25 0 0 0 .25-.25V3.75a.25.25 0 0 0-.25-.25zM14.318 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8.5A.75.75 0 1 0 6 10h1.5v2H6a.75.75 0 0 0 0 1.5h1.5V15A1.5 1.5 0 0 0 9 16.5h8a1.5 1.5 0 0 0 1.5-1.5V7A1.5 1.5 0 0 0 17 5.5H9A1.5 1.5 0 0 0 7.5 7v1.5zM9 10a.75.75 0 0 0 0-1.5V7h8v8H9v-1.5A.75.75 0 0 0 9 12z" />
+      </G>
+    </Svg>
+  );
+};

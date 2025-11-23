@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FaMehRollingEyes = (props: IconProps) => {
+export const FaMehRollingEyes = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 496 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 248, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zM88 224c0-24.3 13.7-45.2 33.6-56-.7 2.6-1.6 5.2-1.6 8 0 17.7 14.3 32 32 32s32-14.3 32-32c0-2.8-.9-5.4-1.6-8 19.9 10.8 33.6 31.7 33.6 56 0 35.3-28.7 64-64 64s-64-28.7-64-64zm224 176H184c-21.2 0-21.2-32 0-32h128c21.2 0 21.2 32 0 32zm32-112c-35.3 0-64-28.7-64-64 0-24.3 13.7-45.2 33.6-56-.7 2.6-1.6 5.2-1.6 8 0 17.7 14.3 32 32 32s32-14.3 32-32c0-2.8-.9-5.4-1.6-8 19.9 10.8 33.6 31.7 33.6 56 0 35.3-28.7 64-64 64z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 496 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 248, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8M88 224c0-24.3 13.7-45.2 33.6-56-.7 2.6-1.6 5.2-1.6 8 0 17.7 14.3 32 32 32s32-14.3 32-32c0-2.8-.9-5.4-1.6-8 19.9 10.8 33.6 31.7 33.6 56 0 35.3-28.7 64-64 64s-64-28.7-64-64m224 176H184c-21.2 0-21.2-32 0-32h128c21.2 0 21.2 32 0 32m32-112c-35.3 0-64-28.7-64-64 0-24.3 13.7-45.2 33.6-56-.7 2.6-1.6 5.2-1.6 8 0 17.7 14.3 32 32 32s32-14.3 32-32c0-2.8-.9-5.4-1.6-8 19.9 10.8 33.6 31.7 33.6 56 0 35.3-28.7 64-64 64" />
+      </G>
+    </Svg>
+  );
+};

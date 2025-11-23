@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiBeerBottleBold = (props: IconProps) => {
+export const PiBeerBottleBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M248.49,39.51l-32-32a12,12,0,0,0-18.55,15L147,60.77l-37.33,7.46a12.09,12.09,0,0,0-6.14,3.28L20.2,154.83a28,28,0,0,0,0,39.6L61.57,235.8a28,28,0,0,0,39.6,0l83.32-83.31a12.09,12.09,0,0,0,3.28-6.14L195.23,109l38.23-51a12,12,0,0,0,15-18.55ZM112,191,65,144l31-31,47,47ZM81.37,220a4,4,0,0,1-2.83-1.17L37.17,177.46a4,4,0,0,1,0-5.66L48,161l47,47L84.2,218.83A4,4,0,0,1,81.37,220Zm93-123.2a12,12,0,0,0-2.17,4.85L165,138.08,160,143,113,96l5-5,36.43-7.28a12,12,0,0,0,4.85-2.17l55.67-41.76,1.29,1.29Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m248.49 39.51-32-32a12 12 0 0 0-18.55 15L147 60.77l-37.33 7.46a12.1 12.1 0 0 0-6.14 3.28L20.2 154.83a28 28 0 0 0 0 39.6l41.37 41.37a28 28 0 0 0 39.6 0l83.32-83.31a12.1 12.1 0 0 0 3.28-6.14l7.46-37.35 38.23-51a12 12 0 0 0 15-18.55ZM112 191l-47-47 31-31 47 47Zm-30.63 29a4 4 0 0 1-2.83-1.17l-41.37-41.37a4 4 0 0 1 0-5.66L48 161l47 47-10.8 10.83a4 4 0 0 1-2.83 1.17m93-123.2a12 12 0 0 0-2.17 4.85l-7.2 36.43-5 4.92-47-47 5-5 36.43-7.28a12 12 0 0 0 4.85-2.17l55.67-41.76 1.29 1.29Z" />
+      </G>
+    </Svg>
+  );
+};

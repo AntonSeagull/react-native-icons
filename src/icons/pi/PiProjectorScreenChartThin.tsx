@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiProjectorScreenChartThin = (props: IconProps) => {
+export const PiProjectorScreenChartThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M92,144V128a4,4,0,0,1,8,0v16a4,4,0,0,1-8,0Zm36,4a4,4,0,0,0,4-4V120a4,4,0,0,0-8,0v24A4,4,0,0,0,128,148Zm32,0a4,4,0,0,0,4-4V112a4,4,0,0,0-8,0v32A4,4,0,0,0,160,148Zm52-72V180h12a4,4,0,0,1,0,8H132v24.4a20,20,0,1,1-8,0V188H32a4,4,0,0,1,0-8H44V76H40A12,12,0,0,1,28,64V48A12,12,0,0,1,40,36H216a12,12,0,0,1,12,12V64a12,12,0,0,1-12,12ZM128,220a12,12,0,1,0,12,12A12,12,0,0,0,128,220ZM40,68H216a4,4,0,0,0,4-4V48a4,4,0,0,0-4-4H40a4,4,0,0,0-4,4V64A4,4,0,0,0,40,68Zm164,8H52V180H204Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M92 144v-16a4 4 0 0 1 8 0v16a4 4 0 0 1-8 0m36 4a4 4 0 0 0 4-4v-24a4 4 0 0 0-8 0v24a4 4 0 0 0 4 4m32 0a4 4 0 0 0 4-4v-32a4 4 0 0 0-8 0v32a4 4 0 0 0 4 4m52-72v104h12a4 4 0 0 1 0 8h-92v24.4a20 20 0 1 1-8 0V188H32a4 4 0 0 1 0-8h12V76h-4a12 12 0 0 1-12-12V48a12 12 0 0 1 12-12h176a12 12 0 0 1 12 12v16a12 12 0 0 1-12 12Zm-84 144a12 12 0 1 0 12 12 12 12 0 0 0-12-12M40 68h176a4 4 0 0 0 4-4V48a4 4 0 0 0-4-4H40a4 4 0 0 0-4 4v16a4 4 0 0 0 4 4m164 8H52v104h152Z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiScrollBold = (props: IconProps) => {
+export const PiScrollBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M92,92a12,12,0,0,1,12-12h60a12,12,0,0,1,0,24H104A12,12,0,0,1,92,92Zm12,52h60a12,12,0,0,0,0-24H104a12,12,0,0,0,0,24Zm132,48a36,36,0,0,1-36,36H88a36,36,0,0,1-36-36V64a12,12,0,0,0-24,0c0,3.73,3.35,6.51,3.38,6.54l-.18-.14h0A12,12,0,1,1,16.81,89.59h0C15.49,88.62,4,79.55,4,64A36,36,0,0,1,40,28H176a36,36,0,0,1,36,36V164h4a12,12,0,0,1,7.2,2.4C224.51,167.38,236,176.45,236,192ZM92.62,172.2A12,12,0,0,1,104,164h84V64a12,12,0,0,0-12-12H73.94A35.88,35.88,0,0,1,76,64V192a12,12,0,0,0,24,0c0-3.58-3.17-6.38-3.2-6.4A12,12,0,0,1,92.62,172.2ZM212,192a7.69,7.69,0,0,0-1.24-4h-87a30.32,30.32,0,0,1,.26,4,35.84,35.84,0,0,1-2.06,12H200A12,12,0,0,0,212,192Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M92 92a12 12 0 0 1 12-12h60a12 12 0 0 1 0 24h-60a12 12 0 0 1-12-12m12 52h60a12 12 0 0 0 0-24h-60a12 12 0 0 0 0 24m132 48a36 36 0 0 1-36 36H88a36 36 0 0 1-36-36V64a12 12 0 0 0-24 0c0 3.73 3.35 6.51 3.38 6.54l-.18-.14a12 12 0 1 1-14.39 19.19C15.49 88.62 4 79.55 4 64a36 36 0 0 1 36-36h136a36 36 0 0 1 36 36v100h4a12 12 0 0 1 7.2 2.4c1.31.98 12.8 10.05 12.8 25.6M92.62 172.2A12 12 0 0 1 104 164h84V64a12 12 0 0 0-12-12H73.94A35.9 35.9 0 0 1 76 64v128a12 12 0 0 0 24 0c0-3.58-3.17-6.38-3.2-6.4a12 12 0 0 1-4.18-13.4M212 192a7.7 7.7 0 0 0-1.24-4h-87a30 30 0 0 1 .26 4 35.8 35.8 0 0 1-2.06 12H200a12 12 0 0 0 12-12" />
+      </G>
+    </Svg>
+  );
+};

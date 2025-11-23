@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiSoundcloudLogoThin = (props: IconProps) => {
+export const PiSoundcloudLogoThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M20,120v48a4,4,0,0,1-8,0V120a4,4,0,0,1,8,0ZM48,92a4,4,0,0,0-4,4v96a4,4,0,0,0,8,0V96A4,4,0,0,0,48,92Zm32-8a4,4,0,0,0-4,4V192a4,4,0,0,0,8,0V88A4,4,0,0,0,80,84Zm32-32a4,4,0,0,0-4,4V192a4,4,0,0,0,8,0V56A4,4,0,0,0,112,52Zm107.27,57.46A76,76,0,0,0,144,44a4,4,0,0,0,0,8,67.75,67.75,0,0,1,67.66,61.13,4,4,0,0,0,3.22,3.53A36,36,0,0,1,208,188H144a4,4,0,0,0,0,8h64a44,44,0,0,0,11.27-86.54Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M20 120v48a4 4 0 0 1-8 0v-48a4 4 0 0 1 8 0m28-28a4 4 0 0 0-4 4v96a4 4 0 0 0 8 0V96a4 4 0 0 0-4-4m32-8a4 4 0 0 0-4 4v104a4 4 0 0 0 8 0V88a4 4 0 0 0-4-4m32-32a4 4 0 0 0-4 4v136a4 4 0 0 0 8 0V56a4 4 0 0 0-4-4m107.27 57.46A76 76 0 0 0 144 44a4 4 0 0 0 0 8 67.75 67.75 0 0 1 67.66 61.13 4 4 0 0 0 3.22 3.53A36 36 0 0 1 208 188h-64a4 4 0 0 0 0 8h64a44 44 0 0 0 11.27-86.54" />
+      </G>
+    </Svg>
+  );
+};

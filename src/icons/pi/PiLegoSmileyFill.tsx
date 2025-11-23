@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiLegoSmileyFill = (props: IconProps) => {
+export const PiLegoSmileyFill = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M184,48H168V32a16,16,0,0,0-16-16H104A16,16,0,0,0,88,32V48H72A32,32,0,0,0,40,80v96a32.06,32.06,0,0,0,24,31v17a16,16,0,0,0,16,16h96a16,16,0,0,0,16-16V207a32.06,32.06,0,0,0,24-31V80A32,32,0,0,0,184,48Zm-28,52a12,12,0,1,1-12,12A12,12,0,0,1,156,100Zm4.27,58.77a61,61,0,0,1-64.54,0,8,8,0,0,1,8.54-13.54,45,45,0,0,0,47.46,0,8,8,0,0,1,8.54,13.54ZM104,32h48V48H104Zm-4,68a12,12,0,1,1-12,12A12,12,0,0,1,100,100Zm76,124H80V208h96Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M184 48h-16V32a16 16 0 0 0-16-16h-48a16 16 0 0 0-16 16v16H72a32 32 0 0 0-32 32v96a32.06 32.06 0 0 0 24 31v17a16 16 0 0 0 16 16h96a16 16 0 0 0 16-16v-17a32.06 32.06 0 0 0 24-31V80a32 32 0 0 0-32-32m-28 52a12 12 0 1 1-12 12 12 12 0 0 1 12-12m4.27 58.77a61 61 0 0 1-64.54 0 8 8 0 0 1 8.54-13.54 45 45 0 0 0 47.46 0 8 8 0 0 1 8.54 13.54M104 32h48v16h-48Zm-4 68a12 12 0 1 1-12 12 12 12 0 0 1 12-12m76 124H80v-16h96Z" />
+      </G>
+    </Svg>
+  );
+};

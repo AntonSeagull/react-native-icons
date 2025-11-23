@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaUniversalAccessSolid = (props: IconProps) => {
+export const LiaUniversalAccessSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 16 4 C 9.382813 4 4 9.382813 4 16 C 4 22.617188 9.382813 28 16 28 C 22.617188 28 28 22.617188 28 16 C 28 9.382813 22.617188 4 16 4 Z M 16 6 C 21.535156 6 26 10.464844 26 16 C 26 21.535156 21.535156 26 16 26 C 10.464844 26 6 21.535156 6 16 C 6 10.464844 10.464844 6 16 6 Z M 16 8 C 14.894531 8 14 8.894531 14 10 C 14 11.105469 14.894531 12 16 12 C 17.105469 12 18 11.105469 18 10 C 18 8.894531 17.105469 8 16 8 Z M 10.21875 12.03125 L 9.78125 13.96875 L 14 14.90625 L 14 19 L 13.03125 23.8125 L 14.96875 24.1875 L 15.96875 19.1875 L 16 19.09375 L 16.03125 19.1875 L 17.03125 24.1875 L 18.96875 23.8125 L 18 19 L 18 14.90625 L 22.21875 13.96875 L 21.78125 12.03125 L 17.5 13 L 14.5 13 Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M16 4C9.383 4 4 9.383 4 16s5.383 12 12 12 12-5.383 12-12S22.617 4 16 4m0 2c5.535 0 10 4.465 10 10s-4.465 10-10 10S6 21.535 6 16 10.465 6 16 6m0 2a1.999 1.999 0 1 0 0 4 1.999 1.999 0 1 0 0-4m-5.781 4.031L9.78 13.97l4.219.937V19l-.969 4.813 1.938.375 1-5 .031-.094.031.093 1 5 1.938-.375L18 19v-4.094l4.219-.937-.438-1.938L17.5 13h-3Z" />
+      </G>
+    </Svg>
+  );
+};

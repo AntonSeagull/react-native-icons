@@ -1,43 +1,38 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GrEzmeral = (props: IconProps) => {
+export const GrEzmeral = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 48 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 24, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M7 8H41V16H7V8Z" fill="#01A982" />
-          <Path  d="M1 8H7V16H1V8Z" fill="#00775B" />
-          <Path  d="M41 8H47V16H41V8Z" fill="#00775B" />
-          <Path  d="M7 16H41V22H7V16Z" fill="#00775B" />
-          <Path  d="M7 2H41V8H7V2Z" fill="#00C781" />
-          <Path  d="M1 8L7 2V8H1Z" fill="#01A982" />
-          <Path  d="M1 16L7 22V16H1Z" fill="#01A982" />
-          <Path  d="M47 8L41 2V8H47Z" fill="#01A982" />
-          <Path  d="M47 16L41 22V16H47Z" fill="#01A982" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 48 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 24, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="#01A982" d="M7 8h34v8H7z" />
+        <Path fill="#00775B" d="M1 8h6v8H1zM41 8h6v8h-6zM7 16h34v6H7z" />
+        <Path fill="#00C781" d="M7 2h34v6H7z" />
+        <Path fill="#01A982" d="m1 8 6-6v6zM1 16l6 6v-6zM47 8l-6-6v6zM47 16l-6 6v-6z" />
+      </G>
+    </Svg>
+  );
+};

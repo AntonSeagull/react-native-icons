@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiMeteorBold = (props: IconProps) => {
+export const PiMeteorBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M96,124a36,36,0,1,0,36,36A36,36,0,0,0,96,124Zm0,48a12,12,0,1,1,12-12A12,12,0,0,1,96,172Zm128.49-52.49a12,12,0,0,1,0,17l-48,48a12,12,0,0,1-17-17l48-48A12,12,0,0,1,224.49,119.51Zm-36-20a12,12,0,0,1,0,17l-20,20a12,12,0,0,1-17-17l20-20A12,12,0,0,1,188.49,99.51Zm44-27-16,16a12,12,0,0,1-17-17l16-16a12,12,0,0,1,17,17Zm-113,15,72-72a12,12,0,0,1,17,17l-72,72a12,12,0,1,1-17-17Zm30.23,109.26a12,12,0,0,1,0,17A76,76,0,1,1,42.26,106.26L125,23.51a12,12,0,1,1,17,17L59.23,123.23a52,52,0,0,0,73.54,73.54A12,12,0,0,1,149.74,196.77Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M96 124a36 36 0 1 0 36 36 36 36 0 0 0-36-36m0 48a12 12 0 1 1 12-12 12 12 0 0 1-12 12m128.49-52.49a12 12 0 0 1 0 17l-48 48a12 12 0 0 1-17-17l48-48a12 12 0 0 1 17 0m-36-20a12 12 0 0 1 0 17l-20 20a12 12 0 0 1-17-17l20-20a12 12 0 0 1 17 0m44-27-16 16a12 12 0 0 1-17-17l16-16a12 12 0 0 1 17 17m-113 15 72-72a12 12 0 0 1 17 17l-72 72a12 12 0 1 1-17-17m30.23 109.26a12 12 0 0 1 0 17A76 76 0 1 1 42.26 106.26L125 23.51a12 12 0 1 1 17 17l-82.77 82.72a52 52 0 0 0 73.54 73.54 12 12 0 0 1 16.97 0Z" />
+      </G>
+    </Svg>
+  );
+};

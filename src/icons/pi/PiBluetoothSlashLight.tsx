@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiBluetoothSlashLight = (props: IconProps) => {
+export const PiBluetoothSlashLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M220.44,212,60.44,36A6,6,0,0,0,51.56,44l72.32,79.55L60.4,171.2a6,6,0,0,0,7.2,9.6L122,140v84a6,6,0,0,0,9.6,4.8l52.28-39.21L211.56,220a6,6,0,0,0,8.88-8.08ZM134,212V140l15.09,11.31,26.68,29.36ZM122,71.63V32a6,6,0,0,1,9.6-4.8l64,48a6,6,0,0,1,0,9.6L162.07,110a6,6,0,0,1-7.2-9.6L182,80,134,44V71.63a6,6,0,0,1-12,0Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m220.44 212-160-176a6 6 0 0 0-8.88 8l72.32 79.55L60.4 171.2a6 6 0 0 0 7.2 9.6L122 140v84a6 6 0 0 0 9.6 4.8l52.28-39.21L211.56 220a6 6 0 0 0 8.88-8.08ZM134 212v-72l15.09 11.31 26.68 29.36ZM122 71.63V32a6 6 0 0 1 9.6-4.8l64 48a6 6 0 0 1 0 9.6L162.07 110a6 6 0 0 1-7.2-9.6L182 80l-48-36v27.63a6 6 0 0 1-12 0" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiVirtualRealityBold = (props: IconProps) => {
+export const PiVirtualRealityBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M127,104.73l-24,56a12,12,0,0,1-22.06,0l-24-56A12,12,0,0,1,79,95.27l13,30.27,13-30.27A12,12,0,0,1,127,104.73ZM256,128a84.09,84.09,0,0,1-84,84H84A84,84,0,0,1,84,44h88A84.09,84.09,0,0,1,256,128Zm-24,0a60.07,60.07,0,0,0-60-60H84a60,60,0,0,0,0,120h88A60.07,60.07,0,0,0,232,128Zm-32-8a31.85,31.85,0,0,1-7.93,21.05l5.69,8A12,12,0,1,1,178.24,163l-7.91-11.06c-.77.05-1.55.09-2.33.09h-8v4a12,12,0,0,1-24,0V100a12,12,0,0,1,12-12h20A32,32,0,0,1,200,120Zm-40,8h8a8,8,0,0,0,0-16h-8Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m127 104.73-24 56a12 12 0 0 1-22.06 0l-24-56A12 12 0 0 1 79 95.27l13 30.27 13-30.27a12 12 0 0 1 22 9.46M256 128a84.09 84.09 0 0 1-84 84H84a84 84 0 0 1 0-168h88a84.09 84.09 0 0 1 84 84m-24 0a60.07 60.07 0 0 0-60-60H84a60 60 0 0 0 0 120h88a60.07 60.07 0 0 0 60-60m-32-8a31.85 31.85 0 0 1-7.93 21.05l5.69 8A12 12 0 1 1 178.24 163l-7.91-11.06c-.77.05-1.55.09-2.33.09h-8v4a12 12 0 0 1-24 0V100a12 12 0 0 1 12-12h20a32 32 0 0 1 32 32m-40 8h8a8 8 0 0 0 0-16h-8Z" />
+      </G>
+    </Svg>
+  );
+};

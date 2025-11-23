@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiHandEyeThin = (props: IconProps) => {
+export const PiHandEyeThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M136,168a8,8,0,1,1-8-8A8,8,0,0,1,136,168Zm76-52v36a84,84,0,0,1-168,0V76A24,24,0,0,1,84,58.13V44a24,24,0,0,1,47.93-1.8A24,24,0,0,1,172,60V98.13A24,24,0,0,1,212,116Zm-8,0a16,16,0,0,0-32,0v4a4,4,0,0,1-8,0V60a16,16,0,0,0-32,0v44a4,4,0,0,1-8,0V44a16,16,0,0,0-32,0v68a4,4,0,0,1-8,0V76a16,16,0,0,0-32,0v76a76,76,0,0,0,152,0Zm-24.42,50.21a4,4,0,0,1,0,3.58c-.7,1.4-17.5,34.21-51.58,34.21s-50.88-32.81-51.58-34.21a4,4,0,0,1,0-3.58c.7-1.4,17.5-34.21,51.58-34.21S178.88,164.81,179.58,166.21Zm-8.16,1.8c-3.83-6.43-18.55-28-43.42-28s-39.6,21.55-43.42,28c3.84,6.44,18.55,28,43.42,28S167.6,174.45,171.42,168Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M136 168a8 8 0 1 1-8-8 8 8 0 0 1 8 8m76-52v36a84 84 0 0 1-168 0V76a24 24 0 0 1 40-17.87V44a24 24 0 0 1 47.93-1.8A24 24 0 0 1 172 60v38.13A24 24 0 0 1 212 116m-8 0a16 16 0 0 0-32 0v4a4 4 0 0 1-8 0V60a16 16 0 0 0-32 0v44a4 4 0 0 1-8 0V44a16 16 0 0 0-32 0v68a4 4 0 0 1-8 0V76a16 16 0 0 0-32 0v76a76 76 0 0 0 152 0Zm-24.42 50.21a4 4 0 0 1 0 3.58c-.7 1.4-17.5 34.21-51.58 34.21s-50.88-32.81-51.58-34.21a4 4 0 0 1 0-3.58c.7-1.4 17.5-34.21 51.58-34.21s50.88 32.81 51.58 34.21m-8.16 1.8c-3.83-6.43-18.55-28-43.42-28s-39.6 21.55-43.42 28c3.84 6.44 18.55 28 43.42 28s39.6-21.56 43.42-28.01Z" />
+      </G>
+    </Svg>
+  );
+};

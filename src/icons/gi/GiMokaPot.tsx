@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiMokaPot = (props: IconProps) => {
+export const GiMokaPot = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M238.6 25l7 14h20.8l7-14h-34.8zm-74.9 32l-14 14h271.4l-70-14H163.7zm-24.6 32l44.2 206h30.3L184.2 89h-45.1zm63.3 0l29.4 206h48.4l29.4-206H202.4zm125.4 0l-29.4 206h30.3l44.2-206h-45.1zm63.4 0l-15.9 74.6L416.7 89h-25.5zM92.27 103l-54.73 54.7 50.03 133.5 16.83-6.4-45.94-122.5L99.73 121h27.87l-3.8-18H92.27zM201 313v14h110v-14H201zm-18.3 32l-42.6 142h44.5L213 345h-30.3zm48.7 0L203 487h106l-28.4-142h-49.2zm67.6 0l28.4 142h44.5l-42.6-142H299z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m238.6 25 7 14h20.8l7-14zm-74.9 32-14 14h271.4l-70-14zm-24.6 32 44.2 206h30.3L184.2 89zm63.3 0 29.4 206h48.4l29.4-206zm125.4 0-29.4 206h30.3l44.2-206zm63.4 0-15.9 74.6L416.7 89zM92.27 103l-54.73 54.7 50.03 133.5 16.83-6.4-45.94-122.5L99.73 121h27.87l-3.8-18zM201 313v14h110v-14zm-18.3 32-42.6 142h44.5L213 345zm48.7 0L203 487h106l-28.4-142zm67.6 0 28.4 142h44.5l-42.6-142z" />
+      </G>
+    </Svg>
+  );
+};

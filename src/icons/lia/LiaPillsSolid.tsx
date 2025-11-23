@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaPillsSolid = (props: IconProps) => {
+export const LiaPillsSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 8.5 5 C 5.467 5 3 7.468 3 10.5 L 3 21.5 C 3 24.532 5.467 27 8.5 27 C 11.533 27 14 24.532 14 21.5 L 14 10.5 C 14 7.468 11.533 5 8.5 5 z M 8.5 7 C 10.43 7 12 8.57 12 10.5 L 12 15 L 5 15 L 5 10.5 C 5 8.57 6.57 7 8.5 7 z M 22.5 14 C 18.916 14 16 16.916 16 20.5 C 16 24.084 18.916 27 22.5 27 C 26.084 27 29 24.084 29 20.5 C 29 16.916 26.084 14 22.5 14 z M 22.5 16 C 24.981 16 27 18.019 27 20.5 C 27 21.378623 26.738056 22.193134 26.300781 22.886719 L 20.113281 16.699219 C 20.806866 16.261944 21.621377 16 22.5 16 z M 5 17 L 12 17 L 12 21.5 C 12 23.43 10.43 25 8.5 25 C 6.57 25 5 23.43 5 21.5 L 5 17 z M 18.699219 18.113281 L 24.886719 24.300781 C 24.193134 24.738056 23.378623 25 22.5 25 C 20.019 25 18 22.981 18 20.5 C 18 19.621377 18.261944 18.806866 18.699219 18.113281 z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M8.5 5A5.506 5.506 0 0 0 3 10.5v11C3 24.532 5.467 27 8.5 27s5.5-2.468 5.5-5.5v-11C14 7.468 11.533 5 8.5 5m0 2c1.93 0 3.5 1.57 3.5 3.5V15H5v-4.5C5 8.57 6.57 7 8.5 7m14 7a6.51 6.51 0 0 0-6.5 6.5c0 3.584 2.916 6.5 6.5 6.5s6.5-2.916 6.5-6.5-2.916-6.5-6.5-6.5m0 2c2.481 0 4.5 2.019 4.5 4.5 0 .879-.262 1.693-.7 2.387l-6.187-6.188A4.46 4.46 0 0 1 22.5 16M5 17h7v4.5c0 1.93-1.57 3.5-3.5 3.5S5 23.43 5 21.5zm13.7 1.113 6.187 6.188c-.694.437-1.508.699-2.387.699a4.505 4.505 0 0 1-4.5-4.5c0-.879.262-1.693.7-2.387" />
+      </G>
+    </Svg>
+  );
+};

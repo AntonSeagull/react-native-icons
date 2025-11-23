@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaPortraitSolid = (props: IconProps) => {
+export const LiaPortraitSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 7 5 L 7 27 L 25 27 L 25 5 Z M 9 7 L 23 7 L 23 25 L 9 25 Z M 16 10 C 13.800781 10 12 11.800781 12 14 C 12 15.113281 12.476563 16.117188 13.21875 16.84375 C 11.886719 17.746094 11 19.28125 11 21 L 13 21 C 13 19.332031 14.332031 18 16 18 C 17.667969 18 19 19.332031 19 21 L 21 21 C 21 19.28125 20.113281 17.746094 18.78125 16.84375 C 19.523438 16.117188 20 15.113281 20 14 C 20 11.800781 18.199219 10 16 10 Z M 16 12 C 17.117188 12 18 12.882813 18 14 C 18 15.117188 17.117188 16 16 16 C 14.882813 16 14 15.117188 14 14 C 14 12.882813 14.882813 12 16 12 Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M7 5v22h18V5Zm2 2h14v18H9Zm7 3c-2.2 0-4 1.8-4 4 0 1.113.477 2.117 1.219 2.844A5.04 5.04 0 0 0 11 21h2c0-1.668 1.332-3 3-3s3 1.332 3 3h2a5.04 5.04 0 0 0-2.219-4.156C19.523 16.117 20 15.114 20 14c0-2.2-1.8-4-4-4m0 2c1.117 0 2 .883 2 2s-.883 2-2 2-2-.883-2-2 .883-2 2-2" />
+      </G>
+    </Svg>
+  );
+};

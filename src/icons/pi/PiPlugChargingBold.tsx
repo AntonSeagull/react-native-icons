@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiPlugChargingBold = (props: IconProps) => {
+export const PiPlugChargingBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M224,48H180V16a12,12,0,0,0-24,0V48H100V16a12,12,0,0,0-24,0V48H32.55C24.4,48,20,54.18,20,60A12,12,0,0,0,32,72H44v92a44.05,44.05,0,0,0,44,44h28v32a12,12,0,0,0,24,0V208h28a44.05,44.05,0,0,0,44-44V72h12a12,12,0,0,0,0-24ZM188,164a20,20,0,0,1-20,20H88a20,20,0,0,1-20-20V72H188Zm-85.86-29.17a12,12,0,0,1-1.38-11l12-32a12,12,0,1,1,22.48,8.42L129.32,116H144a12,12,0,0,1,11.24,16.21l-12,32a12,12,0,0,1-22.48-8.42L126.68,140H112A12,12,0,0,1,102.14,134.83Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M224 48h-44V16a12 12 0 0 0-24 0v32h-56V16a12 12 0 0 0-24 0v32H32.55C24.4 48 20 54.18 20 60a12 12 0 0 0 12 12h12v92a44.05 44.05 0 0 0 44 44h28v32a12 12 0 0 0 24 0v-32h28a44.05 44.05 0 0 0 44-44V72h12a12 12 0 0 0 0-24m-36 116a20 20 0 0 1-20 20H88a20 20 0 0 1-20-20V72h120Zm-85.86-29.17a12 12 0 0 1-1.38-11l12-32a12 12 0 1 1 22.48 8.42L129.32 116H144a12 12 0 0 1 11.24 16.21l-12 32a12 12 0 0 1-22.48-8.42l5.92-15.79H112a12 12 0 0 1-9.86-5.17" />
+      </G>
+    </Svg>
+  );
+};

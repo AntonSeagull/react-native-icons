@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiWatchThin = (props: IconProps) => {
+export const PiWatchThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M204,128a75.94,75.94,0,0,0-32.35-62.16l-6.52-36A12,12,0,0,0,153.32,20H102.68a12,12,0,0,0-11.81,9.86l-6.52,36a75.89,75.89,0,0,0,0,124.32l6.52,36A12,12,0,0,0,102.68,236h50.64a12,12,0,0,0,11.81-9.86l6.52-36A75.94,75.94,0,0,0,204,128ZM98.74,31.29A4,4,0,0,1,102.68,28h50.64a4,4,0,0,1,3.94,3.29l5.26,29a75.69,75.69,0,0,0-69,0Zm58.52,193.42a4,4,0,0,1-3.94,3.29H102.68a4,4,0,0,1-3.94-3.29l-5.26-29a75.69,75.69,0,0,0,69,0ZM128,196a68,68,0,1,1,68-68A68.07,68.07,0,0,1,128,196Zm44-68a4,4,0,0,1-4,4H128a4,4,0,0,1-4-4V88a4,4,0,0,1,8,0v36h36A4,4,0,0,1,172,128Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M204 128a75.94 75.94 0 0 0-32.35-62.16l-6.52-36A12 12 0 0 0 153.32 20h-50.64a12 12 0 0 0-11.81 9.86l-6.52 36a75.89 75.89 0 0 0 0 124.32l6.52 36a12 12 0 0 0 11.81 9.82h50.64a12 12 0 0 0 11.81-9.86l6.52-36A75.94 75.94 0 0 0 204 128M98.74 31.29a4 4 0 0 1 3.94-3.29h50.64a4 4 0 0 1 3.94 3.29l5.26 29a75.69 75.69 0 0 0-69 0Zm58.52 193.42a4 4 0 0 1-3.94 3.29h-50.64a4 4 0 0 1-3.94-3.29l-5.26-29a75.69 75.69 0 0 0 69 0ZM128 196a68 68 0 1 1 68-68 68.07 68.07 0 0 1-68 68m44-68a4 4 0 0 1-4 4h-40a4 4 0 0 1-4-4V88a4 4 0 0 1 8 0v36h36a4 4 0 0 1 4 4" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiChartPolarThin = (props: IconProps) => {
+export const PiChartPolarThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M128,28A100,100,0,1,0,228,128,100.11,100.11,0,0,0,128,28Zm91.91,96H187.85A60.07,60.07,0,0,0,132,68.15V36.09A92.13,92.13,0,0,1,219.91,124ZM124,124H76.17A52.05,52.05,0,0,1,124,76.17Zm0,8v47.83A52.05,52.05,0,0,1,76.17,132Zm8,0h47.83A52.05,52.05,0,0,1,132,179.83Zm0-8V76.17A52.05,52.05,0,0,1,179.83,124Zm-8-87.91V68.15A60.07,60.07,0,0,0,68.15,124H36.09A92.13,92.13,0,0,1,124,36.09ZM36.09,132H68.15A60.07,60.07,0,0,0,124,187.85v32.06A92.13,92.13,0,0,1,36.09,132ZM132,219.91V187.85A60.07,60.07,0,0,0,187.85,132h32.06A92.13,92.13,0,0,1,132,219.91Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M128 28a100 100 0 1 0 100 100A100.11 100.11 0 0 0 128 28m91.91 96h-32.06A60.07 60.07 0 0 0 132 68.15V36.09A92.13 92.13 0 0 1 219.91 124M124 124H76.17A52.05 52.05 0 0 1 124 76.17Zm0 8v47.83A52.05 52.05 0 0 1 76.17 132Zm8 0h47.83A52.05 52.05 0 0 1 132 179.83Zm0-8V76.17A52.05 52.05 0 0 1 179.83 124Zm-8-87.91v32.06A60.07 60.07 0 0 0 68.15 124H36.09A92.13 92.13 0 0 1 124 36.09M36.09 132h32.06A60.07 60.07 0 0 0 124 187.85v32.06A92.13 92.13 0 0 1 36.09 132M132 219.91v-32.06A60.07 60.07 0 0 0 187.85 132h32.06A92.13 92.13 0 0 1 132 219.91" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaMediumM = (props: IconProps) => {
+export const LiaMediumM = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 26 10.359375 L 25.210938 10.359375 C 24.914063 10.359375 24.5 10.785156 24.5 11.058594 L 24.5 20.992188 C 24.5 21.269531 24.914063 21.640625 25.210938 21.640625 L 26 21.640625 L 26 24 L 18.832031 24 L 18.832031 21.640625 L 20.332031 21.640625 L 20.332031 11.199219 L 20.261719 11.199219 L 16.757813 24 L 14.046875 24 L 10.585938 11.199219 L 10.5 11.199219 L 10.5 21.640625 L 12 21.640625 L 12 24 L 6 24 L 6 21.640625 L 6.769531 21.640625 C 7.085938 21.640625 7.5 21.269531 7.5 20.992188 L 7.5 11.058594 C 7.5 10.785156 7.085938 10.359375 6.769531 10.359375 L 6 10.359375 L 6 8 L 13.503906 8 L 15.964844 17.261719 L 16.035156 17.261719 L 18.519531 8 L 26 8 Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M26 10.36h-.79c-.296 0-.71.425-.71.699v9.933c0 .278.414.649.71.649H26V24h-7.168v-2.36h1.5V11.2h-.07L16.758 24h-2.711l-3.461-12.8H10.5v10.44H12V24H6v-2.36h.77c.316 0 .73-.37.73-.648V11.06c0-.274-.414-.7-.73-.7H6V8h7.504l2.46 9.262h.071L18.52 8H26Z" />
+      </G>
+    </Svg>
+  );
+};

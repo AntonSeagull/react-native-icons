@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiPinwheelBold = (props: IconProps) => {
+export const PiPinwheelBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M232.49,215.52l-44-44a64,64,0,0,0,35.59-81,12,12,0,0,0-15.38-7.17l-35.61,13A64,64,0,0,0,90.59,15.89a12,12,0,0,0-7.17,15.38l13,35.61a64,64,0,0,0-80.49,82.55,12,12,0,0,0,15.38,7.17l35.61-13a63.94,63.94,0,0,0,82.55,80.49,12,12,0,0,0,7.17-15.38l-12.95-35.59a63.53,63.53,0,0,0,15.7,3.16l56.17,56.17a12,12,0,0,0,17-17ZM129.38,39.78a40,40,0,0,1,7.43,68L110.7,36.05A39.81,39.81,0,0,1,129.38,39.78ZM36.05,129.32a40,40,0,0,1,71.75-26.11Zm74.59,70.92a40,40,0,0,1-7.43-68L129.32,204A39.83,39.83,0,0,1,110.64,200.24Zm36.45-51.51a39.86,39.86,0,0,1-14.87-11.92L204,110.7a40,40,0,0,1-56.88,38Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m232.49 215.52-44-44a64 64 0 0 0 35.59-81 12 12 0 0 0-15.38-7.17l-35.61 13a64 64 0 0 0-82.5-80.46 12 12 0 0 0-7.17 15.38l13 35.61a64 64 0 0 0-80.49 82.55 12 12 0 0 0 15.38 7.17l35.61-13a63.94 63.94 0 0 0 82.55 80.49 12 12 0 0 0 7.17-15.38l-12.95-35.59a63.5 63.5 0 0 0 15.7 3.16l56.17 56.17a12 12 0 0 0 17-17ZM129.38 39.78a40 40 0 0 1 7.43 68L110.7 36.05a39.8 39.8 0 0 1 18.68 3.73m-93.33 89.54a40 40 0 0 1 71.75-26.11Zm74.59 70.92a40 40 0 0 1-7.43-68L129.32 204a39.8 39.8 0 0 1-18.68-3.76m36.45-51.51a39.86 39.86 0 0 1-14.87-11.92L204 110.7a40 40 0 0 1-56.88 38Z" />
+      </G>
+    </Svg>
+  );
+};

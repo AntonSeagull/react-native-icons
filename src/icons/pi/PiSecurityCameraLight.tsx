@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiSecurityCameraLight = (props: IconProps) => {
+export const PiSecurityCameraLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M248,138a6,6,0,0,0-6,6v18H195.31a2,2,0,0,1-1.41-.59l-19.76-19.75L225.9,89.9a14,14,0,0,0,0-19.8l-56-56a14,14,0,0,0-19.81,0L4.34,160.35A8,8,0,0,0,10,174H50.2l35.9,35.9a14,14,0,0,0,19.8,0l59.76-59.76,19.75,19.76a13.94,13.94,0,0,0,9.9,4.1H242v18a6,6,0,0,0,12,0V144A6,6,0,0,0,248,138ZM158.59,22.59a2,2,0,0,1,2.82,0l14.1,14.1L50.2,162H19.64ZM97.41,201.41a2,2,0,0,1-2.82,0L61.17,168,184,45.17l33.41,33.42a2,2,0,0,1,0,2.82Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M248 138a6 6 0 0 0-6 6v18h-46.69a2 2 0 0 1-1.41-.59l-19.76-19.75L225.9 89.9a14 14 0 0 0 0-19.8l-56-56a14 14 0 0 0-19.81 0L4.34 160.35A8 8 0 0 0 10 174h40.2l35.9 35.9a14 14 0 0 0 19.8 0l59.76-59.76 19.75 19.76a13.94 13.94 0 0 0 9.9 4.1H242v18a6 6 0 0 0 12 0v-48a6 6 0 0 0-6-6M158.59 22.59a2 2 0 0 1 2.82 0l14.1 14.1L50.2 162H19.64ZM97.41 201.41a2 2 0 0 1-2.82 0L61.17 168 184 45.17l33.41 33.42a2 2 0 0 1 0 2.82Z" />
+      </G>
+    </Svg>
+  );
+};

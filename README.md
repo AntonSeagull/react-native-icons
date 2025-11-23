@@ -65,9 +65,9 @@ import { FaUser } from 'react-native-icons-svg/fa';
 export default function App() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <AiFillHeart size={48} color="red" />
-      <BsFillStarFill size={48} color="gold" />
-      <FaUser size={48} color="blue" />
+      <AiFillHeart size={48} fill="red" />
+      <BsFillStarFill size={48} fill="gold" />
+      <FaUser size={48} fill="blue" />
     </View>
   );
 }
@@ -105,17 +105,20 @@ function App() {
 
 All icons accept the following props:
 
-| Prop    | Type     | Default   | Description                        |
-| ------- | -------- | --------- | ---------------------------------- |
-| `size`  | `number` | `24`      | Icon size in pixels                |
-| `color` | `string` | `'black'` | Icon color                         |
-| `style` | `object` | -         | Additional styles                  |
-| `...`   | -        | -         | Any other `react-native-svg` props |
+| Prop     | Type     | Default   | Description                        |
+| -------- | -------- | --------- | ---------------------------------- |
+| `size`   | `number` | `24`      | Icon size in pixels                |
+| `fill`   | `string` | -         | Fill color of the icon             |
+| `stroke` | `string` | -         | Stroke color of the icon           |
+| `style`  | `object` | -         | Additional styles                  |
+| `...`    | -        | -         | Any other `react-native-svg` props |
+
+> ⚠️ **Breaking Change**: In previous versions, the `color` prop was used to set the icon color. This has been replaced with two separate parameters: `fill` (for fill color) and `stroke` (for stroke color). The `color` prop is now deprecated and will be removed in a future version.
 
 ### Example
 
 ```jsx
-<AiFillHeart size={32} color="red" style={{ margin: 10 }} opacity={0.8} />
+<AiFillHeart size={32} fill="red" stroke="red" style={{ margin: 10 }} opacity={0.8} />
 ```
 
 ## 🎨 Available Icon Packs
@@ -182,7 +185,7 @@ This library is **fully optimized for tree-shaking**. Modern bundlers (Metro, We
 ```jsx
 import { AiFillHeart } from 'react-native-icons-svg/ai';
 
-<AiFillHeart size={24} color="red" />;
+<AiFillHeart size={24} fill="red" />;
 ```
 
 ### With Custom Styles
@@ -192,7 +195,7 @@ import { AiFillStar } from 'react-native-icons-svg/ai';
 
 <AiFillStar
   size={32}
-  color="gold"
+  fill="gold"
   style={{
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
@@ -209,7 +212,7 @@ import { AiFillHeart, AiOutlineHeart } from 'react-native-icons-svg/ai';
 
 function FavoriteButton({ isFavorite }) {
   const Icon = isFavorite ? AiFillHeart : AiOutlineHeart;
-  return <Icon size={24} color={isFavorite ? 'red' : 'gray'} />;
+  return <Icon size={24} fill={isFavorite ? 'red' : 'gray'} />;
 }
 ```
 
@@ -309,9 +312,9 @@ import { FaUser } from 'react-native-icons-svg/fa';
 export default function App() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <AiFillHeart size={48} color="red" />
-      <BsFillStarFill size={48} color="gold" />
-      <FaUser size={48} color="blue" />
+      <AiFillHeart size={48} fill="red" />
+      <BsFillStarFill size={48} fill="gold" />
+      <FaUser size={48} fill="blue" />
     </View>
   );
 }
@@ -352,14 +355,17 @@ function App() {
 | Свойство | Тип      | По умолчанию | Описание                                 |
 | -------- | -------- | ------------ | ---------------------------------------- |
 | `size`   | `number` | `24`         | Размер иконки в пикселях                 |
-| `color`  | `string` | `'black'`    | Цвет иконки                              |
+| `fill`   | `string` | -            | Цвет заливки иконки                      |
+| `stroke` | `string` | -            | Цвет обводки иконки                      |
 | `style`  | `object` | -            | Дополнительные стили                     |
 | `...`    | -        | -            | Любые другие свойства `react-native-svg` |
+
+> ⚠️ **Важное изменение**: В предыдущих версиях использовался параметр `color` для установки цвета иконки. Теперь он заменён на два отдельных параметра: `fill` (для цвета заливки) и `stroke` (для цвета обводки). Параметр `color` устарел и будет удалён в будущей версии.
 
 ### Пример
 
 ```jsx
-<AiFillHeart size={32} color="red" style={{ margin: 10 }} opacity={0.8} />
+<AiFillHeart size={32} fill="red" stroke="red" style={{ margin: 10 }} opacity={0.8} />
 ```
 
 ## 🎨 Доступные наборы иконок
@@ -426,7 +432,7 @@ function App() {
 ```jsx
 import { AiFillHeart } from 'react-native-icons-svg/ai';
 
-<AiFillHeart size={24} color="red" />;
+<AiFillHeart size={24} fill="red" />;
 ```
 
 ### С пользовательскими стилями
@@ -436,7 +442,7 @@ import { AiFillStar } from 'react-native-icons-svg/ai';
 
 <AiFillStar
   size={32}
-  color="gold"
+  fill="gold"
   style={{
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
@@ -453,7 +459,7 @@ import { AiFillHeart, AiOutlineHeart } from 'react-native-icons-svg/ai';
 
 function FavoriteButton({ isFavorite }) {
   const Icon = isFavorite ? AiFillHeart : AiOutlineHeart;
-  return <Icon size={24} color={isFavorite ? 'red' : 'gray'} />;
+  return <Icon size={24} fill={isFavorite ? 'red' : 'gray'} />;
 }
 ```
 

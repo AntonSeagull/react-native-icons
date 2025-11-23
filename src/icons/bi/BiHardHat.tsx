@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const BiHardHat = (props: IconProps) => {
+export const BiHardHat = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M21 15a9.11 9.11 0 0 0-.18-1.81 8.53 8.53 0 0 0-.53-1.69 8.08 8.08 0 0 0-.83-1.5 8.73 8.73 0 0 0-1.1-1.33A8.27 8.27 0 0 0 17 7.54a8.08 8.08 0 0 0-1.53-.83L15 6.52V5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v1.52l-.5.19a8.08 8.08 0 0 0-1.5.83 8.27 8.27 0 0 0-1.33 1.1A8.27 8.27 0 0 0 4.54 10a8.08 8.08 0 0 0-.83 1.53 9 9 0 0 0-.53 1.69A9.11 9.11 0 0 0 3 15v3H2v2h20v-2h-1zM5 15a7.33 7.33 0 0 1 .14-1.41 6.64 6.64 0 0 1 .41-1.31 7.15 7.15 0 0 1 .64-1.19 7.15 7.15 0 0 1 1.9-1.9A7.33 7.33 0 0 1 9 8.68V15h2V6h2v9h2V8.68a8.13 8.13 0 0 1 .91.51 7.09 7.09 0 0 1 1 .86 6.44 6.44 0 0 1 .85 1 6 6 0 0 1 .65 1.19 7.13 7.13 0 0 1 .41 1.31A7.33 7.33 0 0 1 19 15v3H5z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M21 15a9 9 0 0 0-.18-1.81 8.5 8.5 0 0 0-.53-1.69 8 8 0 0 0-.83-1.5 8.7 8.7 0 0 0-1.1-1.33A8.3 8.3 0 0 0 17 7.54a8 8 0 0 0-1.53-.83L15 6.52V5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v1.52l-.5.19a8 8 0 0 0-1.5.83 8.3 8.3 0 0 0-1.33 1.1A8.3 8.3 0 0 0 4.54 10a8 8 0 0 0-.83 1.53 9 9 0 0 0-.53 1.69A9 9 0 0 0 3 15v3H2v2h20v-2h-1zM5 15a7.3 7.3 0 0 1 .14-1.41 6.6 6.6 0 0 1 .41-1.31 7 7 0 0 1 .64-1.19 7.2 7.2 0 0 1 1.9-1.9A7 7 0 0 1 9 8.68V15h2V6h2v9h2V8.68a8 8 0 0 1 .91.51 7 7 0 0 1 1 .86 6.4 6.4 0 0 1 .85 1 6 6 0 0 1 .65 1.19 7 7 0 0 1 .41 1.31A7.3 7.3 0 0 1 19 15v3H5z" />
+      </G>
+    </Svg>
+  );
+};

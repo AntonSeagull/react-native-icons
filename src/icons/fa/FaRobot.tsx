@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FaRobot = (props: IconProps) => {
+export const FaRobot = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 640 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 320, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M32,224H64V416H32A31.96166,31.96166,0,0,1,0,384V256A31.96166,31.96166,0,0,1,32,224Zm512-48V448a64.06328,64.06328,0,0,1-64,64H160a64.06328,64.06328,0,0,1-64-64V176a79.974,79.974,0,0,1,80-80H288V32a32,32,0,0,1,64,0V96H464A79.974,79.974,0,0,1,544,176ZM264,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,264,256Zm-8,128H192v32h64Zm96,0H288v32h64ZM456,256a40,40,0,1,0-40,40A39.997,39.997,0,0,0,456,256Zm-8,128H384v32h64ZM640,256V384a31.96166,31.96166,0,0,1-32,32H576V224h32A31.96166,31.96166,0,0,1,640,256Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 640 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 320, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M32 224h32v192H32a31.96 31.96 0 0 1-32-32V256a31.96 31.96 0 0 1 32-32m512-48v272a64.063 64.063 0 0 1-64 64H160a64.063 64.063 0 0 1-64-64V176a79.974 79.974 0 0 1 80-80h112V32a32 32 0 0 1 64 0v64h112a79.974 79.974 0 0 1 80 80m-280 80a40 40 0 1 0-40 40 39.997 39.997 0 0 0 40-40m-8 128h-64v32h64Zm96 0h-64v32h64Zm104-128a40 40 0 1 0-40 40 39.997 39.997 0 0 0 40-40m-8 128h-64v32h64Zm192-128v128a31.96 31.96 0 0 1-32 32h-32V224h32a31.96 31.96 0 0 1 32 32" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiCrownBold = (props: IconProps) => {
+export const PiCrownBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M252,80a32,32,0,1,0-60,15.45l-20.86,25.66L150.82,74.4a32,32,0,1,0-45.64,0L84.87,121.11,64,95.45a32,32,0,1,0-35,15.78l14,84.06A19.94,19.94,0,0,0,62.78,212H193.22A19.94,19.94,0,0,0,213,195.29l14-84.06A32.05,32.05,0,0,0,252,80Zm-32-8a8,8,0,1,1-8,8A8,8,0,0,1,220,72ZM128,44a8,8,0,1,1-8,8A8,8,0,0,1,128,44ZM36,72a8,8,0,1,1-8,8A8,8,0,0,1,36,72ZM189.83,188H66.17L55.29,122.78l23.4,28.79A12,12,0,0,0,88,156a12.87,12.87,0,0,0,1.63-.11,12,12,0,0,0,9.37-7.1L127.18,84l.82,0,.82,0L157,148.79a12,12,0,0,0,9.37,7.1A12.87,12.87,0,0,0,168,156a12,12,0,0,0,9.31-4.43l23.4-28.79Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M252 80a32 32 0 1 0-60 15.45l-20.86 25.66-20.32-46.71a32 32 0 1 0-45.64 0l-20.31 46.71L64 95.45a32 32 0 1 0-35 15.78l14 84.06A19.94 19.94 0 0 0 62.78 212h130.44A19.94 19.94 0 0 0 213 195.29l14-84.06A32.05 32.05 0 0 0 252 80m-32-8a8 8 0 1 1-8 8 8 8 0 0 1 8-8m-92-28a8 8 0 1 1-8 8 8 8 0 0 1 8-8M36 72a8 8 0 1 1-8 8 8 8 0 0 1 8-8m153.83 116H66.17l-10.88-65.22 23.4 28.79A12 12 0 0 0 88 156a13 13 0 0 0 1.63-.11 12 12 0 0 0 9.37-7.1L127.18 84h1.64L157 148.79a12 12 0 0 0 9.37 7.1 13 13 0 0 0 1.63.11 12 12 0 0 0 9.31-4.43l23.4-28.79Z" />
+      </G>
+    </Svg>
+  );
+};

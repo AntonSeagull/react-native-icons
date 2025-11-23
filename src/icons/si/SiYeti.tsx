@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const SiYeti = (props: IconProps) => {
+export const SiYeti = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M14.575 8.582v1.685h2.183v5.15h2.14v-5.15h2.183V8.583h-6.505ZM0 8.582l2.699 3.972v2.864h2.144v-2.864l2.693-3.971H5.172l-1.398 2.305-1.397-2.305zm8.022 0v6.836h5.84v-1.663h-3.694v-.974H13.3v-1.54h-3.132v-.974h3.589V8.583Zm13.832 0 .001 6.836H24V8.583Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M14.575 8.582v1.685h2.183v5.15h2.14v-5.15h2.183V8.583h-6.505ZM0 8.582l2.699 3.972v2.864h2.144v-2.864l2.693-3.971H5.172l-1.398 2.305-1.397-2.305zm8.022 0v6.836h5.84v-1.663h-3.694v-.974H13.3v-1.54h-3.132v-.974h3.589V8.583Zm13.832 0 .001 6.836H24V8.583Z" />
+      </G>
+    </Svg>
+  );
+};

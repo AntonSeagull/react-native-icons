@@ -1,42 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const MdSportsBasketball = (props: IconProps) => {
+export const MdSportsBasketball = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M17.09,11h4.86c-0.16-1.61-0.71-3.11-1.54-4.4C18.68,7.43,17.42,9.05,17.09,11z" />
-          <Path  d="M6.91,11C6.58,9.05,5.32,7.43,3.59,6.6C2.76,7.89,2.21,9.39,2.05,11H6.91z" />
-          <Path  d="M15.07,11c0.32-2.59,1.88-4.79,4.06-6c-1.6-1.63-3.74-2.71-6.13-2.95V11H15.07z" />
-          <Path  d="M8.93,11H11V2.05C8.61,2.29,6.46,3.37,4.87,5C7.05,6.21,8.61,8.41,8.93,11z" />
-          <Path  d="M15.07,13H13v8.95c2.39-0.24,4.54-1.32,6.13-2.95C16.95,17.79,15.39,15.59,15.07,13z" />
-          <Path  d="M3.59,17.4c1.72-0.83,2.99-2.46,3.32-4.4H2.05C2.21,14.61,2.76,16.11,3.59,17.4z" />
-          <Path  d="M17.09,13c0.33,1.95,1.59,3.57,3.32,4.4c0.83-1.29,1.38-2.79,1.54-4.4H17.09z" />
-          <Path  d="M8.93,13c-0.32,2.59-1.88,4.79-4.06,6c1.6,1.63,3.74,2.71,6.13,2.95V13H8.93z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M17.09 11h4.86a9.95 9.95 0 0 0-1.54-4.4 5.99 5.99 0 0 0-3.32 4.4M6.91 11a5.99 5.99 0 0 0-3.32-4.4A9.95 9.95 0 0 0 2.05 11zM15.07 11a8 8 0 0 1 4.06-6A9.97 9.97 0 0 0 13 2.05V11zM8.93 11H11V2.05A9.94 9.94 0 0 0 4.87 5a8 8 0 0 1 4.06 6M15.07 13H13v8.95A9.94 9.94 0 0 0 19.13 19a8 8 0 0 1-4.06-6M3.59 17.4A6.03 6.03 0 0 0 6.91 13H2.05c.16 1.61.71 3.11 1.54 4.4M17.09 13a5.99 5.99 0 0 0 3.32 4.4 9.95 9.95 0 0 0 1.54-4.4zM8.93 13a8 8 0 0 1-4.06 6A9.97 9.97 0 0 0 11 21.95V13z" />
+      </G>
+    </Svg>
+  );
+};

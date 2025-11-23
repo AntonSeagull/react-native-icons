@@ -1,36 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const CiForkKnife = (props: IconProps) => {
+export const CiForkKnife = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M18.83,2.25a6.469,6.469,0,0,0-4.37,6.12v3.15a1.784,1.784,0,0,0,1.78,1.78h2.7v8.14a.5.5,0,0,0,.5.5.508.508,0,0,0,.5-.5V2.56a.508.508,0,0,0-.5-.5.467.467,0,0,0-.17.03ZM16.24,12.3a.781.781,0,0,1-.78-.78V8.37a5.482,5.482,0,0,1,3.48-5.1V12.3Z" />
-          <Path  d="M11.44,2.07a.5.5,0,0,0-.5.5V7.55H8.5V2.57a.5.5,0,0,0-.5-.5.5.5,0,0,0-.5.5V7.55H5.06V2.57a.5.5,0,0,0-.5-.5.5.5,0,0,0-.5.5V9.05a2.507,2.507,0,0,0,2.5,2.5H7.5v9.89a.508.508,0,0,0,.5.5.5.5,0,0,0,.5-.5V11.55h.94a2.5,2.5,0,0,0,2.5-2.5V2.57A.5.5,0,0,0,11.44,2.07Zm-.5,6.98a1.5,1.5,0,0,1-1.5,1.5H6.56a1.511,1.511,0,0,1-1.5-1.5v-.5h5.88Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M18.83 2.25a6.47 6.47 0 0 0-4.37 6.12v3.15a1.784 1.784 0 0 0 1.78 1.78h2.7v8.14a.5.5 0 0 0 .5.5.51.51 0 0 0 .5-.5V2.56a.51.51 0 0 0-.5-.5.5.5 0 0 0-.17.03ZM16.24 12.3a.78.78 0 0 1-.78-.78V8.37a5.48 5.48 0 0 1 3.48-5.1v9.03ZM11.44 2.07a.5.5 0 0 0-.5.5v4.98H8.5V2.57a.5.5 0 0 0-.5-.5.5.5 0 0 0-.5.5v4.98H5.06V2.57a.5.5 0 0 0-.5-.5.5.5 0 0 0-.5.5v6.48a2.507 2.507 0 0 0 2.5 2.5h.94v9.89a.51.51 0 0 0 .5.5.5.5 0 0 0 .5-.5v-9.89h.94a2.5 2.5 0 0 0 2.5-2.5V2.57a.5.5 0 0 0-.5-.5m-.5 6.98a1.5 1.5 0 0 1-1.5 1.5H6.56a1.51 1.51 0 0 1-1.5-1.5v-.5h5.88Z" />
+      </G>
+    </Svg>
+  );
+};

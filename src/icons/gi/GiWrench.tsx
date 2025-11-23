@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiWrench = (props: IconProps) => {
+export const GiWrench = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M151 16c-14.774 0-30 15.226-30 30v105c0 14.774 11.946 26.718 26.718 26.718H181V334.28h-33.282c-14.773 0-26.718 11.946-26.718 26.718v105c0 14.774 15.227 30 30 30h30v-90l75-45 75 45v90h30c14.774 0 30-15.226 30-30v-105c0-14.773-11.946-26.718-26.718-26.718H331V177.718h33.282C379.056 177.718 391 165.772 391 151V46c0-14.773-15.226-30-30-30h-30v90l-75 45-75-45V16h-30z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M151 16c-14.774 0-30 15.226-30 30v105c0 14.774 11.946 26.718 26.718 26.718H181V334.28h-33.282c-14.773 0-26.718 11.946-26.718 26.718v105c0 14.774 15.227 30 30 30h30v-90l75-45 75 45v90h30c14.774 0 30-15.226 30-30v-105c0-14.773-11.946-26.718-26.718-26.718H331V177.718h33.282C379.056 177.718 391 165.772 391 151V46c0-14.773-15.226-30-30-30h-30v90l-75 45-75-45V16z" />
+      </G>
+    </Svg>
+  );
+};

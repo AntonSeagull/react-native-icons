@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaChevronDownSolid = (props: IconProps) => {
+export const LiaChevronDownSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 6.90625 6.59375 L 6.1875 7.28125 L 2.28125 11.1875 L 1.59375 11.90625 L 16 26.3125 L 30.40625 11.90625 L 29.71875 11.1875 L 25.8125 7.28125 L 25.09375 6.59375 L 16 15.6875 Z M 6.875 9.4375 L 15.28125 17.8125 L 16 18.5 L 16.71875 17.8125 L 25.125 9.4375 L 27.5625 11.875 L 16 23.46875 L 4.4375 11.875 Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m6.906 6.594-.718.687-3.907 3.907-.687.718L16 26.313l14.406-14.407-.687-.719-3.907-3.906-.718-.687L16 15.687Zm-.031 2.843 8.406 8.376.719.687.719-.687 8.406-8.375 2.438 2.437L16 23.469 4.438 11.875Z" />
+      </G>
+    </Svg>
+  );
+};

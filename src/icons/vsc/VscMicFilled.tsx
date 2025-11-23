@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const VscMicFilled = (props: IconProps) => {
+export const VscMicFilled = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 16 16"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8, 8)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M7.93994 10.5C8.60298 10.5 9.23887 10.2366 9.70771 9.76777C10.1765 9.29893 10.4399 8.66304 10.4399 8V3.5C10.4399 2.83696 10.1765 2.20107 9.70771 1.73223C9.23887 1.26339 8.60298 1 7.93994 1C7.2769 1 6.64102 1.26339 6.17217 1.73223C5.70333 2.20107 5.43994 2.83696 5.43994 3.5V8C5.43994 8.66304 5.70333 9.29893 6.17217 9.76777C6.64102 10.2366 7.2769 10.5 7.93994 10.5ZM8.43994 12.472V14H10.4399V15H5.43994V14H7.43994V12.472C6.33992 12.349 5.32381 11.8249 4.58588 10.9999C3.84796 10.1749 3.43997 9.10688 3.43994 8H4.43994C4.43994 8.92826 4.80869 9.8185 5.46507 10.4749C6.12145 11.1313 7.01168 11.5 7.93994 11.5C8.8682 11.5 9.75844 11.1313 10.4148 10.4749C11.0712 9.8185 11.4399 8.92826 11.4399 8H12.4399C12.4399 9.10688 12.0319 10.1749 11.294 10.9999C10.5561 11.8249 9.53996 12.349 8.43994 12.472Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 16 16"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8, 8)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M7.94 10.5a2.5 2.5 0 0 0 2.5-2.5V3.5a2.5 2.5 0 0 0-5 0V8a2.5 2.5 0 0 0 2.5 2.5m.5 1.972V14h2v1h-5v-1h2v-1.528A4.5 4.5 0 0 1 3.44 8h1a3.5 3.5 0 0 0 7 0h1a4.5 4.5 0 0 1-4 4.472" />
+      </G>
+    </Svg>
+  );
+};

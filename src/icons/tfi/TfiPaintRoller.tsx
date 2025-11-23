@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TfiPaintRoller = (props: IconProps) => {
+export const TfiPaintRoller = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 17 17"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8.5, 8.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M15 2v-2h-13v2h-0.516c-0.818 0-1.484 0.675-1.484 1.505v2.99c0 0.83 0.666 1.505 1.484 1.505h6.024c0.275 0 0.5 0.225 0.5 0.5v1.5h-1.008v7h3v-7h-0.992v-1.5c0-0.827-0.673-1.5-1.5-1.5h-6.024c-0.266 0-0.484-0.227-0.484-0.505v-2.99c0-0.278 0.218-0.505 0.484-0.505h0.516v3h13v-3h1v-1h-1zM9 16h-1v-5h1v5zM14 5h-11v-4h11v4z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 17 17"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8.5, 8.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M15 2V0H2v2h-.516C.666 2 0 2.675 0 3.505v2.99C0 7.325.666 8 1.484 8h6.024c.275 0 .5.225.5.5V10H7v7h3v-7h-.992V8.5c0-.827-.673-1.5-1.5-1.5H1.484A.496.496 0 0 1 1 6.495v-2.99C1 3.227 1.218 3 1.484 3H2v3h13V3h1V2zM9 16H8v-5h1zm5-11H3V1h11z" />
+      </G>
+    </Svg>
+  );
+};

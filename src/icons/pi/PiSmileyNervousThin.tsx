@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiSmileyNervousThin = (props: IconProps) => {
+export const PiSmileyNervousThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M128,28A100,100,0,1,0,228,128,100.11,100.11,0,0,0,128,28Zm0,192a92,92,0,1,1,92-92A92.1,92.1,0,0,1,128,220ZM84,108a8,8,0,1,1,8,8A8,8,0,0,1,84,108Zm72,0a8,8,0,1,1,8,8A8,8,0,0,1,156,108Zm24,60a4,4,0,0,1-4,4c-8,0-12-5.32-15.2-9.6-3.07-4.09-5-6.4-8.8-6.4s-5.73,2.31-8.8,6.4C140,166.68,136,172,128,172s-12-5.32-15.2-9.6c-3.07-4.09-5-6.4-8.8-6.4s-5.73,2.31-8.8,6.4C92,166.68,88,172,80,172a4,4,0,0,1,0-8c3.81,0,5.73-2.31,8.8-6.4C92,153.32,96,148,104,148s12,5.32,15.2,9.6c3.07,4.09,5,6.4,8.8,6.4s5.73-2.31,8.8-6.4C140,153.32,144,148,152,148s12,5.32,15.2,9.6c3.07,4.09,5,6.4,8.8,6.4A4,4,0,0,1,180,168Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M128 28a100 100 0 1 0 100 100A100.11 100.11 0 0 0 128 28m0 192a92 92 0 1 1 92-92 92.1 92.1 0 0 1-92 92M84 108a8 8 0 1 1 8 8 8 8 0 0 1-8-8m72 0a8 8 0 1 1 8 8 8 8 0 0 1-8-8m24 60a4 4 0 0 1-4 4c-8 0-12-5.32-15.2-9.6-3.07-4.09-5-6.4-8.8-6.4s-5.73 2.31-8.8 6.4c-3.2 4.28-7.2 9.6-15.2 9.6s-12-5.32-15.2-9.6c-3.07-4.09-5-6.4-8.8-6.4s-5.73 2.31-8.8 6.4C92 166.68 88 172 80 172a4 4 0 0 1 0-8c3.81 0 5.73-2.31 8.8-6.4C92 153.32 96 148 104 148s12 5.32 15.2 9.6c3.07 4.09 5 6.4 8.8 6.4s5.73-2.31 8.8-6.4c3.2-4.28 7.2-9.6 15.2-9.6s12 5.32 15.2 9.6c3.07 4.09 5 6.4 8.8 6.4a4 4 0 0 1 4 4" />
+      </G>
+    </Svg>
+  );
+};

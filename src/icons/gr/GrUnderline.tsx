@@ -1,36 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GrUnderline = (props: IconProps) => {
+export const GrUnderline = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M14.41,4.53V4.18h4.66v.36h-.49a1.34,1.34,0,0,0-1.19.65,3,3,0,0,0-.2,1.4v5.33A9.45,9.45,0,0,1,16.78,15a3.85,3.85,0,0,1-1.54,1.87,5.49,5.49,0,0,1-3.13.78,5.89,5.89,0,0,1-3.27-.75,4,4,0,0,1-1.58-2A11.14,11.14,0,0,1,7,11.64V6.5a2.58,2.58,0,0,0-.33-1.59,1.38,1.38,0,0,0-1.08-.38H5V4.18h5.68v.36h-.5A1.3,1.3,0,0,0,9.06,5,2.87,2.87,0,0,0,8.81,6.5v5.73A12.52,12.52,0,0,0,9,14a3.71,3.71,0,0,0,.51,1.54,2.77,2.77,0,0,0,1.06.91,3.68,3.68,0,0,0,1.7.36,4.69,4.69,0,0,0,2.31-.56,3,3,0,0,0,1.39-1.44,8.33,8.33,0,0,0,.37-3V6.5A2.72,2.72,0,0,0,16,5a1.43,1.43,0,0,0-1.12-.43Z" />
-          <Path  d="M4.93,20V19H19v1Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M14.41 4.53v-.35h4.66v.36h-.49a1.34 1.34 0 0 0-1.19.65 3 3 0 0 0-.2 1.4v5.33a9.5 9.5 0 0 1-.41 3.08 3.85 3.85 0 0 1-1.54 1.87 5.5 5.5 0 0 1-3.13.78 5.9 5.9 0 0 1-3.27-.75 4 4 0 0 1-1.58-2A11.1 11.1 0 0 1 7 11.64V6.5a2.58 2.58 0 0 0-.33-1.59 1.38 1.38 0 0 0-1.08-.38H5v-.35h5.68v.36h-.5A1.3 1.3 0 0 0 9.06 5a2.87 2.87 0 0 0-.25 1.5v5.73A12.5 12.5 0 0 0 9 14a3.7 3.7 0 0 0 .51 1.54 2.8 2.8 0 0 0 1.06.91 3.7 3.7 0 0 0 1.7.36 4.7 4.7 0 0 0 2.31-.56 3 3 0 0 0 1.39-1.44 8.3 8.3 0 0 0 .37-3V6.5A2.7 2.7 0 0 0 16 5a1.43 1.43 0 0 0-1.12-.43ZM4.93 20v-1H19v1Z" />
+      </G>
+    </Svg>
+  );
+};

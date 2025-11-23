@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiHungary = (props: IconProps) => {
+export const GiHungary = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M20.99 284.7C64.73 325.3 79.94 391.5 158.3 401c65.1-24.1 131.3-47.5 223.9-51L468 182.4c90.6-51.1-102.4-91.48-136.1-52.5-26 30-70.5 37.1-115.9 42.7l-11.2 26.6c-91.6 8.4-82.5-17.3-102.8-33-39.26 20-70.5 77.8-81.01 118.5z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M20.99 284.7C64.73 325.3 79.94 391.5 158.3 401c65.1-24.1 131.3-47.5 223.9-51L468 182.4c90.6-51.1-102.4-91.48-136.1-52.5-26 30-70.5 37.1-115.9 42.7l-11.2 26.6c-91.6 8.4-82.5-17.3-102.8-33-39.26 20-70.5 77.8-81.01 118.5" />
+      </G>
+    </Svg>
+  );
+};

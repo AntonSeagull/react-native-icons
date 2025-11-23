@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiFileIniBold = (props: IconProps) => {
+export const PiFileIniBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M48,152v56a12,12,0,0,1-24,0V152a12,12,0,0,1,24,0Zm72-12a12,12,0,0,0-12,12v18.55L89.76,145A12,12,0,0,0,68,152v56a12,12,0,0,0,24,0V189.45L110.24,215a12,12,0,0,0,9.76,5,12.15,12.15,0,0,0,3.66-.57A12,12,0,0,0,132,208V152A12,12,0,0,0,120,140Zm44,0a12,12,0,0,0-12,12v56a12,12,0,0,0,24,0V152A12,12,0,0,0,164,140Zm56-52V224a12,12,0,0,1-24,0V104H148a12,12,0,0,1-12-12V44H60v64a12,12,0,0,1-24,0V40A20,20,0,0,1,56,20h96a12,12,0,0,1,8.49,3.52l56,56A12,12,0,0,1,220,88Zm-60-8h23L160,57Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M48 152v56a12 12 0 0 1-24 0v-56a12 12 0 0 1 24 0m72-12a12 12 0 0 0-12 12v18.55L89.76 145A12 12 0 0 0 68 152v56a12 12 0 0 0 24 0v-18.55L110.24 215a12 12 0 0 0 9.76 5 12.2 12.2 0 0 0 3.66-.57A12 12 0 0 0 132 208v-56a12 12 0 0 0-12-12m44 0a12 12 0 0 0-12 12v56a12 12 0 0 0 24 0v-56a12 12 0 0 0-12-12m56-52v136a12 12 0 0 1-24 0V104h-48a12 12 0 0 1-12-12V44H60v64a12 12 0 0 1-24 0V40a20 20 0 0 1 20-20h96a12 12 0 0 1 8.49 3.52l56 56A12 12 0 0 1 220 88m-60-8h23l-23-23Z" />
+      </G>
+    </Svg>
+  );
+};

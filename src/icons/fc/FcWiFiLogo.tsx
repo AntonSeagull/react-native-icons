@@ -1,42 +1,37 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FcWiFiLogo = (props: IconProps) => {
+export const FcWiFiLogo = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 48 48"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 24, 24)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  fill="#3F51B5" d="M46,26.48c0,4.527-3.268,7.52-7.3,7.52H9.299C5.269,34,2,30.634,2,26.48V21.52C2,17.366,5.269,14,9.299,14
-		H38.7c4.032,0,7.3,3.366,7.3,7.52V26.48z" />
-          <Path  fill="#FFFFFF" d="M21.5,19.747C21.5,20.44,20.94,21,20.25,21S19,20.44,19,19.747c0-0.696,0.56-1.258,1.25-1.258
-		S21.5,19.051,21.5,19.747z" />
-          <Path  fill="#FFFFFF" d="M38.561,16c-4.818,0-7.979,0-7.979,0S25,16.193,25,21.914v4.336c0,0,0.101,2.941-3,5.75h16.785
-		c0,0,5.215,0,5.215-5.553c0-4.879,0-4.879,0-4.879S43.772,16,38.561,16z M37.339,21.369h-5.651v2.236h5.094v2.344h-5.094V29H29V19
-		h8.339V21.369z M40.25,18.489c0.689,0,1.25,0.562,1.25,1.258C41.5,20.44,40.939,21,40.25,21S39,20.44,39,19.747
-		C39,19.051,39.561,18.489,40.25,18.489z M41.508,29H39v-7h2.508V29z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 48 48"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 24, 24)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M46 26.48c0 4.527-3.268 7.52-7.3 7.52H9.299C5.269 34 2 30.634 2 26.48v-4.96C2 17.366 5.269 14 9.299 14H38.7c4.032 0 7.3 3.366 7.3 7.52z" />
+        <Ellipse cx={24} cy={24} rx={14.902} ry={15} />
+        <Path d="M17 19h-2.736l-.837 5.859-1.039-5.831H9.93l-1.066 5.831-.81-5.831H5.266L7.597 29h2.459l1.064-6.146L12.209 29h2.484zM19 22h2.508v7H19zM21.5 19.747a1.251 1.251 0 1 1-2.5 0c0-.696.56-1.258 1.25-1.258s1.25.562 1.25 1.258M38.561 16h-7.979S25 16.193 25 21.914v4.336s.101 2.941-3 5.75h16.785S44 32 44 26.447v-4.879S43.772 16 38.561 16m-1.222 5.369h-5.651v2.236h5.094v2.344h-5.094V29H29V19h8.339zm2.911-2.88c.689 0 1.25.562 1.25 1.258 0 .693-.561 1.253-1.25 1.253S39 20.44 39 19.747c0-.696.561-1.258 1.25-1.258M41.508 29H39v-7h2.508z" />
+      </G>
+    </Svg>
+  );
+};

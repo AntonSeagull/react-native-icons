@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaFileImage = (props: IconProps) => {
+export const LiaFileImage = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 6 3 L 6 29 L 26 29 L 26 9.59375 L 25.71875 9.28125 L 19.71875 3.28125 L 19.40625 3 Z M 8 5 L 18 5 L 18 11 L 24 11 L 24 27 L 8 27 Z M 20 6.4375 L 22.5625 9 L 20 9 Z M 21.09375 14 C 20.542969 14 20.09375 14.449219 20.09375 15 C 20.09375 15.550781 20.542969 16 21.09375 16 C 21.644531 16 22.09375 15.550781 22.09375 15 C 22.09375 14.449219 21.644531 14 21.09375 14 Z M 14 15.59375 L 13.28125 16.28125 L 9.28125 20.28125 L 10.71875 21.71875 L 14 18.4375 L 16.28125 20.71875 L 17 21.40625 L 17.71875 20.71875 L 19 19.4375 L 21.28125 21.71875 L 22.71875 20.28125 L 19.71875 17.28125 L 19 16.59375 L 18.28125 17.28125 L 17 18.5625 L 14.71875 16.28125 Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M6 3v26h20V9.594l-.281-.313-6-6L19.406 3Zm2 2h10v6h6v16H8Zm12 1.438L22.563 9H20ZM21.094 14c-.551 0-1 .45-1 1s.449 1 1 1 1-.45 1-1-.45-1-1-1M14 15.594l-.719.687-4 4 1.438 1.438L14 18.437l2.281 2.282.719.687.719-.687L19 19.437l2.281 2.282 1.438-1.438-3-3-.719-.687-.719.687L17 18.563l-2.281-2.282Z" />
+      </G>
+    </Svg>
+  );
+};

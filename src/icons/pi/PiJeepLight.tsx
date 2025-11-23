@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiJeepLight = (props: IconProps) => {
+export const PiJeepLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M240,90H228.85l-9.63-44.93A14.06,14.06,0,0,0,205.53,34H50.47A14.06,14.06,0,0,0,36.78,45.07L27.15,90H16a6,6,0,0,0,0,12H26v98a14,14,0,0,0,14,14H64a14,14,0,0,0,14-14V174H178v26a14,14,0,0,0,14,14h24a14,14,0,0,0,14-14V102h10a6,6,0,0,0,0-12ZM48.51,47.58a2,2,0,0,1,2-1.58H205.53a2,2,0,0,1,2,1.58L216.58,90H39.42ZM66,200a2,2,0,0,1-2,2H40a2,2,0,0,1-2-2V174H66Zm150,2H192a2,2,0,0,1-2-2V174h28v26A2,2,0,0,1,216,202Zm2-40H150V128a6,6,0,0,0-12,0v34H118V128a6,6,0,0,0-12,0v34H38V102H218ZM58,132a10,10,0,1,1,10,10A10,10,0,0,1,58,132Zm120,0a10,10,0,1,1,10,10A10,10,0,0,1,178,132Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M240 90h-11.15l-9.63-44.93A14.06 14.06 0 0 0 205.53 34H50.47a14.06 14.06 0 0 0-13.69 11.07L27.15 90H16a6 6 0 0 0 0 12h10v98a14 14 0 0 0 14 14h24a14 14 0 0 0 14-14v-26h100v26a14 14 0 0 0 14 14h24a14 14 0 0 0 14-14v-98h10a6 6 0 0 0 0-12M48.51 47.58a2 2 0 0 1 2-1.58h155.02a2 2 0 0 1 2 1.58L216.58 90H39.42ZM66 200a2 2 0 0 1-2 2H40a2 2 0 0 1-2-2v-26h28Zm150 2h-24a2 2 0 0 1-2-2v-26h28v26a2 2 0 0 1-2 2m2-40h-68v-34a6 6 0 0 0-12 0v34h-20v-34a6 6 0 0 0-12 0v34H38v-60h180ZM58 132a10 10 0 1 1 10 10 10 10 0 0 1-10-10m120 0a10 10 0 1 1 10 10 10 10 0 0 1-10-10" />
+      </G>
+    </Svg>
+  );
+};

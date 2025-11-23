@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GrBusinessService = (props: IconProps) => {
+export const GrBusinessService = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  fill="none" d="M4,23 L1,23 L1,5 L1,5 L23,5 L23,23 L16,23 M8,5 L8,1 L8,1 L16,1 L16,5 M9,16 C11.209139,16 13,14.209139 13,12 C13,9.790861 11.209139,8 9,8 C6.790861,8 5,9.790861 5,12 C5,14.209139 6.790861,16 9,16 Z M14.0084967,17.8761594 C14.3255566,17.9570186 14.6577589,18 15,18 C17.209139,18 19,16.209139 19,14 C19,11.790861 17.209139,10 15,10 C14.1717747,10 13.4023412,10.2517171 12.7640287,10.6828219 M7.70199467,15.7255728 C6.67265121,16.4493031 6,17.6460985 6,19 C6,21.209139 7.790861,23 10,23 L10,23 C12.209139,23 14,21.209139 14,19 C14,17.2838286 12.9192205,15.8200868 11.4011657,15.2522789" strokeWidth="2" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="none" stroke="#000" strokeWidth={2} d="M4 23H1V5h22v18h-7M8 5V1h8v4M9 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm5.008 1.876Q14.486 18 15 18a4 4 0 1 0-2.236-7.317m-5.062 5.043A4 4 0 0 0 10 23a4 4 0 0 0 1.401-7.748" />
+      </G>
+    </Svg>
+  );
+};

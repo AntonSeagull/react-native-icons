@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TfiLayoutMenuV = (props: IconProps) => {
+export const TfiLayoutMenuV = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 17 17"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8.5, 8.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M3 1v3h11v-3h-11zM13 3h-9v-1h9v1zM3 8h11v-3h-11v3zM4 6h9v1h-9v-1zM3 11.997h11v-3h-11v3zM4 9.997h9v1h-9v-1zM3 15.997h11v-3h-11v3zM4 13.997h9v1h-9v-1z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 17 17"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8.5, 8.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M3 1v3h11V1zm10 2H4V2h9zM3 8h11V5H3zm1-2h9v1H4zm-1 5.997h11v-3H3zm1-2h9v1H4zm-1 6h11v-3H3zm1-2h9v1H4z" />
+      </G>
+    </Svg>
+  );
+};

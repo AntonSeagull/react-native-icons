@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TfiDashboard = (props: IconProps) => {
+export const TfiDashboard = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 17 17"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8.5, 8.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M17 11.5v0.5h-6.168v-1h5.152c-0.112-1.692-0.789-3.231-1.842-4.434l-0.806 0.806-0.707-0.707 0.802-0.802c-1.202-1.053-2.74-1.726-4.431-1.839v2.976h-1v-2.976c-1.691 0.113-3.229 0.786-4.43 1.839l0.796 0.796-0.707 0.707-0.8-0.8c-1.053 1.203-1.731 2.742-1.842 4.434h5.171v1h-6.188v-0.5c0-4.687 3.813-8.5 8.5-8.5s8.5 3.813 8.5 8.5zM10.5 11.5c0 1.103-0.897 2-2 2s-2-0.897-2-2c0-0.644 0.311-1.21 0.784-1.577l-2.082-3.63 0.867-0.497 2.141 3.733c0.095-0.014 0.19-0.029 0.29-0.029 1.103 0 2 0.897 2 2zM9.5 11.5c0-0.551-0.449-1-1-1s-1 0.449-1 1 0.449 1 1 1 1-0.449 1-1z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 17 17"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8.5, 8.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M17 11.5v.5h-6.168v-1h5.152a7.47 7.47 0 0 0-1.842-4.434l-.806.806-.707-.707.802-.802A7.46 7.46 0 0 0 9 4.024V7H8V4.024a7.46 7.46 0 0 0-4.43 1.839l.796.796-.707.707-.8-.8A7.46 7.46 0 0 0 1.017 11h5.171v1H0v-.5C0 6.813 3.813 3 8.5 3S17 6.813 17 11.5m-6.5 0c0 1.103-.897 2-2 2s-2-.897-2-2c0-.644.311-1.21.784-1.577l-2.082-3.63.867-.497L8.21 9.529c.095-.014.19-.029.29-.029 1.103 0 2 .897 2 2m-1 0c0-.551-.449-1-1-1s-1 .449-1 1 .449 1 1 1 1-.449 1-1" />
+      </G>
+    </Svg>
+  );
+};

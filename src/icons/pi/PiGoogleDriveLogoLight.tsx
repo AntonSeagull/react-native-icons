@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiGoogleDriveLogoLight = (props: IconProps) => {
+export const PiGoogleDriveLogoLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M235.9,144.82,167.43,32.58A13.91,13.91,0,0,0,155.56,26H100.43a13.92,13.92,0,0,0-11.87,6.58l0,.05L20.13,144.76a14,14,0,0,0-.28,14.37L47.17,207A14,14,0,0,0,59.32,214H196.67A14,14,0,0,0,208.83,207l27.32-47.82A14,14,0,0,0,235.9,144.82ZM222.56,146H171.39L135,85.33l25.08-41.79Zm-124,0L128,97l29.4,49Zm66,12L191,202H65l26.4-44ZM128,73.67,106.6,38h42.8ZM95.93,43.54,121,85.33,84.6,146H33.43ZM33,158H77.4L54.67,195.89Zm168.3,37.89L178.59,158H223Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M235.9 144.82 167.43 32.58A13.91 13.91 0 0 0 155.56 26h-55.13a13.92 13.92 0 0 0-11.87 6.58v.05L20.13 144.76a14 14 0 0 0-.28 14.37L47.17 207a14 14 0 0 0 12.15 7h137.35a14 14 0 0 0 12.16-7l27.32-47.82a14 14 0 0 0-.25-14.36M222.56 146h-51.17L135 85.33l25.08-41.79Zm-124 0L128 97l29.4 49Zm66 12L191 202H65l26.4-44ZM128 73.67 106.6 38h42.8ZM95.93 43.54 121 85.33 84.6 146H33.43ZM33 158h44.4l-22.73 37.89Zm168.3 37.89L178.59 158H223Z" />
+      </G>
+    </Svg>
+  );
+};

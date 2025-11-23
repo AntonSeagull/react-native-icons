@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiCoffeeBeanThin = (props: IconProps) => {
+export const PiCoffeeBeanThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M209,47c-32.36-32.35-95-22.33-139.7,22.34S14.63,176.66,47,209c12.82,12.81,30.38,19,49.71,19,29.46,0,63-14.34,90-41.32C231.35,142,241.37,79.34,209,47ZM75,75c25.47-25.46,57-39.09,84.26-39.09,14.51,0,27.83,3.87,38.43,11.84-25.76,7.05-63,26.4-73.6,79.49-10.5,52.52-49.25,69.26-72.91,74.58C23.77,172.12,34.16,115.81,75,75ZM181,181c-39,39-92.17,50.23-122.71,27.25,25.75-7,63-26.39,73.62-79.48,10.5-52.53,49.25-69.26,72.91-74.59C232.23,83.88,221.84,140.19,181,181Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M209 47c-32.36-32.35-95-22.33-139.7 22.34S14.63 176.66 47 209c12.82 12.81 30.38 19 49.71 19 29.46 0 63-14.34 90-41.32C231.35 142 241.37 79.34 209 47M75 75c25.47-25.46 57-39.09 84.26-39.09 14.51 0 27.83 3.87 38.43 11.84-25.76 7.05-63 26.4-73.6 79.49-10.5 52.52-49.25 69.26-72.91 74.58C23.77 172.12 34.16 115.81 75 75m106 106c-39 39-92.17 50.23-122.71 27.25 25.75-7 63-26.39 73.62-79.48 10.5-52.53 49.25-69.26 72.91-74.59C232.23 83.88 221.84 140.19 181 181" />
+      </G>
+    </Svg>
+  );
+};

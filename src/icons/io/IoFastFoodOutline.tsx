@@ -1,42 +1,69 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const IoFastFoodOutline = (props: IconProps) => {
+export const IoFastFoodOutline = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Polyline  points="368 112 384 48 431 32" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="241" y1="112" x2="248.44" y2="175.97" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
-          <Line  x1="224" y1="112" x2="480" y2="112" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
-          <Path  d="M322,416c0,35.35-20.65,64-56,64H134c-35.35,0-56-28.65-56-64" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
-          <Path  d="M336,336c17.67,0,32,17.91,32,40h0c0,22.09-14.33,40-32,40H64c-17.67,0-32-17.91-32-40h0c0-22.09,14.33-40,32-40" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
-          <Path  d="M344,336H179.31a8,8,0,0,0-5.65,2.34l-26.83,26.83a4,4,0,0,1-5.66,0l-26.83-26.83a8,8,0,0,0-5.65-2.34H56a24,24,0,0,1-24-24h0a24,24,0,0,1,24-24H344a24,24,0,0,1,24,24h0A24,24,0,0,1,344,336Z" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
-          <Path  d="M64,276v-.22c0-55,45-83.78,100-83.78h72c55,0,100,29,100,84v-.22" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
-          <Path  d="M256,480H395.31a32,32,0,0,0,31.91-29.61L463,112" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M322 416c0 35.35-20.65 64-56 64H134c-35.35 0-56-28.65-56-64M336 336c17.67 0 32 17.91 32 40h0c0 22.09-14.33 40-32 40H64c-17.67 0-32-17.91-32-40h0c0-22.09 14.33-40 32-40" style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinecap: "round",
+        strokeMiterlimit: 10,
+        strokeWidth: 32
+        }} />
+        <Path d="M344 336H179.31a8 8 0 0 0-5.65 2.34l-26.83 26.83a4 4 0 0 1-5.66 0l-26.83-26.83a8 8 0 0 0-5.65-2.34H56a24 24 0 0 1-24-24h0a24 24 0 0 1 24-24h288a24 24 0 0 1 24 24h0a24 24 0 0 1-24 24ZM64 276v-.22c0-55 45-83.78 100-83.78h72c55 0 100 29 100 84v-.22M241 112l7.44 63.97" style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinecap: "round",
+        strokeMiterlimit: 10,
+        strokeWidth: 32
+        }} />
+        <Path d="M256 480h139.31a32 32 0 0 0 31.91-29.61L463 112" style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinecap: "round",
+        strokeMiterlimit: 10,
+        strokeWidth: 32
+        }} />
+        <Path d="m368 112 16-64 47-16" style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: 32
+        }} />
+        <Path d="M224 112h256" style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinecap: "round",
+        strokeMiterlimit: 10,
+        strokeWidth: 32
+        }} />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiSpineArrow = (props: IconProps) => {
+export const GiSpineArrow = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M14.563 15.406v104.75L72.97 135.72l52.436 52.468 34.72-18.594 8.81 16.47-86.186 46.155 119.875 33.155 84.28 84.313 20.22-7.594 6.563 17.5-65.438 24.594L491 494 381.812 252.72l-26.03 68.31-17.47-6.655 8.938-23.47-21.406-21.436-33.28-120.314-2.72 5.063-41.625 77.843-16.5-8.813 16.686-31.22-46.375-46.374-33.06-119.53-43.064 80.78-16.5-8.78 15.688-29.407L71.78 15.405H14.563z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M14.563 15.406v104.75L72.97 135.72l52.436 52.468 34.72-18.594 8.81 16.47-86.186 46.155 119.875 33.155 84.28 84.313 20.22-7.594 6.563 17.5-65.438 24.594L491 494 381.812 252.72l-26.03 68.31-17.47-6.655 8.938-23.47-21.406-21.436-33.28-120.314-2.72 5.063-41.625 77.843-16.5-8.813 16.686-31.22-46.375-46.374-33.06-119.53-43.064 80.78-16.5-8.78 15.688-29.407L71.78 15.405z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,45 +1,45 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TiCalculator = (props: IconProps) => {
+export const TiCalculator = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Circle  cx="10" cy="11" r="1" />
-          <Circle  cx="13" cy="11" r="1" />
-          <Circle  cx="16" cy="11" r="1" />
-          <Circle  cx="10" cy="14" r="1" />
-          <Circle  cx="13" cy="14" r="1" />
-          <Circle  cx="16" cy="14" r="1" />
-          <Circle  cx="10" cy="17" r="1" />
-          <Circle  cx="13" cy="17" r="1" />
-          <Circle  cx="16" cy="17" r="1" />
-          <Path  d="M17 21h-8c-1.7 0-3-1.3-3-3v-12c0-1.7 1.3-3 3-3h8c1.7 0 3 1.3 3 3v12c0 1.7-1.3 3-3 3zm-8-16c-.6 0-1 .4-1 1v12c0 .6.4 1 1 1h8c.6 0 1-.4 1-1v-12c0-.6-.4-1-1-1h-8z" />
-          <Path  d="M16 7v1h-6v-1h6m1-1h-8v3h8v-3z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M17 21H9c-1.7 0-3-1.3-3-3V6c0-1.7 1.3-3 3-3h8c1.7 0 3 1.3 3 3v12c0 1.7-1.3 3-3 3M9 5c-.6 0-1 .4-1 1v12c0 .6.4 1 1 1h8c.6 0 1-.4 1-1V6c0-.6-.4-1-1-1z" />
+        <Circle cx={10} cy={11} r={1} />
+        <Circle cx={13} cy={11} r={1} />
+        <Circle cx={16} cy={11} r={1} />
+        <Circle cx={10} cy={14} r={1} />
+        <Circle cx={13} cy={14} r={1} />
+        <Circle cx={16} cy={14} r={1} />
+        <Circle cx={10} cy={17} r={1} />
+        <Circle cx={13} cy={17} r={1} />
+        <Circle cx={16} cy={17} r={1} />
+        <Path d="M16 7v1h-6V7zm1-1H9v3h8z" />
+      </G>
+    </Svg>
+  );
+};

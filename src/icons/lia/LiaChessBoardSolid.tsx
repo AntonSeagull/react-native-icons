@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaChessBoardSolid = (props: IconProps) => {
+export const LiaChessBoardSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 7 4 L 7 7 L 10 7 L 10 4 L 7 4 z M 10 7 L 10 10 L 13 10 L 13 7 L 10 7 z M 13 7 L 16 7 L 16 4 L 13 4 L 13 7 z M 16 7 L 16 10 L 19 10 L 19 7 L 16 7 z M 19 7 L 22 7 L 22 4 L 19 4 L 19 7 z M 22 7 L 22 10 L 25 10 L 25 7 L 22 7 z M 25 7 L 28 7 L 28 4 L 25 4 L 25 7 z M 25 10 L 25 13 L 28 13 L 28 10 L 25 10 z M 25 13 L 22 13 L 22 16 L 25 16 L 25 13 z M 25 16 L 25 19 L 28 19 L 28 16 L 25 16 z M 25 19 L 22 19 L 22 22 L 25 22 L 25 19 z M 25 22 L 25 25 L 28 25 L 28 22 L 25 22 z M 25 25 L 22 25 L 22 28 L 25 28 L 25 25 z M 22 25 L 22 22 L 19 22 L 19 25 L 22 25 z M 19 25 L 16 25 L 16 28 L 19 28 L 19 25 z M 16 25 L 16 22 L 13 22 L 13 25 L 16 25 z M 13 25 L 10 25 L 10 28 L 13 28 L 13 25 z M 10 25 L 10 22 L 7 22 L 7 25 L 10 25 z M 7 25 L 4 25 L 4 28 L 7 28 L 7 25 z M 7 22 L 7 19 L 4 19 L 4 22 L 7 22 z M 7 19 L 10 19 L 10 16 L 7 16 L 7 19 z M 7 16 L 7 13 L 4 13 L 4 16 L 7 16 z M 7 13 L 10 13 L 10 10 L 7 10 L 7 13 z M 7 10 L 7 7 L 4 7 L 4 10 L 7 10 z M 10 13 L 10 16 L 13 16 L 13 13 L 10 13 z M 13 13 L 16 13 L 16 10 L 13 10 L 13 13 z M 16 13 L 16 16 L 19 16 L 19 13 L 16 13 z M 19 13 L 22 13 L 22 10 L 19 10 L 19 13 z M 19 16 L 19 19 L 22 19 L 22 16 L 19 16 z M 19 19 L 16 19 L 16 22 L 19 22 L 19 19 z M 16 19 L 16 16 L 13 16 L 13 19 L 16 19 z M 13 19 L 10 19 L 10 22 L 13 22 L 13 19 z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M7 4v3h3V4zm3 3v3h3V7zm3 0h3V4h-3zm3 0v3h3V7zm3 0h3V4h-3zm3 0v3h3V7zm3 0h3V4h-3zm0 3v3h3v-3zm0 3h-3v3h3zm0 3v3h3v-3zm0 3h-3v3h3zm0 3v3h3v-3zm0 3h-3v3h3zm-3 0v-3h-3v3zm-3 0h-3v3h3zm-3 0v-3h-3v3zm-3 0h-3v3h3zm-3 0v-3H7v3zm-3 0H4v3h3zm0-3v-3H4v3zm0-3h3v-3H7zm0-3v-3H4v3zm0-3h3v-3H7zm0-3V7H4v3zm3 3v3h3v-3zm3 0h3v-3h-3zm3 0v3h3v-3zm3 0h3v-3h-3zm0 3v3h3v-3zm0 3h-3v3h3zm-3 0v-3h-3v3zm-3 0h-3v3h3z" />
+      </G>
+    </Svg>
+  );
+};

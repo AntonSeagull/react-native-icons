@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GrBraille = (props: IconProps) => {
+export const GrBraille = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M7 10C8.65685425 10 10 8.65685425 10 7 10 5.34314575 8.65685425 4 7 4 5.34314575 4 4 5.34314575 4 7 4 8.65685425 5.34314575 10 7 10zM17 20C18.6568542 20 20 18.6568542 20 17 20 15.3431458 18.6568542 14 17 14 15.3431458 14 14 15.3431458 14 17 14 18.6568542 15.3431458 20 17 20zM7 8C7.55228475 8 8 7.55228475 8 7 8 6.44771525 7.55228475 6 7 6 6.44771525 6 6 6.44771525 6 7 6 7.55228475 6.44771525 8 7 8zM17 18C17.5522847 18 18 17.5522847 18 17 18 16.4477153 17.5522847 16 17 16 16.4477153 16 16 16.4477153 16 17 16 17.5522847 16.4477153 18 17 18zM7 20C5.34314575 20 4 18.6568542 4 17 4 15.3431458 5.34314575 14 7 14 8.65685425 14 10 15.3431458 10 17 10 18.6568542 8.65685425 20 7 20zM17 10C15.3431458 10 14 8.65685425 14 7 14 5.34314575 15.3431458 4 17 4 18.6568542 4 20 5.34314575 20 7 20 8.65685425 18.6568542 10 17 10z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="none" fillRule="evenodd" stroke="#000" strokeWidth={2} d="M7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 20a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm10-10a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+      </G>
+    </Svg>
+  );
+};

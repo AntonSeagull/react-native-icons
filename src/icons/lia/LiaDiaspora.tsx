@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaDiaspora = (props: IconProps) => {
+export const LiaDiaspora = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 12.005859 5 L 12.005859 11.142578 L 6.3691406 9.2636719 L 4.1542969 15.904297 L 9.8164062 17.792969 L 6.0996094 22.800781 L 11.720703 26.972656 L 15.390625 22.027344 L 18.861328 27.099609 L 24.636719 23.146484 L 21.039062 17.890625 L 26.816406 16.023438 L 24.664062 9.3613281 L 20 11.191406 L 19 5 L 12.005859 5 z M 14 7 L 17.005859 7 L 17.005859 13.939453 L 23.376953 11.880859 L 24.298828 14.734375 L 17.876953 16.810547 L 21.857422 22.625 L 19.380859 24.318359 L 15.455078 18.582031 L 11.306641 24.175781 L 8.8964844 22.386719 L 13.066406 16.767578 L 6.6855469 14.640625 L 7.6328125 11.794922 L 14 14 L 14 7 z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M12.006 5v6.143l-5.637-1.88-2.215 6.641 5.662 1.889L6.1 22.801l5.62 4.172 3.67-4.946 3.471 5.073 5.776-3.954-3.598-5.255 5.777-1.868-2.152-6.662L20 11.191 19 5zM14 7h3.006v6.94l6.371-2.06.922 2.854-6.422 2.077 3.98 5.814-2.476 1.693-3.926-5.736-4.148 5.594-2.41-1.79 4.17-5.618-6.381-2.127.947-2.846L14 14z" />
+      </G>
+    </Svg>
+  );
+};

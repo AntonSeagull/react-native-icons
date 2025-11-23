@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiMicrophoneStageThin = (props: IconProps) => {
+export const PiMicrophoneStageThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M168,20a68.08,68.08,0,0,0-68,68,67.19,67.19,0,0,0,.82,10.49L30.34,194.59a11.94,11.94,0,0,0,1.2,15.58l14.29,14.3a11.95,11.95,0,0,0,15.58,1.19l96.11-70.48A68,68,0,1,0,168,20Zm60,68a59.7,59.7,0,0,1-14.87,39.47L128.54,42.87A59.94,59.94,0,0,1,228,88ZM56.68,219.21a4,4,0,0,1-5.2-.4L37.19,204.52a4,4,0,0,1-.4-5.2l66.46-90.62a68.31,68.31,0,0,0,44.05,44.05ZM108,88a59.77,59.77,0,0,1,14.87-39.47l84.6,84.6A60,60,0,0,1,108,88Zm-1.17,61.17a4,4,0,0,1,0,5.65l-8,8a4,4,0,1,1-5.65-5.65l8-8A4,4,0,0,1,106.84,149.16Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M168 20a68.08 68.08 0 0 0-68 68 67 67 0 0 0 .82 10.49l-70.48 96.1a11.94 11.94 0 0 0 1.2 15.58l14.29 14.3a11.95 11.95 0 0 0 15.58 1.19l96.11-70.48A68 68 0 1 0 168 20m60 68a59.7 59.7 0 0 1-14.87 39.47l-84.59-84.6A59.94 59.94 0 0 1 228 88M56.68 219.21a4 4 0 0 1-5.2-.4l-14.29-14.29a4 4 0 0 1-.4-5.2l66.46-90.62a68.31 68.31 0 0 0 44.05 44.05ZM108 88a59.77 59.77 0 0 1 14.87-39.47l84.6 84.6A60 60 0 0 1 108 88m-1.17 61.17a4 4 0 0 1 0 5.65l-8 8a4 4 0 1 1-5.65-5.65l8-8a4 4 0 0 1 5.66-.01Z" />
+      </G>
+    </Svg>
+  );
+};

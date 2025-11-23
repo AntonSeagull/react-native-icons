@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const CiVolume = (props: IconProps) => {
+export const CiVolume = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M17.849,20.934a1.555,1.555,0,0,1-.781-.212l-4.16-2.4a3.769,3.769,0,0,0-1.877-.5H7.214a2.631,2.631,0,0,1-2.628-2.627V8.809A2.631,2.631,0,0,1,7.214,6.182h3.817a3.747,3.747,0,0,0,1.877-.5l4.16-2.4a1.564,1.564,0,0,1,2.346,1.354V19.369a1.57,1.57,0,0,1-1.565,1.565ZM7.214,7.182A1.63,1.63,0,0,0,5.586,8.809v6.382a1.629,1.629,0,0,0,1.628,1.627h3.817a4.756,4.756,0,0,1,2.377.637l4.16,2.4a.543.543,0,0,0,.563,0,.553.553,0,0,0,.283-.487V4.632a.565.565,0,0,0-.846-.489l-4.16,2.4a4.753,4.753,0,0,1-2.377.637Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M17.849 20.934a1.56 1.56 0 0 1-.781-.212l-4.16-2.4a3.77 3.77 0 0 0-1.877-.5H7.214a2.63 2.63 0 0 1-2.628-2.627V8.809a2.63 2.63 0 0 1 2.628-2.627h3.817a3.75 3.75 0 0 0 1.877-.5l4.16-2.4a1.564 1.564 0 0 1 2.346 1.354v14.733a1.57 1.57 0 0 1-1.565 1.565M7.214 7.182a1.63 1.63 0 0 0-1.628 1.627v6.382a1.63 1.63 0 0 0 1.628 1.627h3.817a4.76 4.76 0 0 1 2.377.637l4.16 2.4a.54.54 0 0 0 .563 0 .55.55 0 0 0 .283-.487V4.632a.565.565 0 0 0-.846-.489l-4.16 2.4a4.75 4.75 0 0 1-2.377.637Z" />
+      </G>
+    </Svg>
+  );
+};

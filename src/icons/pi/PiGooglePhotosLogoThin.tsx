@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiGooglePhotosLogoThin = (props: IconProps) => {
+export const PiGooglePhotosLogoThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M232,124H185.68A68,68,0,0,0,128,20a4,4,0,0,0-4,4V70.32A68,68,0,0,0,20,128a4,4,0,0,0,4,4H70.32A68,68,0,0,0,128,236a4,4,0,0,0,4-4V185.68A68,68,0,0,0,236,128,4,4,0,0,0,232,124ZM188,88a59.28,59.28,0,0,1-12,36H132V28.13A60.08,60.08,0,0,1,188,88ZM88,68a59.28,59.28,0,0,1,36,12v44H28.13A60.08,60.08,0,0,1,88,68ZM68,168a59.28,59.28,0,0,1,12-36h44v95.87A60.08,60.08,0,0,1,68,168Zm100,20a59.28,59.28,0,0,1-36-12V132h95.87A60.08,60.08,0,0,1,168,188Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M232 124h-46.32A68 68 0 0 0 128 20a4 4 0 0 0-4 4v46.32A68 68 0 0 0 20 128a4 4 0 0 0 4 4h46.32A68 68 0 0 0 128 236a4 4 0 0 0 4-4v-46.32A68 68 0 0 0 236 128a4 4 0 0 0-4-4m-44-36a59.28 59.28 0 0 1-12 36h-44V28.13A60.08 60.08 0 0 1 188 88M88 68a59.28 59.28 0 0 1 36 12v44H28.13A60.08 60.08 0 0 1 88 68M68 168a59.28 59.28 0 0 1 12-36h44v95.87A60.08 60.08 0 0 1 68 168m100 20a59.28 59.28 0 0 1-36-12v-44h95.87A60.08 60.08 0 0 1 168 188" />
+      </G>
+    </Svg>
+  );
+};

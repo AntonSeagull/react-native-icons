@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-10-13T08:45:19.557Z
+// Generated on 2025-11-23T17:45:52.315Z
 // Total icons: 3020
 
 export { RiAB } from './RiAB';

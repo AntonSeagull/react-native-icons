@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaGlassWhiskeySolid = (props: IconProps) => {
+export const LiaGlassWhiskeySolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 4.8183594 7 L 8.1523438 27 L 23.847656 27 L 27.179688 7 L 4.8183594 7 z M 7.1816406 9 L 24.820312 9 L 23.154297 19 L 10.669922 19 L 11 21 L 22.820312 21 L 22.154297 25 L 9.8476562 25 L 7.1816406 9 z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m4.818 7 3.334 20h15.696L27.18 7zm2.364 2H24.82l-1.666 10H10.67l.33 2h11.82l-.666 4H9.848z" />
+      </G>
+    </Svg>
+  );
+};

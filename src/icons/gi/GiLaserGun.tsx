@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiLaserGun = (props: IconProps) => {
+export const GiLaserGun = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M238 16a12 12 0 0 0-12 12v50.5C140.87 92.783 76 166.81 76 256s64.87 163.217 150 177.5V484a12 12 0 0 0 12 12h36a12 12 0 0 0 12-12v-50.5c85.13-14.283 150-88.31 150-177.5S371.13 92.783 286 78.5V28a12 12 0 0 0-12-12h-36zm-12 155.125V199a12 12 0 0 0 12 12h36a12 12 0 0 0 12-12v-27.875c34.955 12.356 60 45.69 60 84.875 0 39.186-25.045 72.52-60 84.875V313a12 12 0 0 0-12-12h-36a12 12 0 0 0-12 12v27.875c-34.955-12.356-60-45.69-60-84.875 0-39.186 25.045-72.52 60-84.875z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M238 16a12 12 0 0 0-12 12v50.5C140.87 92.783 76 166.81 76 256s64.87 163.217 150 177.5V484a12 12 0 0 0 12 12h36a12 12 0 0 0 12-12v-50.5c85.13-14.283 150-88.31 150-177.5S371.13 92.783 286 78.5V28a12 12 0 0 0-12-12zm-12 155.125V199a12 12 0 0 0 12 12h36a12 12 0 0 0 12-12v-27.875c34.955 12.356 60 45.69 60 84.875s-25.045 72.52-60 84.875V313a12 12 0 0 0-12-12h-36a12 12 0 0 0-12 12v27.875c-34.955-12.356-60-45.69-60-84.875s25.045-72.52 60-84.875" />
+      </G>
+    </Svg>
+  );
+};

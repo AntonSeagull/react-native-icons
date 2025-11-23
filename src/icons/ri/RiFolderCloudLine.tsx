@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const RiFolderCloudLine = (props: IconProps) => {
+export const RiFolderCloudLine = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M3 3C2.44772 3 2 3.44772 2 4V20C2 20.5523 2.44772 21 3 21H10V19H4V5H9.58579L11.5858 7H20V11H22V6C22 5.44772 21.5523 5 21 5H12.4142L10.4142 3H3ZM12 18.25C12 16.9907 12.8465 15.9291 14.0015 15.6031C13.9452 13.6578 15.5523 12 17.5 12C19.4477 12 21.0548 13.6578 20.9985 15.6031C22.1535 15.9291 23 16.9907 23 18.25C23 19.7688 21.7688 21 20.25 21H14.75C13.2312 21 12 19.7688 12 18.25ZM17.5 14C16.6716 14 16 14.6716 16 15.5C16 15.9637 16.0239 16.4751 16.0569 16.9605C15.0926 17.1654 14 17.5516 14 18.25C14 18.6642 14.3358 19 14.75 19H20.25C20.6642 19 21 18.6642 21 18.25C21 17.5516 19.9074 17.1654 18.9431 16.9605C18.9761 16.4751 19 15.9637 19 15.5C19 14.6716 18.3284 14 17.5 14Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M3 3a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h7v-2H4V5h5.586l2 2H20v4h2V6a1 1 0 0 0-1-1h-8.586l-2-2zm9 15.25c0-1.26.847-2.32 2.002-2.647C13.945 13.658 15.552 12 17.5 12s3.555 1.658 3.499 3.603A2.751 2.751 0 0 1 20.25 21h-5.5A2.75 2.75 0 0 1 12 18.25M17.5 14a1.5 1.5 0 0 0-1.5 1.5c0 .464.024.975.057 1.46-.964.205-2.057.592-2.057 1.29 0 .414.336.75.75.75h5.5a.75.75 0 0 0 .75-.75c0-.698-1.093-1.085-2.057-1.29.033-.485.057-.996.057-1.46a1.5 1.5 0 0 0-1.5-1.5" />
+      </G>
+    </Svg>
+  );
+};

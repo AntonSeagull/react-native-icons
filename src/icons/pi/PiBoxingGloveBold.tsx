@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiBoxingGloveBold = (props: IconProps) => {
+export const PiBoxingGloveBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M168,12H120A60.08,60.08,0,0,0,60.13,68H56a36,36,0,0,0-36,36v29.19a20.13,20.13,0,0,0,4.38,12.5,11.46,11.46,0,0,0,.94,1L60,181v35a20,20,0,0,0,20,20H192a20,20,0,0,0,20-20V177.68l15.23-53.3a20.07,20.07,0,0,0,.77-5.5V72A60.07,60.07,0,0,0,168,12Zm36,106.32L188.46,172.7A12.28,12.28,0,0,0,188,176v36H84V176a12,12,0,0,0-3.56-8.53L44,131.45V104A12,12,0,0,1,56,92h4v12a12,12,0,0,0,24,0V72a36,36,0,0,1,36-36h48a36,36,0,0,1,36,36ZM166.66,162l-9,6,9,6a12,12,0,1,1-13.32,20L136,182.42,118.66,194a12,12,0,0,1-13.32-20l9-6-9-6a12,12,0,0,1,13.32-20L136,153.58,153.34,142a12,12,0,1,1,13.32,20Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M168 12h-48a60.08 60.08 0 0 0-59.87 56H56a36 36 0 0 0-36 36v29.19a20.13 20.13 0 0 0 4.38 12.5 12 12 0 0 0 .94 1L60 181v35a20 20 0 0 0 20 20h112a20 20 0 0 0 20-20v-38.32l15.23-53.3a20 20 0 0 0 .77-5.5V72a60.07 60.07 0 0 0-60-60m36 106.32-15.54 54.38a12.3 12.3 0 0 0-.46 3.3v36H84v-36a12 12 0 0 0-3.56-8.53L44 131.45V104a12 12 0 0 1 12-12h4v12a12 12 0 0 0 24 0V72a36 36 0 0 1 36-36h48a36 36 0 0 1 36 36ZM166.66 162l-9 6 9 6a12 12 0 1 1-13.32 20L136 182.42 118.66 194a12 12 0 0 1-13.32-20l9-6-9-6a12 12 0 0 1 13.32-20L136 153.58 153.34 142a12 12 0 1 1 13.32 20" />
+      </G>
+    </Svg>
+  );
+};

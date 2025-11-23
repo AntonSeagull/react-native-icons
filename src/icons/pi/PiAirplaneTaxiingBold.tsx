@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiAirplaneTaxiingBold = (props: IconProps) => {
+export const PiAirplaneTaxiingBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M208,88H149L104.49,43.51A12,12,0,0,0,96,40H88A20,20,0,0,0,69,66.33L76.27,88H61L40.49,67.51A12,12,0,0,0,32,64H24A20,20,0,0,0,4.86,89.75l14.07,46.89A43.72,43.72,0,0,0,61.07,168H240a12,12,0,0,0,12-12V132A44.05,44.05,0,0,0,208,88Zm20,56H61.07a19.89,19.89,0,0,1-19.16-14.25L30.4,91.36l17.12,17.13A12,12,0,0,0,56,112h36.9A12,12,0,0,0,104.3,96.21L94.83,67.79l40.69,40.7A12,12,0,0,0,144,112h64a20,20,0,0,1,20,20Zm0,60a20,20,0,1,1-20-20A20,20,0,0,1,228,204Zm-96,0a20,20,0,1,1-20-20A20,20,0,0,1,132,204Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M208 88h-59l-44.51-44.49A12 12 0 0 0 96 40h-8a20 20 0 0 0-19 26.33L76.27 88H61L40.49 67.51A12 12 0 0 0 32 64h-8A20 20 0 0 0 4.86 89.75l14.07 46.89A43.72 43.72 0 0 0 61.07 168H240a12 12 0 0 0 12-12v-24a44.05 44.05 0 0 0-44-44m20 56H61.07a19.89 19.89 0 0 1-19.16-14.25L30.4 91.36l17.12 17.13A12 12 0 0 0 56 112h36.9a12 12 0 0 0 11.4-15.79l-9.47-28.42 40.69 40.7A12 12 0 0 0 144 112h64a20 20 0 0 1 20 20Zm0 60a20 20 0 1 1-20-20 20 20 0 0 1 20 20m-96 0a20 20 0 1 1-20-20 20 20 0 0 1 20 20" />
+      </G>
+    </Svg>
+  );
+};

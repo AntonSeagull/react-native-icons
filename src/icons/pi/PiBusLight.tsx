@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiBusLight = (props: IconProps) => {
+export const PiBusLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M184,34H72A30,30,0,0,0,42,64V208a14,14,0,0,0,14,14H80a14,14,0,0,0,14-14V190h68v18a14,14,0,0,0,14,14h24a14,14,0,0,0,14-14V64A30,30,0,0,0,184,34ZM54,178V118H202v60ZM54,78H202v28H54ZM72,46H184a18,18,0,0,1,18,18v2H54V64A18,18,0,0,1,72,46ZM82,208a2,2,0,0,1-2,2H56a2,2,0,0,1-2-2V190H82Zm118,2H176a2,2,0,0,1-2-2V190h28v18A2,2,0,0,1,200,210Zm-98-62a10,10,0,1,1-10-10A10,10,0,0,1,102,148Zm72,0a10,10,0,1,1-10-10A10,10,0,0,1,174,148Zm72-68v24a6,6,0,0,1-12,0V80a6,6,0,0,1,12,0ZM22,80v24a6,6,0,0,1-12,0V80a6,6,0,0,1,12,0Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M184 34H72a30 30 0 0 0-30 30v144a14 14 0 0 0 14 14h24a14 14 0 0 0 14-14v-18h68v18a14 14 0 0 0 14 14h24a14 14 0 0 0 14-14V64a30 30 0 0 0-30-30M54 178v-60h148v60Zm0-100h148v28H54Zm18-32h112a18 18 0 0 1 18 18v2H54v-2a18 18 0 0 1 18-18m10 162a2 2 0 0 1-2 2H56a2 2 0 0 1-2-2v-18h28Zm118 2h-24a2 2 0 0 1-2-2v-18h28v18a2 2 0 0 1-2 2m-98-62a10 10 0 1 1-10-10 10 10 0 0 1 10 10m72 0a10 10 0 1 1-10-10 10 10 0 0 1 10 10m72-68v24a6 6 0 0 1-12 0V80a6 6 0 0 1 12 0M22 80v24a6 6 0 0 1-12 0V80a6 6 0 0 1 12 0" />
+      </G>
+    </Svg>
+  );
+};

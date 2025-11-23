@@ -1,38 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const IoLogoMicrosoft = (props: IconProps) => {
+export const IoLogoMicrosoft = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M31.87,30.58H244.7V243.39H31.87Z" />
-          <Path  d="M266.89,30.58H479.7V243.39H266.89Z" />
-          <Path  d="M31.87,265.61H244.7v212.8H31.87Z" />
-          <Path  d="M266.89,265.61H479.7v212.8H266.89Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M31.87 30.58H244.7v212.81H31.87ZM266.89 30.58H479.7v212.81H266.89ZM31.87 265.61H244.7v212.8H31.87ZM266.89 265.61H479.7v212.8H266.89Z" />
+      </G>
+    </Svg>
+  );
+};

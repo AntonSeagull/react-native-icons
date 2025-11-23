@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiCameraRotateThin = (props: IconProps) => {
+export const PiCameraRotateThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M208,60H178.13L163.32,37.78A4,4,0,0,0,160,36H96a4,4,0,0,0-3.32,1.78L77.85,60H48A20,20,0,0,0,28,80V192a20,20,0,0,0,20,20H208a20,20,0,0,0,20-20V80A20,20,0,0,0,208,60Zm12,132a12,12,0,0,1-12,12H48a12,12,0,0,1-12-12V80A12,12,0,0,1,48,68H80a4,4,0,0,0,3.33-1.78L98.13,44h59.72l14.82,22.22A4,4,0,0,0,176,68h32a12,12,0,0,1,12,12ZM172,96v24a4,4,0,0,1-4,4H144a4,4,0,0,1,0-8h14.66l-5.27-5.52a36.12,36.12,0,0,0-47-3.29,4,4,0,1,1-4.8-6.39,44.17,44.17,0,0,1,57.51,4.09L164,110V96a4,4,0,0,1,8,0Zm-16.8,61.6a4,4,0,0,1-.8,5.6,44.15,44.15,0,0,1-57.51-4.09L92,154v14a4,4,0,0,1-8,0V144a4,4,0,0,1,4-4h24a4,4,0,0,1,0,8H97.34l5.27,5.52a36.12,36.12,0,0,0,47,3.29A4,4,0,0,1,155.2,157.6Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M208 60h-29.87l-14.81-22.22A4 4 0 0 0 160 36H96a4 4 0 0 0-3.32 1.78L77.85 60H48a20 20 0 0 0-20 20v112a20 20 0 0 0 20 20h160a20 20 0 0 0 20-20V80a20 20 0 0 0-20-20m12 132a12 12 0 0 1-12 12H48a12 12 0 0 1-12-12V80a12 12 0 0 1 12-12h32a4 4 0 0 0 3.33-1.78L98.13 44h59.72l14.82 22.22A4 4 0 0 0 176 68h32a12 12 0 0 1 12 12Zm-48-96v24a4 4 0 0 1-4 4h-24a4 4 0 0 1 0-8h14.66l-5.27-5.52a36.12 36.12 0 0 0-47-3.29 4 4 0 1 1-4.8-6.39 44.17 44.17 0 0 1 57.51 4.09L164 110V96a4 4 0 0 1 8 0m-16.8 61.6a4 4 0 0 1-.8 5.6 44.15 44.15 0 0 1-57.51-4.09L92 154v14a4 4 0 0 1-8 0v-24a4 4 0 0 1 4-4h24a4 4 0 0 1 0 8H97.34l5.27 5.52a36.12 36.12 0 0 0 47 3.29 4 4 0 0 1 5.59.79" />
+      </G>
+    </Svg>
+  );
+};

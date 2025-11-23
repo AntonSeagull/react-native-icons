@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiBarbellThin = (props: IconProps) => {
+export const PiBarbellThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M248,124H236V88a12,12,0,0,0-12-12H204V64a12,12,0,0,0-12-12H168a12,12,0,0,0-12,12v60H100V64A12,12,0,0,0,88,52H64A12,12,0,0,0,52,64V76H32A12,12,0,0,0,20,88v36H8a4,4,0,0,0,0,8H20v36a12,12,0,0,0,12,12H52v12a12,12,0,0,0,12,12H88a12,12,0,0,0,12-12V132h56v60a12,12,0,0,0,12,12h24a12,12,0,0,0,12-12V180h20a12,12,0,0,0,12-12V132h12a4,4,0,0,0,0-8ZM32,172a4,4,0,0,1-4-4V88a4,4,0,0,1,4-4H52v88Zm60,20a4,4,0,0,1-4,4H64a4,4,0,0,1-4-4V64a4,4,0,0,1,4-4H88a4,4,0,0,1,4,4Zm104,0a4,4,0,0,1-4,4H168a4,4,0,0,1-4-4V64a4,4,0,0,1,4-4h24a4,4,0,0,1,4,4Zm32-24a4,4,0,0,1-4,4H204V84h20a4,4,0,0,1,4,4Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M248 124h-12V88a12 12 0 0 0-12-12h-20V64a12 12 0 0 0-12-12h-24a12 12 0 0 0-12 12v60h-56V64a12 12 0 0 0-12-12H64a12 12 0 0 0-12 12v12H32a12 12 0 0 0-12 12v36H8a4 4 0 0 0 0 8h12v36a12 12 0 0 0 12 12h20v12a12 12 0 0 0 12 12h24a12 12 0 0 0 12-12v-60h56v60a12 12 0 0 0 12 12h24a12 12 0 0 0 12-12v-12h20a12 12 0 0 0 12-12v-36h12a4 4 0 0 0 0-8M32 172a4 4 0 0 1-4-4V88a4 4 0 0 1 4-4h20v88Zm60 20a4 4 0 0 1-4 4H64a4 4 0 0 1-4-4V64a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4Zm104 0a4 4 0 0 1-4 4h-24a4 4 0 0 1-4-4V64a4 4 0 0 1 4-4h24a4 4 0 0 1 4 4Zm32-24a4 4 0 0 1-4 4h-20V84h20a4 4 0 0 1 4 4Z" />
+      </G>
+    </Svg>
+  );
+};

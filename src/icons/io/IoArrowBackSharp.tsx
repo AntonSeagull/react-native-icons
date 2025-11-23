@@ -1,36 +1,41 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const IoArrowBackSharp = (props: IconProps) => {
+export const IoArrowBackSharp = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Polyline  points="244 400 100 256 244 112" fill="none" strokeLinecap="square" strokeMiterlimit="10" strokeWidth="48px" />
-          <Line  x1="120" y1="256" x2="412" y2="256" fill="none" strokeLinecap="square" strokeMiterlimit="10" strokeWidth="48px" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M244 400 100 256l144-144M120 256h292" style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinecap: "square",
+        strokeMiterlimit: 10,
+        strokeWidth: 48
+        }} />
+      </G>
+    </Svg>
+  );
+};

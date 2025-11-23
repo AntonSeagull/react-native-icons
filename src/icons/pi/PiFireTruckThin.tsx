@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiFireTruckThin = (props: IconProps) => {
+export const PiFireTruckThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M251.71,118.51l-14-35A12,12,0,0,0,226.58,76H188V64a4,4,0,0,0-8,0V166.71A28.05,28.05,0,0,0,164.29,188H107.71a28,28,0,0,0-55.42,0H32a4,4,0,0,1-4-4V136a4,4,0,0,0-8,0v48a12,12,0,0,0,12,12H52.29a28,28,0,0,0,55.42,0h56.58a28,28,0,0,0,55.42,0H240a12,12,0,0,0,12-12V120A4,4,0,0,0,251.71,118.51ZM226.58,84a4,4,0,0,1,3.72,2.51L242.09,116H188V84ZM80,212a20,20,0,1,1,20-20A20,20,0,0,1,80,212Zm112,0a20,20,0,1,1,20-20A20,20,0,0,1,192,212Zm48-24H219.71A28,28,0,0,0,188,164.29V124h56v60A4,4,0,0,1,240,188ZM24,100a4,4,0,0,0,0,8H152a4,4,0,0,0,0-8H132V68h20a4,4,0,0,0,0-8H24a4,4,0,0,0,0,8H44v32Zm100,0H92V68h32ZM52,68H84v32H52Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m251.71 118.51-14-35A12 12 0 0 0 226.58 76H188V64a4 4 0 0 0-8 0v102.71A28.05 28.05 0 0 0 164.29 188h-56.58a28 28 0 0 0-55.42 0H32a4 4 0 0 1-4-4v-48a4 4 0 0 0-8 0v48a12 12 0 0 0 12 12h20.29a28 28 0 0 0 55.42 0h56.58a28 28 0 0 0 55.42 0H240a12 12 0 0 0 12-12v-64a4 4 0 0 0-.29-1.49M226.58 84a4 4 0 0 1 3.72 2.51L242.09 116H188V84ZM80 212a20 20 0 1 1 20-20 20 20 0 0 1-20 20m112 0a20 20 0 1 1 20-20 20 20 0 0 1-20 20m48-24h-20.29A28 28 0 0 0 188 164.29V124h56v60a4 4 0 0 1-4 4M24 100a4 4 0 0 0 0 8h128a4 4 0 0 0 0-8h-20V68h20a4 4 0 0 0 0-8H24a4 4 0 0 0 0 8h20v32Zm100 0H92V68h32ZM52 68h32v32H52Z" />
+      </G>
+    </Svg>
+  );
+};

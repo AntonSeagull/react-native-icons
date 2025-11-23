@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiPinterestLogoFill = (props: IconProps) => {
+export const PiPinterestLogoFill = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M240,128.7c-.38,56.49-46.46,102.73-102.94,103.29a104.16,104.16,0,0,1-25.94-3,4,4,0,0,1-2.91-4.86l8.64-34.55A60.57,60.57,0,0,0,144,196c37,0,66.7-33.45,63.81-73.36A72,72,0,1,0,69.24,155,8,8,0,0,0,80,159.29a8.19,8.19,0,0,0,4-10.49,56,56,0,1,1,107.86-24.93C194,154.4,171.73,180,144,180a44.87,44.87,0,0,1-23.14-6.44l14.9-59.62a8,8,0,0,0-15.52-3.88L93.38,217.51a4,4,0,0,1-5.71,2.59A104,104,0,0,1,32,126.88C32.6,70.52,78.67,24.52,135,24A104,104,0,0,1,240,128.7Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M240 128.7c-.38 56.49-46.46 102.73-102.94 103.29a104.2 104.2 0 0 1-25.94-3 4 4 0 0 1-2.91-4.86l8.64-34.55A60.6 60.6 0 0 0 144 196c37 0 66.7-33.45 63.81-73.36A72 72 0 1 0 69.24 155 8 8 0 0 0 80 159.29a8.19 8.19 0 0 0 4-10.49 56 56 0 1 1 107.86-24.93C194 154.4 171.73 180 144 180a44.87 44.87 0 0 1-23.14-6.44l14.9-59.62a8 8 0 0 0-15.52-3.88L93.38 217.51a4 4 0 0 1-5.71 2.59A104 104 0 0 1 32 126.88C32.6 70.52 78.67 24.52 135 24a104 104 0 0 1 105 104.7" />
+      </G>
+    </Svg>
+  );
+};

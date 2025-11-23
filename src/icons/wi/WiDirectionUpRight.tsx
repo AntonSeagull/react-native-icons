@@ -1,38 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const WiDirectionUpRight = (props: IconProps) => {
+export const WiDirectionUpRight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 30 30"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 15, 15)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M10.05,17.55c0,0.3,0.09,0.55,0.26,0.73c0.2,0.19,0.46,0.28,0.79,0.28c0.3,0,0.55-0.09,0.73-0.28l6.04-6.05v1.95
-	c0,0.3,0.1,0.55,0.3,0.75c0.2,0.2,0.45,0.3,0.75,0.3c0.29,0,0.54-0.1,0.74-0.31s0.3-0.45,0.3-0.75V9.7c0-0.3-0.1-0.55-0.3-0.75
-	s-0.45-0.3-0.74-0.3h-4.5c-0.29,0-0.54,0.1-0.73,0.3S13.4,9.39,13.4,9.7c0,0.29,0.1,0.54,0.29,0.73s0.44,0.29,0.73,0.29h1.95
-	l-6.06,6.06C10.14,16.99,10.05,17.25,10.05,17.55z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 30 30"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 15, 15)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M10.05 17.55c0 .3.09.55.26.73.2.19.46.28.79.28.3 0 .55-.09.73-.28l6.04-6.05v1.95q0 .45.3.75t.75.3c.29 0 .54-.1.74-.31s.3-.45.3-.75V9.7q0-.45-.3-.75c-.3-.3-.45-.3-.74-.3h-4.5c-.29 0-.54.1-.73.3s-.29.44-.29.75c0 .29.1.54.29.73s.44.29.73.29h1.95l-6.06 6.06c-.17.21-.26.47-.26.77" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,40 +1,48 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const IoLanguageOutline = (props: IconProps) => {
+export const IoLanguageOutline = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Polyline  points="272 448 368 224 464 448" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="48" y1="112" x2="336" y2="112" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="192" y1="64" x2="192" y2="112" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="301.5" y1="384" x2="434.5" y2="384" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Path  d="M281.3,112S257,206,199,277,80,384,80,384" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Path  d="M256,336s-35-27-72-75-56-85-56-85" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M48 112h288M192 64v48M272 448l96-224 96 224M301.5 384h133M281.3 112S257 206 199 277 80 384 80 384" style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: 32
+        }} />
+        <Path d="M256 336s-35-27-72-75-56-85-56-85" style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: 32
+        }} />
+      </G>
+    </Svg>
+  );
+};

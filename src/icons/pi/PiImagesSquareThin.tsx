@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiImagesSquareThin = (props: IconProps) => {
+export const PiImagesSquareThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M208,36H80A12,12,0,0,0,68,48V68H48A12,12,0,0,0,36,80V208a12,12,0,0,0,12,12H176a12,12,0,0,0,12-12V188h20a12,12,0,0,0,12-12V48A12,12,0,0,0,208,36ZM76,48a4,4,0,0,1,4-4H208a4,4,0,0,1,4,4v79l-23.51-23.52a12,12,0,0,0-17,0L95,180H80a4,4,0,0,1-4-4ZM180,208a4,4,0,0,1-4,4H48a4,4,0,0,1-4-4V80a4,4,0,0,1,4-4H68V176a12,12,0,0,0,12,12H180Zm28-28H106.34l70.83-70.83a4,4,0,0,1,5.66,0L212,138.34V176A4,4,0,0,1,208,180Zm-88-72a20,20,0,1,0-20-20A20,20,0,0,0,120,108Zm0-32a12,12,0,1,1-12,12A12,12,0,0,1,120,76Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M208 36H80a12 12 0 0 0-12 12v20H48a12 12 0 0 0-12 12v128a12 12 0 0 0 12 12h128a12 12 0 0 0 12-12v-20h20a12 12 0 0 0 12-12V48a12 12 0 0 0-12-12M76 48a4 4 0 0 1 4-4h128a4 4 0 0 1 4 4v79l-23.51-23.52a12 12 0 0 0-17 0L95 180H80a4 4 0 0 1-4-4Zm104 160a4 4 0 0 1-4 4H48a4 4 0 0 1-4-4V80a4 4 0 0 1 4-4h20v100a12 12 0 0 0 12 12h100Zm28-28H106.34l70.83-70.83a4 4 0 0 1 5.66 0L212 138.34V176a4 4 0 0 1-4 4m-88-72a20 20 0 1 0-20-20 20 20 0 0 0 20 20m0-32a12 12 0 1 1-12 12 12 12 0 0 1 12-12" />
+      </G>
+    </Svg>
+  );
+};

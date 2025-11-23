@@ -1,42 +1,37 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LuNotebookTabs = (props: IconProps) => {
+export const LuNotebookTabs = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M2 6h4" />
-          <Path  d="M2 10h4" />
-          <Path  d="M2 14h4" />
-          <Path  d="M2 18h4" />
-          <Path  d="M15 2v20" />
-          <Path  d="M15 7h5" />
-          <Path  d="M15 12h5" />
-          <Path  d="M15 17h5" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M2 6h4M2 10h4M2 14h4M2 18h4" />
+        <Rect width={16} height={20} x={4} y={2} rx={2} />
+        <Path d="M15 2v20M15 7h5M15 12h5M15 17h5" />
+      </G>
+    </Svg>
+  );
+};

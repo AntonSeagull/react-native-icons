@@ -1,36 +1,47 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const IoPlaySkipBackOutline = (props: IconProps) => {
+export const IoPlaySkipBackOutline = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Line  x1="112" y1="80" x2="112" y2="432" fill="none" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
-          <Path  d="M400,111V401c0,17.44-17,28.52-31,20.16L121.09,272.79c-12.12-7.25-12.12-26.33,0-33.58L369,90.84C383,82.48,400,93.56,400,111Z" fill="none" strokeMiterlimit="10" strokeWidth="32px" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M400 111v290c0 17.44-17 28.52-31 20.16L121.09 272.79c-12.12-7.25-12.12-26.33 0-33.58L369 90.84c14-8.36 31 2.72 31 20.16Z" style={{
+        fill: "none",
+        stroke: "#000",
+        strokeMiterlimit: 10,
+        strokeWidth: 32
+        }} />
+        <Path d="M112 80v352" style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinecap: "round",
+        strokeMiterlimit: 10,
+        strokeWidth: 32
+        }} />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiFolderSimpleDashedThin = (props: IconProps) => {
+export const PiFolderSimpleDashedThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M125.6,83.2,95.73,60.8a4,4,0,0,0-2.4-.8H40a4,4,0,0,0-4,4V80a4,4,0,0,1-8,0V64A12,12,0,0,1,40,52H93.33a12.05,12.05,0,0,1,7.2,2.4L130.4,76.8a4,4,0,1,1-4.8,6.4ZM88,204H39.38A3.39,3.39,0,0,1,36,200.62V192a4,4,0,0,0-8,0v8.62A11.4,11.4,0,0,0,39.38,212H88a4,4,0,0,0,0-8Zm72,0H128a4,4,0,0,0,0,8h32a4,4,0,0,0,0-8Zm64-56a4,4,0,0,0-4,4v48.89a3.12,3.12,0,0,1-3.11,3.11H200a4,4,0,0,0,0,8h16.89A11.12,11.12,0,0,0,228,200.89V152A4,4,0,0,0,224,148Zm-8-72H168a4,4,0,0,0,0,8h48a4,4,0,0,1,4,4v24a4,4,0,0,0,8,0V88A12,12,0,0,0,216,76ZM32,156a4,4,0,0,0,4-4V120a4,4,0,0,0-8,0v32A4,4,0,0,0,32,156Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M125.6 83.2 95.73 60.8a4 4 0 0 0-2.4-.8H40a4 4 0 0 0-4 4v16a4 4 0 0 1-8 0V64a12 12 0 0 1 12-12h53.33a12.05 12.05 0 0 1 7.2 2.4l29.87 22.4a4 4 0 1 1-4.8 6.4M88 204H39.38a3.39 3.39 0 0 1-3.38-3.38V192a4 4 0 0 0-8 0v8.62A11.4 11.4 0 0 0 39.38 212H88a4 4 0 0 0 0-8m72 0h-32a4 4 0 0 0 0 8h32a4 4 0 0 0 0-8m64-56a4 4 0 0 0-4 4v48.89a3.12 3.12 0 0 1-3.11 3.11H200a4 4 0 0 0 0 8h16.89A11.12 11.12 0 0 0 228 200.89V152a4 4 0 0 0-4-4m-8-72h-48a4 4 0 0 0 0 8h48a4 4 0 0 1 4 4v24a4 4 0 0 0 8 0V88a12 12 0 0 0-12-12M32 156a4 4 0 0 0 4-4v-32a4 4 0 0 0-8 0v32a4 4 0 0 0 4 4" />
+      </G>
+    </Svg>
+  );
+};

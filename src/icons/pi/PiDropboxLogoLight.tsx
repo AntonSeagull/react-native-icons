@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiDropboxLogoLight = (props: IconProps) => {
+export const PiDropboxLogoLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M235.42,151.07,190.54,120l44.88-31.07a6,6,0,0,0,0-9.86l-52-36a6,6,0,0,0-6.84,0L128,76.7,79.42,43.07a6,6,0,0,0-6.84,0l-52,36a6,6,0,0,0,0,9.86L65.46,120,20.58,151.07a6,6,0,0,0,0,9.86l52,36a6,6,0,0,0,6.84,0L128,163.3l48.58,33.63a6,6,0,0,0,6.84,0l52-36a6,6,0,0,0,0-9.86ZM128,148.7,86.54,120,128,91.3,169.46,120Zm52-93.4L221.46,84,180,112.7,138.54,84Zm-104,0L117.46,84,76,112.7,34.54,84Zm0,129.4L34.54,156,76,127.3,117.46,156Zm104,0L138.54,156,180,127.3,221.46,156ZM156.82,208a6,6,0,0,1-1.51,8.35l-23.89,16.54a6,6,0,0,1-6.84,0l-23.89-16.54a6,6,0,0,1,6.83-9.86L128,220.7l20.48-14.17A6,6,0,0,1,156.82,208Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M235.42 151.07 190.54 120l44.88-31.07a6 6 0 0 0 0-9.86l-52-36a6 6 0 0 0-6.84 0L128 76.7 79.42 43.07a6 6 0 0 0-6.84 0l-52 36a6 6 0 0 0 0 9.86L65.46 120l-44.88 31.07a6 6 0 0 0 0 9.86l52 36a6 6 0 0 0 6.84 0L128 163.3l48.58 33.63a6 6 0 0 0 6.84 0l52-36a6 6 0 0 0 0-9.86M128 148.7 86.54 120 128 91.3l41.46 28.7Zm52-93.4L221.46 84 180 112.7 138.54 84Zm-104 0L117.46 84 76 112.7 34.54 84Zm0 129.4L34.54 156 76 127.3l41.46 28.7Zm104 0L138.54 156 180 127.3l41.46 28.7ZM156.82 208a6 6 0 0 1-1.51 8.35l-23.89 16.54a6 6 0 0 1-6.84 0l-23.89-16.54a6 6 0 0 1 6.83-9.86L128 220.7l20.48-14.17a6 6 0 0 1 8.34 1.47" />
+      </G>
+    </Svg>
+  );
+};

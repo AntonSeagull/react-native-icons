@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FaHeadSideCough = (props: IconProps) => {
+export const FaHeadSideCough = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 640 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 320, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M616,304a24,24,0,1,0-24-24A24,24,0,0,0,616,304ZM552,416a24,24,0,1,0,24,24A24,24,0,0,0,552,416Zm-64-56a24,24,0,1,0,24,24A24,24,0,0,0,488,360ZM616,464a24,24,0,1,0,24,24A24,24,0,0,0,616,464Zm0-104a24,24,0,1,0,24,24A24,24,0,0,0,616,360Zm-64-40a24,24,0,1,0,24,24A24,24,0,0,0,552,320Zm-74.78-45c-21-47.12-48.5-151.75-73.12-186.75A208.13,208.13,0,0,0,234.1,0H192C86,0,0,86,0,192c0,56.75,24.75,107.62,64,142.88V512H288V480h64a64,64,0,0,0,64-64H320a32,32,0,0,1,0-64h96V320h32A32,32,0,0,0,477.22,275ZM288,224a32,32,0,1,1,32-32A32.07,32.07,0,0,1,288,224Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 640 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 320, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M616 304a24 24 0 1 0-24-24 24 24 0 0 0 24 24m-64 112a24 24 0 1 0 24 24 24 24 0 0 0-24-24m-64-56a24 24 0 1 0 24 24 24 24 0 0 0-24-24m128 104a24 24 0 1 0 24 24 24 24 0 0 0-24-24m0-104a24 24 0 1 0 24 24 24 24 0 0 0-24-24m-64-40a24 24 0 1 0 24 24 24 24 0 0 0-24-24m-74.78-45c-21-47.12-48.5-151.75-73.12-186.75A208.13 208.13 0 0 0 234.1 0H192C86 0 0 86 0 192c0 56.75 24.75 107.62 64 142.88V512h224v-32h64a64 64 0 0 0 64-64h-96a32 32 0 0 1 0-64h96v-32h32a32 32 0 0 0 29.22-45M288 224a32 32 0 1 1 32-32 32.07 32.07 0 0 1-32 32" />
+      </G>
+    </Svg>
+  );
+};

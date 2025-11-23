@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GrHpe = (props: IconProps) => {
+export const GrHpe = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 48 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 24, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M2 6H46V18H2V6ZM5 9H43V15H5V9Z" fill="#00C781" fillRule="evenodd" clipRule="evenodd" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 48 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 24, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="#00C781" fillRule="evenodd" d="M2 6h44v12H2zm3 3h38v6H5z" clipRule="evenodd" />
+      </G>
+    </Svg>
+  );
+};

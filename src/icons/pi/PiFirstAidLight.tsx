@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiFirstAidLight = (props: IconProps) => {
+export const PiFirstAidLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M216,90H166V40a14,14,0,0,0-14-14H104A14,14,0,0,0,90,40V90H40a14,14,0,0,0-14,14v48a14,14,0,0,0,14,14H90v50a14,14,0,0,0,14,14h48a14,14,0,0,0,14-14V166h50a14,14,0,0,0,14-14V104A14,14,0,0,0,216,90Zm2,62a2,2,0,0,1-2,2H160a6,6,0,0,0-6,6v56a2,2,0,0,1-2,2H104a2,2,0,0,1-2-2V160a6,6,0,0,0-6-6H40a2,2,0,0,1-2-2V104a2,2,0,0,1,2-2H96a6,6,0,0,0,6-6V40a2,2,0,0,1,2-2h48a2,2,0,0,1,2,2V96a6,6,0,0,0,6,6h56a2,2,0,0,1,2,2Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M216 90h-50V40a14 14 0 0 0-14-14h-48a14 14 0 0 0-14 14v50H40a14 14 0 0 0-14 14v48a14 14 0 0 0 14 14h50v50a14 14 0 0 0 14 14h48a14 14 0 0 0 14-14v-50h50a14 14 0 0 0 14-14v-48a14 14 0 0 0-14-14m2 62a2 2 0 0 1-2 2h-56a6 6 0 0 0-6 6v56a2 2 0 0 1-2 2h-48a2 2 0 0 1-2-2v-56a6 6 0 0 0-6-6H40a2 2 0 0 1-2-2v-48a2 2 0 0 1 2-2h56a6 6 0 0 0 6-6V40a2 2 0 0 1 2-2h48a2 2 0 0 1 2 2v56a6 6 0 0 0 6 6h56a2 2 0 0 1 2 2Z" />
+      </G>
+    </Svg>
+  );
+};

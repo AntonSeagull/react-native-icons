@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiIceCubes = (props: IconProps) => {
+export const GiIceCubes = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M90.01 41l46.09 452h239.8L422 41zM142 62.04l112.5 18.29-3.9 24.17 104.2-21.92 7.7 36.42H394l-33.9 354H151.9L119 128.9l-1-9.9h14.7l7.8-48.07zm14.8 20.66l-12.5 77 77.1 12.5 12.5-76.99zm184 21.2L264.6 120l16 76.2 76.3-16zM219.5 242.6l-36.7 68.6 68.8 36.8 36.7-68.6z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m90.01 41 46.09 452h239.8L422 41zM142 62.04l112.5 18.29-3.9 24.17 104.2-21.92 7.7 36.42H394l-33.9 354H151.9L119 128.9l-1-9.9h14.7l7.8-48.07zm14.8 20.66-12.5 77 77.1 12.5 12.5-76.99zm184 21.2L264.6 120l16 76.2 76.3-16zM219.5 242.6l-36.7 68.6 68.8 36.8 36.7-68.6z" />
+      </G>
+    </Svg>
+  );
+};

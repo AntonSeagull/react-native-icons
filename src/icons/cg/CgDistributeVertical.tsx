@@ -1,37 +1,36 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const CgDistributeVertical = (props: IconProps) => {
+export const CgDistributeVertical = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M9 11H15V13H9V11Z" stroke="currentColor" strokeOpacity="0.5" strokeWidth="2" />
-          <Path  d="M19 7H5V5H19V7Z" fill="currentColor" />
-          <Path  d="M19 19H5V17H19V19Z" fill="currentColor" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path stroke="currentColor" strokeOpacity={0.5} strokeWidth={2} d="M9 11h6v2H9z" />
+        <Path fill="currentColor" d="M19 7H5V5h14zM19 19H5v-2h14z" />
+      </G>
+    </Svg>
+  );
+};

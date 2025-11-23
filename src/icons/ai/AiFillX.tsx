@@ -1,38 +1,37 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const AiFillX = (props: IconProps) => {
+export const AiFillX = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 1024 1024"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 512, 512)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M711.111 800H88.89C39.8 800 0 760.2 0 711.111V88.89C0 39.8 39.8 0 88.889 0H711.11C760.2 0 800 39.8 800 88.889V711.11C800 760.2 760.2 800 711.111 800" />
-          <Path  fill="#FFF" fillRule="nonzero" d="M628 623H484.942L174 179h143.058zm-126.012-37.651h56.96L300.013 216.65h-56.96z" />
-          <Path  fill="#FFF" fillRule="nonzero" d="M219.296885 623 379 437.732409 358.114212 410 174 623z" />
-          <Path  fill="#FFF" fillRule="nonzero" d="M409 348.387347 429.212986 377 603 177 558.330417 177z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 1024 1024"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 512, 512)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="#000" d="M823.111 912H200.89C151.8 912 112 872.2 112 823.111V200.89c0-49.09 39.8-88.89 88.889-88.89H823.11c49.09 0 88.89 39.8 88.89 88.889V823.11c0 49.09-39.8 88.89-88.889 88.89" />
+        <Path fill="#FFF" d="M740 735H596.942L286 291h143.058zm-126.012-37.651h56.96L412.013 328.65h-56.96z" />
+        <Path fill="#FFF" d="M331.297 735 491 549.732 470.114 522 286 735zM521 460.387 541.213 489 715 289h-44.67z" />
+      </G>
+    </Svg>
+  );
+};

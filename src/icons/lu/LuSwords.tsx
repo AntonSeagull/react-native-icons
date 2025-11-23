@@ -1,42 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LuSwords = (props: IconProps) => {
+export const LuSwords = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Polyline  points="14.5 17.5 3 6 3 3 6 3 17.5 14.5" />
-          <Polyline  points="14.5 6.5 18 3 21 3 21 6 17.5 9.5" />
-          <Line  x1="13" x2="19" y1="19" y2="13" />
-          <Line  x1="16" x2="20" y1="16" y2="20" />
-          <Line  x1="19" x2="21" y1="21" y2="19" />
-          <Line  x1="5" x2="9" y1="14" y2="18" />
-          <Line  x1="7" x2="4" y1="17" y2="20" />
-          <Line  x1="3" x2="5" y1="19" y2="21" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M14.5 17.5 3 6V3h3l11.5 11.5M13 19l6-6M16 16l4 4M19 21l2-2M14.5 6.5 18 3h3v3l-3.5 3.5M5 14l4 4M7 17l-3 3M3 19l2 2" />
+      </G>
+    </Svg>
+  );
+};

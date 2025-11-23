@@ -1,35 +1,44 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const RxBorderAll = (props: IconProps) => {
+export const RxBorderAll = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 15 15"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 7.5, 7.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M0.25 1C0.25 0.585786 0.585786 0.25 1 0.25H14C14.4142 0.25 14.75 0.585786 14.75 1V14C14.75 14.4142 14.4142 14.75 14 14.75H1C0.585786 14.75 0.25 14.4142 0.25 14V1ZM1.75 1.75V13.25H13.25V1.75H1.75Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 15 15"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 7.5, 7.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="currentColor" fillRule="evenodd" d="M.25 1A.75.75 0 0 1 1 .25h13a.75.75 0 0 1 .75.75v13a.75.75 0 0 1-.75.75H1A.75.75 0 0 1 .25 14zm1.5.75v11.5h11.5V1.75z" clipRule="evenodd" />
+        <Rect width={1} height={1} x={7} y={5} fill="currentColor" rx={0.5} />
+        <Rect width={1} height={1} x={7} y={3} fill="currentColor" rx={0.5} />
+        <Rect width={1} height={1} x={7} y={7} fill="currentColor" rx={0.5} />
+        <Rect width={1} height={1} x={5} y={7} fill="currentColor" rx={0.5} />
+        <Rect width={1} height={1} x={3} y={7} fill="currentColor" rx={0.5} />
+        <Rect width={1} height={1} x={9} y={7} fill="currentColor" rx={0.5} />
+        <Rect width={1} height={1} x={11} y={7} fill="currentColor" rx={0.5} />
+        <Rect width={1} height={1} x={7} y={9} fill="currentColor" rx={0.5} />
+        <Rect width={1} height={1} x={7} y={11} fill="currentColor" rx={0.5} />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const CiBasketball = (props: IconProps) => {
+export const CiBasketball = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M19.02,4.971a9.941,9.941,0,1,0,0,14.05A9.941,9.941,0,0,0,19.02,4.971Zm-13.34.71a8.894,8.894,0,0,1,6.05-2.6,8.812,8.812,0,0,1-2.61,6.04,8.75,8.75,0,0,1-6.04,2.61A8.875,8.875,0,0,1,5.68,5.681ZM3.1,12.731a9.772,9.772,0,0,0,6.73-2.9,9.8,9.8,0,0,0,2.9-6.73,8.908,8.908,0,0,1,5.23,2.24L5.34,17.951A8.881,8.881,0,0,1,3.1,12.731Zm8.18,8.17a8.872,8.872,0,0,1-5.23-2.24L18.66,6.041a8.91,8.91,0,0,1,2.24,5.24,9.86,9.86,0,0,0-9.62,9.62Zm7.04-2.59a8.856,8.856,0,0,1-6.04,2.61,8.851,8.851,0,0,1,8.64-8.64A8.847,8.847,0,0,1,18.32,18.311Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M19.02 4.971a9.941 9.941 0 1 0 0 14.05 9.94 9.94 0 0 0 0-14.05m-13.34.71a8.9 8.9 0 0 1 6.05-2.6 8.8 8.8 0 0 1-2.61 6.04 8.75 8.75 0 0 1-6.04 2.61 8.88 8.88 0 0 1 2.6-6.05m-2.58 7.05a9.77 9.77 0 0 0 6.73-2.9 9.8 9.8 0 0 0 2.9-6.73 8.9 8.9 0 0 1 5.23 2.24L5.34 17.951a8.88 8.88 0 0 1-2.24-5.22m8.18 8.17a8.87 8.87 0 0 1-5.23-2.24l12.61-12.62a8.9 8.9 0 0 1 2.24 5.24 9.86 9.86 0 0 0-9.62 9.62m7.04-2.59a8.86 8.86 0 0 1-6.04 2.61 8.85 8.85 0 0 1 8.64-8.64 8.85 8.85 0 0 1-2.6 6.03" />
+      </G>
+    </Svg>
+  );
+};

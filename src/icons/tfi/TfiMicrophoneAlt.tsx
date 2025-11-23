@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TfiMicrophoneAlt = (props: IconProps) => {
+export const TfiMicrophoneAlt = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 17 17"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8.5, 8.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M11.614 7.021c0.688-0.754 1.12-1.747 1.12-2.847 0-2.335-1.899-4.234-4.234-4.234s-4.234 1.899-4.234 4.234c0 1.1 0.432 2.093 1.12 2.847l1.137 7.979h1.477v1.984h1v-1.984h1.477l1.137-7.979zM6 2.147v1.853h1v-2.674c0.309-0.164 0.643-0.28 1-0.336v4.010h1v-4.010c0.357 0.056 0.691 0.172 1 0.336v2.674h1v-1.853c0.452 0.557 0.734 1.256 0.734 2.026 0 1.784-1.451 3.235-3.234 3.235s-3.234-1.45-3.234-3.234c0-0.771 0.282-1.47 0.734-2.027zM7.391 14l-0.87-6.104c0.593 0.316 1.26 0.513 1.979 0.513s1.386-0.197 1.979-0.514l-0.87 6.105h-2.218z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 17 17"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8.5, 8.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M11.614 7.021a4.2 4.2 0 0 0 1.12-2.847c0-2.335-1.899-4.234-4.234-4.234S4.266 1.839 4.266 4.174c0 1.1.432 2.093 1.12 2.847L6.523 15H8v1.984h1V15h1.477zM6 2.147V4h1V1.326c.309-.164.643-.28 1-.336V5h1V.99c.357.056.691.172 1 .336V4h1V2.147c.452.557.734 1.256.734 2.026 0 1.784-1.451 3.235-3.234 3.235s-3.234-1.45-3.234-3.234c0-.771.282-1.47.734-2.027M7.391 14l-.87-6.104c.593.316 1.26.513 1.979.513s1.386-.197 1.979-.514L9.609 14z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiFactoryThin = (props: IconProps) => {
+export const PiFactoryThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M112,176a4,4,0,0,1-4,4H80a4,4,0,0,1,0-8h28A4,4,0,0,1,112,176Zm64-4H148a4,4,0,0,0,0,8h28a4,4,0,0,0,0-8Zm60,44a4,4,0,0,1-4,4H24a4,4,0,0,1,0-8H36V88a4,4,0,0,1,6.4-3.2L100,128V88a4,4,0,0,1,6.4-3.2l44.14,33.11L163.06,30.3A12.06,12.06,0,0,1,174.94,20h18.12a12.06,12.06,0,0,1,11.88,10.3l15,105.13a3.64,3.64,0,0,1,0,.57v76h12A4,4,0,0,1,236,216Zm-78.16-92.62L169.33,132h42.06L197,31.43a4,4,0,0,0-4-3.43H174.94a4,4,0,0,0-4,3.43ZM44,212H212V140H168a4,4,0,0,1-2.4-.8L108,96v40a4,4,0,0,1-6.4,3.2L44,96Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M112 176a4 4 0 0 1-4 4H80a4 4 0 0 1 0-8h28a4 4 0 0 1 4 4m64-4h-28a4 4 0 0 0 0 8h28a4 4 0 0 0 0-8m60 44a4 4 0 0 1-4 4H24a4 4 0 0 1 0-8h12V88a4 4 0 0 1 6.4-3.2L100 128V88a4 4 0 0 1 6.4-3.2l44.14 33.11 12.52-87.61A12.06 12.06 0 0 1 174.94 20h18.12a12.06 12.06 0 0 1 11.88 10.3l15 105.13a3.6 3.6 0 0 1 0 .57v76h12a4 4 0 0 1 4.06 4m-78.16-92.62 11.49 8.62h42.06L197 31.43a4 4 0 0 0-4-3.43h-18.06a4 4 0 0 0-4 3.43ZM44 212h168v-72h-44a4 4 0 0 1-2.4-.8L108 96v40a4 4 0 0 1-6.4 3.2L44 96Z" />
+      </G>
+    </Svg>
+  );
+};

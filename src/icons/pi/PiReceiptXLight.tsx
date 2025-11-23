@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiReceiptXLight = (props: IconProps) => {
+export const PiReceiptXLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M216,42H40A14,14,0,0,0,26,56V208a6,6,0,0,0,8.68,5.37L64,198.71l29.32,14.66a6,6,0,0,0,5.36,0L128,198.71l29.32,14.66a6,6,0,0,0,5.36,0L192,198.71l29.32,14.66A6,6,0,0,0,224,214a5.93,5.93,0,0,0,3.15-.9A6,6,0,0,0,230,208V56A14,14,0,0,0,216,42Zm2,156.29-23.32-11.66a6,6,0,0,0-5.36,0L160,201.29l-29.32-14.66a6,6,0,0,0-5.36,0L96,201.29,66.68,186.63a6,6,0,0,0-5.36,0L38,198.29V56a2,2,0,0,1,2-2H216a2,2,0,0,1,2,2Zm-61.76-98L136.48,120l19.76,19.76a6,6,0,1,1-8.48,8.48L128,128.48l-19.76,19.76a6,6,0,0,1-8.48-8.48L119.52,120,99.76,100.24a6,6,0,0,1,8.48-8.48L128,111.52l19.76-19.76a6,6,0,0,1,8.48,8.48Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M216 42H40a14 14 0 0 0-14 14v152a6 6 0 0 0 8.68 5.37L64 198.71l29.32 14.66a6 6 0 0 0 5.36 0L128 198.71l29.32 14.66a6 6 0 0 0 5.36 0L192 198.71l29.32 14.66a6 6 0 0 0 2.68.63 5.93 5.93 0 0 0 3.15-.9A6 6 0 0 0 230 208V56a14 14 0 0 0-14-14m2 156.29-23.32-11.66a6 6 0 0 0-5.36 0L160 201.29l-29.32-14.66a6 6 0 0 0-5.36 0L96 201.29l-29.32-14.66a6 6 0 0 0-5.36 0L38 198.29V56a2 2 0 0 1 2-2h176a2 2 0 0 1 2 2Zm-61.76-98L136.48 120l19.76 19.76a6 6 0 1 1-8.48 8.48L128 128.48l-19.76 19.76a6 6 0 0 1-8.48-8.48L119.52 120l-19.76-19.76a6 6 0 0 1 8.48-8.48L128 111.52l19.76-19.76a6 6 0 0 1 8.48 8.48Z" />
+      </G>
+    </Svg>
+  );
+};

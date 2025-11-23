@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiShippingContainerThin = (props: IconProps) => {
+export const PiShippingContainerThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M235.3,74.5,129.1,44.15a4.09,4.09,0,0,0-1.67-.11L22.3,59.06A12.06,12.06,0,0,0,12,70.94V185.06a12.06,12.06,0,0,0,10.3,11.88l105.13,15a3.64,3.64,0,0,0,.57,0,4.11,4.11,0,0,0,1.1-.15L235.3,181.5A12,12,0,0,0,244,170V86A12,12,0,0,0,235.3,74.5ZM96,124H76V59.47l48-6.86V203.39l-48-6.86V132H96a4,4,0,0,0,0-8ZM20,185.06V70.94a4,4,0,0,1,3.43-4L68,60.61V124H48a4,4,0,0,0,0,8H68v63.39L23.43,189A4,4,0,0,1,20,185.06ZM236,170a4,4,0,0,1-2.9,3.84L132,202.7V53.3L233.1,82.19A4,4,0,0,1,236,86Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M235.3 74.5 129.1 44.15a4.1 4.1 0 0 0-1.67-.11L22.3 59.06A12.06 12.06 0 0 0 12 70.94v114.12a12.06 12.06 0 0 0 10.3 11.88l105.13 15a3.6 3.6 0 0 0 .57 0 4.1 4.1 0 0 0 1.1-.15l106.2-30.29A12 12 0 0 0 244 170V86a12 12 0 0 0-8.7-11.5M96 124H76V59.47l48-6.86v150.78l-48-6.86V132h20a4 4 0 0 0 0-8m-76 61.06V70.94a4 4 0 0 1 3.43-4L68 60.61V124H48a4 4 0 0 0 0 8h20v63.39L23.43 189a4 4 0 0 1-3.43-3.94M236 170a4 4 0 0 1-2.9 3.84L132 202.7V53.3l101.1 28.89A4 4 0 0 1 236 86Z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaArchwaySolid = (props: IconProps) => {
+export const LiaArchwaySolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 3 6 L 3 12 L 5 12 L 5 24 L 3 24 L 3 26 L 5 26 L 13 26 L 13 24 L 13 19 C 13 17.346 14.346 16 16 16 C 17.654 16 19 17.346 19 19 L 19 24 L 19 26 L 27 26 L 29 26 L 29 24 L 27 24 L 27 12 L 29 12 L 29 6 L 3 6 z M 5 8 L 27 8 L 27 10 L 5 10 L 5 8 z M 7 12 L 25 12 L 25 24 L 21 24 L 21 19 C 21 16.243 18.757 14 16 14 C 13.243 14 11 16.243 11 19 L 11 24 L 7 24 L 7 12 z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M3 6v6h2v12H3v2h10v-7c0-1.654 1.346-3 3-3s3 1.346 3 3v7h10v-2h-2V12h2V6zm2 2h22v2H5zm2 4h18v12h-4v-5c0-2.757-2.243-5-5-5s-5 2.243-5 5v5H7z" />
+      </G>
+    </Svg>
+  );
+};

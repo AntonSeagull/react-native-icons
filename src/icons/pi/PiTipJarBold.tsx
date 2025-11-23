@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiTipJarBold = (props: IconProps) => {
+export const PiTipJarBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M188,49.68V32a20,20,0,0,0-20-20H88A20,20,0,0,0,68,32V49.68A44.06,44.06,0,0,0,36,92V200a44.05,44.05,0,0,0,44,44h96a44.05,44.05,0,0,0,44-44V92A44.06,44.06,0,0,0,188,49.68ZM164,48H140V36h24ZM116,36V48H92V36Zm80,164a20,20,0,0,1-20,20H80a20,20,0,0,1-20-20V92A20,20,0,0,1,80,72h96a20,20,0,0,1,20,20Zm-28-38a30,30,0,0,1-28,29.93V196a12,12,0,0,1-24,0v-4h-8a12,12,0,0,1,0-24h30a6,6,0,0,0,0-12H118a30,30,0,0,1-2-59.93V96a12,12,0,0,1,24,0h8a12,12,0,0,1,0,24H118a6,6,0,0,0,0,12h20A30,30,0,0,1,168,162Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M188 49.68V32a20 20 0 0 0-20-20H88a20 20 0 0 0-20 20v17.68A44.06 44.06 0 0 0 36 92v108a44.05 44.05 0 0 0 44 44h96a44.05 44.05 0 0 0 44-44V92a44.06 44.06 0 0 0-32-42.32M164 48h-24V36h24Zm-48-12v12H92V36Zm80 164a20 20 0 0 1-20 20H80a20 20 0 0 1-20-20V92a20 20 0 0 1 20-20h96a20 20 0 0 1 20 20Zm-28-38a30 30 0 0 1-28 29.93V196a12 12 0 0 1-24 0v-4h-8a12 12 0 0 1 0-24h30a6 6 0 0 0 0-12h-20a30 30 0 0 1-2-59.93V96a12 12 0 0 1 24 0h8a12 12 0 0 1 0 24h-30a6 6 0 0 0 0 12h20a30 30 0 0 1 30 30" />
+      </G>
+    </Svg>
+  );
+};

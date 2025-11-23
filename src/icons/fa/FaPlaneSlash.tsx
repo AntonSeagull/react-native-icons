@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FaPlaneSlash = (props: IconProps) => {
+export const FaPlaneSlash = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 640 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 320, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M32.48,147.88,64,256,32.48,364.13A16,16,0,0,0,48,384H88a16,16,0,0,0,12.8-6.41L144,320H246.85l-49,171.59A16,16,0,0,0,213.2,512h65.5a16,16,0,0,0,13.89-8.06l66.6-116.54L34.35,136.34A15.47,15.47,0,0,0,32.48,147.88ZM633.82,458.09,455.14,320H512c35.34,0,96-28.66,96-64s-60.66-64-96-64H397.7L292.61,8.06C290.06,3.61,283.84,0,278.71,0H213.2a16,16,0,0,0-15.38,20.39l36.94,129.29L45.46,3.38A16,16,0,0,0,23,6.19L3.37,31.45A16,16,0,0,0,6.18,53.91L594.54,508.63A16,16,0,0,0,617,505.81l19.64-25.26A16,16,0,0,0,633.82,458.09Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 640 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 320, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M32.48 147.88 64 256 32.48 364.13A16 16 0 0 0 48 384h40a16 16 0 0 0 12.8-6.41L144 320h102.85l-49 171.59A16 16 0 0 0 213.2 512h65.5a16 16 0 0 0 13.89-8.06l66.6-116.54L34.35 136.34a15.47 15.47 0 0 0-1.87 11.54m601.34 310.21L455.14 320H512c35.34 0 96-28.66 96-64s-60.66-64-96-64H397.7L292.61 8.06C290.06 3.61 283.84 0 278.71 0H213.2a16 16 0 0 0-15.38 20.39l36.94 129.29L45.46 3.38A16 16 0 0 0 23 6.19L3.37 31.45a16 16 0 0 0 2.81 22.46l588.36 454.72a16 16 0 0 0 22.46-2.82l19.64-25.26a16 16 0 0 0-2.82-22.46" />
+      </G>
+    </Svg>
+  );
+};

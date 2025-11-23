@@ -1,36 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const VscRepoPull = (props: IconProps) => {
+export const VscRepoPull = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 16 16"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8, 8)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M5.03544 12H2V13H5.03544C5.27806 14.6961 6.73676 16 8.5 16C10.2632 16 11.7219 14.6961 11.9646 13H15.0001V12H11.9646C11.7219 10.3039 10.2632 9 8.5 9C6.73676 9 5.27806 10.3039 5.03544 12ZM11 12.5C11 13.8807 9.88071 15 8.5 15C7.11929 15 6 13.8807 6 12.5C6 11.1193 7.11929 10 8.5 10C9.88071 10 11 11.1193 11 12.5Z" fillRule="evenodd" clipRule="evenodd" />
-          <Path  d="M8.00016 6.43934V0H9.00016V6.43934L12.6466 2.7929L13.3537 3.5L8.85371 8H8.14661L3.64661 3.5L4.35371 2.7929L8.00016 6.43934Z" fillRule="evenodd" clipRule="evenodd" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 16 16"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8, 8)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fillRule="evenodd" d="M5.035 12H2v1h3.035a3.5 3.5 0 0 0 6.93 0H15v-1h-3.035a3.501 3.501 0 0 0-6.93 0m5.965.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0M8 6.44V0h1v6.44l3.647-3.647.707.707-4.5 4.5h-.707l-4.5-4.5.707-.707z" clipRule="evenodd" />
+      </G>
+    </Svg>
+  );
+};

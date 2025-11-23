@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FaBluetoothB = (props: IconProps) => {
+export const FaBluetoothB = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 320 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 160, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M196.48 260.023l92.626-103.333L143.125 0v206.33l-86.111-86.111-31.406 31.405 108.061 108.399L25.608 368.422l31.406 31.405 86.111-86.111L145.84 512l148.552-148.644-97.912-103.333zm40.86-102.996l-49.977 49.978-.338-100.295 50.315 50.317zM187.363 313.04l49.977 49.978-50.315 50.316.338-100.294z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 320 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 160, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m196.48 260.023 92.626-103.333L143.125 0v206.33l-86.111-86.111-31.406 31.405 108.061 108.399L25.608 368.422l31.406 31.405 86.111-86.111L145.84 512l148.552-148.644zm40.86-102.996-49.977 49.978-.338-100.295zM187.363 313.04l49.977 49.978-50.315 50.316z" />
+      </G>
+    </Svg>
+  );
+};

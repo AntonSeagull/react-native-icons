@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiScooterLight = (props: IconProps) => {
+export const PiScooterLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M212,138a34.32,34.32,0,0,0-4.89.36L173.69,38.1A6,6,0,0,0,168,34H136a6,6,0,0,0,0,12h27.68l18.24,54.73L125.16,170H77.94a34,34,0,1,0-1.44,12H128a6,6,0,0,0,4.64-2.2l53.76-65.62,9.33,28A34,34,0,1,0,212,138ZM44,194a22,22,0,1,1,22-22A22,22,0,0,1,44,194Zm168,0a22,22,0,1,1,22-22A22,22,0,0,1,212,194Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M212 138a34 34 0 0 0-4.89.36L173.69 38.1A6 6 0 0 0 168 34h-32a6 6 0 0 0 0 12h27.68l18.24 54.73L125.16 170H77.94a34 34 0 1 0-1.44 12H128a6 6 0 0 0 4.64-2.2l53.76-65.62 9.33 28A34 34 0 1 0 212 138M44 194a22 22 0 1 1 22-22 22 22 0 0 1-22 22m168 0a22 22 0 1 1 22-22 22 22 0 0 1-22 22" />
+      </G>
+    </Svg>
+  );
+};

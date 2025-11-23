@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiShrimpBold = (props: IconProps) => {
+export const PiShrimpBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M244,60a32,32,0,0,0-32-32H128a4,4,0,0,1-4-4,12,12,0,0,0-24,0,28,28,0,0,0,28,28h84a8,8,0,0,1,0,16H96.9C50.43,68,12.34,105.4,12,151.37A84,84,0,0,0,96,236h56a12,12,0,0,0,0-24H124V196h44a12,12,0,0,0,0-24H112a8,8,0,0,1,0-16h40a76.1,76.1,0,0,0,75.58-68.07A32,32,0,0,0,244,60ZM96.9,92H100v42.34a32.2,32.2,0,0,0-12.65,9.27l-44-20A61.19,61.19,0,0,1,96.9,92ZM36,151.54c0-1.61.11-3.21.25-4.79l43.87,19.94a30.18,30.18,0,0,0,.66,4.29L51.31,192A59.54,59.54,0,0,1,36,151.54ZM96,212a59.8,59.8,0,0,1-24.23-5.09l22.66-16.18a32.47,32.47,0,0,0,5.57,2.93V212Zm56-80H124V92h78.6A52.08,52.08,0,0,1,152,132Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M244 60a32 32 0 0 0-32-32h-84a4 4 0 0 1-4-4 12 12 0 0 0-24 0 28 28 0 0 0 28 28h84a8 8 0 0 1 0 16H96.9c-46.47 0-84.56 37.4-84.9 83.37A84 84 0 0 0 96 236h56a12 12 0 0 0 0-24h-28v-16h44a12 12 0 0 0 0-24h-56a8 8 0 0 1 0-16h40a76.1 76.1 0 0 0 75.58-68.07A32 32 0 0 0 244 60M96.9 92h3.1v42.34a32.2 32.2 0 0 0-12.65 9.27l-44-20A61.19 61.19 0 0 1 96.9 92M36 151.54c0-1.61.11-3.21.25-4.79l43.87 19.94a30 30 0 0 0 .66 4.29L51.31 192A59.54 59.54 0 0 1 36 151.54M96 212a59.8 59.8 0 0 1-24.23-5.09l22.66-16.18a32.5 32.5 0 0 0 5.57 2.93V212Zm56-80h-28V92h78.6a52.08 52.08 0 0 1-50.6 40" />
+      </G>
+    </Svg>
+  );
+};

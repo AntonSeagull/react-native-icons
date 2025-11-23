@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiTennisBallThin = (props: IconProps) => {
+export const PiTennisBallThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M198.74,57.29A99.39,99.39,0,0,0,128,28h-.19a100,100,0,1,0,70.93,29.29ZM62.92,63a91.38,91.38,0,0,1,60.8-26.85A91.31,91.31,0,0,1,96.87,96.89,91.44,91.44,0,0,1,36.1,123.73,91.61,91.61,0,0,1,62.92,63ZM36.09,131.74a99.36,99.36,0,0,0,66.44-29.2,99.25,99.25,0,0,0,29.21-66.45,91.9,91.9,0,0,1,88.17,88.17,100,100,0,0,0-95.65,95.65,91.9,91.9,0,0,1-88.17-88.17Zm157,61.31a91.38,91.38,0,0,1-60.8,26.85,92,92,0,0,1,87.62-87.63A91.61,91.61,0,0,1,193.08,193.05Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M198.74 57.29A99.4 99.4 0 0 0 128 28h-.19a100 100 0 1 0 70.93 29.29M62.92 63a91.38 91.38 0 0 1 60.8-26.85 91.3 91.3 0 0 1-26.85 60.74 91.44 91.44 0 0 1-60.77 26.84A91.6 91.6 0 0 1 62.92 63m-26.83 68.74a99.36 99.36 0 0 0 66.44-29.2 99.25 99.25 0 0 0 29.21-66.45 91.9 91.9 0 0 1 88.17 88.17 100 100 0 0 0-95.65 95.65 91.9 91.9 0 0 1-88.17-88.17m157 61.31a91.38 91.38 0 0 1-60.8 26.85 92 92 0 0 1 87.62-87.63 91.6 91.6 0 0 1-26.83 60.78Z" />
+      </G>
+    </Svg>
+  );
+};

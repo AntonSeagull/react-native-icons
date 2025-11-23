@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiTreeViewThin = (props: IconProps) => {
+export const PiTreeViewThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M176,148h32a12,12,0,0,0,12-12V104a12,12,0,0,0-12-12H176a12,12,0,0,0-12,12v12H84V76H96a12,12,0,0,0,12-12V32A12,12,0,0,0,96,20H64A12,12,0,0,0,52,32V64A12,12,0,0,0,64,76H76V192a20,20,0,0,0,20,20h68v12a12,12,0,0,0,12,12h32a12,12,0,0,0,12-12V192a12,12,0,0,0-12-12H176a12,12,0,0,0-12,12v12H96a12,12,0,0,1-12-12V124h80v12A12,12,0,0,0,176,148ZM60,64V32a4,4,0,0,1,4-4H96a4,4,0,0,1,4,4V64a4,4,0,0,1-4,4H64A4,4,0,0,1,60,64ZM172,192a4,4,0,0,1,4-4h32a4,4,0,0,1,4,4v32a4,4,0,0,1-4,4H176a4,4,0,0,1-4-4Zm0-88a4,4,0,0,1,4-4h32a4,4,0,0,1,4,4v32a4,4,0,0,1-4,4H176a4,4,0,0,1-4-4Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M176 148h32a12 12 0 0 0 12-12v-32a12 12 0 0 0-12-12h-32a12 12 0 0 0-12 12v12H84V76h12a12 12 0 0 0 12-12V32a12 12 0 0 0-12-12H64a12 12 0 0 0-12 12v32a12 12 0 0 0 12 12h12v116a20 20 0 0 0 20 20h68v12a12 12 0 0 0 12 12h32a12 12 0 0 0 12-12v-32a12 12 0 0 0-12-12h-32a12 12 0 0 0-12 12v12H96a12 12 0 0 1-12-12v-68h80v12a12 12 0 0 0 12 12M60 64V32a4 4 0 0 1 4-4h32a4 4 0 0 1 4 4v32a4 4 0 0 1-4 4H64a4 4 0 0 1-4-4m112 128a4 4 0 0 1 4-4h32a4 4 0 0 1 4 4v32a4 4 0 0 1-4 4h-32a4 4 0 0 1-4-4Zm0-88a4 4 0 0 1 4-4h32a4 4 0 0 1 4 4v32a4 4 0 0 1-4 4h-32a4 4 0 0 1-4-4Z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiSketchLogoThin = (props: IconProps) => {
+export const PiSketchLogoThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M243,101.37l-56-64A4,4,0,0,0,184,36H72a4,4,0,0,0-3,1.37l-56,64a4,4,0,0,0,.09,5.36l112,120a4,4,0,0,0,5.84,0l112-120A4,4,0,0,0,243,101.37ZM77.29,108l39.07,97.66L25.2,108Zm92.8,0L128,213.23,85.91,108ZM88,100l40-53.33L168,100Zm90.71,8H230.8l-91.16,97.66Zm52.47-8H178L136,44h46.18ZM73.82,44H120L78,100H24.82Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m243 101.37-56-64a4 4 0 0 0-3-1.37H72a4 4 0 0 0-3 1.37l-56 64a4 4 0 0 0 .09 5.36l112 120a4 4 0 0 0 5.84 0l112-120a4 4 0 0 0 .07-5.36M77.29 108l39.07 97.66L25.2 108Zm92.8 0L128 213.23 85.91 108ZM88 100l40-53.33L168 100Zm90.71 8h52.09l-91.16 97.66Zm52.47-8H178l-42-56h46.18ZM73.82 44H120l-42 56H24.82Z" />
+      </G>
+    </Svg>
+  );
+};

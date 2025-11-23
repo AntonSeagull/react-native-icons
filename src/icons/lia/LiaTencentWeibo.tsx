@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaTencentWeibo = (props: IconProps) => {
+export const LiaTencentWeibo = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 17 2 C 12.039063 2 8 6.039063 8 11 C 8 12.53125 8.382813 13.957031 9.0625 15.21875 C 9.457031 14.503906 9.90625 13.832031 10.375 13.1875 C 10.144531 12.496094 10 11.769531 10 11 C 10 7.140625 13.140625 4 17 4 C 20.859375 4 24 7.140625 24 11 C 24 14.859375 20.859375 18 17 18 C 16.183594 18 15.414063 17.851563 14.6875 17.59375 C 14.34375 18.15625 14.027344 18.742188 13.75 19.375 C 14.761719 19.769531 15.851563 20 17 20 C 21.960938 20 26 15.960938 26 11 C 26 6.039063 21.960938 2 17 2 Z M 17 8 C 15.34375 8 14 9.34375 14 11 C 14 11.335938 14.085938 11.636719 14.1875 11.9375 C 8.457031 17.242188 8 25.210938 8 29 L 10 29 C 10 25.386719 10.417969 18.257813 15.40625 13.53125 C 15.867188 13.824219 16.414063 14 17 14 C 18.65625 14 20 12.65625 20 11 C 20 9.34375 18.65625 8 17 8 Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M17 2c-4.96 0-9 4.04-9 9 0 1.531.383 2.957 1.063 4.219.394-.715.843-1.387 1.312-2.031A6.9 6.9 0 0 1 10 11c0-3.86 3.14-7 7-7s7 3.14 7 7-3.14 7-7 7a6.9 6.9 0 0 1-2.312-.406c-.344.562-.66 1.148-.938 1.781A8.9 8.9 0 0 0 17 20c4.96 0 9-4.04 9-9s-4.04-9-9-9m0 6a3 3 0 0 0-3 3c0 .336.086.637.188.938C8.457 17.242 8 25.21 8 29h2c0-3.613.418-10.742 5.406-15.469.461.293 1.008.469 1.594.469a3 3 0 0 0 0-6" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiUserGearBold = (props: IconProps) => {
+export const PiUserGearBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M148.5,156.53a72,72,0,1,0-89,0,124,124,0,0,0-48.69,35.75,12,12,0,0,0,18.38,15.44C48.54,184.69,75.11,172,104,172c37,0,61.12,19.42,74.81,35.72a12,12,0,1,0,18.38-15.44A124,124,0,0,0,148.5,156.53ZM56,100a48,48,0,1,1,48,48A48.05,48.05,0,0,1,56,100Zm190.53,40-7.11,2.31,4.39,6.05a12,12,0,1,1-19.41,14.11l-4.4-6.06-4.4,6.06a12,12,0,1,1-19.41-14.11l4.39-6.05L193.47,140a12,12,0,1,1,7.41-22.83l7.12,2.31V112a12,12,0,0,1,24,0v7.48l7.12-2.31A12,12,0,1,1,246.53,140Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M148.5 156.53a72 72 0 1 0-89 0 124 124 0 0 0-48.69 35.75 12 12 0 0 0 18.38 15.44C48.54 184.69 75.11 172 104 172c37 0 61.12 19.42 74.81 35.72a12 12 0 1 0 18.38-15.44 124 124 0 0 0-48.69-35.75M56 100a48 48 0 1 1 48 48 48.05 48.05 0 0 1-48-48m190.53 40-7.11 2.31 4.39 6.05a12 12 0 1 1-19.41 14.11l-4.4-6.06-4.4 6.06a12 12 0 1 1-19.41-14.11l4.39-6.05-7.11-2.31a12 12 0 1 1 7.41-22.83l7.12 2.31V112a12 12 0 0 1 24 0v7.48l7.12-2.31a12 12 0 1 1 7.41 22.83" />
+      </G>
+    </Svg>
+  );
+};

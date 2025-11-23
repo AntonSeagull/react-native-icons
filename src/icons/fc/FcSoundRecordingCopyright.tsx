@@ -1,36 +1,36 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FcSoundRecordingCopyright = (props: IconProps) => {
+export const FcSoundRecordingCopyright = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 48 48"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 24, 24)`}
-      >
-        <G fill={color} stroke={color}>
-          <Circle  fill="#9C27B0" cx="24" cy="24" r="21" />
-          <Path  fill="#E1BEE7" d="M20.7,27.2v8.4h-3.9V12.9h8.7c1.3,0,2.5,0.2,3.5,0.5c1,0.4,1.9,0.9,2.6,1.5c0.7,0.6,1.2,1.4,1.6,2.3 c0.4,0.9,0.6,1.8,0.6,2.9c0,1.1-0.2,2.1-0.6,3c-0.4,0.9-0.9,1.6-1.6,2.2c-0.7,0.6-1.6,1.1-2.6,1.4c-1,0.3-2.2,0.5-3.5,0.5H20.7z M20.7,24h4.7c0.8,0,1.4-0.1,2-0.3c0.5-0.2,1-0.5,1.4-0.8c0.4-0.3,0.6-0.8,0.8-1.2c0.2-0.5,0.2-1,0.2-1.6c0-0.5-0.1-1-0.2-1.5 c-0.2-0.5-0.4-0.9-0.8-1.3c-0.4-0.4-0.8-0.7-1.4-0.9c-0.5-0.2-1.2-0.3-2-0.3h-4.7V24z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 48 48"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 24, 24)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Circle cx={24} cy={24} r={21} fill="#9C27B0" />
+        <Path fill="#E1BEE7" d="M20.7 27.2v8.4h-3.9V12.9h8.7c1.3 0 2.5.2 3.5.5 1 .4 1.9.9 2.6 1.5s1.2 1.4 1.6 2.3.6 1.8.6 2.9q0 1.65-.6 3c-.4.9-.9 1.6-1.6 2.2S30 26.4 29 26.7s-2.2.5-3.5.5zm0-3.2h4.7c.8 0 1.4-.1 2-.3.5-.2 1-.5 1.4-.8s.6-.8.8-1.2c.2-.5.2-1 .2-1.6 0-.5-.1-1-.2-1.5-.2-.5-.4-.9-.8-1.3s-.8-.7-1.4-.9c-.5-.2-1.2-.3-2-.3h-4.7z" />
+      </G>
+    </Svg>
+  );
+};

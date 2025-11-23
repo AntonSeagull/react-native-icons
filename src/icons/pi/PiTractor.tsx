@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiTractor = (props: IconProps) => {
+export const PiTractor = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M240,165.41V134a15.89,15.89,0,0,0-11.4-15.32l-.21-.06L192,108.71V72a8,8,0,0,0-16,0v32.38l-24-6.5V56h8a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16h8V88H40a8,8,0,0,0,0,16H68a68.07,68.07,0,0,1,68,68v12a8,8,0,0,0,8,8h32.23A36,36,0,1,0,240,165.41ZM68,88H64V56h72v66.77A83.92,83.92,0,0,0,68,88Zm84,26.45L224,134v20.1A36,36,0,0,0,178.06,176H152ZM212,208a20,20,0,1,1,20-20A20,20,0,0,1,212,208ZM68,120a52,52,0,1,0,52,52A52.06,52.06,0,0,0,68,120Zm0,88a36,36,0,1,1,36-36A36,36,0,0,1,68,208Zm12-36a12,12,0,1,1-12-12A12,12,0,0,1,80,172Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M240 165.41V134a15.89 15.89 0 0 0-11.4-15.32l-.21-.06-36.39-9.91V72a8 8 0 0 0-16 0v32.38l-24-6.5V56h8a8 8 0 0 0 0-16H40a8 8 0 0 0 0 16h8v32h-8a8 8 0 0 0 0 16h28a68.07 68.07 0 0 1 68 68v12a8 8 0 0 0 8 8h32.23A36 36 0 1 0 240 165.41M68 88h-4V56h72v66.77A83.92 83.92 0 0 0 68 88m84 26.45L224 134v20.1a36 36 0 0 0-45.94 21.9H152ZM212 208a20 20 0 1 1 20-20 20 20 0 0 1-20 20M68 120a52 52 0 1 0 52 52 52.06 52.06 0 0 0-52-52m0 88a36 36 0 1 1 36-36 36 36 0 0 1-36 36m12-36a12 12 0 1 1-12-12 12 12 0 0 1 12 12" />
+      </G>
+    </Svg>
+  );
+};

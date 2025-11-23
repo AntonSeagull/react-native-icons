@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiMicrosoftTeamsLogoBold = (props: IconProps) => {
+export const PiMicrosoftTeamsLogoBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M116,104a12,12,0,0,1-12,12h-4v36a12,12,0,0,1-24,0V116H72a12,12,0,0,1,0-24h32A12,12,0,0,1,116,104ZM240,92.74V152A44,44,0,0,1,198,196,68,68,0,0,1,76,200H36a20,20,0,0,1-20-20V76A20,20,0,0,1,36,56H92a44,44,0,0,1,80.51-24.53A36,36,0,0,1,221.94,76h1.32A16.76,16.76,0,0,1,240,92.74ZM180,55.09c0,.3,0,.6,0,.91a44.14,44.14,0,0,1-4.77,20H188a12,12,0,1,0-8-20.91ZM116,56h24a19.93,19.93,0,0,1,14.86,6.66A20.25,20.25,0,0,0,156,56a20,20,0,0,0-40,0ZM40,176h96V80H40Zm140-8V100H160v80a20,20,0,0,1-20,20H105.86A44,44,0,0,0,180,168Zm36-68H204v68c0,.79,0,1.57-.06,2.35A20,20,0,0,0,216,152Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M116 104a12 12 0 0 1-12 12h-4v36a12 12 0 0 1-24 0v-36h-4a12 12 0 0 1 0-24h32a12 12 0 0 1 12 12m124-11.26V152a44 44 0 0 1-42 44 68 68 0 0 1-122 4H36a20 20 0 0 1-20-20V76a20 20 0 0 1 20-20h56a44 44 0 0 1 80.51-24.53A36 36 0 0 1 221.94 76h1.32A16.76 16.76 0 0 1 240 92.74m-60-37.65V56a44.14 44.14 0 0 1-4.77 20H188a12 12 0 1 0-8-20.91M116 56h24a19.93 19.93 0 0 1 14.86 6.66A20.3 20.3 0 0 0 156 56a20 20 0 0 0-40 0M40 176h96V80H40Zm140-8v-68h-20v80a20 20 0 0 1-20 20h-34.14A44 44 0 0 0 180 168m36-68h-12v68c0 .79 0 1.57-.06 2.35A20 20 0 0 0 216 152Z" />
+      </G>
+    </Svg>
+  );
+};

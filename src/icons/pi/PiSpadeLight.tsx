@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiSpadeLight = (props: IconProps) => {
+export const PiSpadeLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M179.84,51.39a284.14,284.14,0,0,0-49.16-32.76,6,6,0,0,0-5.36,0A284.14,284.14,0,0,0,76.16,51.39C42.88,79.13,26,107.59,26,136a54,54,0,0,0,75.24,49.65l-11,36.63A6,6,0,0,0,96,230h64a6,6,0,0,0,5.75-7.72l-11-36.63A54,54,0,0,0,230,136C230,107.59,213.12,79.13,179.84,51.39ZM176,178a42,42,0,0,1-27.6-10.34,6,6,0,0,0-9.69,6.24L151.94,218H104.06l13.23-44.1a6,6,0,0,0-9.69-6.24A42,42,0,0,1,38,136c0-53.73,74.77-97,90-105.22C143.24,39,218,82.2,218,136A42,42,0,0,1,176,178Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M179.84 51.39a284 284 0 0 0-49.16-32.76 6 6 0 0 0-5.36 0 284 284 0 0 0-49.16 32.76C42.88 79.13 26 107.59 26 136a54 54 0 0 0 75.24 49.65l-11 36.63A6 6 0 0 0 96 230h64a6 6 0 0 0 5.75-7.72l-11-36.63A54 54 0 0 0 230 136c0-28.41-16.88-56.87-50.16-84.61M176 178a42 42 0 0 1-27.6-10.34 6 6 0 0 0-9.69 6.24l13.23 44.1h-47.88l13.23-44.1a6 6 0 0 0-9.69-6.24A42 42 0 0 1 38 136c0-53.73 74.77-97 90-105.22C143.24 39 218 82.2 218 136a42 42 0 0 1-42 42" />
+      </G>
+    </Svg>
+  );
+};

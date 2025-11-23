@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaTruckLoadingSolid = (props: IconProps) => {
+export const LiaTruckLoadingSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 17 5 L 17 21.074219 L 2.7324219 25.035156 L 3.2675781 26.962891 L 20.015625 22.314453 C 20.179437 24.924586 22.349292 27 25 27 C 27.757 27 30 24.757 30 22 C 30 19.243 27.757 17 25 17 C 22.901506 17 21.107665 18.302147 20.367188 20.138672 L 19 20.517578 L 19 7 L 30 7 L 30 5 L 17 5 z M 12.460938 9.7636719 L 1.9160156 12.787109 L 4.6914062 22.470703 L 15.236328 19.445312 L 12.460938 9.7636719 z M 11.089844 12.236328 L 12.763672 18.074219 L 6.0644531 19.994141 L 4.390625 14.158203 L 11.089844 12.236328 z M 25 19 C 26.654 19 28 20.346 28 22 C 28 23.654 26.654 25 25 25 C 23.346 25 22 23.654 22 22 C 22 20.346 23.346 19 25 19 z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M17 5v16.074L2.732 25.035l.536 1.928 16.748-4.649A5.003 5.003 0 0 0 25 27c2.757 0 5-2.243 5-5s-2.243-5-5-5a5 5 0 0 0-4.633 3.139L19 20.518V7h11V5zm-4.54 4.764L1.917 12.787l2.775 9.684 10.545-3.026zm-1.37 2.472 1.674 5.838-6.7 1.92-1.673-5.836zM25 19c1.654 0 3 1.346 3 3s-1.346 3-3 3-3-1.346-3-3 1.346-3 3-3" />
+      </G>
+    </Svg>
+  );
+};

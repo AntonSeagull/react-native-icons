@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaSynagogueSolid = (props: IconProps) => {
+export const LiaSynagogueSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 16 4.65625 L 15.34375 5.25 L 7.625 12 L 4 12 L 4 27 L 14 27 L 14 23 C 14 21.882813 14.882813 21 16 21 C 17.117188 21 18 21.882813 18 23 L 18 27 L 28 27 L 28 12 L 24.375 12 L 16.65625 5.25 Z M 6 7 C 5.417969 7.875 4 8.007813 4 9.65625 C 4 10.582031 4.65625 11 4.65625 11 L 7.34375 11 C 7.34375 11 8 10.582031 8 9.65625 C 8 7.921875 6.65625 7.847656 6 7 Z M 26 7 C 25.417969 7.875 24 8.5 24 9.65625 C 24 10.582031 24.65625 11 24.65625 11 L 27.34375 11 C 27.34375 11 28 10.582031 28 9.65625 C 28 8.414063 26.65625 7.847656 26 7 Z M 16 7.3125 L 23.34375 13.75 L 23.625 14 L 26 14 L 26 25 L 20 25 L 20 23 C 20 20.800781 18.199219 19 16 19 C 13.800781 19 12 20.800781 12 23 L 12 25 L 6 25 L 6 14 L 8.375 14 L 8.65625 13.75 Z M 16 11.46875 L 15.125 12.96875 L 13.40625 12.96875 L 14.25 14.46875 L 13.40625 15.96875 L 15.125 15.96875 L 16 17.5 L 16.875 15.96875 L 18.59375 15.96875 L 17.75 14.46875 L 18.59375 12.96875 L 16.875 12.96875 Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m16 4.656-.656.594L7.625 12H4v15h10v-4c0-1.117.883-2 2-2s2 .883 2 2v4h10V12h-3.625l-7.719-6.75ZM6 7c-.582.875-2 1.008-2 2.656 0 .926.656 1.344.656 1.344h2.688S8 10.582 8 9.656C8 7.922 6.656 7.848 6 7m20 0c-.582.875-2 1.5-2 2.656 0 .926.656 1.344.656 1.344h2.688S28 10.582 28 9.656C28 8.414 26.656 7.848 26 7m-10 .313 7.344 6.437.281.25H26v11h-6v-2c0-2.2-1.8-4-4-4s-4 1.8-4 4v2H6V14h2.375l.281-.25Zm0 4.156-.875 1.5h-1.719l.844 1.5-.844 1.5h1.719L16 17.5l.875-1.531h1.719l-.844-1.5.844-1.5h-1.719Z" />
+      </G>
+    </Svg>
+  );
+};

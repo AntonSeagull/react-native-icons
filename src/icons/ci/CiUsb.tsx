@@ -1,36 +1,36 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const CiUsb = (props: IconProps) => {
+export const CiUsb = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M20.44,8.355H18.31v-.14a1.443,1.443,0,0,0-1.44-1.45H7.29a5.235,5.235,0,0,0,0,10.47h9.58a1.443,1.443,0,0,0,1.44-1.45v-.14h2.13a1.511,1.511,0,0,0,1.5-1.5V9.855A1.5,1.5,0,0,0,20.44,8.355Zm-3.13,7.43a.446.446,0,0,1-.44.45H7.29a4.235,4.235,0,0,1,0-8.47h9.58a.446.446,0,0,1,.44.45Zm3.63-1.64a.508.508,0,0,1-.5.5H18.31V9.355h2.13a.5.5,0,0,1,.5.5Z" />
-          <Path  d="M6.29,13.444A1.446,1.446,0,1,1,7.738,12,1.447,1.447,0,0,1,6.29,13.444Zm0-1.892A.446.446,0,1,0,6.738,12,.446.446,0,0,0,6.29,11.552Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M20.44 8.355h-2.13v-.14a1.443 1.443 0 0 0-1.44-1.45H7.29a5.235 5.235 0 0 0 0 10.47h9.58a1.443 1.443 0 0 0 1.44-1.45v-.14h2.13a1.51 1.51 0 0 0 1.5-1.5v-4.29a1.5 1.5 0 0 0-1.5-1.5m-3.13 7.43a.446.446 0 0 1-.44.45H7.29a4.235 4.235 0 0 1 0-8.47h9.58a.446.446 0 0 1 .44.45Zm3.63-1.64a.51.51 0 0 1-.5.5h-2.13v-5.29h2.13a.5.5 0 0 1 .5.5Z" />
+        <Path d="M6.29 13.444A1.446 1.446 0 1 1 7.738 12a1.447 1.447 0 0 1-1.448 1.444m0-1.892a.446.446 0 1 0 .448.448.446.446 0 0 0-.448-.448" />
+      </G>
+    </Svg>
+  );
+};

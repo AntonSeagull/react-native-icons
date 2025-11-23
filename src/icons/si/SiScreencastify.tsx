@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const SiScreencastify = (props: IconProps) => {
+export const SiScreencastify = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M7.898 2.347c-.472.008-.914.38-.914.891v4.278H1.1c-.541 0-1.1.437-1.1.978v7.02c0 .54.559.907 1.1.907h5.884V7.533h6.408c.542 0 .926.437.926.979v1.623l3.667-2.095v7.927l-3.667-2.095v1.676c0 .541-.384.908-.926.908H6.984v4.313c0 .68.786 1.1 1.38.768l9.638-5.535 5.553-3.195c.593-.402.593-1.257 0-1.59l-5.553-3.194L8.364 2.47a.886.886 0 00-.466-.123z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M7.898 2.347c-.472.008-.914.38-.914.891v4.278H1.1c-.541 0-1.1.437-1.1.978v7.02c0 .54.559.907 1.1.907h5.884V7.533h6.408c.542 0 .926.437.926.979v1.623l3.667-2.095v7.927l-3.667-2.095v1.676c0 .541-.384.908-.926.908H6.984v4.313c0 .68.786 1.1 1.38.768l9.638-5.535 5.553-3.195c.593-.402.593-1.257 0-1.59l-5.553-3.194L8.364 2.47a.9.9 0 0 0-.466-.123" />
+      </G>
+    </Svg>
+  );
+};

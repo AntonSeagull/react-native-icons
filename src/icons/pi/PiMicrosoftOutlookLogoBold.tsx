@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiMicrosoftOutlookLogoBold = (props: IconProps) => {
+export const PiMicrosoftOutlookLogoBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M124,128a36,36,0,1,0-36,36A36,36,0,0,0,124,128Zm-48,0a12,12,0,1,1,12,12A12,12,0,0,1,76,128Zm148-28H212V32a12,12,0,0,0-12-12H104A12,12,0,0,0,92,32V56H36A20,20,0,0,0,16,76V180a20,20,0,0,0,20,20H68v16a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V112A12,12,0,0,0,224,100Zm-52.45,68L212,136.54v62.92ZM116,44h72v80.8l-28,21.78V76a20,20,0,0,0-20-20H116ZM40,80h96v96H40ZM92,200h48a20,20,0,0,0,18.28-11.92L189,212H92Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M124 128a36 36 0 1 0-36 36 36 36 0 0 0 36-36m-48 0a12 12 0 1 1 12 12 12 12 0 0 1-12-12m148-28h-12V32a12 12 0 0 0-12-12h-96a12 12 0 0 0-12 12v24H36a20 20 0 0 0-20 20v104a20 20 0 0 0 20 20h32v16a20 20 0 0 0 20 20h128a20 20 0 0 0 20-20V112a12 12 0 0 0-12-12m-52.45 68L212 136.54v62.92ZM116 44h72v80.8l-28 21.78V76a20 20 0 0 0-20-20h-24ZM40 80h96v96H40Zm52 120h48a20 20 0 0 0 18.28-11.92L189 212H92Z" />
+      </G>
+    </Svg>
+  );
+};

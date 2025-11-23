@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaBitcoin = (props: IconProps) => {
+export const LiaBitcoin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 12 3 L 12 6 L 8 6 L 8 26 L 12 26 L 12 29 L 14 29 L 14 26 L 16 26 L 16 29 L 18 29 L 18 26 L 19.5 26 C 22.527344 26 25 23.527344 25 20.5 C 25 18.417969 23.839844 16.589844 22.125 15.65625 C 23.28125 14.644531 24 13.148438 24 11.5 C 24 8.472656 21.527344 6 18.5 6 L 18 6 L 18 3 L 16 3 L 16 6 L 14 6 L 14 3 Z M 10 8 L 18.5 8 C 20.445313 8 22 9.554688 22 11.5 C 22 13.445313 20.445313 15 18.5 15 L 10 15 Z M 10 17 L 19.5 17 C 21.445313 17 23 18.554688 23 20.5 C 23 22.445313 21.445313 24 19.5 24 L 10 24 Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M12 3v3H8v20h4v3h2v-3h2v3h2v-3h1.5c3.027 0 5.5-2.473 5.5-5.5 0-2.082-1.16-3.91-2.875-4.844A5.513 5.513 0 0 0 18.5 6H18V3h-2v3h-2V3Zm-2 5h8.5c1.945 0 3.5 1.555 3.5 3.5S20.445 15 18.5 15H10Zm0 9h9.5c1.945 0 3.5 1.555 3.5 3.5S21.445 24 19.5 24H10Z" />
+      </G>
+    </Svg>
+  );
+};

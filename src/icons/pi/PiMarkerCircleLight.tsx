@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiMarkerCircleLight = (props: IconProps) => {
+export const PiMarkerCircleLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M200.12,55.87A102,102,0,1,0,55.88,200.12,102,102,0,1,0,200.12,55.87ZM86,207.64V176a2,2,0,0,1,2-2h80a2,2,0,0,1,2,2v31.64a90.32,90.32,0,0,1-84,0ZM104,142h48a2,2,0,0,1,2,2v18H102V144A2,2,0,0,1,104,142Zm11.54-12L126,79.59a2,2,0,0,1,3.92,0L140.46,130Zm76.1,61.64A92.76,92.76,0,0,1,182,200V176a14,14,0,0,0-14-14h-2V144a14,14,0,0,0-13.27-14l-11-52.9a14,14,0,0,0-27.42,0l-11,52.9A14,14,0,0,0,90,144v18H88a14,14,0,0,0-14,14v24a92.76,92.76,0,0,1-9.64-8.37,90,90,0,1,1,127.28,0Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M200.12 55.87A102 102 0 1 0 55.88 200.12 102 102 0 1 0 200.12 55.87M86 207.64V176a2 2 0 0 1 2-2h80a2 2 0 0 1 2 2v31.64a90.32 90.32 0 0 1-84 0M104 142h48a2 2 0 0 1 2 2v18h-52v-18a2 2 0 0 1 2-2m11.54-12L126 79.59a2 2 0 0 1 3.92 0L140.46 130Zm76.1 61.64A93 93 0 0 1 182 200v-24a14 14 0 0 0-14-14h-2v-18a14 14 0 0 0-13.27-14l-11-52.9a14 14 0 0 0-27.42 0l-11 52.9A14 14 0 0 0 90 144v18h-2a14 14 0 0 0-14 14v24a93 93 0 0 1-9.64-8.37 90 90 0 1 1 127.28 0Z" />
+      </G>
+    </Svg>
+  );
+};

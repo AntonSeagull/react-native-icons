@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GoSparkle = (props: IconProps) => {
+export const GoSparkle = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M11.191.565c.275-.754 1.342-.753 1.618 0l1.918 5.238a5.83 5.83 0 0 0 3.47 3.47l5.237 1.918c.755.275.755 1.342 0 1.618l-5.237 1.918a5.83 5.83 0 0 0-3.47 3.47l-1.918 5.237c-.276.755-1.343.755-1.618 0l-1.918-5.237a5.83 5.83 0 0 0-3.47-3.47L.565 12.809c-.753-.276-.754-1.342 0-1.618l5.238-1.918a5.83 5.83 0 0 0 3.47-3.47L11.191.565Zm-.505 5.756a7.336 7.336 0 0 1-4.365 4.365L2.73 12l3.591 1.315a7.333 7.333 0 0 1 4.365 4.365L12 21.269l1.315-3.589a7.33 7.33 0 0 1 4.365-4.365L21.269 12l-3.589-1.314a7.333 7.333 0 0 1-4.365-4.365L12 2.73l-1.314 3.591Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M11.191.565c.275-.754 1.342-.753 1.618 0l1.918 5.238a5.83 5.83 0 0 0 3.47 3.47l5.237 1.918c.755.275.755 1.342 0 1.618l-5.237 1.918a5.83 5.83 0 0 0-3.47 3.47l-1.918 5.237c-.276.755-1.343.755-1.618 0l-1.918-5.237a5.83 5.83 0 0 0-3.47-3.47L.565 12.809c-.753-.276-.754-1.342 0-1.618l5.238-1.918a5.83 5.83 0 0 0 3.47-3.47zm-.505 5.756a7.34 7.34 0 0 1-4.365 4.365L2.73 12l3.591 1.315a7.33 7.33 0 0 1 4.365 4.365L12 21.269l1.315-3.589a7.33 7.33 0 0 1 4.365-4.365L21.269 12l-3.589-1.314a7.33 7.33 0 0 1-4.365-4.365L12 2.73z" />
+      </G>
+    </Svg>
+  );
+};

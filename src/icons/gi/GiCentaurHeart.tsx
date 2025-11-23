@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiCentaurHeart = (props: IconProps) => {
+export const GiCentaurHeart = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M147.9 25.75c-10.1 0-20.2 1.2-29.9 3.6-52 13-95.7 59.8-97.8 127.05-1.1 35.8 9.9 65.6 27.6 91.1 17.6 25.6 41.5 47.1 66.8 68.5C165.2 358.5 221 399.8 247 464.3l8.9 22 8.5-22.2C289 399.5 343 356.3 393 312.8c50-43.5 96.6-88.3 98.8-155.8 2.3-71.55-42.4-116.75-95.5-127.15-49-9.7-105.4 9.1-140.3 57.7-27.5-42.1-68.3-61.7-108.1-61.8zM80 112l80 32-64 32 116.4 23.3L256 112l43.6 87.3L416 176l-64-32 80-32 32 80-171.5 66L256 416l-36.5-158L48 192l32-80z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M147.9 25.75c-10.1 0-20.2 1.2-29.9 3.6-52 13-95.7 59.8-97.8 127.05-1.1 35.8 9.9 65.6 27.6 91.1 17.6 25.6 41.5 47.1 66.8 68.5C165.2 358.5 221 399.8 247 464.3l8.9 22 8.5-22.2C289 399.5 343 356.3 393 312.8s96.6-88.3 98.8-155.8c2.3-71.55-42.4-116.75-95.5-127.15-49-9.7-105.4 9.1-140.3 57.7-27.5-42.1-68.3-61.7-108.1-61.8M80 112l80 32-64 32 116.4 23.3L256 112l43.6 87.3L416 176l-64-32 80-32 32 80-171.5 66L256 416l-36.5-158L48 192z" />
+      </G>
+    </Svg>
+  );
+};

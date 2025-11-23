@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const SiFoxtel = (props: IconProps) => {
+export const SiFoxtel = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M2.867 10.631l.341-1.024H0v4.779h1.16v-1.72h1.434l.341-1.024H1.16v-1.01zm3.03-1.085a2.454 2.454 0 1 0-.006 4.908 2.454 2.454 0 0 0 .007-4.908zm0 3.74a1.287 1.287 0 1 1-.007-2.574 1.287 1.287 0 0 1 .008 2.575zm6.506-3.679h-1.297l-.812 1.304-.82-1.304H8.177l1.468 2.335-1.536 2.444h1.297l.888-1.405.88 1.405h1.297l-1.529-2.444zm.102 1.024h1.413v3.755h1.16V10.63h1.23V9.607h-3.16zm7.304 0l.341-1.024h-3.208v4.779h2.867l.341-1.024h-2.046v-.915h1.432l.341-1.024h-1.773v-.792zm2.143 2.73V9.608h-1.16v4.779h2.867L24 13.362Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m2.867 10.631.341-1.024H0v4.779h1.16v-1.72h1.434l.341-1.024H1.16v-1.01zm3.03-1.085a2.454 2.454 0 1 0-.006 4.908 2.454 2.454 0 0 0 .007-4.908zm0 3.74a1.287 1.287 0 1 1-.007-2.574 1.287 1.287 0 0 1 .008 2.575zm6.506-3.679h-1.297l-.812 1.304-.82-1.304H8.177l1.468 2.335-1.536 2.444h1.297l.888-1.405.88 1.405h1.297l-1.529-2.444zm.102 1.024h1.413v3.755h1.16V10.63h1.23V9.607h-3.16zm7.304 0 .341-1.024h-3.208v4.779h2.867l.341-1.024h-2.046v-.915h1.432l.341-1.024h-1.773v-.792zm2.143 2.73V9.608h-1.16v4.779h2.867L24 13.362Z" />
+      </G>
+    </Svg>
+  );
+};

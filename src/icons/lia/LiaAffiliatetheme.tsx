@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaAffiliatetheme = (props: IconProps) => {
+export const LiaAffiliatetheme = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 12.103516 5 C 10.236794 5.0156311 7.3762969 6.9496406 5.0371094 9.9550781 C 2.1581094 13.654078 1.14725 17.559313 2.78125 18.695312 C 4.41525 19.821312 8.0838906 17.733156 10.962891 14.035156 C 13.841891 10.336156 14.85275 6.4326406 13.21875 5.3066406 C 12.912375 5.0955156 12.534298 4.9963928 12.103516 5 z M 29.984375 11 C 26.183375 17.359 20.088375 20.541625 16.359375 18.265625 C 15.075375 17.479625 14.285141 15.815 13.994141 14 C 12.018141 17.66 8.208 20.903 4 22 C 6.681 25.188 10.838453 27 15.314453 27 C 23.401453 27 29.960937 20.378172 29.960938 12.201172 C 29.970937 11.742172 30.027375 11.437 29.984375 11 z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M12.104 5c-1.867.016-4.728 1.95-7.067 4.955-2.879 3.7-3.89 7.604-2.256 8.74 1.634 1.126 5.303-.962 8.182-4.66s3.89-7.602 2.256-8.728c-.307-.211-.685-.31-1.115-.307m17.88 6c-3.8 6.359-9.896 9.542-13.625 7.266-1.284-.786-2.074-2.451-2.365-4.266-1.976 3.66-5.786 6.903-9.994 8 2.681 3.188 6.838 5 11.314 5 8.087 0 14.647-6.622 14.647-14.799.01-.459.066-.764.023-1.201" />
+      </G>
+    </Svg>
+  );
+};

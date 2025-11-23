@@ -1,36 +1,36 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const CiMicrochip = (props: IconProps) => {
+export const CiMicrochip = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M13,14.5H11A1.5,1.5,0,0,1,9.5,13V11A1.5,1.5,0,0,1,11,9.5h2A1.5,1.5,0,0,1,14.5,11v2A1.5,1.5,0,0,1,13,14.5Zm-2-4a.5.5,0,0,0-.5.5v2a.5.5,0,0,0,.5.5h2a.5.5,0,0,0,.5-.5V11a.5.5,0,0,0-.5-.5Z" />
-          <Path  d="M20.435,14.5h-1.93v-5h1.93a.5.5,0,0,0,0-1h-1.93V8a2.507,2.507,0,0,0-2.5-2.5h-.5V3.565a.508.508,0,0,0-.5-.5.5.5,0,0,0-.5.5V5.5h-5V3.565a.508.508,0,0,0-.5-.5.5.5,0,0,0-.5.5V5.5h-.5A2.5,2.5,0,0,0,5.505,8v.5H3.565a.5.5,0,1,0,0,1h1.94v5H3.565a.5.5,0,1,0,0,1h1.94V16a2.5,2.5,0,0,0,2.5,2.5h.5v1.94a.5.5,0,0,0,1,0V18.5h5v1.94a.5.5,0,0,0,1,0V18.5h.5a2.507,2.507,0,0,0,2.5-2.5v-.5h1.93a.5.5,0,0,0,0-1ZM17.505,16a1.5,1.5,0,0,1-1.5,1.5h-8a1.5,1.5,0,0,1-1.5-1.5V8a1.5,1.5,0,0,1,1.5-1.5h8a1.511,1.511,0,0,1,1.5,1.5Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M13 14.5h-2A1.5 1.5 0 0 1 9.5 13v-2A1.5 1.5 0 0 1 11 9.5h2a1.5 1.5 0 0 1 1.5 1.5v2a1.5 1.5 0 0 1-1.5 1.5m-2-4a.5.5 0 0 0-.5.5v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5Z" />
+        <Path d="M20.435 14.5h-1.93v-5h1.93a.5.5 0 0 0 0-1h-1.93V8a2.507 2.507 0 0 0-2.5-2.5h-.5V3.565a.51.51 0 0 0-.5-.5.5.5 0 0 0-.5.5V5.5h-5V3.565a.51.51 0 0 0-.5-.5.5.5 0 0 0-.5.5V5.5h-.5a2.5 2.5 0 0 0-2.5 2.5v.5h-1.94a.5.5 0 1 0 0 1h1.94v5h-1.94a.5.5 0 1 0 0 1h1.94v.5a2.5 2.5 0 0 0 2.5 2.5h.5v1.94a.5.5 0 0 0 1 0V18.5h5v1.94a.5.5 0 0 0 1 0V18.5h.5a2.507 2.507 0 0 0 2.5-2.5v-.5h1.93a.5.5 0 0 0 0-1m-2.93 1.5a1.5 1.5 0 0 1-1.5 1.5h-8a1.5 1.5 0 0 1-1.5-1.5V8a1.5 1.5 0 0 1 1.5-1.5h8a1.51 1.51 0 0 1 1.5 1.5Z" />
+      </G>
+    </Svg>
+  );
+};

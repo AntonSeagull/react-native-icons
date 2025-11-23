@@ -1,36 +1,46 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const IoAlbumsOutline = (props: IconProps) => {
+export const IoAlbumsOutline = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Line  x1="144" y1="80" x2="368" y2="80" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
-          <Line  x1="112" y1="128" x2="400" y2="128" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32px" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Rect width={384} height={256} x={64} y={176} rx={28.87} ry={28.87} style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinejoin: "round",
+        strokeWidth: 32
+        }} />
+        <Path d="M144 80h224M112 128h288" style={{
+        stroke: "#000",
+        strokeLinecap: "round",
+        strokeMiterlimit: 10,
+        strokeWidth: 32
+        }} />
+      </G>
+    </Svg>
+  );
+};

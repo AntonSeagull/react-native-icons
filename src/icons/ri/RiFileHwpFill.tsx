@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const RiFileHwpFill = (props: IconProps) => {
+export const RiFileHwpFill = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M16 2L20.9997 7L21 20.9925C21 21.5489 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918C3 2.44405 3.44749 2 3.9985 2H16ZM9.33333 14.6667H8V18H16V16.6667L9.333 16.666L9.33333 14.6667ZM12 14.3333C11.4477 14.3333 11 14.781 11 15.3333C11 15.8856 11.4477 16.3333 12 16.3333C12.5523 16.3333 13 15.8856 13 15.3333C13 14.781 12.5523 14.3333 12 14.3333ZM12 9C10.6193 9 9.5 10.1193 9.5 11.5C9.5 12.8807 10.6193 14 12 14C13.3807 14 14.5 12.8807 14.5 11.5C14.5 10.1193 13.3807 9 12 9ZM12 10.3333C12.6443 10.3333 13.1667 10.8557 13.1667 11.5C13.1667 12.1443 12.6443 12.6667 12 12.6667C11.3557 12.6667 10.8333 12.1443 10.8333 11.5C10.8333 10.8557 11.3557 10.3333 12 10.3333ZM12.6667 6H11.3333L11.333 7.333L8 7.33333V8.66667H16V7.33333L12.666 7.333L12.6667 6Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m16 2 5 5v13.993A1 1 0 0 1 20.007 22H3.993A1 1 0 0 1 3 21.008V2.992C3 2.444 3.447 2 3.999 2zM9.333 14.667H8V18h8v-1.333l-6.667-.001zM12 14.333a1 1 0 1 0 0 2 1 1 0 0 0 0-2M12 9a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5m0 1.333a1.167 1.167 0 1 1 0 2.334 1.167 1.167 0 0 1 0-2.334M12.667 6h-1.334v1.333H8v1.334h8V7.333h-3.334z" />
+      </G>
+    </Svg>
+  );
+};

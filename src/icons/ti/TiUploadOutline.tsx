@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TiUploadOutline = (props: IconProps) => {
+export const TiUploadOutline = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M20.986 17c0-.105-.004-.211-.038-.316l-2-6c-.093-.276-.302-.483-.56-.594.881-1.175.799-2.847-.269-3.914l-6.119-6.121-6.121 6.121c-1.067 1.067-1.149 2.739-.27 3.914-.256.109-.467.316-.559.594l-2 6c-.034.105-.038.211-.038.316-.012 0-.012 5-.012 5 0 .553.447 1 1 1h16c.553 0 1-.447 1-1 0 0 0-5-.014-5zm-13.693-9.41l4.707-4.707 4.707 4.707c.391.391.391 1.023 0 1.414-.379.377-1.035.377-1.414 0l-2.293-2.293v5.789c0 .552-.448 1-1 1s-1-.448-1-1v-5.789l-2.293 2.293c-.379.377-1.035.377-1.414 0-.391-.391-.391-1.025 0-1.414zm-.572 4.41h2.279v.5c0 1.654 1.346 3 3 3s3-1.346 3-3v-.5h2.279l1.666 5h-13.892l1.668-5zm-1.721 9v-3h14v3h-14z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M20.986 17c0-.105-.004-.211-.038-.316l-2-6a1 1 0 0 0-.56-.594 2.995 2.995 0 0 0-.269-3.914L12 .055 5.879 6.176a3 3 0 0 0-.27 3.914.99.99 0 0 0-.559.594l-2 6a1 1 0 0 0-.038.316C3 17 3 22 3 22a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1s0-5-.014-5M7.293 7.59 12 2.883l4.707 4.707a1 1 0 0 1 0 1.414 1.025 1.025 0 0 1-1.414 0L13 6.711V12.5a1 1 0 0 1-2 0V6.711L8.707 9.004a1.025 1.025 0 0 1-1.414 0 1 1 0 0 1 0-1.414M6.721 12H9v.5c0 1.654 1.346 3 3 3s3-1.346 3-3V12h2.279l1.666 5H5.053zM5 21v-3h14v3z" />
+      </G>
+    </Svg>
+  );
+};

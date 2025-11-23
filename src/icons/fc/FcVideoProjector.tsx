@@ -1,38 +1,40 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FcVideoProjector = (props: IconProps) => {
+export const FcVideoProjector = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 48 48"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 24, 24)`}
-      >
-        <G fill={color} stroke={color}>
-          <Circle  fill="#37474F" cx="37" cy="24" r="8" />
-          <Circle  fill="#a0f" cx="37" cy="24" r="6" />
-          <Path  fill="#78909C" d="M44,35H4c-2.2,0-4-1.8-4-4V17c0-2.2,1.8-4,4-4h40c2.2,0,4,1.8,4,4v14C48,33.2,46.2,35,44,35z" />
-          <Path  fill="#EA80FC" d="M40.7,21.7c-1-1.1-2.3-1.7-3.7-1.7s-2.8,0.6-3.7,1.7c-0.4,0.4-0.3,1,0.1,1.4c0.4,0.4,1,0.3,1.4-0.1 c1.2-1.3,3.3-1.3,4.5,0c0.2,0.2,0.5,0.3,0.7,0.3c0.2,0,0.5-0.1,0.7-0.3C41.1,22.7,41.1,22.1,40.7,21.7z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 48 48"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 24, 24)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M5 34h6v3H5zM37 34h6v3h-6z" />
+        <Path fill="#78909C" d="M44 35H4c-2.2 0-4-1.8-4-4V17c0-2.2 1.8-4 4-4h40c2.2 0 4 1.8 4 4v14c0 2.2-1.8 4-4 4" />
+        <Path d="M5 19h2v2H5zM5 23h2v2H5zM5 27h2v2H5zM9 19h2v2H9zM9 23h2v2H9zM9 27h2v2H9zM13 19h2v2h-2zM13 23h2v2h-2zM13 27h2v2h-2zM17 19h2v2h-2zM17 23h2v2h-2zM17 27h2v2h-2zM21 19h2v2h-2zM21 23h2v2h-2zM21 27h2v2h-2z" />
+        <Circle cx={37} cy={24} r={8} fill="#37474F" />
+        <Circle cx={37} cy={24} r={6} fill="#a0f" />
+        <Path fill="#EA80FC" d="M40.7 21.7c-1-1.1-2.3-1.7-3.7-1.7s-2.8.6-3.7 1.7c-.4.4-.3 1 .1 1.4s1 .3 1.4-.1c1.2-1.3 3.3-1.3 4.5 0 .2.2.5.3.7.3s.5-.1.7-.3c.4-.3.4-.9 0-1.3" />
+      </G>
+    </Svg>
+  );
+};

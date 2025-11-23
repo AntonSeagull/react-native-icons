@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiShotgun = (props: IconProps) => {
+export const GiShotgun = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M160.72 16C136 16.11 136 17.875 136 46v300c0 30 0 30 30 30h180c30 0 30 0 30-30V46c0-30 0-30-30-30H166c-1.875 0-3.633-.007-5.28 0zM196 76h120v210H196V76zm-46.656 345A13.333 13.333 0 0 0 136 434.344v48.312A13.333 13.333 0 0 0 149.344 496h213.312A13.333 13.333 0 0 0 376 482.656v-48.312A13.333 13.333 0 0 0 362.656 421H149.344z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M160.72 16C136 16.11 136 17.875 136 46v300c0 30 0 30 30 30h180c30 0 30 0 30-30V46c0-30 0-30-30-30H166c-1.875 0-3.633-.007-5.28 0M196 76h120v210H196zm-46.656 345A13.333 13.333 0 0 0 136 434.344v48.312A13.333 13.333 0 0 0 149.344 496h213.312A13.333 13.333 0 0 0 376 482.656v-48.312A13.333 13.333 0 0 0 362.656 421z" />
+      </G>
+    </Svg>
+  );
+};

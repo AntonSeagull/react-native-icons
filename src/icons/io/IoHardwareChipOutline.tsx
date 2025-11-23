@@ -1,46 +1,53 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const IoHardwareChipOutline = (props: IconProps) => {
+export const IoHardwareChipOutline = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Line  x1="256" y1="80" x2="256" y2="48" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="336" y1="80" x2="336" y2="48" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="176" y1="80" x2="176" y2="48" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="256" y1="464" x2="256" y2="432" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="336" y1="464" x2="336" y2="432" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="176" y1="464" x2="176" y2="432" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="432" y1="256" x2="464" y2="256" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="432" y1="336" x2="464" y2="336" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="432" y1="176" x2="464" y2="176" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="48" y1="256" x2="80" y2="256" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="48" y1="336" x2="80" y2="336" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="48" y1="176" x2="80" y2="176" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32px" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Rect width={352} height={352} x={80} y={80} rx={48} ry={48} style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinejoin: "round",
+        strokeWidth: 32
+        }} />
+        <Rect width={224} height={224} x={144} y={144} rx={16} ry={16} style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinejoin: "round",
+        strokeWidth: 32
+        }} />
+        <Path d="M256 80V48M336 80V48M176 80V48M256 464v-32M336 464v-32M176 464v-32M432 256h32M432 336h32M432 176h32M48 256h32M48 336h32M48 176h32" style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinecap: "round",
+        strokeLinejoin: "round",
+        strokeWidth: 32
+        }} />
+      </G>
+    </Svg>
+  );
+};

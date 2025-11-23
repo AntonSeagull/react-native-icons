@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiTreeBold = (props: IconProps) => {
+export const PiTreeBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M201.17,59.62a80,80,0,0,0-146.34,0,76,76,0,0,0,61.17,139V232a12,12,0,0,0,24,0V198.64A76.26,76.26,0,0,0,168,204l1.92,0A76,76,0,0,0,201.17,59.62ZM169.35,180A52,52,0,0,1,140,171.79V135.42l41.37-20.69a12,12,0,1,0-10.74-21.46L140,108.58V88a12,12,0,0,0-24,0v44.58L85.37,117.27a12,12,0,0,0-10.74,21.46L116,159.42v12.37A52.24,52.24,0,0,1,86.65,180c-27.53-.69-50.72-24.56-50.65-52.13a51.81,51.81,0,0,1,32.61-48.1,12,12,0,0,0,6.78-7,56,56,0,0,1,105.22,0,12,12,0,0,0,6.78,7A51.81,51.81,0,0,1,220,127.85C220.08,155.41,196.88,179.29,169.35,180Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M201.17 59.62a80 80 0 0 0-146.34 0 76 76 0 0 0 61.17 139V232a12 12 0 0 0 24 0v-33.36a76.3 76.3 0 0 0 28 5.36h1.92a76 76 0 0 0 31.25-144.38M169.35 180a52 52 0 0 1-29.35-8.21v-36.37l41.37-20.69a12 12 0 1 0-10.74-21.46L140 108.58V88a12 12 0 0 0-24 0v44.58l-30.63-15.31a12 12 0 0 0-10.74 21.46L116 159.42v12.37A52.24 52.24 0 0 1 86.65 180c-27.53-.69-50.72-24.56-50.65-52.13a51.81 51.81 0 0 1 32.61-48.1 12 12 0 0 0 6.78-7 56 56 0 0 1 105.22 0 12 12 0 0 0 6.78 7A51.81 51.81 0 0 1 220 127.85c.08 27.56-23.12 51.44-50.65 52.15" />
+      </G>
+    </Svg>
+  );
+};

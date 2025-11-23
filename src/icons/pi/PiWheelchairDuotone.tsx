@@ -1,36 +1,36 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiWheelchairDuotone = (props: IconProps) => {
+export const PiWheelchairDuotone = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M128,48a24,24,0,1,1-24-24A24,24,0,0,1,128,48Z" opacity="0.2" />
-          <Path  d="M255.59,189.47a8,8,0,0,0-10.12-5.06l-17.42,5.81-28.9-57.8A8,8,0,0,0,192,128H112V104h56a8,8,0,0,0,0-16H112V79a32,32,0,1,0-16,0V89.81A72,72,0,0,0,112,232c33.52,0,63.69-22.71,71.75-54a8,8,0,1,0-15.5-4C162.09,198,137.91,216,112,216A56,56,0,0,1,96,106.34V136a8,8,0,0,0,8,8h83.05l29.79,59.58a8,8,0,0,0,9.69,4l24-8A8,8,0,0,0,255.59,189.47ZM88,48a16,16,0,1,1,16,16A16,16,0,0,1,88,48Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M128 48a24 24 0 1 1-24-24 24 24 0 0 1 24 24" opacity={0.2} />
+        <Path d="M255.59 189.47a8 8 0 0 0-10.12-5.06l-17.42 5.81-28.9-57.8A8 8 0 0 0 192 128h-80v-24h56a8 8 0 0 0 0-16h-56v-9a32 32 0 1 0-16 0v10.81A72 72 0 0 0 112 232c33.52 0 63.69-22.71 71.75-54a8 8 0 1 0-15.5-4c-6.16 24-30.34 42-56.25 42a56 56 0 0 1-16-109.66V136a8 8 0 0 0 8 8h83.05l29.79 59.58a8 8 0 0 0 9.69 4l24-8a8 8 0 0 0 5.06-10.11M88 48a16 16 0 1 1 16 16 16 16 0 0 1-16-16" />
+      </G>
+    </Svg>
+  );
+};

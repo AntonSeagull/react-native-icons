@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiCardboardBox = (props: IconProps) => {
+export const GiCardboardBox = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M185.424 52.607L30.404 130.04l55.375 55.317 155.017-77.43-55.373-55.32zm141.152 0l-55.373 55.32 155.018 77.43 55.376-55.316-155.02-77.433zM256 120.45l-9 4.497v142.715l9 4.496 9-4.496V124.947l-9-4.496zM86.482 207.605l-57.59 71.917 139.545 77.45 72.358-72.286-154.313-77.08zm339.036 0l-154.313 77.08 72.358 72.287 139.544-77.45-57.59-71.916zM247 303.93l-75.436 75.36-78.562-43.6v44.058L247 456.67V303.93zm18 0v152.74l153.998-76.922v-44.06l-78.562 43.603L265 303.93z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M185.424 52.607 30.404 130.04l55.375 55.317 155.017-77.43-55.373-55.32zm141.152 0-55.373 55.32 155.018 77.43 55.376-55.316zM256 120.45l-9 4.497v142.715l9 4.496 9-4.496V124.947l-9-4.496zM86.482 207.605l-57.59 71.917 139.545 77.45 72.358-72.286-154.313-77.08zm339.036 0-154.313 77.08 72.358 72.287 139.544-77.45-57.59-71.916zM247 303.93l-75.436 75.36-78.562-43.6v44.058L247 456.67zm18 0v152.74l153.998-76.922v-44.06l-78.562 43.603z" />
+      </G>
+    </Svg>
+  );
+};

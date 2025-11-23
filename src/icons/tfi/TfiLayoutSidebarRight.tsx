@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TfiLayoutSidebarRight = (props: IconProps) => {
+export const TfiLayoutSidebarRight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 17 17"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8.5, 8.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M17 0v17h-5v-17h5zM9 17h1v-1h-1v1zM7.223 17h0.889v-1h-0.889v1zM1.889 17h0.889v-1h-0.889v1zM3.667 17h0.889v-1h-0.889v1zM5.445 17h0.889v-1h-0.889v1zM0 17h1v-1h-1v1zM0 9h1v-1h-1v1zM0 3h1v-1h-1v1zM0 11h1v-1h-1v1zM0 7h1v-1h-1v1zM0 13h1v-1h-1v1zM0 15h1v-1h-1v1zM0 5h1v-1h-1v1zM0 1h1v-1h-1v1zM8.111 0h-0.889v1h0.889v-1zM6.333 0h-0.889v1h0.889v-1zM2.777 0h-0.888v1h0.889v-1zM4.555 0h-0.888v1h0.889v-1zM9 1h1v-1h-1v1zM9 15h1v-1h-1v1zM9 13h1v-1h-1v1zM9 9h1v-1h-1v1zM9 11h1v-1h-1v1zM9 5h1v-1h-1v1zM9 7h1v-1h-1v1zM9 3h1v-1h-1v1z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 17 17"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8.5, 8.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M17 0v17h-5V0zM9 17h1v-1H9zm-1.777 0h.889v-1h-.889zm-5.334 0h.889v-1h-.889zm1.778 0h.889v-1h-.889zm1.778 0h.889v-1h-.889zM0 17h1v-1H0zm0-8h1V8H0zm0-6h1V2H0zm0 8h1v-1H0zm0-4h1V6H0zm0 6h1v-1H0zm0 2h1v-1H0zM0 5h1V4H0zm0-4h1V0H0zm8.111-1h-.889v1h.889zM6.333 0h-.889v1h.889zM2.777 0h-.888v1h.889V0zm1.778 0h-.888v1h.889V0zM9 1h1V0H9zm0 14h1v-1H9zm0-2h1v-1H9zm0-4h1V8H9zm0 2h1v-1H9zm0-6h1V4H9zm0 2h1V6H9zm0-4h1V2H9z" />
+      </G>
+    </Svg>
+  );
+};

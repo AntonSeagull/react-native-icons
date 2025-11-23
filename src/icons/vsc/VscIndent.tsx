@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const VscIndent = (props: IconProps) => {
+export const VscIndent = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 16 16"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8, 8)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M4 5V6.984C4 7.11661 4.0527 7.24379 4.1465 7.33755C4.2402 7.43132 4.3674 7.484 4.5 7.484H11.382L9.749 5.851L10.456 5.144L12.577 7.265L13 7.688V8.256L10.456 10.8L9.749 10.093L11.359 8.484H4.5C4.1022 8.484 3.7207 8.32597 3.4393 8.04466C3.158 7.76336 3 7.38182 3 6.984V5H4Z" fillRule="evenodd" clipRule="evenodd" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 16 16"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8, 8)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fillRule="evenodd" d="M4 5v1.984a.5.5 0 0 0 .5.5h6.882L9.749 5.851l.707-.707 2.121 2.121.423.423v.568L10.456 10.8l-.707-.707 1.61-1.609H4.5a1.5 1.5 0 0 1-1.5-1.5V5z" clipRule="evenodd" />
+      </G>
+    </Svg>
+  );
+};

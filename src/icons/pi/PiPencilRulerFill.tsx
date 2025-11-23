@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiPencilRulerFill = (props: IconProps) => {
+export const PiPencilRulerFill = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M224,48V208a16,16,0,0,1-16,16H160a16,16,0,0,1-16-16V180a4,4,0,0,1,4-4h36a8,8,0,0,0,8-8.53,8.18,8.18,0,0,0-8.25-7.47H148a4,4,0,0,1-4-4V140a4,4,0,0,1,4-4h36a8,8,0,0,0,8-8.53,8.18,8.18,0,0,0-8.25-7.47H148a4,4,0,0,1-4-4V100a4,4,0,0,1,4-4h36a8,8,0,0,0,8-8.53A8.18,8.18,0,0,0,183.73,80H148a4,4,0,0,1-4-4V48a16,16,0,0,1,16-16h48A16,16,0,0,1,224,48ZM109.66,58.34A8,8,0,0,1,112,64V208a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V64a8,8,0,0,1,2.34-5.66l32-32a8,8,0,0,1,11.32,0ZM48,80V184H64V80Zm32,0V184H96V80ZM51.31,64H92.69L72,43.31Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M224 48v160a16 16 0 0 1-16 16h-48a16 16 0 0 1-16-16v-28a4 4 0 0 1 4-4h36a8 8 0 0 0 8-8.53 8.18 8.18 0 0 0-8.25-7.47H148a4 4 0 0 1-4-4v-16a4 4 0 0 1 4-4h36a8 8 0 0 0 8-8.53 8.18 8.18 0 0 0-8.25-7.47H148a4 4 0 0 1-4-4v-16a4 4 0 0 1 4-4h36a8 8 0 0 0 8-8.53 8.18 8.18 0 0 0-8.27-7.47H148a4 4 0 0 1-4-4V48a16 16 0 0 1 16-16h48a16 16 0 0 1 16 16M109.66 58.34A8 8 0 0 1 112 64v144a16 16 0 0 1-16 16H48a16 16 0 0 1-16-16V64a8 8 0 0 1 2.34-5.66l32-32a8 8 0 0 1 11.32 0ZM48 80v104h16V80Zm32 0v104h16V80ZM51.31 64h41.38L72 43.31Z" />
+      </G>
+    </Svg>
+  );
+};

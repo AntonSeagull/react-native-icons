@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaMegaport = (props: IconProps) => {
+export const LiaMegaport = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 16 3 C 8.832 3 3 8.832 3 16 C 3 23.168 8.832 29 16 29 C 23.168 29 29 23.168 29 16 C 29 8.832 23.168 3 16 3 z M 16 5 C 22.065 5 27 9.935 27 16 C 27 22.065 22.065 27 16 27 C 9.935 27 5 22.065 5 16 C 5 9.935 9.935 5 16 5 z M 16 7 L 15 8 L 15 10.671875 L 13 12.671875 L 13 15.707031 L 10 18.105469 L 10 19.585938 L 10 22 L 11 23 L 12 22 L 12 19.585938 L 12 19.066406 L 13.5 17.865234 L 15 19.066406 L 15 22 L 16 23 L 17 22 L 17 19.585938 L 17 19.066406 L 18.5 17.865234 L 20 19.066406 L 20 22 L 21 23 L 22 22 L 22 19.585938 L 22 18.105469 L 19 15.707031 L 19 12.671875 L 17 10.671875 L 17 8 L 16 7 z M 16 12.5 L 17 13.5 L 17 16.171875 L 16 17.171875 L 15 16.171875 L 15 13.5 L 16 12.5 z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M16 3C8.832 3 3 8.832 3 16s5.832 13 13 13 13-5.832 13-13S23.168 3 16 3m0 2c6.065 0 11 4.935 11 11s-4.935 11-11 11S5 22.065 5 16 9.935 5 16 5m0 2-1 1v2.672l-2 2v3.035l-3 2.398V22l1 1 1-1v-2.934l1.5-1.2 1.5 1.2V22l1 1 1-1v-2.934l1.5-1.2 1.5 1.2V22l1 1 1-1v-3.894l-3-2.399v-3.035l-2-2V8zm0 5.5 1 1v2.672l-1 1-1-1V13.5z" />
+      </G>
+    </Svg>
+  );
+};

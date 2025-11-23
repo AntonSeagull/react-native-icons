@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const Imndcloud2 = (props: IconProps) => {
+export const Imndcloud2 = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 16 16"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8, 8)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M14.5 0h-13c-0.825 0-1.5 0.675-1.5 1.5v13c0 0.825 0.675 1.5 1.5 1.5h13c0.825 0 1.5-0.675 1.5-1.5v-13c0-0.825-0.675-1.5-1.5-1.5zM2.75 11h-0.5l-0.25-1.5 0.25-1.5h0.5l0.25 1.5-0.25 1.5zM4.75 11h-0.5l-0.25-2 0.25-2h0.5l0.25 2-0.25 2zM6.75 11h-0.5l-0.25-3 0.25-3h0.5l0.25 3-0.25 3zM12.894 11c-0.031 0-4.706-0.003-4.709-0.003-0.1-0.009-0.181-0.097-0.184-0.2v-5.394c0-0.1 0.034-0.15 0.162-0.2 0.331-0.128 0.703-0.203 1.088-0.203 1.566 0 2.85 1.2 2.987 2.734 0.203-0.084 0.425-0.131 0.656-0.131 0.938 0 1.7 0.762 1.7 1.7s-0.762 1.697-1.7 1.697z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 16 16"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8, 8)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M14.5 0h-13C.675 0 0 .675 0 1.5v13c0 .825.675 1.5 1.5 1.5h13c.825 0 1.5-.675 1.5-1.5v-13c0-.825-.675-1.5-1.5-1.5M2.75 11h-.5L2 9.5 2.25 8h.5L3 9.5zm2 0h-.5L4 9l.25-2h.5L5 9zm2 0h-.5L6 8l.25-3h.5L7 8zm6.144 0-4.709-.003a.21.21 0 0 1-.184-.2V5.403c0-.1.034-.15.162-.2a3 3 0 0 1 4.075 2.531 1.701 1.701 0 0 1 2.356 1.569c0 .938-.762 1.697-1.7 1.697" />
+      </G>
+    </Svg>
+  );
+};

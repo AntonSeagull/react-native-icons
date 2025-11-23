@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiLips = (props: IconProps) => {
+export const GiLips = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M166.844 112.344c-42.01 38.554-97.815 75.023-147.53 86.03 39.097 14.38 89.036 18.718 134.717 9.157 53.264 31.33 128.095 32.185 184.876 0 44.99 15.297 96.346 13.18 149.688-9.31-59.564-9.606-125.004-51.588-155.25-85.876-55.502 39.62-111 32.146-166.5 0zm-133.72 114.03c17.33 29.572 48.467 79.248 89.75 131.064 27.24 34.188 76.606 31.093 129.97 31.093 49.298 0 102.29.706 127.625-31.092 37.724-47.35 68.59-92.143 88.217-122-124.874 84.53-316.773 93.18-435.562-9.063z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M166.844 112.344c-42.01 38.554-97.815 75.023-147.53 86.03 39.097 14.38 89.036 18.718 134.717 9.157 53.264 31.33 128.095 32.185 184.876 0 44.99 15.297 96.346 13.18 149.688-9.31-59.564-9.606-125.004-51.588-155.25-85.876-55.502 39.62-111 32.146-166.5 0zm-133.72 114.03c17.33 29.572 48.467 79.248 89.75 131.064 27.24 34.188 76.606 31.093 129.97 31.093 49.298 0 102.29.706 127.625-31.092 37.724-47.35 68.59-92.143 88.217-122-124.874 84.53-316.773 93.18-435.562-9.063z" />
+      </G>
+    </Svg>
+  );
+};

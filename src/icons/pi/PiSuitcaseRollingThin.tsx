@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiSuitcaseRollingThin = (props: IconProps) => {
+export const PiSuitcaseRollingThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M100,88v96a4,4,0,0,1-8,0V88a4,4,0,0,1,8,0Zm28-4a4,4,0,0,0-4,4v96a4,4,0,0,0,8,0V88A4,4,0,0,0,128,84Zm32,0a4,4,0,0,0-4,4v96a4,4,0,0,0,8,0V88A4,4,0,0,0,160,84Zm44-20V208a12,12,0,0,1-12,12H172v20a4,4,0,0,1-8,0V220H92v20a4,4,0,0,1-8,0V220H64a12,12,0,0,1-12-12V64A12,12,0,0,1,64,52H92V24A20,20,0,0,1,112,4h32a20,20,0,0,1,20,20V52h28A12,12,0,0,1,204,64ZM100,52h56V24a12,12,0,0,0-12-12H112a12,12,0,0,0-12,12Zm96,12a4,4,0,0,0-4-4H64a4,4,0,0,0-4,4V208a4,4,0,0,0,4,4H192a4,4,0,0,0,4-4Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M100 88v96a4 4 0 0 1-8 0V88a4 4 0 0 1 8 0m28-4a4 4 0 0 0-4 4v96a4 4 0 0 0 8 0V88a4 4 0 0 0-4-4m32 0a4 4 0 0 0-4 4v96a4 4 0 0 0 8 0V88a4 4 0 0 0-4-4m44-20v144a12 12 0 0 1-12 12h-20v20a4 4 0 0 1-8 0v-20H92v20a4 4 0 0 1-8 0v-20H64a12 12 0 0 1-12-12V64a12 12 0 0 1 12-12h28V24a20 20 0 0 1 20-20h32a20 20 0 0 1 20 20v28h28a12 12 0 0 1 12 12M100 52h56V24a12 12 0 0 0-12-12h-32a12 12 0 0 0-12 12Zm96 12a4 4 0 0 0-4-4H64a4 4 0 0 0-4 4v144a4 4 0 0 0 4 4h128a4 4 0 0 0 4-4Z" />
+      </G>
+    </Svg>
+  );
+};

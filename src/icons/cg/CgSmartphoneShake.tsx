@@ -1,40 +1,37 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const CgSmartphoneShake = (props: IconProps) => {
+export const CgSmartphoneShake = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M13 14H11V16H13V14Z" fill="currentColor" />
-          <Path  d="M8 7C8 5.89543 8.89543 5 10 5H14C15.1046 5 16 5.89543 16 7V17C16 18.1046 15.1046 19 14 19H10C8.89543 19 8 18.1046 8 17V7ZM10 7H14V17H10V7Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
-          <Path  d="M18 9H20V15H18V9Z" fill="currentColor" />
-          <Path  d="M0 14H2V10H0V14Z" fill="currentColor" />
-          <Path  d="M6 15H4V9H6V15Z" fill="currentColor" />
-          <Path  d="M24 10H22V14H24V10Z" fill="currentColor" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="currentColor" d="M13 14h-2v2h2z" />
+        <Path fill="currentColor" fillRule="evenodd" d="M8 7a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2zm2 0h4v10h-4z" clipRule="evenodd" />
+        <Path fill="currentColor" d="M18 9h2v6h-2zM0 14h2v-4H0zM6 15H4V9h2zM24 10h-2v4h2z" />
+      </G>
+    </Svg>
+  );
+};

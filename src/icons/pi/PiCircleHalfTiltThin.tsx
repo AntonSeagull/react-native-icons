@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiCircleHalfTiltThin = (props: IconProps) => {
+export const PiCircleHalfTiltThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M198.71,57.29A100,100,0,1,0,57.29,198.71,100,100,0,1,0,198.71,57.29ZM188,197.72a91.35,91.35,0,0,1-24,15v-115l24-24Zm-88-36.06,24-24V219.9a91.91,91.91,0,0,1-24-4.24Zm-8,51a91.69,91.69,0,0,1-26.15-16.89L92,169.66Zm40-83,24-24v110a91.76,91.76,0,0,1-24,4.24ZM36,128A92,92,0,0,1,190.16,60.19l-130,130A91.34,91.34,0,0,1,36,128Zm160,62V66A92,92,0,0,1,196,190Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M198.71 57.29A100 100 0 1 0 57.29 198.71 100 100 0 1 0 198.71 57.29M188 197.72a91.4 91.4 0 0 1-24 15v-115l24-24Zm-88-36.06 24-24v82.24a92 92 0 0 1-24-4.24Zm-8 51a91.7 91.7 0 0 1-26.15-16.89L92 169.66Zm40-83 24-24v110a91.8 91.8 0 0 1-24 4.24ZM36 128a92 92 0 0 1 154.16-67.81l-130 130A91.34 91.34 0 0 1 36 128m160 62V66a92 92 0 0 1 0 124" />
+      </G>
+    </Svg>
+  );
+};

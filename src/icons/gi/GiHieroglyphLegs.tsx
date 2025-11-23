@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiHieroglyphLegs = (props: IconProps) => {
+export const GiHieroglyphLegs = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M166.4 48.07C174.7 139.7 83.71 316.3 30.34 410.6c-13.4 23.7-10.14 47.1 8.03 53.3l173.73-.5c1.7-9.1 1.7-19.1-7.3-31.3-32.1-16-76.5-6.2-95.6-30.8-13.33-17.2 84.7-149.3 120.4-259.7 11.3 79.1 32.1 172.1 76.3 262.7-1.1 23.6-8.8 53.3 9.4 59.6l173.7-.5c1.7-9.1 1.7-19.1-7.3-31.3-32.1-16.1-85.6-5.7-103.8-31.1-70.4-98.3-71.2-243.9-99.5-352.93z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M166.4 48.07C174.7 139.7 83.71 316.3 30.34 410.6c-13.4 23.7-10.14 47.1 8.03 53.3l173.73-.5c1.7-9.1 1.7-19.1-7.3-31.3-32.1-16-76.5-6.2-95.6-30.8-13.33-17.2 84.7-149.3 120.4-259.7 11.3 79.1 32.1 172.1 76.3 262.7-1.1 23.6-8.8 53.3 9.4 59.6l173.7-.5c1.7-9.1 1.7-19.1-7.3-31.3-32.1-16.1-85.6-5.7-103.8-31.1-70.4-98.3-71.2-243.9-99.5-352.93z" />
+      </G>
+    </Svg>
+  );
+};

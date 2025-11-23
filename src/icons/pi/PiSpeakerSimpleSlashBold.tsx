@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiSpeakerSimpleSlashBold = (props: IconProps) => {
+export const PiSpeakerSimpleSlashBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M248,88v80a12,12,0,0,1-24,0V88a12,12,0,0,1,24,0ZM224.88,207.93a12,12,0,1,1-17.76,16.14L172,185.44V224a12,12,0,0,1-19.37,9.47L83.88,180H40a20,20,0,0,1-20-20V96A20,20,0,0,1,40,76H72.51L47.12,48.07A12,12,0,0,1,64.88,31.93ZM148,159,94.33,100H44v56H88a12,12,0,0,1,7.37,2.53L148,199.46Zm-14.15-91.5,14.15-11v38.4a12,12,0,0,0,24,0V32a12,12,0,0,0-19.37-9.47L119.12,48.6a12,12,0,1,0,14.73,18.94ZM200,150.94a12,12,0,0,0,12-12V104a12,12,0,0,0-24,0v34.94A12,12,0,0,0,200,150.94Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M248 88v80a12 12 0 0 1-24 0V88a12 12 0 0 1 24 0m-23.12 119.93a12 12 0 1 1-17.76 16.14L172 185.44V224a12 12 0 0 1-19.37 9.47L83.88 180H40a20 20 0 0 1-20-20V96a20 20 0 0 1 20-20h32.51L47.12 48.07a12 12 0 0 1 17.76-16.14ZM148 159l-53.67-59H44v56h44a12 12 0 0 1 7.37 2.53L148 199.46Zm-14.15-91.5 14.15-11v38.4a12 12 0 0 0 24 0V32a12 12 0 0 0-19.37-9.47L119.12 48.6a12 12 0 1 0 14.73 18.94ZM200 150.94a12 12 0 0 0 12-12V104a12 12 0 0 0-24 0v34.94a12 12 0 0 0 12 12" />
+      </G>
+    </Svg>
+  );
+};

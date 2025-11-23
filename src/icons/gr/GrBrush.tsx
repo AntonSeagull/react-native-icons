@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GrBrush = (props: IconProps) => {
+export const GrBrush = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  fill="none" d="M10.4350288,13.8510725 C8.66912406,14.6226292 7.43502884,16.3847098 7.43502884,18.4350288 C7.43502884,21.1964526 12.4350288,25.4350288 12.4350288,25.4350288 C12.4350288,25.4350288 17.4350288,21.1964526 17.4350288,18.4350288 C17.4350288,16.3847098 16.2009336,14.6226292 14.4350288,13.8510725 L14.4350288,-0.564864977 C14.4350288,-1.67491274 13.5395983,-2.56497116 12.4350288,-2.56497116 C11.3227585,-2.56497116 10.4350288,-1.66949312 10.4350288,-0.564864977 L10.4350288,13.8510725 Z M10,12 L12.6000977,12 L15,12" transform="rotate(45 12.435 11.435)" strokeWidth="2" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="none" stroke="#000" strokeWidth={2} d="M9.312 11.73a5 5 0 0 0-5.362 1.12c-1.953 1.952-1.414 8.485-1.414 8.485s6.532.538 8.485-1.415a5 5 0 0 0 1.12-5.362L22.334 4.364a1.997 1.997 0 0 0 0-2.828 1.995 1.995 0 0 0-2.828 0zm1.002-1.617 1.838 1.838 1.697 1.697" />
+      </G>
+    </Svg>
+  );
+};

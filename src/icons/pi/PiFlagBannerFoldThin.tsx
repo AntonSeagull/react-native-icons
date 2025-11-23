@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiFlagBannerFoldThin = (props: IconProps) => {
+export const PiFlagBannerFoldThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M235.36,45.83A4,4,0,0,0,232,44H152a4,4,0,0,0-3.64,2.34L138.52,68H28a4,4,0,0,0-3,6.69L62.59,116,25,157.31A4,4,0,0,0,28,164h73.09a4,4,0,0,0,3.64-2.35L114.58,140h71.21l-37.43,82.34a4,4,0,0,0,2,5.3A4.07,4.07,0,0,0,152,228a4,4,0,0,0,3.64-2.35l80-176A4,4,0,0,0,235.36,45.83ZM98.52,156H37L71,118.69a4,4,0,0,0,0-5.38L37,76h97.84Zm90.9-24H118.21l36.37-80h71.21Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M235.36 45.83A4 4 0 0 0 232 44h-80a4 4 0 0 0-3.64 2.34L138.52 68H28a4 4 0 0 0-3 6.69L62.59 116 25 157.31a4 4 0 0 0 3 6.69h73.09a4 4 0 0 0 3.64-2.35l9.85-21.65h71.21l-37.43 82.34a4 4 0 0 0 2 5.3 4.1 4.1 0 0 0 1.64.36 4 4 0 0 0 3.64-2.35l80-176a4 4 0 0 0-.28-3.82M98.52 156H37l34-37.31a4 4 0 0 0 0-5.38L37 76h97.84Zm90.9-24h-71.21l36.37-80h71.21Z" />
+      </G>
+    </Svg>
+  );
+};

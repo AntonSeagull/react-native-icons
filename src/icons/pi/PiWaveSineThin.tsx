@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiWaveSineThin = (props: IconProps) => {
+export const PiWaveSineThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M235.62,129.7C214.4,174.93,196.1,196,178,196c-22.56,0-37.67-32.21-53.66-66.3C110.15,99.37,95.44,68,78,68c-14.2,0-31.13,20.76-50.34,61.7a4,4,0,0,1-7.24-3.4C41.6,81.07,59.9,60,78,60c22.56,0,37.67,32.21,53.66,66.3C145.85,156.63,160.56,188,178,188c14.2,0,31.13-20.76,50.34-61.7a4,4,0,0,1,7.24,3.4Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M235.62 129.7C214.4 174.93 196.1 196 178 196c-22.56 0-37.67-32.21-53.66-66.3C110.15 99.37 95.44 68 78 68c-14.2 0-31.13 20.76-50.34 61.7a4 4 0 0 1-7.24-3.4C41.6 81.07 59.9 60 78 60c22.56 0 37.67 32.21 53.66 66.3 14.19 30.33 28.9 61.7 46.34 61.7 14.2 0 31.13-20.76 50.34-61.7a4 4 0 0 1 7.24 3.4Z" />
+      </G>
+    </Svg>
+  );
+};

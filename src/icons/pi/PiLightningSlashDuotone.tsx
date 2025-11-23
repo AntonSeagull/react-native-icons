@@ -1,36 +1,36 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiLightningSlashDuotone = (props: IconProps) => {
+export const PiLightningSlashDuotone = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M96,240l16-80L48,136,160,16,144,96l64,24Z" opacity="0.2" />
-          <Path  d="M53.92,34.62A8,8,0,1,0,42.08,45.38L81.33,88.56l-39.18,42a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l61.86-66.28,38.37,42.2a8,8,0,1,0,11.84-10.76ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l30.12-32.27,60.78,66.86ZM108.66,71a8,8,0,0,1-.39-11.31l45.88-49.16a8,8,0,0,1,13.69,7L153.18,90.9l57.63,21.61a8,8,0,0,1,3,12.95l-22.3,23.89a8,8,0,0,1-11.7-10.91L194,123.29l-52.8-19.8a8,8,0,0,1-5-9.06l10.47-52.38L120,70.62A8,8,0,0,1,108.66,71Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m96 240 16-80-64-24L160 16l-16 80 64 24Z" opacity={0.2} />
+        <Path d="M53.92 34.62a8 8 0 1 0-11.84 10.76l39.25 43.18-39.18 42a8 8 0 0 0 3 13l57.63 21.61-14.62 73.26a8 8 0 0 0 13.69 7l61.86-66.28 38.37 42.2a8 8 0 1 0 11.84-10.76ZM109.37 214l10.47-52.38a8 8 0 0 0-5-9.06L62 132.71l30.12-32.27 60.78 66.86Zm-.71-143a8 8 0 0 1-.39-11.31l45.88-49.16a8 8 0 0 1 13.69 7L153.18 90.9l57.63 21.61a8 8 0 0 1 3 12.95l-22.3 23.89a8 8 0 0 1-11.7-10.91L194 123.29l-52.8-19.8a8 8 0 0 1-5-9.06l10.47-52.38L120 70.62a8 8 0 0 1-11.34.38" />
+      </G>
+    </Svg>
+  );
+};

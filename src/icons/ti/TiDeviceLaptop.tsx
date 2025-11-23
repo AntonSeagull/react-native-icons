@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TiDeviceLaptop = (props: IconProps) => {
+export const TiDeviceLaptop = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M21.989 16.049c.009-.315.011-.657.011-1.049v-9c0-1.654-1.346-3-3-3h-14c-1.654 0-3 1.346-3 3v9c0 .385.002.73.012 1.049-1.145.228-2.012 1.24-2.012 2.451 0 1.378 1.122 2.5 2.5 2.5h19c1.378 0 2.5-1.122 2.5-2.5 0-1.211-.866-2.222-2.011-2.451zm-17.989-10.049c0-.551.449-1 1-1h14c.551 0 1 .449 1 1v9c0 .388-.005.726-.014 1h-.986v-9c0-.55-.45-1-1-1h-12c-.55 0-1 .45-1 1v9h-.98c-.012-.264-.02-.599-.02-1v-9zm14 10h-12v-9h12v9zm3.5 3h-19c-.271 0-.5-.229-.5-.5s.229-.5.5-.5h19c.271 0 .5.229.5.5s-.229.5-.5.5z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M21.989 16.049c.009-.315.011-.657.011-1.049V6c0-1.654-1.346-3-3-3H5C3.346 3 2 4.346 2 6v9c0 .385.002.73.012 1.049A2.504 2.504 0 0 0 0 18.5C0 19.878 1.122 21 2.5 21h19c1.378 0 2.5-1.122 2.5-2.5a2.504 2.504 0 0 0-2.011-2.451M4 6c0-.551.449-1 1-1h14c.551 0 1 .449 1 1v9c0 .388-.005.726-.014 1H19V7c0-.55-.45-1-1-1H6c-.55 0-1 .45-1 1v9h-.98q-.019-.397-.02-1zm14 10H6V7h12zm3.5 3h-19c-.271 0-.5-.229-.5-.5s.229-.5.5-.5h19c.271 0 .5.229.5.5s-.229.5-.5.5" />
+      </G>
+    </Svg>
+  );
+};

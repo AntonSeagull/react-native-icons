@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaLanguageSolid = (props: IconProps) => {
+export const LiaLanguageSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 4 4 L 4 22 L 10 22 L 10 28 L 28 28 L 28 10 L 22 10 L 22 4 Z M 6 6 L 20 6 L 20 10.5625 L 10.5625 20 L 6 20 Z M 11 8 L 11 9 L 8 9 L 8 11 L 12.9375 11 C 12.808594 12.148438 12.457031 13.054688 11.875 13.6875 C 11.53125 13.574219 11.222656 13.433594 10.96875 13.28125 C 10.265625 12.863281 10 12.417969 10 12 L 8 12 C 8 13.191406 8.734375 14.183594 9.71875 14.84375 C 9.226563 14.949219 8.65625 15 8 15 L 8 17 C 9.773438 17 11.25 16.59375 12.375 15.84375 C 12.898438 15.933594 13.429688 16 14 16 L 14 14.125 C 14.542969 13.214844 14.832031 12.152344 14.9375 11 L 16 11 L 16 9 L 13 9 L 13 8 Z M 21.4375 12 L 26 12 L 26 26 L 12 26 L 12 21.4375 Z M 20 13.84375 L 19.0625 16.6875 L 17.0625 22.6875 L 17 22.84375 L 17 24 L 19 24 L 19 23.125 L 19.03125 23 L 20.96875 23 L 21 23.125 L 21 24 L 23 24 L 23 22.84375 L 22.9375 22.6875 L 20.9375 16.6875 Z M 20 20.125 L 20.28125 21 L 19.71875 21 Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M4 4v18h6v6h18V10h-6V4Zm2 2h14v4.563L10.563 20H6Zm5 2v1H8v2h4.938c-.13 1.148-.481 2.055-1.063 2.688a4.5 4.5 0 0 1-.906-.407C10.266 12.863 10 12.418 10 12H8c0 1.191.734 2.184 1.719 2.844A8.3 8.3 0 0 1 8 15v2c1.773 0 3.25-.406 4.375-1.156.523.09 1.055.156 1.625.156v-1.875c.543-.91.832-1.973.938-3.125H16V9h-3V8Zm10.438 4H26v14H12v-4.562ZM20 13.844l-.937 2.844-2 6-.063.156V24h2v-.875l.031-.125h1.938l.031.125V24h2v-1.156l-.062-.157-2-6Zm0 6.281.281.875h-.562Z" />
+      </G>
+    </Svg>
+  );
+};

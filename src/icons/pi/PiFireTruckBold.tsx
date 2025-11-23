@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiFireTruckBold = (props: IconProps) => {
+export const PiFireTruckBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M255.14,115.54l-14-35A19.9,19.9,0,0,0,222.58,68H204V64a12,12,0,0,0-24,0v94.06A36.23,36.23,0,0,0,158.06,180H113.94a36,36,0,0,0-67.88,0H36V144a12,12,0,0,0-24,0v40a20,20,0,0,0,20,20H46.06a36,36,0,0,0,67.88,0h44.12a36,36,0,0,0,67.88,0H236a20,20,0,0,0,20-20V120A12,12,0,0,0,255.14,115.54ZM219.88,92l6.4,16H204V92ZM80,204a12,12,0,1,1,12-12A12,12,0,0,1,80,204Zm112,0a12,12,0,1,1,12-12A12,12,0,0,1,192,204Zm33.94-24A36.23,36.23,0,0,0,204,158.06V132h28v48ZM24,92a12,12,0,0,0,0,24H152a12,12,0,0,0,0-24H140V76h12a12,12,0,0,0,0-24H24a12,12,0,0,0,0,24H36V92Zm92,0H100V76h16ZM60,76H76V92H60Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m255.14 115.54-14-35A19.9 19.9 0 0 0 222.58 68H204v-4a12 12 0 0 0-24 0v94.06A36.23 36.23 0 0 0 158.06 180h-44.12a36 36 0 0 0-67.88 0H36v-36a12 12 0 0 0-24 0v40a20 20 0 0 0 20 20h14.06a36 36 0 0 0 67.88 0h44.12a36 36 0 0 0 67.88 0H236a20 20 0 0 0 20-20v-64a12 12 0 0 0-.86-4.46M219.88 92l6.4 16H204V92ZM80 204a12 12 0 1 1 12-12 12 12 0 0 1-12 12m112 0a12 12 0 1 1 12-12 12 12 0 0 1-12 12m33.94-24A36.23 36.23 0 0 0 204 158.06V132h28v48ZM24 92a12 12 0 0 0 0 24h128a12 12 0 0 0 0-24h-12V76h12a12 12 0 0 0 0-24H24a12 12 0 0 0 0 24h12v16Zm92 0h-16V76h16ZM60 76h16v16H60Z" />
+      </G>
+    </Svg>
+  );
+};

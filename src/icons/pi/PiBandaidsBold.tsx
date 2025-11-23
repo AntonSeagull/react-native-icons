@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiBandaidsBold = (props: IconProps) => {
+export const PiBandaidsBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M190.23,128l24.88-24.89a44,44,0,1,0-62.22-62.22L128,65.77,103.11,40.89a44,44,0,1,0-62.22,62.22L65.77,128,40.89,152.89a44,44,0,1,0,62.22,62.22L128,190.23l24.89,24.88a44,44,0,1,0,62.22-62.22ZM169.86,57.86h0a20,20,0,1,1,28.28,28.28L173.25,111,145,82.75ZM156.28,128,128,156.28,99.72,128,128,99.72ZM57.86,86.14A20,20,0,1,1,86.14,57.86L111,82.75,82.75,111Zm28.28,112a20,20,0,1,1-28.28-28.28L82.75,145,111,173.25Zm112,0a20,20,0,0,1-28.28,0L145,173.25,173.25,145l24.89,24.89a20,20,0,0,1,0,28.28Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m190.23 128 24.88-24.89a44 44 0 1 0-62.22-62.22L128 65.77l-24.89-24.88a44 44 0 1 0-62.22 62.22L65.77 128l-24.88 24.89a44 44 0 1 0 62.22 62.22L128 190.23l24.89 24.88a44 44 0 1 0 62.22-62.22Zm-20.37-70.14a20 20 0 1 1 28.28 28.28L173.25 111 145 82.75ZM156.28 128 128 156.28 99.72 128 128 99.72ZM57.86 86.14a20 20 0 1 1 28.28-28.28L111 82.75 82.75 111Zm28.28 112a20 20 0 1 1-28.28-28.28L82.75 145 111 173.25Zm112 0a20 20 0 0 1-28.28 0L145 173.25 173.25 145l24.89 24.89a20 20 0 0 1 0 28.28Z" />
+      </G>
+    </Svg>
+  );
+};

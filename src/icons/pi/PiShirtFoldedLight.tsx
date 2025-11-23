@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiShirtFoldedLight = (props: IconProps) => {
+export const PiShirtFoldedLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M200,42H178.48L164.25,27.76A6,6,0,0,0,160,26H96a6,6,0,0,0-4.25,1.76L77.52,42H56A14,14,0,0,0,42,56V208a14,14,0,0,0,14,14H200a14,14,0,0,0,14-14V56A14,14,0,0,0,200,42ZM128,69.18,107.21,38h41.58Zm32.93-27.76L170,50.49V104a2,2,0,0,1-3.25,1.56L135.93,78.92ZM86,50.49l9.07-9.07,25,37.5L89.25,105.54A2,2,0,0,1,86,104ZM54,208V56a2,2,0,0,1,2-2H74v50a13.87,13.87,0,0,0,8.06,12.68A14.11,14.11,0,0,0,88,118,13.87,13.87,0,0,0,97,114.74l.08-.07,25-21.56V210H56A2,2,0,0,1,54,208Zm148,0a2,2,0,0,1-2,2H134V93.11l25,21.56.08.07A13.87,13.87,0,0,0,168,118a14.08,14.08,0,0,0,6-1.35A13.87,13.87,0,0,0,182,104V54h18a2,2,0,0,1,2,2Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M200 42h-21.52l-14.23-14.24A6 6 0 0 0 160 26H96a6 6 0 0 0-4.25 1.76L77.52 42H56a14 14 0 0 0-14 14v152a14 14 0 0 0 14 14h144a14 14 0 0 0 14-14V56a14 14 0 0 0-14-14m-72 27.18L107.21 38h41.58Zm32.93-27.76 9.07 9.07V104a2 2 0 0 1-3.25 1.56l-30.82-26.64ZM86 50.49l9.07-9.07 25 37.5-30.82 26.62A2 2 0 0 1 86 104ZM54 208V56a2 2 0 0 1 2-2h18v50a13.87 13.87 0 0 0 8.06 12.68A14.1 14.1 0 0 0 88 118a13.87 13.87 0 0 0 9-3.26l.08-.07 25-21.56V210H56a2 2 0 0 1-2-2m148 0a2 2 0 0 1-2 2h-66V93.11l25 21.56.08.07A13.87 13.87 0 0 0 168 118a14.1 14.1 0 0 0 6-1.35 13.87 13.87 0 0 0 8-12.65V54h18a2 2 0 0 1 2 2Z" />
+      </G>
+    </Svg>
+  );
+};

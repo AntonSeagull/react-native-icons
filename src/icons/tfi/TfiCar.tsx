@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TfiCar = (props: IconProps) => {
+export const TfiCar = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 17 17"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8.5, 8.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M17 9.984l-1.958 0.002-2.051-3.986h-7.949l-2.968 3.999-2.074 0.001v4.977h2.002c0 0.008-0.002 0.015-0.002 0.023 0 1.103 0.897 2 2 2s2-0.897 2-2c0-0.008-0.002-0.015-0.002-0.023h5.005c-0.001 0.008-0.003 0.015-0.003 0.023 0 1.103 0.897 2 2 2s2-0.897 2-2c0-0.008-0.002-0.015-0.002-0.023h2.002v-4.993zM13.918 9.987l-3.897 0.004v-2.991h2.36l1.537 2.987zM5.544 7h3.477v2.992l-5.701 0.005 2.224-2.997zM4 16c-0.551 0-1-0.449-1-1s0.449-1 1-1 1 0.449 1 1-0.449 1-1 1zM13 16c-0.551 0-1-0.449-1-1s0.449-1 1-1 1 0.449 1 1-0.449 1-1 1zM16 13.977h-1.291c-0.35-0.582-0.981-0.977-1.709-0.977s-1.359 0.395-1.709 0.977h-5.582c-0.35-0.582-0.981-0.977-1.709-0.977s-1.359 0.395-1.709 0.977h-1.291v-2.977l15-0.015v2.992z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 17 17"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8.5, 8.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m17 9.984-1.958.002L12.991 6H5.042L2.074 9.999 0 10v4.977h2.002L2 15c0 1.103.897 2 2 2s2-.897 2-2l-.002-.023h5.005q-.002.011-.003.023c0 1.103.897 2 2 2s2-.897 2-2l-.002-.023H17zm-3.082.003-3.897.004V7h2.36zM5.544 7h3.477v2.992l-5.701.005zM4 16c-.551 0-1-.449-1-1s.449-1 1-1 1 .449 1 1-.449 1-1 1m9 0c-.551 0-1-.449-1-1s.449-1 1-1 1 .449 1 1-.449 1-1 1m3-2.023h-1.291C14.359 13.395 13.728 13 13 13s-1.359.395-1.709.977H5.709C5.359 13.395 4.728 13 4 13s-1.359.395-1.709.977H1V11l15-.015z" />
+      </G>
+    </Svg>
+  );
+};

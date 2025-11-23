@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaPoundSignSolid = (props: IconProps) => {
+export const LiaPoundSignSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 17.6875 5 C 17.417969 5 17.140625 5.027344 16.875 5.0625 C 13.699219 5.476563 11 8.203125 11 11.65625 C 11 12.785156 11.28125 13.898438 11.65625 15 L 9 15 L 9 17 L 12.40625 17 C 12.605469 17.554688 12.765625 18.101563 12.90625 18.65625 C 13.46875 20.863281 13.527344 22.839844 11.53125 25 L 8 25 L 8 27 L 24 27 L 24 22 L 22 22 L 22 25 L 14.0625 25 C 15.453125 22.695313 15.378906 20.253906 14.84375 18.15625 C 14.742188 17.757813 14.617188 17.382813 14.5 17 L 20 17 L 20 15 L 13.84375 15 C 13.390625 13.691406 13 12.53125 13 11.65625 C 13 8.425781 16.300781 6.113281 19.375 7.34375 L 20.125 5.5 C 19.308594 5.175781 18.496094 5 17.6875 5 Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M17.688 5c-.27 0-.547.027-.813.063C13.699 5.477 11 8.203 11 11.656c0 1.13.281 2.242.656 3.344H9v2h3.406c.2.555.36 1.102.5 1.656.563 2.207.621 4.184-1.375 6.344H8v2h16v-5h-2v3h-7.937c1.39-2.305 1.316-4.746.78-6.844-.1-.398-.226-.773-.343-1.156H20v-2h-6.156C13.39 13.691 13 12.531 13 11.656c0-3.23 3.3-5.543 6.375-4.312l.75-1.844c-.816-.324-1.629-.5-2.437-.5" />
+      </G>
+    </Svg>
+  );
+};

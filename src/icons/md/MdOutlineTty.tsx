@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const MdOutlineTty = (props: IconProps) => {
+export const MdOutlineTty = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M16,6h-2V4h2V6z M18,7h-2v2h2V7z M19,9h2V7h-2V9z M19,4h-2v2h2V4z M15,7h-2v2h2V7z M19,10h-2v2h2V10z M16,10h-2v2h2V10z M13,4h-2v2h2V4z M20,15.82v4.15c0,0.56-0.47,1.03-1.03,1c-2.89-0.17-5.6-1.03-7.97-2.4C8.27,16.99,6.01,14.73,4.43,12 C3.05,9.63,2.2,6.92,2.03,4.03C2,3.47,2.47,3,3.03,3h4.15c0.48,0,0.89,0.34,0.98,0.8L8.9,7.48c0.07,0.33-0.04,0.67-0.27,0.9 L6.1,10.9c1.43,2.5,3.5,4.57,6,6l2.52-2.52c0.24-0.24,0.58-0.34,0.9-0.27l3.67,0.73C19.66,14.93,20,15.34,20,15.82z M5.18,8.99 l1.65-1.65L6.36,5H4.13C4.3,6.37,4.66,7.71,5.18,8.99z M18,16.64l-2.34-0.47l-1.65,1.65c1.28,0.52,2.63,0.87,3.99,1.05V16.64z M20,4v2h2V4H20z M20,12h2v-2h-2V12z M13,10h-2v2h2V10z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M16 6h-2V4h2zm2 1h-2v2h2zm1 2h2V7h-2zm0-5h-2v2h2zm-4 3h-2v2h2zm4 3h-2v2h2zm-3 0h-2v2h2zm-3-6h-2v2h2zm7 11.82v4.15c0 .56-.47 1.03-1.03 1-2.89-.17-5.6-1.03-7.97-2.4A18 18 0 0 1 4.43 12a17.9 17.9 0 0 1-2.4-7.97C2 3.47 2.47 3 3.03 3h4.15c.48 0 .89.34.98.8l.74 3.68a.99.99 0 0 1-.27.9L6.1 10.9c1.43 2.5 3.5 4.57 6 6l2.52-2.52a.98.98 0 0 1 .9-.27l3.67.73c.47.09.81.5.81.98M5.18 8.99l1.65-1.65L6.36 5H4.13c.17 1.37.53 2.71 1.05 3.99M18 16.64l-2.34-.47-1.65 1.65c1.28.52 2.63.87 3.99 1.05zM20 4v2h2V4zm0 8h2v-2h-2zm-7-2h-2v2h2z" />
+      </G>
+    </Svg>
+  );
+};

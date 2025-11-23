@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiLightningALight = (props: IconProps) => {
+export const PiLightningALight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M173.88,111.94a6,6,0,0,0-3.42-4.27L119,84.56,133,25.39a6,6,0,0,0-10.24-5.47L27.6,122.78a6,6,0,0,0,1.94,9.55L81,155.44,67,214.61a6,6,0,0,0,3,6.68,6,6,0,0,0,7.22-1.22l95.2-102.85A6,6,0,0,0,173.88,111.94Zm-90,83.21,9.92-41.76a6,6,0,0,0-3.38-6.86L42.08,124.8l74-80-9.92,41.77a6,6,0,0,0,3.38,6.86l48.38,21.73Zm153.44,18.16-36-72a6,6,0,0,0-10.74,0l-36,72a6,6,0,0,0,10.74,5.37L175.71,198h40.58l10.34,20.68A6,6,0,0,0,232,222a5.87,5.87,0,0,0,2.68-.64A6,6,0,0,0,237.36,213.31ZM181.71,186,196,157.42,210.29,186Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M173.88 111.94a6 6 0 0 0-3.42-4.27L119 84.56l14-59.17a6 6 0 0 0-10.24-5.47L27.6 122.78a6 6 0 0 0 1.94 9.55L81 155.44l-14 59.17a6 6 0 0 0 3 6.68 6 6 0 0 0 7.22-1.22l95.2-102.85a6 6 0 0 0 1.46-5.28m-90 83.21 9.92-41.76a6 6 0 0 0-3.38-6.86L42.08 124.8l74-80-9.92 41.77a6 6 0 0 0 3.38 6.86l48.38 21.73Zm153.44 18.16-36-72a6 6 0 0 0-10.74 0l-36 72a6 6 0 0 0 10.74 5.37L175.71 198h40.58l10.34 20.68A6 6 0 0 0 232 222a5.9 5.9 0 0 0 2.68-.64 6 6 0 0 0 2.68-8.05ZM181.71 186 196 157.42 210.29 186Z" />
+      </G>
+    </Svg>
+  );
+};

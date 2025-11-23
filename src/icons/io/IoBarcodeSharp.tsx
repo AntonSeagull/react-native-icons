@@ -1,41 +1,41 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const IoBarcodeSharp = (props: IconProps) => {
+export const IoBarcodeSharp = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Polyline  points="400 400.33 448 400 448 112 400 112.33" fill="none" strokeLinecap="square" strokeLinejoin="round" strokeWidth="32px" />
-          <Polyline  points="112 112 64 112.33 64 400.33 112 400" fill="none" strokeLinecap="square" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="384" y1="192" x2="384" y2="320" fill="none" strokeLinecap="square" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="320" y1="160" x2="320" y2="352" fill="none" strokeLinecap="square" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="256" y1="176" x2="256" y2="336" fill="none" strokeLinecap="square" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="192" y1="160" x2="192" y2="352" fill="none" strokeLinecap="square" strokeLinejoin="round" strokeWidth="32px" />
-          <Line  x1="128" y1="192" x2="128" y2="320" fill="none" strokeLinecap="square" strokeLinejoin="round" strokeWidth="32px" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m400 400.33 48-.33V112l-48 .33M112 112l-48 .33v288l48-.33M384 192v128M320 160v192M256 176v160M192 160v192M128 192v128" style={{
+        fill: "none",
+        stroke: "#000",
+        strokeLinecap: "square",
+        strokeLinejoin: "round",
+        strokeWidth: 32
+        }} />
+      </G>
+    </Svg>
+  );
+};

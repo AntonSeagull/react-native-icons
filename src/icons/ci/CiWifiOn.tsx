@@ -1,38 +1,38 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const CiWifiOn = (props: IconProps) => {
+export const CiWifiOn = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Circle  cx="11.999" cy="17.172" r="1.12" />
-          <Path  d="M2.922,10.777a12.194,12.194,0,0,1,18.155-.034c.436.476,1.141-.233.707-.707a13.189,13.189,0,0,0-19.569.034c-.432.475.273,1.184.707.707Z" />
-          <Path  d="M5.654,13.169a8.615,8.615,0,0,1,12.691-.024c.437.475,1.143-.234.707-.707a9.621,9.621,0,0,0-14.106.024c-.433.474.272,1.184.708.707Z" />
-          <Path  d="M8.7,15.492a4.47,4.47,0,0,1,6.6-.013c.438.474,1.143-.235.707-.707a5.475,5.475,0,0,0-8.015.013c-.434.474.271,1.183.707.707Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M2.922 10.777a12.194 12.194 0 0 1 18.155-.034c.436.476 1.141-.233.707-.707a13.19 13.19 0 0 0-19.569.034c-.432.475.273 1.184.707.707" />
+        <Path d="M5.654 13.169a8.615 8.615 0 0 1 12.691-.024c.437.475 1.143-.234.707-.707a9.62 9.62 0 0 0-14.106.024c-.433.474.272 1.184.708.707" />
+        <Path d="M8.7 15.492a4.47 4.47 0 0 1 6.6-.013c.438.474 1.143-.235.707-.707a5.475 5.475 0 0 0-8.015.013c-.434.474.271 1.183.707.707Z" />
+        <Circle cx={11.999} cy={17.172} r={1.12} />
+      </G>
+    </Svg>
+  );
+};

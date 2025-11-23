@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaStarOfLifeSolid = (props: IconProps) => {
+export const LiaStarOfLifeSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 13 4 L 13 10.804688 L 7.1074219 7.4023438 L 4.1074219 12.599609 L 10 16 L 4.1074219 19.400391 L 7.1074219 24.597656 L 13 21.195312 L 13 28 L 19 28 L 19 21.195312 L 24.892578 24.597656 L 27.892578 19.400391 L 22 16 L 27.892578 12.599609 L 24.892578 7.4023438 L 19 10.804688 L 19 4 L 13 4 z M 15 6 L 17 6 L 17 14.269531 L 24.160156 10.134766 L 25.160156 11.865234 L 18 16 L 25.160156 20.134766 L 24.160156 21.865234 L 17 17.730469 L 17 26 L 15 26 L 15 17.730469 L 7.8398438 21.865234 L 6.8398438 20.134766 L 14 16 L 6.8398438 11.865234 L 7.8398438 10.134766 L 15 14.269531 L 15 6 z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M13 4v6.805L7.107 7.402l-3 5.198L10 16l-5.893 3.4 3 5.198L13 21.195V28h6v-6.805l5.893 3.403 3-5.198L22 16l5.893-3.4-3-5.198L19 10.805V4zm2 2h2v8.27l7.16-4.135 1 1.73L18 16l7.16 4.135-1 1.73L17 17.73V26h-2v-8.27l-7.16 4.135-1-1.73L14 16l-7.16-4.135 1-1.73L15 14.27z" />
+      </G>
+    </Svg>
+  );
+};

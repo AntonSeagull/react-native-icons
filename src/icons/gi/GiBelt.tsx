@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiBelt = (props: IconProps) => {
+export const GiBelt = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M256 126.97c-86.364 0-225.564 39.103-234.6 109.96-9.828 90.817 77.986 124.365 144.875 128.814v-78.592c-52.133 0-70.272-22.63-66.675-50.222 7.275-55.81 100.12-63.614 156.4-63.614s149.125 7.805 156.4 63.614c3.597 27.59-14.542 50.222-66.675 50.222v78.592c66.89-4.45 154.703-37.997 144.875-128.814-5.604-78.746-148.236-109.96-234.6-109.96zm71.656 152.257l-143.312.02V384.87l143.312.157V279.226zm-17.642 21.507v23.606h-82.29v19.592h82.29v21.523h-104.12V300.8h32.33l71.79-.066z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M256 126.97c-86.364 0-225.564 39.103-234.6 109.96-9.828 90.817 77.986 124.365 144.875 128.814v-78.592c-52.133 0-70.272-22.63-66.675-50.222 7.275-55.81 100.12-63.614 156.4-63.614s149.125 7.805 156.4 63.614c3.597 27.59-14.542 50.222-66.675 50.222v78.592c66.89-4.45 154.703-37.997 144.875-128.814-5.604-78.746-148.236-109.96-234.6-109.96m71.656 152.257-143.312.02V384.87l143.312.157zm-17.642 21.507v23.606h-82.29v19.592h82.29v21.523h-104.12V300.8h32.33z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiPasswordLight = (props: IconProps) => {
+export const PiPasswordLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M46,56V200a6,6,0,0,1-12,0V56a6,6,0,0,1,12,0Zm94.58,56.41L118,119.74V96a6,6,0,0,0-12,0v23.74l-22.58-7.33a6,6,0,1,0-3.71,11.41l22.58,7.33-14,19.21a6,6,0,1,0,9.7,7.06l14-19.21,14,19.21a6,6,0,0,0,9.7-7.06l-14-19.21,22.58-7.33a6,6,0,1,0-3.71-11.41Zm103.56,3.85a6,6,0,0,0-7.56-3.85L214,119.74V96a6,6,0,0,0-12,0v23.74l-22.58-7.33a6,6,0,1,0-3.71,11.41l22.58,7.33-13.95,19.21a6,6,0,1,0,9.7,7.06l14-19.21,14,19.21a6,6,0,0,0,9.7-7.06l-13.95-19.21,22.58-7.33A6,6,0,0,0,244.14,116.26Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M46 56v144a6 6 0 0 1-12 0V56a6 6 0 0 1 12 0m94.58 56.41L118 119.74V96a6 6 0 0 0-12 0v23.74l-22.58-7.33a6 6 0 1 0-3.71 11.41l22.58 7.33-14 19.21a6 6 0 1 0 9.7 7.06l14-19.21 14 19.21a6 6 0 0 0 9.7-7.06l-14-19.21 22.58-7.33a6 6 0 1 0-3.71-11.41Zm103.56 3.85a6 6 0 0 0-7.56-3.85L214 119.74V96a6 6 0 0 0-12 0v23.74l-22.58-7.33a6 6 0 1 0-3.71 11.41l22.58 7.33-13.95 19.21a6 6 0 1 0 9.7 7.06l14-19.21 14 19.21a6 6 0 0 0 9.7-7.06l-13.95-19.21 22.58-7.33a6 6 0 0 0 3.77-7.56" />
+      </G>
+    </Svg>
+  );
+};

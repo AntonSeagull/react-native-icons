@@ -1,36 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const CiSliderHorizontal = (props: IconProps) => {
+export const CiSliderHorizontal = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M21.45,7.5H9.99A2,2,0,0,0,8.06,6h-1A2,2,0,0,0,5.13,7.5H2.55a.5.5,0,0,0-.5.5.508.508,0,0,0,.5.5H5.13A2,2,0,0,0,7.06,10h1A2,2,0,0,0,9.99,8.5H21.45A.5.5,0,0,0,21.45,7.5ZM8.06,9h-1a1.006,1.006,0,0,1-1-.98V8a1,1,0,0,1,1-1h1a1,1,0,1,1,0,2Z" />
-          <Path  d="M21.45,15.5H18.87A2,2,0,0,0,16.94,14h-1a2,2,0,0,0-1.93,1.5H2.55a.5.5,0,0,0,0,1H14.01A2,2,0,0,0,15.94,18h1a2,2,0,0,0,1.93-1.5h2.58a.5.5,0,0,0,.5-.5A.508.508,0,0,0,21.45,15.5Zm-3.51.5a1,1,0,0,1-1,1h-1a1,1,0,1,1,0-2h1a1.006,1.006,0,0,1,1,.98Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M21.45 7.5H9.99A2 2 0 0 0 8.06 6h-1a2 2 0 0 0-1.93 1.5H2.55a.5.5 0 0 0-.5.5.51.51 0 0 0 .5.5h2.58A2 2 0 0 0 7.06 10h1a2 2 0 0 0 1.93-1.5h11.46a.5.5 0 0 0 0-1M8.06 9h-1a1.006 1.006 0 0 1-1-.98V8a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2M21.45 15.5h-2.58a2 2 0 0 0-1.93-1.5h-1a2 2 0 0 0-1.93 1.5H2.55a.5.5 0 0 0 0 1h11.46a2 2 0 0 0 1.93 1.5h1a2 2 0 0 0 1.93-1.5h2.58a.5.5 0 0 0 .5-.5.51.51 0 0 0-.5-.5m-3.51.5a1 1 0 0 1-1 1h-1a1 1 0 1 1 0-2h1a1.006 1.006 0 0 1 1 .98Z" />
+      </G>
+    </Svg>
+  );
+};

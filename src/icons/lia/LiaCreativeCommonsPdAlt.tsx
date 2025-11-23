@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaCreativeCommonsPdAlt = (props: IconProps) => {
+export const LiaCreativeCommonsPdAlt = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 16 3 C 8.832 3 3 8.832 3 16 C 3 23.168 8.832 29 16 29 C 23.168 29 29 23.168 29 16 C 29 8.832 23.168 3 16 3 z M 16 5 C 22.065 5 27 9.935 27 16 C 27 22.065 22.065 27 16 27 C 9.935 27 5 22.065 5 16 C 5 9.935 9.935 5 16 5 z M 9 12 L 9 20 L 11 20 L 11 18 L 13 18 C 14.654 18 16 16.654 16 15 C 16 13.346 14.654 12 13 12 L 9 12 z M 17 12 L 17 20 L 20.5 20 C 22.43 20 24 18.206 24 16 C 24 13.794 22.43 12 20.5 12 L 17 12 z M 11 14 L 13 14 C 13.551 14 14 14.448 14 15 C 14 15.552 13.551 16 13 16 L 11 16 L 11 14 z M 19 14 L 20.5 14 C 21.313 14 22 14.916 22 16 C 22 17.084 21.313 18 20.5 18 L 19 18 L 19 14 z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M16 3C8.832 3 3 8.832 3 16s5.832 13 13 13 13-5.832 13-13S23.168 3 16 3m0 2c6.065 0 11 4.935 11 11s-4.935 11-11 11S5 22.065 5 16 9.935 5 16 5m-7 7v8h2v-2h2c1.654 0 3-1.346 3-3s-1.346-3-3-3zm8 0v8h3.5c1.93 0 3.5-1.794 3.5-4s-1.57-4-3.5-4zm-6 2h2a1.001 1.001 0 0 1 0 2h-2zm8 0h1.5c.813 0 1.5.916 1.5 2s-.687 2-1.5 2H19z" />
+      </G>
+    </Svg>
+  );
+};

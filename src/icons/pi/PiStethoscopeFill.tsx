@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiStethoscopeFill = (props: IconProps) => {
+export const PiStethoscopeFill = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M240,160a32,32,0,1,0-39.93,31,8,8,0,0,0-.07,1,32,32,0,0,1-32,32H144a32,32,0,0,1-32-32V151.48c31.47-4,56-31.47,56-64.31V40a8,8,0,0,0-8-8H136a8,8,0,0,0,0,16h16V87.17c0,26.58-21.25,48.49-47.36,48.83A48,48,0,0,1,56,88V48H72a8,8,0,0,0,0-16H48a8,8,0,0,0-8,8V88a64,64,0,0,0,56,63.49V192a48.05,48.05,0,0,0,48,48h24a48.05,48.05,0,0,0,48-48,8,8,0,0,0-.07-1A32,32,0,0,0,240,160Zm-32,8a8,8,0,1,1,8-8A8,8,0,0,1,208,168Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M240 160a32 32 0 1 0-39.93 31 8 8 0 0 0-.07 1 32 32 0 0 1-32 32h-24a32 32 0 0 1-32-32v-40.52c31.47-4 56-31.47 56-64.31V40a8 8 0 0 0-8-8h-24a8 8 0 0 0 0 16h16v39.17c0 26.58-21.25 48.49-47.36 48.83A48 48 0 0 1 56 88V48h16a8 8 0 0 0 0-16H48a8 8 0 0 0-8 8v48a64 64 0 0 0 56 63.49V192a48.05 48.05 0 0 0 48 48h24a48.05 48.05 0 0 0 48-48 8 8 0 0 0-.07-1A32 32 0 0 0 240 160m-32 8a8 8 0 1 1 8-8 8 8 0 0 1-8 8" />
+      </G>
+    </Svg>
+  );
+};

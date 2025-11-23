@@ -1,43 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TbAdjustmentsAlt = (props: IconProps) => {
+export const TbAdjustmentsAlt = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M4 8h4v4h-4z" />
-          <Path  d="M6 4l0 4" />
-          <Path  d="M6 12l0 8" />
-          <Path  d="M10 14h4v4h-4z" />
-          <Path  d="M12 4l0 10" />
-          <Path  d="M12 18l0 2" />
-          <Path  d="M16 5h4v4h-4z" />
-          <Path  d="M18 4l0 1" />
-          <Path  d="M18 9l0 11" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M4 8h4v4H4zM6 4v4M6 12v8M10 14h4v4h-4zM12 4v10M12 18v2M16 5h4v4h-4zM18 4v1M18 9v11" />
+      </G>
+    </Svg>
+  );
+};

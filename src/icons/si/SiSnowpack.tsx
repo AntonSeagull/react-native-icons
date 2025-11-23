@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const SiSnowpack = (props: IconProps) => {
+export const SiSnowpack = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M23.8094 19.7512l-10.8-16.7999a1.2002 1.2002 0 00-2.0189 0L.1906 19.7512a1.2 1.2 0 00-.0439 1.224 1.2002 1.2002 0 001.0534.6247H22.8c.4391 0 .843-.2396 1.0534-.6251a1.1994 1.1994 0 00-.044-1.2236zM12 5.8193L15.202 10.8H12l-2.4 2.4-1.4272-1.4272z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m23.81 19.751-10.8-16.8a1.2 1.2 0 0 0-2.02 0l-10.8 16.8a1.2 1.2 0 0 0-.043 1.224A1.2 1.2 0 0 0 1.2 21.6h21.6a1.2 1.2 0 0 0 1.053-.625 1.2 1.2 0 0 0-.044-1.224M12 5.82l3.202 4.981H12l-2.4 2.4-1.427-1.427z" />
+      </G>
+    </Svg>
+  );
+};

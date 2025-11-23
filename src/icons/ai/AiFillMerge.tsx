@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const AiFillMerge = (props: IconProps) => {
+export const AiFillMerge = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 1024 1024"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 512, 512)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M112 0c61.856 0 112 50.144 112 112 0 49.262-31.803 91.095-75.998 106.088L148 502.371l386.488-126.553.014-95.914C489.009 265.664 456 223.187 456 173c0-61.856 50.144-112 112-112s112 50.144 112 112c0 48.327-30.608 89.505-73.496 105.206l-.018 113.037c-.003 21.932-14.1 41.379-34.944 48.204L148 578.132l.002 27.78c43.64 14.805 75.197 55.78 75.983 104.236L224 712c0 61.856-50.144 112-112 112S0 773.856 0 712c0-49.262 31.804-91.096 75.999-106.088V218.088C31.804 203.096 0 161.262 0 112 0 50.144 50.144 0 112 0" transform="matrix(1 0 0 -1 172 924)" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 1024 1024"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 512, 512)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M284 924c61.856 0 112-50.144 112-112 0-49.262-31.803-91.095-75.998-106.088L320 421.629l386.488 126.553.014 95.914C661.009 658.336 628 700.813 628 751c0 61.856 50.144 112 112 112s112-50.144 112-112c0-48.327-30.608-89.505-73.496-105.206l-.018-113.037c-.003-21.932-14.1-41.379-34.944-48.204L320 345.868l.002-27.78c43.64-14.805 75.197-55.78 75.983-104.236L396 212c0-61.856-50.144-112-112-112s-112 50.144-112 112c0 49.262 31.804 91.096 75.999 106.088v387.824C203.804 720.904 172 762.738 172 812c0 61.856 50.144 112 112 112" />
+      </G>
+    </Svg>
+  );
+};

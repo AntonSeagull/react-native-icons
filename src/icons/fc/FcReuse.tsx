@@ -1,38 +1,40 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FcReuse = (props: IconProps) => {
+export const FcReuse = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 48 48"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 24, 24)`}
-      >
-        <G fill={color} stroke={color}>
-          <Circle  fill="#FFB74D" cx="36.5" cy="10" r="5" />
-          <Path  fill="#607D8B" d="M31.7,15.9c-0.6-2-1.3-4-2.5-5.8c-1.3-1.6-3.2-3.1-6.1-2c-3.1,1.3-9.2,3.6-11.2,4.5 c-2.3,1.1-4.1,2.7-4.1,5.9c0,3.4,4.3,5.3,4.3,5.3l14.7-6.1l1.7,4.5l5.3,0.1C33.8,22.4,32.3,17.9,31.7,15.9z" />
-          <Path  fill="#B39DDB" d="M37.9,42h-7.9c-1,0-1.8-0.7-2-1.7l-2.6-17.1h17l-2.6,17.1C39.8,41.3,38.9,42,37.9,42z" />
-          <Path  fill="#7E57C2" d="M42,24H26c-0.6,0-1-0.4-1-1v0c0-0.6,0.4-1,1-1h16c0.6,0,1,0.4,1,1v0C43,23.6,42.6,24,42,24z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 48 48"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 24, 24)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="#455A64" d="M12.1 42h5.1l-.7-23.8-5.6 2z" />
+        <Circle cx={36.5} cy={10} r={5} fill="#FFB74D" />
+        <Path fill="#607D8B" d="M11 42H6l1.8-23.4 6.4 2.3z" />
+        <Path fill="#607D8B" d="M31.7 15.9c-.6-2-1.3-4-2.5-5.8-1.3-1.6-3.2-3.1-6.1-2-3.1 1.3-9.2 3.6-11.2 4.5-2.3 1.1-4.1 2.7-4.1 5.9 0 3.4 4.3 5.3 4.3 5.3l14.7-6.1 1.7 4.5 5.3.1c0 .1-1.5-4.4-2.1-6.4" />
+        <Path fill="#B39DDB" d="M37.9 42H30c-1 0-1.8-.7-2-1.7l-2.6-17.1h17l-2.6 17.1c0 1-.9 1.7-1.9 1.7" />
+        <Path fill="#7E57C2" d="M42 24H26c-.6 0-1-.4-1-1s.4-1 1-1h16c.6 0 1 .4 1 1s-.4 1-1 1" />
+      </G>
+    </Svg>
+  );
+};

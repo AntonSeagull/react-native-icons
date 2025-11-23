@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiPersonSimpleSkiFill = (props: IconProps) => {
+export const PiPersonSimpleSkiFill = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M144,60a28,28,0,1,1,28,28A28,28,0,0,1,144,60ZM37.76,87.68l111,32.36,5.61,5.61A8,8,0,0,0,160,128h40a8,8,0,0,0,0-16H163.31l-4.72-4.72,0,0-24.9-24.9a8,8,0,0,0-11.32,0L112,92.67,42.24,72.32a8,8,0,0,0-4.48,15.36Zm200.9,105.47a8,8,0,0,0-11.1-2.22,53.78,53.78,0,0,1-45,6.9l-62.79-18.28,29.9-29.9a8,8,0,0,0-3.46-13.35l-56-16a8,8,0,0,0-4.4,15.39L128.73,148l-26.5,26.49-76-22.13a8,8,0,1,0-4.48,15.36l156.31,45.52a69.78,69.78,0,0,0,58.37-8.95A8,8,0,0,0,238.66,193.15Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M144 60a28 28 0 1 1 28 28 28 28 0 0 1-28-28M37.76 87.68l111 32.36 5.61 5.61A8 8 0 0 0 160 128h40a8 8 0 0 0 0-16h-36.69l-4.72-4.72-24.9-24.9a8 8 0 0 0-11.32 0L112 92.67 42.24 72.32a8 8 0 0 0-4.48 15.36m200.9 105.47a8 8 0 0 0-11.1-2.22 53.78 53.78 0 0 1-45 6.9l-62.79-18.28 29.9-29.9a8 8 0 0 0-3.46-13.35l-56-16a8 8 0 0 0-4.4 15.39L128.73 148l-26.5 26.49-76-22.13a8 8 0 1 0-4.48 15.36l156.31 45.52a69.78 69.78 0 0 0 58.37-8.95 8 8 0 0 0 2.23-11.14" />
+      </G>
+    </Svg>
+  );
+};

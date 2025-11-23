@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GrWheelchair = (props: IconProps) => {
+export const GrWheelchair = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  fill="none" d="M10,3 L10,12 L17,12 L19,18 L21,18 M15,9 L9,9 C5.6862915,9 3,11.6862915 3,15 C3,18.3137085 5.6862915,21 9,21 C12.3137085,21 15,18.3137085 15,15 M11,4 C11.5522847,4 12,3.55228475 12,3 C12,2.44771525 11.5522847,2 11,2 C10.4477153,2 10,2.44771525 10,3 C10,3.55228475 10.4477153,4 11,4 Z" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 3v9h7l2 6h2m-6-9H9a6 6 0 1 0 6 6M11 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const Imalizer2 = (props: IconProps) => {
+export const Imalizer2 = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 16 16"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8, 8)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M14 7h0.25c0.412 0 0.75-0.338 0.75-0.75v-2.5c0-0.413-0.338-0.75-0.75-0.75h-0.25v-3h-2v3h-0.25c-0.412 0-0.75 0.337-0.75 0.75v2.5c0 0.412 0.338 0.75 0.75 0.75h0.25v9h2v-9zM12 4h2v2h-2v-2zM9.25 13c0.412 0 0.75-0.338 0.75-0.75v-2.5c0-0.412-0.338-0.75-0.75-0.75h-0.25v-9h-2v9h-0.25c-0.412 0-0.75 0.338-0.75 0.75v2.5c0 0.412 0.338 0.75 0.75 0.75h0.25v3h2v-3h0.25zM7 10h2v2h-2v-2zM4.25 7c0.412 0 0.75-0.338 0.75-0.75v-2.5c0-0.413-0.338-0.75-0.75-0.75h-0.25v-3h-2v3h-0.25c-0.413 0-0.75 0.337-0.75 0.75v2.5c0 0.412 0.337 0.75 0.75 0.75h0.25v9h2v-9h0.25zM2 4h2v2h-2v-2z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 16 16"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8, 8)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M14 7h.25c.412 0 .75-.338.75-.75v-2.5a.75.75 0 0 0-.75-.75H14V0h-2v3h-.25a.75.75 0 0 0-.75.75v2.5c0 .412.338.75.75.75H12v9h2zm-2-3h2v2h-2zm-2.75 9c.412 0 .75-.338.75-.75v-2.5A.753.753 0 0 0 9.25 9H9V0H7v9h-.25a.753.753 0 0 0-.75.75v2.5c0 .412.338.75.75.75H7v3h2v-3zM7 10h2v2H7zM4.25 7c.412 0 .75-.338.75-.75v-2.5A.75.75 0 0 0 4.25 3H4V0H2v3h-.25a.75.75 0 0 0-.75.75v2.5c0 .412.337.75.75.75H2v9h2V7zM2 4h2v2H2z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,48 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TbBorderInner = (props: IconProps) => {
+export const TbBorderInner = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M4 12l16 0" />
-          <Path  d="M12 4l0 16" />
-          <Path  d="M4 4l0 .01" />
-          <Path  d="M8 4l0 .01" />
-          <Path  d="M16 4l0 .01" />
-          <Path  d="M20 4l0 .01" />
-          <Path  d="M4 8l0 .01" />
-          <Path  d="M20 8l0 .01" />
-          <Path  d="M4 16l0 .01" />
-          <Path  d="M20 16l0 .01" />
-          <Path  d="M4 20l0 .01" />
-          <Path  d="M8 20l0 .01" />
-          <Path  d="M16 20l0 .01" />
-          <Path  d="M20 20l0 .01" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M4 12h16M12 4v16M4 4v.01M8 4v.01M16 4v.01M20 4v.01M4 8v.01M20 8v.01M4 16v.01M20 16v.01M4 20v.01M8 20v.01M16 20v.01M20 20v.01" />
+      </G>
+    </Svg>
+  );
+};

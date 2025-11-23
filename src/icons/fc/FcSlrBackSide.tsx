@@ -1,41 +1,43 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FcSlrBackSide = (props: IconProps) => {
+export const FcSlrBackSide = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 48 48"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 24, 24)`}
-      >
-        <G fill={color} stroke={color}>
-          <Circle  fill="#FFF9C4" cx="27" cy="21" r="2" />
-          <Path  fill="#5E35B1" d="M40,10h-7.6l-2-3c-0.4-0.6-1-0.9-1.7-0.9h-9.6c-0.7,0-1.3,0.3-1.7,0.9l-2,3H8c-2.2,0-4,1.8-4,4v24 c0,2.2,1.8,4,4,4h32c2.2,0,4-1.8,4-4V14C44,11.8,42.2,10,40,10z" />
-          <Path  fill="#F57C00" d="M11,16h20c0.6,0,1,0.4,1,1v16c0,0.6-0.4,1-1,1H11c-0.6,0-1-0.4-1-1V17C10,16.4,10.4,16,11,16z" />
-          <Circle  cx="38" cy="18" r="2" />
-          <Circle  cx="38" cy="24" r="2" />
-          <Circle  cx="38" cy="30" r="2" />
-          <Path  d="M34,10h6V9.2C40,8.5,39.5,8,38.8,8h-3.6C34.5,8,34,8.5,34,9.2V10z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 48 48"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 24, 24)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="#5E35B1" d="M40 10h-7.6l-2-3c-.4-.6-1-.9-1.7-.9h-9.6c-.7 0-1.3.3-1.7.9l-2 3H8c-2.2 0-4 1.8-4 4v24c0 2.2 1.8 4 4 4h32c2.2 0 4-1.8 4-4V14c0-2.2-1.8-4-4-4" />
+        <Path fill="#F57C00" d="M11 16h20c.6 0 1 .4 1 1v16c0 .6-.4 1-1 1H11c-.6 0-1-.4-1-1V17c0-.6.4-1 1-1" />
+        <Path fill="#942A09" d="M18.9 22 12 32h13.8z" />
+        <Circle cx={27} cy={21} r={2} fill="#FFF9C4" />
+        <Path fill="#BF360C" d="m25.2 26-4.8 6H30z" />
+        <Path d="M34 10h6v-.8c0-.7-.5-1.2-1.2-1.2h-3.6c-.7 0-1.2.5-1.2 1.2z" />
+        <Circle cx={38} cy={18} r={2} />
+        <Circle cx={38} cy={24} r={2} />
+        <Circle cx={38} cy={30} r={2} />
+      </G>
+    </Svg>
+  );
+};

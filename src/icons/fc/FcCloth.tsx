@@ -1,41 +1,37 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FcCloth = (props: IconProps) => {
+export const FcCloth = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 48 48"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 24, 24)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  fill="#FF5722" d="M6,10v28c0,2.2,1.8,4,4,4h28c2.2,0,4-1.8,4-4V10c0-2.2-1.8-4-4-4H10C7.8,6,6,7.8,6,10z" />
-          <Path  d="M6.1,39c0.2,0.8,0.6,1.5,1.2,2h33.2c0.6-0.5,1-1.2,1.2-2H6.1z" />
-          <Path  d="M6.1,9h35.7c-0.2-0.8-0.6-1.5-1.2-2H7.4C6.8,7.5,6.3,8.2,6.1,9z" />
-          <Path  d="M39,6.1V7h1.6C40.2,6.6,39.6,6.3,39,6.1z" />
-          <Path  d="M40.6,41H39v0.9C39.6,41.7,40.2,41.4,40.6,41z" />
-          <Path  d="M9,41H7.4c0.5,0.4,1,0.7,1.6,0.9V41z" />
-          <Path  d="M7.4,7H9V6.1C8.4,6.3,7.8,6.6,7.4,7z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 48 48"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 24, 24)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="#FF5722" d="M6 10v28c0 2.2 1.8 4 4 4h28c2.2 0 4-1.8 4-4V10c0-2.2-1.8-4-4-4H10c-2.2 0-4 1.8-4 4" />
+        <Path d="M6 35h36v2H6zM6 31h36v2H6zM6.1 39c.2.8.6 1.5 1.2 2h33.2c.6-.5 1-1.2 1.2-2zM6.1 9h35.7c-.2-.8-.6-1.5-1.2-2H7.4c-.6.5-1.1 1.2-1.3 2M6 23h36v2H6zM6 27h36v2H6zM6 15h36v2H6zM6 11h36v2H6zM6 19h36v2H6z" />
+        <Path d="M27 6h2v5h-2zM27 13h2v6h-2zM27 29h2v6h-2zM31 6h2v1h-2zM19 29h2v6h-2zM31 9h2v6h-2zM23 6h2v1h-2zM23 25h2v6h-2zM23 9h2v6h-2zM19 21h2v6h-2zM23 17h2v6h-2zM23 33h2v6h-2zM27 21h2v6h-2zM39 33h2v6h-2zM39 17h2v6h-2zM39 25h2v6h-2zM39 6.1V7h1.6c-.4-.4-1-.7-1.6-.9M31 17h2v6h-2zM40.6 41H39v.9c.6-.2 1.2-.5 1.6-.9M35 13h2v6h-2zM31 33h2v6h-2zM35 29h2v6h-2zM39 9h2v6h-2zM35 21h2v6h-2zM31 25h2v6h-2zM35 37h2v5h-2zM35 6h2v5h-2zM31 41h2v1h-2zM23 41h2v1h-2zM27 37h2v5h-2zM19 37h2v5h-2zM7 17h2v6H7zM9 41H7.4c.5.4 1 .7 1.6.9zM7.4 7H9v-.9c-.6.2-1.2.5-1.6.9M7 33h2v6H7zM7 25h2v6H7zM7 9h2v6H7zM11 29h2v6h-2zM15 17h2v6h-2zM15 33h2v6h-2zM15 9h2v6h-2zM15 6h2v1h-2zM19 6h2v5h-2zM15 25h2v6h-2zM15 41h2v1h-2zM11 21h2v6h-2zM11 6h2v5h-2zM11 37h2v5h-2zM19 13h2v6h-2zM11 13h2v6h-2z" />
+      </G>
+    </Svg>
+  );
+};

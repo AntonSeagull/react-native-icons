@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const RiBlurOffLine = (props: IconProps) => {
+export const RiBlurOffLine = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M18.1537 19.5646C14.6255 22.8742 9.08161 22.8062 5.6362 19.3608C2.19078 15.9154 2.12284 10.3715 5.43239 6.8433L1.39355 2.80445L2.80777 1.39024L22.6068 21.1892L21.1925 22.6034L18.1537 19.5646ZM6.84756 8.25846C4.3185 11.0046 4.38612 15.2823 7.05041 17.9466C9.7147 20.6109 13.9924 20.6785 16.7385 18.1494L6.84756 8.25846ZM20.4144 16.1969L18.8156 14.598C19.3488 12.3187 18.7269 9.82407 16.9499 8.0471L12.0002 3.09735L9.65751 5.43999L8.2433 4.02578L12.0002 0.268921L18.3641 6.63288C20.9499 9.21864 21.6333 12.9863 20.4144 16.1969Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M18.154 19.565A9 9 0 0 1 5.432 6.843L1.394 2.804 2.808 1.39l19.799 19.8-1.415 1.413zM6.848 8.258a7 7 0 0 0 9.89 9.891zm13.566 7.939-1.598-1.599a7 7 0 0 0-1.866-6.55L12 3.097 9.658 5.44 8.243 4.026 12 .269l6.364 6.364a9 9 0 0 1 2.05 9.564" />
+      </G>
+    </Svg>
+  );
+};

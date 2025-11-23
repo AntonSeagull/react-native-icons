@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiGoogleDriveLogoThin = (props: IconProps) => {
+export const PiGoogleDriveLogoThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M234.19,145.86,165.74,33.64A11.94,11.94,0,0,0,155.56,28H100.43a11.93,11.93,0,0,0-10.17,5.64l0,0L21.83,145.82a12,12,0,0,0-.25,12.32L48.91,206A12,12,0,0,0,59.32,212H196.67A12,12,0,0,0,207.09,206l27.32-47.81A12,12,0,0,0,234.19,145.86ZM226.13,148H170.26l-37.6-62.67,27.39-45.65ZM95.06,148,128,93.11,160.93,148Zm70.67,8,28.8,48H61.47l28.79-48ZM128,77.56,103.06,36h49.87ZM95.94,39.68l27.39,45.65L85.74,148H29.87ZM29.58,156H80.94L54.63,199.85Zm171.79,43.85L175.06,156h51.36Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M234.19 145.86 165.74 33.64A11.94 11.94 0 0 0 155.56 28h-55.13a11.93 11.93 0 0 0-10.17 5.64L21.83 145.82a12 12 0 0 0-.25 12.32L48.91 206a12 12 0 0 0 10.41 6h137.35a12 12 0 0 0 10.42-6l27.32-47.81a12 12 0 0 0-.22-12.33m-8.06 2.14h-55.87l-37.6-62.67 27.39-45.65Zm-131.07 0L128 93.11 160.93 148Zm70.67 8 28.8 48H61.47l28.79-48ZM128 77.56 103.06 36h49.87ZM95.94 39.68l27.39 45.65L85.74 148H29.87ZM29.58 156h51.36l-26.31 43.85Zm171.79 43.85L175.06 156h51.36Z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaCoffeeSolid = (props: IconProps) => {
+export const LiaCoffeeSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 11 3 L 11 7 L 13 7 L 13 3 Z M 15 4 L 15 7 L 17 7 L 17 4 Z M 4.875 8 L 5 9.09375 L 6.8125 26.3125 C 6.972656 27.832031 8.285156 29 9.8125 29 L 19.1875 29 C 20.714844 29 22.027344 27.832031 22.1875 26.3125 L 22.65625 22 L 25 22 C 26.644531 22 28 20.644531 28 19 L 28 16 C 28 14.355469 26.644531 13 25 13 L 23.59375 13 L 24 9.09375 L 24.125 8 Z M 7.125 10 L 21.875 10 L 20.1875 26.09375 C 20.132813 26.613281 19.707031 27 19.1875 27 L 9.8125 27 C 9.292969 27 8.867188 26.613281 8.8125 26.09375 Z M 23.375 15 L 25 15 C 25.566406 15 26 15.433594 26 16 L 26 19 C 26 19.566406 25.566406 20 25 20 L 22.84375 20 Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M11 3v4h2V3Zm4 1v3h2V4ZM4.875 8 5 9.094l1.813 17.219c.16 1.519 1.472 2.687 3 2.687h9.375c1.527 0 2.84-1.168 3-2.687L22.656 22H25c1.645 0 3-1.355 3-3v-3c0-1.645-1.355-3-3-3h-1.406L24 9.094 24.125 8Zm2.25 2h14.75l-1.687 16.094c-.055.52-.481.906-1 .906H9.813c-.52 0-.946-.387-1-.906Zm16.25 5H25c.566 0 1 .434 1 1v3c0 .566-.434 1-1 1h-2.156Z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,41 +1,36 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FcStumbleupon = (props: IconProps) => {
+export const FcStumbleupon = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 48 48"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 24, 24)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  fill="#E64A19" d="M24.001,5c-10.494,0-19,8.506-19,19c0,10.493,8.506,19,19,19c10.493,0,19-8.507,19-19
-	C43.001,13.506,34.494,5,24.001,5z" />
-          <Path  fill="#FFFFFF" d="M24.001,19C23.998,19,24.004,19,24.001,19c-0.062-0.004-1,0-1,1v7.876C22.916,29.888,21.504,33,17.959,33
-		c-3.607,0-4.958-3.065-4.958-4.958V24h4v4c0.038,0.709,0.629,1,1,1c0.665,0,0.972-0.361,1-1v-8.124c0-2.01,1.332-5,5-5
-		c0.045,0,0.086,0.006,0.131,0.007c0,0,4.869-0.009,4.869,5.117c0,1.104-0.896,1.876-2,1.876s-2-0.771-2-1.876
-		C25.001,19.124,24.041,19.003,24.001,19z M35.001,27.876c0,2.01-1.331,5.124-5,5.124s-5-3.114-5-5.124v-3.439
-		c0.614,0.272,1.285,0.439,2,0.439c0.712,0,1.386-0.154,2-0.424V28c0.038,1,0.663,1,1,1c0.247,0,1,0,1-1v-4h4V27.876z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 48 48"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 24, 24)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="#E64A19" d="M24.001 5c-10.494 0-19 8.506-19 19s8.506 19 19 19 19-8.507 19-19-8.507-19-19-19" />
+        <Path fill="#FFF" d="M24.001 19c-.003 0 .003 0 0 0-.062-.004-1 0-1 1v7.876C22.916 29.888 21.504 33 17.959 33c-3.607 0-4.958-3.065-4.958-4.958V24h4v4c.038.709.629 1 1 1 .665 0 .972-.361 1-1v-8.124c0-2.01 1.332-5 5-5 .045 0 .086.006.131.007 0 0 4.869-.009 4.869 5.117 0 1.104-.896 1.876-2 1.876s-2-.771-2-1.876c0-.876-.96-.997-1-1m11 8.876c0 2.01-1.331 5.124-5 5.124s-5-3.114-5-5.124v-3.439a4.9 4.9 0 0 0 2 .439 4.95 4.95 0 0 0 2-.424V28c.038 1 .663 1 1 1 .247 0 1 0 1-1v-4h4z" />
+      </G>
+    </Svg>
+  );
+};

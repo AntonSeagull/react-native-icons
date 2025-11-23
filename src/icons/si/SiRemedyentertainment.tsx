@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const SiRemedyentertainment = (props: IconProps) => {
+export const SiRemedyentertainment = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M13.717 5.245v6.613a3.309 3.309 0 0 0 3.306-3.307 3.31 3.31 0 0 0-3.306-3.306Zm-4.594 0h-3.45v6.613h3.455a3.309 3.309 0 0 0 3.306-3.307 3.312 3.312 0 0 0-3.311-3.306Zm11.448 9.915v-1.507a8.578 8.578 0 0 1-2.714 2.379l2.714 4.792v-2.878L24 24h-7.574l-2.709-4.789V24h-1.656l-3.907-6.897H5.673V24H0V0h9.123a8.5 8.5 0 0 1 4.589 1.337V0a8.551 8.551 0 0 1 6.859 3.441V1.939a8.527 8.527 0 0 1 3.133 6.612 8.516 8.516 0 0 1-3.133 6.609Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M13.717 5.245v6.613a3.31 3.31 0 0 0 3.306-3.307 3.31 3.31 0 0 0-3.306-3.306m-4.594 0h-3.45v6.613h3.455a3.31 3.31 0 0 0 3.306-3.307 3.31 3.31 0 0 0-3.311-3.306m11.448 9.915v-1.507a8.6 8.6 0 0 1-2.714 2.379l2.714 4.792v-2.878L24 24h-7.574l-2.709-4.789V24h-1.656l-3.907-6.897H5.673V24H0V0h9.123a8.5 8.5 0 0 1 4.589 1.337V0a8.55 8.55 0 0 1 6.859 3.441V1.939a8.53 8.53 0 0 1 3.133 6.612 8.52 8.52 0 0 1-3.133 6.609" />
+      </G>
+    </Svg>
+  );
+};

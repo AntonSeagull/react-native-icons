@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GrTroubleshoot = (props: IconProps) => {
+export const GrTroubleshoot = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  fill="none" d="M1,5 C1,3.00000024 2,1 3,1 C3,1 5,5 5,5 L7,5 C7,5 9,1 9,1 C10,1 11,3.00000006 11,5 C11,7.25400025 10,9.0000003 8,10 L8,21 C8,22 8,23 6,23 C4,23 4,22 4,21 L4,10 C2,9.0000003 1,7.25400042 1,5 Z M19,12 L19,18 M17,18 L18,23 L20,23 L21,18 L17,18 Z M14,12 L24,12 L14,12 Z M21,12 L21,3 C21,1.895 20.105,1 19,1 C17.895,1 17,1.895 17,3 L17,12" strokeWidth="2" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="none" stroke="#000" strokeWidth={2} d="M1 5c0-2 1-4 2-4l2 4h2l2-4c1 0 2 2 2 4 0 2.254-1 4-3 5v11c0 1 0 2-2 2s-2-1-2-2V10C2 9 1 7.254 1 5Zm18 7v6m-2 0 1 5h2l1-5zm-3-6h10zm7 0V3a2 2 0 1 0-4 0v9" />
+      </G>
+    </Svg>
+  );
+};

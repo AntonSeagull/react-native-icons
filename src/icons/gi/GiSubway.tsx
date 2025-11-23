@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiSubway = (props: IconProps) => {
+export const GiSubway = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M136.1 37.15L105.4 328.8l26.3 26.3h248.6l26.3-26.3-30.7-291.65H361v44H151v-44zm32.9 0v26h174v-26zm-16.9 60h207.8l18.3 145.95H133.8zm15.8 17.95l-13.7 110h203.6l-13.7-110zm-7.9 158c18.1 0 33 14.9 33 33 0 18.2-14.9 33-33 33s-33-14.8-33-33c0-18.1 14.9-33 33-33zm192 0c18.1 0 33 14.9 33 33 0 18.2-14.9 33-33 33s-33-14.8-33-33c0-18.1 14.9-33 33-33zm-192 18c-8.4 0-15 6.7-15 15 0 8.4 6.6 15 15 15s15-6.6 15-15c0-8.3-6.6-15-15-15zm192 0c-8.4 0-15 6.7-15 15 0 8.4 6.6 15 15 15s15-6.6 15-15c0-8.3-6.6-15-15-15zm-204.5 82L91.6 486.8h46.8l13.5-28.7h208.2l13.5 28.7h46.8l-55.9-113.7h-42.4l6.3 14H183.6l6.3-14zm28 32h161l10.2 23H165.3z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M136.1 37.15 105.4 328.8l26.3 26.3h248.6l26.3-26.3-30.7-291.65H361v44H151v-44zm32.9 0v26h174v-26zm-16.9 60h207.8l18.3 145.95H133.8zm15.8 17.95-13.7 110h203.6l-13.7-110zm-7.9 158c18.1 0 33 14.9 33 33 0 18.2-14.9 33-33 33s-33-14.8-33-33c0-18.1 14.9-33 33-33m192 0c18.1 0 33 14.9 33 33 0 18.2-14.9 33-33 33s-33-14.8-33-33c0-18.1 14.9-33 33-33m-192 18c-8.4 0-15 6.7-15 15 0 8.4 6.6 15 15 15s15-6.6 15-15c0-8.3-6.6-15-15-15m192 0c-8.4 0-15 6.7-15 15 0 8.4 6.6 15 15 15s15-6.6 15-15c0-8.3-6.6-15-15-15m-204.5 82L91.6 486.8h46.8l13.5-28.7h208.2l13.5 28.7h46.8l-55.9-113.7h-42.4l6.3 14H183.6l6.3-14zm28 32h161l10.2 23H165.3z" />
+      </G>
+    </Svg>
+  );
+};

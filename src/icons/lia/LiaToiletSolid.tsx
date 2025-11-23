@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaToiletSolid = (props: IconProps) => {
+export const LiaToiletSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 6 4 C 5.476563 4 4.941406 4.183594 4.5625 4.5625 C 4.183594 4.941406 4 5.476563 4 6 L 4 17 C 4 19.789063 5.652344 22.117188 8 23.59375 L 8 28 L 23 28 L 23 23.59375 C 25.347656 22.117188 27 19.789063 27 17 L 27 16 L 14 16 L 14 6 C 14 5.476563 13.816406 4.941406 13.4375 4.5625 C 13.058594 4.183594 12.523438 4 12 4 Z M 6 6 L 12 6 L 12 16 L 6 16 Z M 8 8 L 8 11 L 10 11 L 10 8 Z M 6.3125 18 L 24.6875 18 C 24.332031 19.726563 23.320313 21.25 21.53125 22.21875 L 21 22.5 L 21 26 L 10 26 L 10 22.5 L 9.46875 22.21875 C 7.679688 21.25 6.667969 19.726563 6.3125 18 Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M6 4c-.523 0-1.059.184-1.437.563C4.183 4.94 4 5.477 4 6v11c0 2.79 1.652 5.117 4 6.594V28h15v-4.406c2.348-1.477 4-3.805 4-6.594v-1H14V6c0-.523-.184-1.059-.562-1.437C13.058 4.183 12.523 4 12 4Zm0 2h6v10H6Zm2 2v3h2V8ZM6.313 18h18.375c-.356 1.727-1.368 3.25-3.157 4.219L21 22.5V26H10v-3.5l-.531-.281C7.679 21.25 6.668 19.727 6.313 18" />
+      </G>
+    </Svg>
+  );
+};

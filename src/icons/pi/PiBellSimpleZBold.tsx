@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiBellSimpleZBold = (props: IconProps) => {
+export const PiBellSimpleZBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M156,140a12,12,0,0,1-12,12H112a12,12,0,0,1-10-18.66L121.58,104H112a12,12,0,1,1,0-24h32a12,12,0,0,1,10,18.66L134.42,128H144A12,12,0,0,1,156,140Zm69.33,46A19.77,19.77,0,0,1,208,196H48a19.77,19.77,0,0,1-17.31-10,20.08,20.08,0,0,1,.05-20.06C39.39,151,44,129.58,44,104a84,84,0,0,1,168,0c0,25.57,4.59,47,13.27,61.93A20.08,20.08,0,0,1,225.34,186Zm-24-14C192.49,154,188,131.13,188,104a60,60,0,0,0-120,0c0,27.14-4.48,50-13.33,68ZM160,212H96a12,12,0,0,0,0,24h64a12,12,0,0,0,0-24Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M156 140a12 12 0 0 1-12 12h-32a12 12 0 0 1-10-18.66L121.58 104H112a12 12 0 1 1 0-24h32a12 12 0 0 1 10 18.66L134.42 128H144a12 12 0 0 1 12 12m69.33 46A19.77 19.77 0 0 1 208 196H48a19.77 19.77 0 0 1-17.31-10 20.08 20.08 0 0 1 .05-20.06C39.39 151 44 129.58 44 104a84 84 0 0 1 168 0c0 25.57 4.59 47 13.27 61.93a20.08 20.08 0 0 1 .07 20.07Zm-24-14c-8.84-18-13.33-40.87-13.33-68a60 60 0 0 0-120 0c0 27.14-4.48 50-13.33 68ZM160 212H96a12 12 0 0 0 0 24h64a12 12 0 0 0 0-24" />
+      </G>
+    </Svg>
+  );
+};

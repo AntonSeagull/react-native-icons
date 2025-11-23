@@ -1,38 +1,41 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const IoMagnetSharp = (props: IconProps) => {
+export const IoMagnetSharp = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Line  x1="191.98" y1="463.58" x2="191.98" y2="415.58" strokeLinecap="square" strokeMiterlimit="10" strokeWidth="32px" />
-          <Line  x1="90.16" y1="421.4" x2="124.1" y2="387.46" strokeLinecap="square" strokeMiterlimit="10" strokeWidth="32px" />
-          <Line  x1="47.98" y1="319.58" x2="95.98" y2="319.58" strokeLinecap="square" strokeMiterlimit="10" strokeWidth="32px" />
-          <Path  d="M422.2,89.82a144,144,0,0,0-203.71-.07l-67.88,67.88,67.88,67.89,67.88-67.89a48,48,0,0,1,68.46.59c18.3,18.92,17.48,49.24-1.14,67.86L286.37,293.4l67.88,67.88,66.91-66.91C477.53,238,478.53,146.22,422.2,89.82Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M191.98 463.58v-48M90.16 421.4l33.94-33.94M47.98 319.58h48" style={{
+        stroke: "#000",
+        strokeLinecap: "square",
+        strokeMiterlimit: 10,
+        strokeWidth: 32
+        }} />
+        <Path d="M422.2 89.82a144 144 0 0 0-203.71-.07l-67.88 67.88 67.88 67.89 67.88-67.89a48 48 0 0 1 68.46.59c18.3 18.92 17.48 49.24-1.14 67.86l-67.32 67.32 67.88 67.88 66.91-66.91c56.37-56.37 57.37-148.15 1.04-204.55M82.718 225.517l45.255-45.254 67.883 67.882L150.6 293.4zM218.49 361.27l45.254-45.254 67.882 67.882-45.255 45.255z" />
+      </G>
+    </Svg>
+  );
+};

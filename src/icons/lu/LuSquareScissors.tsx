@@ -1,39 +1,39 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LuSquareScissors = (props: IconProps) => {
+export const LuSquareScissors = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Circle  cx="8" cy="8" r="2" />
-          <Circle  cx="8" cy="16" r="2" />
-          <Path  d="M9.414 9.414 12 12" />
-          <Path  d="M14.8 14.8 18 18" />
-          <Path  d="m18 6-8.586 8.586" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Rect width={20} height={20} x={2} y={2} rx={2} />
+        <Circle cx={8} cy={8} r={2} />
+        <Path d="M9.414 9.414 12 12M14.8 14.8 18 18" />
+        <Circle cx={8} cy={16} r={2} />
+        <Path d="m18 6-8.586 8.586" />
+      </G>
+    </Svg>
+  );
+};

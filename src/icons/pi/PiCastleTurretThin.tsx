@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiCastleTurretThin = (props: IconProps) => {
+export const PiCastleTurretThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M216,220H196V113.66l12.49-12.49A11.93,11.93,0,0,0,212,92.69V48a12,12,0,0,0-12-12H176a4,4,0,0,0-4,4V68H148V40a4,4,0,0,0-4-4H112a4,4,0,0,0-4,4V68H84V40a4,4,0,0,0-4-4H56A12,12,0,0,0,44,48V92.69a11.93,11.93,0,0,0,3.51,8.48L60,113.66V220H40a4,4,0,0,0,0,8H216a4,4,0,0,0,0-8ZM66.83,109.17,53.17,95.51A4,4,0,0,1,52,92.69V48a4,4,0,0,1,4-4H76V72a4,4,0,0,0,4,4h32a4,4,0,0,0,4-4V44h24V72a4,4,0,0,0,4,4h32a4,4,0,0,0,4-4V44h20a4,4,0,0,1,4,4V92.69a4,4,0,0,1-1.17,2.82l-13.66,13.66A4,4,0,0,0,188,112V220H156V168a28,28,0,0,0-56,0v52H68V112A4,4,0,0,0,66.83,109.17ZM148,220H108V168a20,20,0,0,1,40,0Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M216 220h-20V113.66l12.49-12.49a11.93 11.93 0 0 0 3.51-8.48V48a12 12 0 0 0-12-12h-24a4 4 0 0 0-4 4v28h-24V40a4 4 0 0 0-4-4h-32a4 4 0 0 0-4 4v28H84V40a4 4 0 0 0-4-4H56a12 12 0 0 0-12 12v44.69a11.93 11.93 0 0 0 3.51 8.48L60 113.66V220H40a4 4 0 0 0 0 8h176a4 4 0 0 0 0-8M66.83 109.17 53.17 95.51A4 4 0 0 1 52 92.69V48a4 4 0 0 1 4-4h20v28a4 4 0 0 0 4 4h32a4 4 0 0 0 4-4V44h24v28a4 4 0 0 0 4 4h32a4 4 0 0 0 4-4V44h20a4 4 0 0 1 4 4v44.69a4 4 0 0 1-1.17 2.82l-13.66 13.66A4 4 0 0 0 188 112v108h-32v-52a28 28 0 0 0-56 0v52H68V112a4 4 0 0 0-1.17-2.83M148 220h-40v-52a20 20 0 0 1 40 0Z" />
+      </G>
+    </Svg>
+  );
+};

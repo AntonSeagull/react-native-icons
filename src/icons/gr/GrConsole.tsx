@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GrConsole = (props: IconProps) => {
+export const GrConsole = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M16 18a1 1 0 100-2v2zm-8-2a1 1 0 100 2v-2zm.707-8.707a1 1 0 10-1.414 1.414l1.414-1.414zM11 11l.707.707a1 1 0 000-1.414L11 11zm-3.707 2.293a1 1 0 101.414 1.414l-1.414-1.414zM7 4h10V2H7v2zm13 3v10h2V7h-2zm-3 13H7v2h10v-2zM4 17V7H2v10h2zm3 3a3 3 0 01-3-3H2a5 5 0 005 5v-2zm13-3a3 3 0 01-3 3v2a5 5 0 005-5h-2zM17 4a3 3 0 013 3h2a5 5 0 00-5-5v2zM7 2a5 5 0 00-5 5h2a3 3 0 013-3V2zm9 14H8v2h8v-2zM7.293 8.707l3 3 1.414-1.414-3-3-1.414 1.414zm3 1.586l-3 3 1.414 1.414 3-3-1.414-1.414z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="#000" d="M16 18a1 1 0 1 0 0-2zm-8-2a1 1 0 1 0 0 2zm.707-8.707a1 1 0 1 0-1.414 1.414zM11 11l.707.707a1 1 0 0 0 0-1.414zm-3.707 2.293a1 1 0 1 0 1.414 1.414zM7 4h10V2H7zm13 3v10h2V7zm-3 13H7v2h10zM4 17V7H2v10zm3 3a3 3 0 0 1-3-3H2a5 5 0 0 0 5 5zm13-3a3 3 0 0 1-3 3v2a5 5 0 0 0 5-5zM17 4a3 3 0 0 1 3 3h2a5 5 0 0 0-5-5zM7 2a5 5 0 0 0-5 5h2a3 3 0 0 1 3-3zm9 14H8v2h8zM7.293 8.707l3 3 1.414-1.414-3-3zm3 1.586-3 3 1.414 1.414 3-3z" />
+      </G>
+    </Svg>
+  );
+};

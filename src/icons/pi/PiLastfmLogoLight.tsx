@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiLastfmLogoLight = (props: IconProps) => {
+export const PiLastfmLogoLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M246,160a38,38,0,0,1-38,38H190.57a54.21,54.21,0,0,1-48.94-31.16l-30.14-64.6A42.14,42.14,0,0,0,73.43,78H64a42,42,0,0,0-42,42v24a42,42,0,0,0,42,42h8a34,34,0,0,0,31.17-20.4,6,6,0,0,1,11,4.8A46,46,0,0,1,72,198H64a54.06,54.06,0,0,1-54-54V120A54.06,54.06,0,0,1,64,66h9.43a54.21,54.21,0,0,1,48.94,31.16l30.14,64.6A42.14,42.14,0,0,0,190.57,186H208a26,26,0,0,0,0-52H188a34,34,0,0,1,0-68h20a30,30,0,0,1,30,30,6,6,0,0,1-12,0,18,18,0,0,0-18-18H188a22,22,0,0,0,0,44h20A38,38,0,0,1,246,160Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M246 160a38 38 0 0 1-38 38h-17.43a54.21 54.21 0 0 1-48.94-31.16l-30.14-64.6A42.14 42.14 0 0 0 73.43 78H64a42 42 0 0 0-42 42v24a42 42 0 0 0 42 42h8a34 34 0 0 0 31.17-20.4 6 6 0 0 1 11 4.8A46 46 0 0 1 72 198h-8a54.06 54.06 0 0 1-54-54v-24a54.06 54.06 0 0 1 54-54h9.43a54.21 54.21 0 0 1 48.94 31.16l30.14 64.6A42.14 42.14 0 0 0 190.57 186H208a26 26 0 0 0 0-52h-20a34 34 0 0 1 0-68h20a30 30 0 0 1 30 30 6 6 0 0 1-12 0 18 18 0 0 0-18-18h-20a22 22 0 0 0 0 44h20a38 38 0 0 1 38 38" />
+      </G>
+    </Svg>
+  );
+};

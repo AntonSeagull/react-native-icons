@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaChartAreaSolid = (props: IconProps) => {
+export const LiaChartAreaSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 28 4.0625 L 26.375 5.3125 L 21.75 8.9375 L 16.15625 8 L 15.78125 7.9375 L 15.4375 8.15625 L 9.75 11.9375 L 5.1875 11.03125 L 4 10.78125 L 4 28 L 28 28 Z M 26 8.15625 L 26 13.53125 L 21.78125 16.875 L 16.3125 15.0625 L 15.84375 14.90625 L 15.4375 15.15625 L 9.875 18.875 L 6 17.3125 L 6 13.21875 L 9.8125 13.96875 L 10.21875 14.0625 L 10.5625 13.84375 L 16.21875 10.0625 L 21.84375 11 L 22.28125 11.0625 L 22.625 10.78125 Z M 26 16.09375 L 26 26 L 6 26 L 6 19.5 L 9.625 20.9375 L 10.125 21.125 L 10.5625 20.84375 L 16.1875 17.09375 L 21.6875 18.9375 L 22.1875 19.125 L 22.625 18.78125 Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m28 4.063-1.625 1.25-4.625 3.625L16.156 8l-.375-.062-.344.218-5.687 3.781-4.562-.906L4 10.781V28h24Zm-2 4.093v5.375l-4.219 3.344-5.468-1.812-.47-.157-.405.25-5.563 3.719L6 17.313v-4.094l3.813.75.406.094.344-.22 5.656-3.78 5.625.937.437.063.344-.282Zm0 7.938V26H6v-6.5l3.625 1.438.5.187.438-.281 5.624-3.75 5.5 1.843.5.188.438-.344Z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,38 +1,39 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FcSelfServiceKiosk = (props: IconProps) => {
+export const FcSelfServiceKiosk = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 48 48"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 24, 24)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  fill="#546E7A" d="M44,30H4V11c0-2.2,1.8-4,4-4h32c2.2,0,4,1.8,4,4V30z" />
-          <Path  fill="#64B5F6" d="M40,27H8c-0.6,0-1-0.4-1-1V11c0-0.6,0.4-1,1-1h32c0.6,0,1,0.4,1,1v15C41,26.6,40.6,27,40,27z" />
-          <Path  fill="#78909C" d="M40,41H8c-2.2,0-4-1.8-4-4v-7h40v7C44,39.2,42.2,41,40,41z" />
-          <Path  d="M18,35c0,1.1-1.3,2-3,2s-3-0.9-3-2H18z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 48 48"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 24, 24)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="#546E7A" d="M44 30H4V11c0-2.2 1.8-4 4-4h32c2.2 0 4 1.8 4 4z" />
+        <Path fill="#64B5F6" d="M40 27H8c-.6 0-1-.4-1-1V11c0-.6.4-1 1-1h32c.6 0 1 .4 1 1v15c0 .6-.4 1-1 1" />
+        <Path fill="#78909C" d="M40 41H8c-2.2 0-4-1.8-4-4v-7h40v7c0 2.2-1.8 4-4 4" />
+        <Path d="M27 34h12v2H27zM9 34h12v2H9z" />
+        <Path d="M18 35c0 1.1-1.3 2-3 2s-3-.9-3-2z" />
+      </G>
+    </Svg>
+  );
+};

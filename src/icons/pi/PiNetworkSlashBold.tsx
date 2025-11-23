@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiNetworkSlashBold = (props: IconProps) => {
+export const PiNetworkSlashBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M56.88,31.93A12,12,0,1,0,39.12,48.07L93.6,108H24a12,12,0,0,0,0,24H52v24H48a20,20,0,0,0-20,20v32a20,20,0,0,0,20,20H80a20,20,0,0,0,20-20V176a20,20,0,0,0-20-20H76V132h39.42l83.7,92.07a12,12,0,0,0,17.76-16.14ZM76,204H52V180H76ZM92,42.14V40a20,20,0,0,1,20-20h32a20,20,0,0,1,20,20V72a20,20,0,0,1-20,20h-5.58a12,12,0,1,1,0-24H140V44H115.86A12,12,0,0,1,92,42.14ZM244,120a12,12,0,0,1-12,12H204v6.94a12,12,0,0,1-24,0V132h-5.21a12,12,0,1,1,0-24H232A12,12,0,0,1,244,120Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M56.88 31.93a12 12 0 1 0-17.76 16.14L93.6 108H24a12 12 0 0 0 0 24h28v24h-4a20 20 0 0 0-20 20v32a20 20 0 0 0 20 20h32a20 20 0 0 0 20-20v-32a20 20 0 0 0-20-20h-4v-24h39.42l83.7 92.07a12 12 0 0 0 17.76-16.14ZM76 204H52v-24h24ZM92 42.14V40a20 20 0 0 1 20-20h32a20 20 0 0 1 20 20v32a20 20 0 0 1-20 20h-5.58a12 12 0 1 1 0-24H140V44h-24.14A12 12 0 0 1 92 42.14M244 120a12 12 0 0 1-12 12h-28v6.94a12 12 0 0 1-24 0V132h-5.21a12 12 0 1 1 0-24H232a12 12 0 0 1 12 12" />
+      </G>
+    </Svg>
+  );
+};

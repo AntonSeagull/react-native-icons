@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaGopuramSolid = (props: IconProps) => {
+export const LiaGopuramSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 9 5 L 9 10 L 8 10 L 8 14 L 6 14 L 6 20 L 4 20 L 4 27 L 9 27 L 9 20 L 10 20 L 10 14 L 11 14 L 11 10 L 13 10 L 13 14 L 12 14 L 12 20 L 11 20 L 11 27 L 13 27 L 13 25 C 13 23.343 14.343 22 16 22 C 17.657 22 19 23.343 19 25 L 19 27 L 21 27 L 21 20 L 20 20 L 20 14 L 19 14 L 19 10 L 21 10 L 21 14 L 22 14 L 22 20 L 23 20 L 23 27 L 28 27 L 28 20 L 26 20 L 26 14 L 24 14 L 24 10 L 23 10 L 23 5 L 21 5 L 21 7 L 19 7 L 19 5 L 17 5 L 17 7 L 15 7 L 15 5 L 13 5 L 13 7 L 11 7 L 11 5 L 9 5 z M 16 11 C 16.552 11 17 11.448 17 12 L 17 14 L 15 14 L 15 12 C 15 11.448 15.448 11 16 11 z M 16 16 C 17.105 16 18 16.895 18 18 L 18 20 L 14 20 L 14 18 C 14 16.895 14.895 16 16 16 z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M9 5v5H8v4H6v6H4v7h5v-7h1v-6h1v-4h2v4h-1v6h-1v7h2v-2a3 3 0 1 1 6 0v2h2v-7h-1v-6h-1v-4h2v4h1v6h1v7h5v-7h-2v-6h-2v-4h-1V5h-2v2h-2V5h-2v2h-2V5h-2v2h-2V5zm7 6a1 1 0 0 1 1 1v2h-2v-2a1 1 0 0 1 1-1m0 5a2 2 0 0 1 2 2v2h-4v-2a2 2 0 0 1 2-2" />
+      </G>
+    </Svg>
+  );
+};

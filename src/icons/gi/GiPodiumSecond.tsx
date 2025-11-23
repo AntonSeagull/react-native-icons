@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiPodiumSecond = (props: IconProps) => {
+export const GiPodiumSecond = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M90.139 122.533c-11.594 0-23 12.8-23 31s11.406 31 23 31c11.593 0 23-12.8 23-31s-11.407-31-23-31zm103.95 2.975c-19.909 29.9-44.89 49.149-71.333 57.77-7.307 11.535-18.868 19.255-32.617 19.255-13.75 0-25.311-7.72-32.618-19.256-18.893 4.527-28.056 67.85-34.212 102.391l17.382 4.664 13.928-51.893 11.854 154.094h14.666v-103h18v103h14.666L128 208c30.818-17.632 67.095-44.257 82.188-74.441l-16.098-8.051zM169 313v96H25v78h462v-30H343V313H169z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M90.139 122.533c-11.594 0-23 12.8-23 31s11.406 31 23 31 23-12.8 23-31-11.407-31-23-31m103.95 2.975c-19.909 29.9-44.89 49.149-71.333 57.77-7.307 11.535-18.868 19.255-32.617 19.255-13.75 0-25.311-7.72-32.618-19.256-18.893 4.527-28.056 67.85-34.212 102.391l17.382 4.664 13.928-51.893 11.854 154.094h14.666v-103h18v103h14.666L128 208c30.818-17.632 67.095-44.257 82.188-74.441zM169 313v96H25v78h462v-30H343V313z" />
+      </G>
+    </Svg>
+  );
+};

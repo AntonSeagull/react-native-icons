@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TfiSharethis = (props: IconProps) => {
+export const TfiSharethis = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 17 17"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8.5, 8.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M16.5 13.168c0 1.843-1.49 3.332-3.333 3.332-1.844 0-3.333-1.489-3.333-3.332 0-0.116 0.010-0.24 0.020-0.354l-3.75-1.876c-0.593 0.552-1.396 0.896-2.271 0.896-1.844 0-3.333-1.489-3.333-3.334 0-1.843 1.489-3.332 3.333-3.332 0.875 0 1.677 0.343 2.271 0.895l3.75-1.874c-0.010-0.116-0.020-0.24-0.020-0.354 0-1.845 1.489-3.334 3.333-3.334 1.843 0 3.333 1.489 3.333 3.334 0 1.844-1.49 3.333-3.333 3.333-0.875 0-1.677-0.344-2.271-0.896l-3.75 1.875c0.010 0.115 0.021 0.24 0.021 0.354 0 0.115-0.011 0.24-0.021 0.354l3.75 1.877c0.594-0.553 1.397-0.897 2.271-0.897 1.843-0.002 3.333 1.487 3.333 3.333z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 17 17"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8.5, 8.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M16.5 13.168a3.33 3.33 0 0 1-3.333 3.332 3.33 3.33 0 0 1-3.313-3.686l-3.75-1.876A3.33 3.33 0 0 1 .5 8.5a3.33 3.33 0 0 1 3.333-3.332c.875 0 1.677.343 2.271.895l3.75-1.874A3.33 3.33 0 0 1 13.167.501 3.33 3.33 0 0 1 16.5 3.835a3.33 3.33 0 0 1-5.604 2.437l-3.75 1.875c.01.115.021.24.021.354 0 .115-.011.24-.021.354l3.75 1.877a3.34 3.34 0 0 1 2.271-.897 3.327 3.327 0 0 1 3.333 3.333" />
+      </G>
+    </Svg>
+  );
+};

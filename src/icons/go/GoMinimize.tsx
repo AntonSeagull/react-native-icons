@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GoMinimize = (props: IconProps) => {
+export const GoMinimize = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M10 13.25a.71.71 0 0 1 .149.015c.013.002.026.008.039.011.033.009.066.017.098.031a.753.753 0 0 1 .363.323c.015.027.031.054.043.083a.731.731 0 0 1 .058.287v6a.75.75 0 0 1-1.5 0v-4.189L3.53 21.53a.749.749 0 1 1-1.06-1.06l5.72-5.72H4a.75.75 0 0 1 0-1.5h6ZM20.47 2.47a.749.749 0 1 1 1.06 1.06l-5.719 5.72H20a.75.75 0 0 1 0 1.5h-6a.731.731 0 0 1-.133-.013c-.005-.001-.011-.001-.016-.003-.014-.002-.026-.008-.039-.011-.034-.009-.067-.017-.099-.031-.029-.012-.056-.028-.083-.043a.731.731 0 0 1-.38-.649V4a.75.75 0 0 1 1.5 0v4.19l5.72-5.72Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M10 13.25a.7.7 0 0 1 .149.015q.02.005.039.011.05.012.098.031a.75.75 0 0 1 .363.323q.024.04.043.083a.7.7 0 0 1 .058.287v6a.75.75 0 0 1-1.5 0v-4.189L3.53 21.53a.749.749 0 1 1-1.06-1.06l5.72-5.72H4a.75.75 0 0 1 0-1.5zM20.47 2.47a.749.749 0 1 1 1.06 1.06l-5.719 5.72H20a.75.75 0 0 1 0 1.5h-6a1 1 0 0 1-.133-.013q-.008 0-.016-.003-.02-.005-.039-.011-.051-.012-.099-.031-.043-.02-.083-.043a.73.73 0 0 1-.38-.649V4a.75.75 0 0 1 1.5 0v4.19z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TfiClipboard = (props: IconProps) => {
+export const TfiClipboard = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 17 17"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8.5, 8.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M16 2v15h-15v-15h2.244v1h-1.244v13h13v-13h-1.278v-1h2.278zM13 5h-9v-4h3.085c0.207-0.582 0.763-1 1.415-1s1.208 0.418 1.415 1h3.085v4zM12 2h-3v-0.5c0-0.276-0.224-0.5-0.5-0.5s-0.5 0.224-0.5 0.5v0.5h-3v2h7v-2z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 17 17"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8.5, 8.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M16 2v15H1V2h2.244v1H2v13h13V3h-1.278V2zm-3 3H4V1h3.085c.207-.582.763-1 1.415-1s1.208.418 1.415 1H13zm-1-3H9v-.5a.5.5 0 0 0-1 0V2H5v2h7z" />
+      </G>
+    </Svg>
+  );
+};

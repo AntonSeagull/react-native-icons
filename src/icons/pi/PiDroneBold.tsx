@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiDroneBold = (props: IconProps) => {
+export const PiDroneBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M42.06,109.94a48,48,0,1,1,67.88-67.88A12,12,0,0,1,93,59,24,24,0,1,0,59,93a12,12,0,1,1-17,17ZM163,59A24,24,0,1,1,197,93a12,12,0,1,0,17,17,48,48,0,1,0-67.88-67.88,12,12,0,0,0,17,17Zm33.94,87a12,12,0,0,0,0,17A24,24,0,1,1,163,197a12,12,0,0,0-17,17,48,48,0,1,0,67.88-67.88A12,12,0,0,0,197,146.06ZM93,197A24,24,0,1,1,59,163a12,12,0,0,0-17-17,48,48,0,1,0,67.88,67.88,12,12,0,1,0-17-17Zm71-88V147l24.49,24.48a12,12,0,0,1-17,17L147,164H109L84.49,188.49a12,12,0,0,1-17-17L92,147V109L67.51,84.49a12,12,0,0,1,17-17L109,92H147l24.48-24.49a12,12,0,0,1,17,17Zm-48,31h24V116H116Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M42.06 109.94a48 48 0 1 1 67.88-67.88A12 12 0 0 1 93 59a24 24 0 1 0-34 34 12 12 0 1 1-17 17ZM163 59a24 24 0 1 1 34 34 12 12 0 1 0 17 17 48 48 0 1 0-67.88-67.88 12 12 0 0 0 17 17Zm33.94 87a12 12 0 0 0 0 17A24 24 0 1 1 163 197a12 12 0 0 0-17 17 48 48 0 1 0 67.88-67.88 12 12 0 0 0-16.88-.06ZM93 197a24 24 0 1 1-34-34 12 12 0 0 0-17-17 48 48 0 1 0 67.88 67.88 12 12 0 1 0-17-17Zm71-88v38l24.49 24.48a12 12 0 0 1-17 17L147 164h-38l-24.51 24.49a12 12 0 0 1-17-17L92 147v-38L67.51 84.49a12 12 0 0 1 17-17L109 92h38l24.48-24.49a12 12 0 0 1 17 17Zm-48 31h24v-24h-24Z" />
+      </G>
+    </Svg>
+  );
+};

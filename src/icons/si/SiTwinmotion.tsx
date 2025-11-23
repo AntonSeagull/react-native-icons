@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const SiTwinmotion = (props: IconProps) => {
+export const SiTwinmotion = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M12 .1175C7.08.1175 2.8508 3.0792.9994 7.3172h15.7994v.0045l-2.364 16.5475C19.8947 22.7444 24 17.9096 24 12.1175h-6.261l.6875-4.8003h4.5741C21.1484 3.0784 16.9208.1175 12 .1175m-12 12c0 5.8163 4.1393 10.666 9.6331 11.765l1.681-11.765Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M12 .118c-4.92 0-9.15 2.961-11 7.2h15.799v.004l-2.364 16.547C19.895 22.744 24 17.91 24 12.118h-6.261l.688-4.8H23C21.148 3.077 16.92.117 12 .117m-12 12c0 5.816 4.14 10.666 9.633 11.765l1.681-11.765Z" />
+      </G>
+    </Svg>
+  );
+};

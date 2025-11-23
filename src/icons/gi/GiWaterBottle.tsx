@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiWaterBottle = (props: IconProps) => {
+export const GiWaterBottle = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M121.4 33v30h78.1V33zm11 48c-16.4 16.58-42.95 46.2-42.95 71v39H231.5v-39c0-24.8-26.5-54.42-43-71zM89.45 209v16H231.5v-16zm0 34v16H231.5v-16zm0 34v16H231.5v-16zm0 34v170.2c43.05 12.7 98.95 12.7 142.05 0V311zm224.85 34l14.3 142H345l-6.9-118.5 18-1L363 487h45.3l14.3-142z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M121.4 33v30h78.1V33zm11 48c-16.4 16.58-42.95 46.2-42.95 71v39H231.5v-39c0-24.8-26.5-54.42-43-71zM89.45 209v16H231.5v-16zm0 34v16H231.5v-16zm0 34v16H231.5v-16zm0 34v170.2c43.05 12.7 98.95 12.7 142.05 0V311zm224.85 34 14.3 142H345l-6.9-118.5 18-1L363 487h45.3l14.3-142z" />
+      </G>
+    </Svg>
+  );
+};

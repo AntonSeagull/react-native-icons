@@ -1,40 +1,36 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TbTreadmill = (props: IconProps) => {
+export const TbTreadmill = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M10 3a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" />
-          <Path  d="M3 14l4 1l.5 -.5" />
-          <Path  d="M12 18v-3l-3 -2.923l.75 -5.077" />
-          <Path  d="M6 10v-2l4 -1l2.5 2.5l2.5 .5" />
-          <Path  d="M21 22a1 1 0 0 0 -1 -1h-16a1 1 0 0 0 -1 1" />
-          <Path  d="M18 21l1 -11l2 -1" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M10 3a1 1 0 1 0 2 0 1 1 0 0 0-2 0M3 14l4 1 .5-.5M12 18v-3l-3-2.923L9.75 7" />
+        <Path d="M6 10V8l4-1 2.5 2.5 2.5.5M21 22a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1M18 21l1-11 2-1" />
+      </G>
+    </Svg>
+  );
+};

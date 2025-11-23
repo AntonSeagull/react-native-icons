@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiTumblrLogoLight = (props: IconProps) => {
+export const PiTumblrLogoLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M192,118a6,6,0,0,0,6-6V72a6,6,0,0,0-6-6H150V24a6,6,0,0,0-6-6H112a6,6,0,0,0-6,6A42,42,0,0,1,64,66a6,6,0,0,0-6,6v40a6,6,0,0,0,6,6H90v58a62.07,62.07,0,0,0,62,62h40a6,6,0,0,0,6-6V184a6,6,0,0,0-6-6H160a10,10,0,0,1-10-10V118Zm-32,72h26v36H152a50.06,50.06,0,0,1-50-50V112a6,6,0,0,0-6-6H70V77.67A54.12,54.12,0,0,0,117.67,30H138V72a6,6,0,0,0,6,6h42v28H144a6,6,0,0,0-6,6v56A22,22,0,0,0,160,190Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M192 118a6 6 0 0 0 6-6V72a6 6 0 0 0-6-6h-42V24a6 6 0 0 0-6-6h-32a6 6 0 0 0-6 6 42 42 0 0 1-42 42 6 6 0 0 0-6 6v40a6 6 0 0 0 6 6h26v58a62.07 62.07 0 0 0 62 62h40a6 6 0 0 0 6-6v-48a6 6 0 0 0-6-6h-32a10 10 0 0 1-10-10v-50Zm-32 72h26v36h-34a50.06 50.06 0 0 1-50-50v-64a6 6 0 0 0-6-6H70V77.67A54.12 54.12 0 0 0 117.67 30H138v42a6 6 0 0 0 6 6h42v28h-42a6 6 0 0 0-6 6v56a22 22 0 0 0 22 22" />
+      </G>
+    </Svg>
+  );
+};

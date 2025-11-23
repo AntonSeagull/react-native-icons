@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiCastleTurretBold = (props: IconProps) => {
+export const PiCastleTurretBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M216,212H204V117l10.14-10.14A19.86,19.86,0,0,0,220,92.69V48a20,20,0,0,0-20-20H56A20,20,0,0,0,36,48V92.69a19.86,19.86,0,0,0,5.86,14.14L52,117v95H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24ZM72.49,103.51,60,91V52H88V76a12,12,0,0,0,24,0V52h32V76a12,12,0,0,0,24,0V52h28V91l-12.49,12.48A12,12,0,0,0,180,112V212H164V168a36,36,0,0,0-72,0v44H76V112A12,12,0,0,0,72.49,103.51ZM140,212H116V168a12,12,0,0,1,24,0Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M216 212h-12v-95l10.14-10.14A19.86 19.86 0 0 0 220 92.69V48a20 20 0 0 0-20-20H56a20 20 0 0 0-20 20v44.69a19.86 19.86 0 0 0 5.86 14.14L52 117v95H40a12 12 0 0 0 0 24h176a12 12 0 0 0 0-24M72.49 103.51 60 91V52h28v24a12 12 0 0 0 24 0V52h32v24a12 12 0 0 0 24 0V52h28v39l-12.49 12.48A12 12 0 0 0 180 112v100h-16v-44a36 36 0 0 0-72 0v44H76V112a12 12 0 0 0-3.51-8.49M140 212h-24v-44a12 12 0 0 1 24 0Z" />
+      </G>
+    </Svg>
+  );
+};

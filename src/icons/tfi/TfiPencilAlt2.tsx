@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TfiPencilAlt2 = (props: IconProps) => {
+export const TfiPencilAlt2 = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 17 17"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8.5, 8.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M9.492 0h-1.984c-0.827 0-1.5 0.673-1.5 1.5v10.657l2.521 4.956 2.464-4.959v-10.654c-0.001-0.827-0.674-1.5-1.501-1.5zM7.508 1h1.984c0.275 0 0.5 0.225 0.5 0.5v1.019h-2.984v-1.019c0-0.275 0.224-0.5 0.5-0.5zM8.078 14.021l-0.934-1.835h2.715l-0.911 1.835h-0.87zM7.008 11.187v-5.637h2.984v5.637h-2.984zM7.008 4.55v-1.031h2.984v1.031h-2.984z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 17 17"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8.5, 8.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M9.492 0H7.508c-.827 0-1.5.673-1.5 1.5v10.657l2.521 4.956 2.464-4.959V1.5A1.503 1.503 0 0 0 9.492 0M7.508 1h1.984c.275 0 .5.225.5.5v1.019H7.008V1.5a.5.5 0 0 1 .5-.5m.57 13.021-.934-1.835h2.715l-.911 1.835zm-1.07-2.834V5.55h2.984v5.637zm0-6.637V3.519h2.984V4.55z" />
+      </G>
+    </Svg>
+  );
+};

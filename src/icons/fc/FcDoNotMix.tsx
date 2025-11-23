@@ -1,35 +1,39 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FcDoNotMix = (props: IconProps) => {
+export const FcDoNotMix = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 48 48"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 24, 24)`}
-      >
-        <G fill={color} stroke={color}>
-          
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 48 48"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 24, 24)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="#00BCD4" d="M26.9 42H17v-9.9z" />
+        <Path fill="#00BCD4" d="M30 6v20.2L19.8 36.4l2.8 2.8L34 27.8V6z" />
+        <Path fill="#2196F3" d="M15.9 31H6v-9.9z" />
+        <Path fill="#2196F3" d="M20.2 14 8.8 25.4l2.8 2.8L21.8 18H41v-4z" />
+        <Path fill="#37474F" d="M3.563 6.396 6.39 3.568l37.966 37.966-2.828 2.828z" />
+      </G>
+    </Svg>
+  );
+};

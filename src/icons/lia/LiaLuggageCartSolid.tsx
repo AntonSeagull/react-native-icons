@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaLuggageCartSolid = (props: IconProps) => {
+export const LiaLuggageCartSolid = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 19 6 C 17.355469 6 16 7.355469 16 9 L 10 9 L 10 21 L 28 21 L 28 9 L 22 9 C 22 7.355469 20.644531 6 19 6 Z M 4 7 L 4 9 L 5 9 C 5.554688 9 6 9.445313 6 10 L 6 21 C 6 23.210938 7.789063 25 10 25 L 28 25 L 28 23 L 10 23 C 8.808594 23 8 22.191406 8 21 L 8 10 C 8 8.355469 6.644531 7 5 7 Z M 24.5 25 C 23.671875 25 23 25.671875 23 26.5 C 23 27.328125 23.671875 28 24.5 28 C 25.328125 28 26 27.328125 26 26.5 C 26 25.671875 25.328125 25 24.5 25 Z M 12.5 25 C 11.671875 25 11 25.671875 11 26.5 C 11 27.328125 11.671875 28 12.5 28 C 13.328125 28 14 27.328125 14 26.5 C 14 25.671875 13.328125 25 12.5 25 Z M 19 8 C 19.554688 8 20 8.445313 20 9 L 18 9 C 18 8.445313 18.445313 8 19 8 Z M 12 11 L 26 11 L 26 19 L 12 19 Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M19 6c-1.645 0-3 1.355-3 3h-6v12h18V9h-6c0-1.645-1.355-3-3-3M4 7v2h1c.555 0 1 .445 1 1v11c0 2.21 1.79 4 4 4h18v-2H10c-1.191 0-2-.809-2-2V10c0-1.645-1.355-3-3-3Zm20.5 18a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-12 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M19 8c.555 0 1 .445 1 1h-2c0-.555.445-1 1-1m-7 3h14v8H12Z" />
+      </G>
+    </Svg>
+  );
+};

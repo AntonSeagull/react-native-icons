@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiContactlessPaymentLight = (props: IconProps) => {
+export const PiContactlessPaymentLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M95.31,101.2a57.37,57.37,0,0,1,0,53.6,6,6,0,0,1-10.62-5.6,44.75,44.75,0,0,0,0-42.4,6,6,0,1,1,10.62-5.6Zm47.86-34.49a6,6,0,0,0-2.46,8.12,112.67,112.67,0,0,1,0,106.34,6,6,0,1,0,10.58,5.66,124.65,124.65,0,0,0,0-117.66A6,6,0,0,0,143.17,66.71Zm-28,16a6,6,0,0,0-2.48,8.12,79,79,0,0,1,0,74.36,6,6,0,0,0,10.6,5.64,91,91,0,0,0,0-85.64A6,6,0,0,0,115.18,82.7ZM230,128A102,102,0,1,1,128,26,102.12,102.12,0,0,1,230,128Zm-12,0a90,90,0,1,0-90,90A90.1,90.1,0,0,0,218,128Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M95.31 101.2a57.37 57.37 0 0 1 0 53.6 6 6 0 0 1-10.62-5.6 44.75 44.75 0 0 0 0-42.4 6 6 0 1 1 10.62-5.6m47.86-34.49a6 6 0 0 0-2.46 8.12 112.67 112.67 0 0 1 0 106.34 6 6 0 1 0 10.58 5.66 124.65 124.65 0 0 0 0-117.66 6 6 0 0 0-8.12-2.46m-28 16a6 6 0 0 0-2.48 8.12 79 79 0 0 1 0 74.36 6 6 0 0 0 10.6 5.64 91 91 0 0 0 0-85.64 6 6 0 0 0-8.11-2.49ZM230 128A102 102 0 1 1 128 26a102.12 102.12 0 0 1 102 102m-12 0a90 90 0 1 0-90 90 90.1 90.1 0 0 0 90-90" />
+      </G>
+    </Svg>
+  );
+};

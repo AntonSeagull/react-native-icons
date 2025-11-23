@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const SlDrop = (props: IconProps) => {
+export const SlDrop = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 1024 1024"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 512, 512)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M510.4 1022.704c-193.312 0-350.592-155.12-350.592-345.776 0-222.688 311.632-644.848 324.912-662.72a31.98 31.98 0 0 1 25.473-12.913c11.183-.096 19.567 4.593 25.663 12.56 13.408 17.537 328.336 432.226 328.336 663.058 0 190.672-158.72 345.791-353.792 345.791zm.352-935.008c-74.4 105.664-286.943 422.064-286.943 589.217 0 155.376 128.56 281.776 286.592 281.776 159.776 0 289.776-126.4 289.776-281.776.016-173.36-214.145-485.024-289.425-589.217z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 1024 1024"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 512, 512)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M510.4 1022.704c-193.312 0-350.592-155.12-350.592-345.776 0-222.688 311.632-644.848 324.912-662.72a31.98 31.98 0 0 1 25.473-12.913c11.183-.096 19.567 4.593 25.663 12.56 13.408 17.537 328.336 432.226 328.336 663.058 0 190.672-158.72 345.791-353.792 345.791m.352-935.008c-74.4 105.664-286.943 422.064-286.943 589.217 0 155.376 128.56 281.776 286.592 281.776 159.776 0 289.776-126.4 289.776-281.776.016-173.36-214.145-485.024-289.425-589.217" />
+      </G>
+    </Svg>
+  );
+};

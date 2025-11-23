@@ -1,40 +1,40 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const RxShadowOuter = (props: IconProps) => {
+export const RxShadowOuter = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 15 15"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 7.5, 7.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  opacity=".05" d="M12.1398 3.88617C13.8553 4.94159 15 6.83701 15 9.00001C15 12.3137 12.3137 15 9.00002 15C6.84351 15 4.95296 13.8621 3.89569 12.1552L4.32076 11.8919C5.29069 13.4578 7.02376 14.5 9.00002 14.5C12.0376 14.5 14.5 12.0375 14.5 9.00001C14.5 7.01781 13.4516 5.28027 11.8778 4.31203L12.1398 3.88617Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
-          <Path  opacity=".2" d="M12.851 5.07321C13.8684 6.07106 14.5 7.46199 14.5 9C14.5 12.0375 12.0376 14.5 9.00004 14.5C7.46215 14.5 6.07132 13.8685 5.07349 12.8513L5.43043 12.5011C6.3381 13.4264 7.60186 14 9.00004 14C11.7614 14 14 11.7614 14 9C14 7.60171 13.4264 6.33786 12.5009 5.43017L12.851 5.07321Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
-          <Path  opacity=".35" d="M13.3022 6.45071C13.7455 7.19737 14 8.06935 14 9.00001C14 11.7614 11.7614 14 9.00002 14C8.04868 14 7.15868 13.7341 6.40118 13.2724L6.66142 12.8454C7.34275 13.2607 8.14306 13.5 9.00002 13.5C11.4853 13.5 13.5 11.4853 13.5 9.00001C13.5 8.16165 13.271 7.37754 12.8722 6.70599L13.3022 6.45071Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
-          <Path  opacity=".5" d="M13.3745 7.94022C13.4566 8.28031 13.5 8.63525 13.5 9.00001C13.5 11.4853 11.4853 13.5 9.00003 13.5C8.61104 13.5 8.23323 13.4506 7.87268 13.3576L7.99759 12.8734C8.31768 12.956 8.65353 13 9.00003 13C11.2091 13 13 11.2091 13 9.00001C13 8.67509 12.9613 8.35953 12.8884 8.05757L13.3745 7.94022Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
-          <Path  opacity=".65" d="M12.9155 9.82133C12.5898 11.3813 11.3562 12.6072 9.79205 12.9215L9.69354 12.4313C11.0613 12.1565 12.1413 11.0834 12.4261 9.71915L12.9155 9.82133Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
-          <Path  d="M1.2771 7.50253C1.2771 4.06456 4.06413 1.27753 7.5021 1.27753C10.94 1.27753 13.7271 4.06456 13.7271 7.50253C13.7271 10.9405 10.94 13.7275 7.5021 13.7275C4.06413 13.7275 1.2771 10.9405 1.2771 7.50253ZM7.5021 2.22753C4.5888 2.22753 2.2271 4.58923 2.2271 7.50253C2.2271 10.4158 4.5888 12.7775 7.5021 12.7775C10.4154 12.7775 12.7771 10.4158 12.7771 7.50253C12.7771 4.58923 10.4154 2.22753 7.5021 2.22753Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 15 15"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 7.5, 7.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="currentColor" fillRule="evenodd" d="M12.14 3.886a6 6 0 1 1-8.244 8.269l.425-.263a5.5 5.5 0 1 0 7.557-7.58z" clipRule="evenodd" opacity={0.05} />
+        <Path fill="currentColor" fillRule="evenodd" d="M12.851 5.073a5.5 5.5 0 1 1-7.778 7.778l.357-.35a5 5 0 1 0 7.07-7.07z" clipRule="evenodd" opacity={0.2} />
+        <Path fill="currentColor" fillRule="evenodd" d="M13.302 6.45a5 5 0 0 1-6.901 6.822l.26-.427a4.5 4.5 0 0 0 6.21-6.14z" clipRule="evenodd" opacity={0.35} />
+        <Path fill="currentColor" fillRule="evenodd" d="M13.375 7.94q.124.511.125 1.06a4.5 4.5 0 0 1-5.627 4.358l.125-.485Q8.479 13 9 13a4 4 0 0 0 3.888-4.942z" clipRule="evenodd" opacity={0.5} />
+        <Path fill="currentColor" fillRule="evenodd" d="M12.916 9.821a4 4 0 0 1-3.124 3.1l-.098-.49a3.5 3.5 0 0 0 2.732-2.712z" clipRule="evenodd" opacity={0.65} />
+        <Path fill="currentColor" fillRule="evenodd" d="M1.277 7.503a6.225 6.225 0 1 1 12.45 0 6.225 6.225 0 0 1-12.45 0m6.225-5.275a5.275 5.275 0 1 0 0 10.55 5.275 5.275 0 0 0 0-10.55" clipRule="evenodd" />
+      </G>
+    </Svg>
+  );
+};

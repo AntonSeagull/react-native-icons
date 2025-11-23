@@ -1,41 +1,36 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FiAperture = (props: IconProps) => {
+export const FiAperture = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Circle  cx="12" cy="12" r="10" />
-          <Line  x1="14.31" y1="8" x2="20.05" y2="17.94" />
-          <Line  x1="9.69" y1="8" x2="21.17" y2="8" />
-          <Line  x1="7.38" y1="12" x2="13.12" y2="2.06" />
-          <Line  x1="9.69" y1="16" x2="3.95" y2="6.06" />
-          <Line  x1="14.31" y1="16" x2="2.83" y2="16" />
-          <Line  x1="16.62" y1="12" x2="10.88" y2="21.94" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Circle cx={12} cy={12} r={10} />
+        <Path d="m14.31 8 5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16 3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94" />
+      </G>
+    </Svg>
+  );
+};

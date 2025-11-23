@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiSouthAmerica = (props: IconProps) => {
+export const GiSouthAmerica = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M158.152 21c50.525 10.105 97.448 23.812 135.04 46.849L316.7 108.38l104.572 41.342c-4.774 32.838-38.956 77.93-59.987 117.542l-47.017 20.671c.2 18.24-25.396 43.977-40.531 61l-23.914-7.498 10.944 19.658c-9.25 18.14-27.763 23.432-44.99 33.844l-12.565 68.498 19.455 18.645L207.265 491l-37.695-22.292c-1.518-77.714 1.599-155.383 3.648-233.058-38.693-13.55-56.957-53.469-81.874-85.116-2.114-2.685.268-41.208 22.292-56.34l5.434-35.19C133.412 43.898 135.746 37.722 158.152 21z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M158.152 21c50.525 10.105 97.448 23.812 135.04 46.849L316.7 108.38l104.572 41.342c-4.774 32.838-38.956 77.93-59.987 117.542l-47.017 20.671c.2 18.24-25.396 43.977-40.531 61l-23.914-7.498 10.944 19.658c-9.25 18.14-27.763 23.432-44.99 33.844l-12.565 68.498 19.455 18.645L207.265 491l-37.695-22.292c-1.518-77.714 1.599-155.383 3.648-233.058-38.693-13.55-56.957-53.469-81.874-85.116-2.114-2.685.268-41.208 22.292-56.34l5.434-35.19C133.412 43.898 135.746 37.722 158.152 21" />
+      </G>
+    </Svg>
+  );
+};

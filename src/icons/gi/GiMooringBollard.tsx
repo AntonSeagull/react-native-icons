@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiMooringBollard = (props: IconProps) => {
+export const GiMooringBollard = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M192 41c-13 0-27.2 6.75-39.5 17.73-12.4 10.97-22.6 25.97-28.1 40.43-5.4 14.44-5.7 27.84-1 36.54S138 151 160 151h192c22 0 31.9-6.6 36.6-15.3 4.7-8.7 4.4-22.1-1-36.54-5.5-14.46-15.7-29.46-28.1-40.43C347.2 47.75 333 41 320 41H192zm-23 128v270h174V169H169zM32 254v36h119v-36H32zm329 0v36h119v-36H361zM87 432v25H73v30h366v-30h-14v-25h-18v25H105v-25H87z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M192 41c-13 0-27.2 6.75-39.5 17.73-12.4 10.97-22.6 25.97-28.1 40.43-5.4 14.44-5.7 27.84-1 36.54S138 151 160 151h192c22 0 31.9-6.6 36.6-15.3s4.4-22.1-1-36.54c-5.5-14.46-15.7-29.46-28.1-40.43C347.2 47.75 333 41 320 41zm-23 128v270h174V169zM32 254v36h119v-36zm329 0v36h119v-36zM87 432v25H73v30h366v-30h-14v-25h-18v25H105v-25z" />
+      </G>
+    </Svg>
+  );
+};

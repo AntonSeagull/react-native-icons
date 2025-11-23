@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const RiDvFill = (props: IconProps) => {
+export const RiDvFill = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M4 14.7453C2.18652 13.4804 1 11.3787 1 9C1 5.13401 4.13401 2 8 2C11.866 2 15 5.13401 15 9C15 11.3787 13.8135 13.4804 12 14.7453V21C12 21.5523 11.5523 22 11 22H5C4.44772 22 4 21.5523 4 21V14.7453ZM8 14C10.7614 14 13 11.7614 13 9C13 6.23858 10.7614 4 8 4C5.23858 4 3 6.23858 3 9C3 11.7614 5.23858 14 8 14ZM7 18V20H9V18H7ZM8 12C6.34315 12 5 10.6569 5 9C5 7.34315 6.34315 6 8 6C9.65685 6 11 7.34315 11 9C11 10.6569 9.65685 12 8 12ZM14 17V15.7083C15.8412 14.0604 17 11.6655 17 9C17 6.69494 16.1334 4.59227 14.7083 3H21C21.5523 3 22 3.44772 22 4V16C22 16.5523 21.5523 17 21 17H14ZM18 7V9H20V7H18Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M4 14.745a7 7 0 1 1 8 0V21a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1zM8 14A5 5 0 1 0 8 4a5 5 0 0 0 0 10m-1 4v2h2v-2zm1-6a3 3 0 1 1 0-6 3 3 0 0 1 0 6m6 5v-1.292A8.98 8.98 0 0 0 17 9a8.97 8.97 0 0 0-2.292-6H21a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1zm4-10v2h2V7z" />
+      </G>
+    </Svg>
+  );
+};

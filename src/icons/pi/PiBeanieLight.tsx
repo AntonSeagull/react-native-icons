@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiBeanieLight = (props: IconProps) => {
+export const PiBeanieLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M222,163.37V144a94.17,94.17,0,0,0-73.7-91.79,26,26,0,1,0-40.6,0A94.17,94.17,0,0,0,34,144v19.37A14,14,0,0,0,26,176v32a14,14,0,0,0,14,14H216a14,14,0,0,0,14-14V176A14,14,0,0,0,222,163.37ZM114,36a14,14,0,1,1,14,14A14,14,0,0,1,114,36Zm14,26a82.1,82.1,0,0,1,82,82v18H46V144A82.1,82.1,0,0,1,128,62Zm-6,112v36H78V174Zm12,0h44v36H134ZM38,208V176a2,2,0,0,1,2-2H66v36H40A2,2,0,0,1,38,208Zm180,0a2,2,0,0,1-2,2H190V174h26a2,2,0,0,1,2,2Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M222 163.37V144a94.17 94.17 0 0 0-73.7-91.79 26 26 0 1 0-40.6 0A94.17 94.17 0 0 0 34 144v19.37A14 14 0 0 0 26 176v32a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14v-32a14 14 0 0 0-8-12.63M114 36a14 14 0 1 1 14 14 14 14 0 0 1-14-14m14 26a82.1 82.1 0 0 1 82 82v18H46v-18a82.1 82.1 0 0 1 82-82m-6 112v36H78v-36Zm12 0h44v36h-44Zm-96 34v-32a2 2 0 0 1 2-2h26v36H40a2 2 0 0 1-2-2m180 0a2 2 0 0 1-2 2h-26v-36h26a2 2 0 0 1 2 2Z" />
+      </G>
+    </Svg>
+  );
+};

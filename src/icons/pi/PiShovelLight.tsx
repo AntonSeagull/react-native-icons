@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiShovelLight = (props: IconProps) => {
+export const PiShovelLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M244.24,59.76l-48-48a6,6,0,0,0-8.48,8.48L207.52,40l-73.86,73.86L97.9,78.1a14,14,0,0,0-19.8,0l-56,56A13.94,13.94,0,0,0,18,144v80a14,14,0,0,0,14,14h80a13.94,13.94,0,0,0,9.9-4.1l56-56a14,14,0,0,0,0-19.8l-35.76-35.76L216,48.48l19.76,19.76a6,6,0,1,0,8.48-8.48ZM169.41,166.58a2,2,0,0,1,0,2.84l-56,56A2,2,0,0,1,112,226H32a2,2,0,0,1-2-2V144a2,2,0,0,1,.58-1.42l56-56A2,2,0,0,1,88,86a2.07,2.07,0,0,1,1.42.58l35.75,35.76L83.76,163.76a6,6,0,1,0,8.48,8.48l41.42-41.41Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m244.24 59.76-48-48a6 6 0 0 0-8.48 8.48L207.52 40l-73.86 73.86L97.9 78.1a14 14 0 0 0-19.8 0l-56 56A13.94 13.94 0 0 0 18 144v80a14 14 0 0 0 14 14h80a13.94 13.94 0 0 0 9.9-4.1l56-56a14 14 0 0 0 0-19.8l-35.76-35.76L216 48.48l19.76 19.76a6 6 0 1 0 8.48-8.48m-74.83 106.82a2 2 0 0 1 0 2.84l-56 56a2 2 0 0 1-1.41.58H32a2 2 0 0 1-2-2v-80a2 2 0 0 1 .58-1.42l56-56A2 2 0 0 1 88 86a2.07 2.07 0 0 1 1.42.58l35.75 35.76-41.41 41.42a6 6 0 1 0 8.48 8.48l41.42-41.41Z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiSinagot = (props: IconProps) => {
+export const GiSinagot = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M117.3 41.08c4.5 117.22-11 230.92-33.94 343.02 48.74 1.5 94.14-1.7 140.64-9 4.3-16.6 8.2-35.8 11.5-56.5-2.3-54.1-12.5-109.7-19.3-168.5zm69.6 15.03l.1 35.03L205.1 111l-.2-54.89zM264 123.6c4.5 93.3-5.8 198.4-25.1 265l116.2-12.5c3.3-60.6.3-114.4-6.3-174.3zm54.4 2.5v23.2l18 16.6v-39.8zm154.2 262.2c-53.5 11.2-87.7 15.4-136.2 22.4v-14.5l-18 1.9v15c-36.4 4.4-74.2 6.9-112.5 8.2l-.1-25.3c-6 .8-12 1.5-18 2.2l.1 23.6c-54.7 1.4-110.49.5-164.98-.3 14.72 13.6 24.36 31.5 46.67 43.8 101.81 9.9 200.41 4.6 299.21 0l22.4-46 97.9-17z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M117.3 41.08c4.5 117.22-11 230.92-33.94 343.02 48.74 1.5 94.14-1.7 140.64-9 4.3-16.6 8.2-35.8 11.5-56.5-2.3-54.1-12.5-109.7-19.3-168.5zm69.6 15.03.1 35.03L205.1 111l-.2-54.89zM264 123.6c4.5 93.3-5.8 198.4-25.1 265l116.2-12.5c3.3-60.6.3-114.4-6.3-174.3zm54.4 2.5v23.2l18 16.6v-39.8zm154.2 262.2c-53.5 11.2-87.7 15.4-136.2 22.4v-14.5l-18 1.9v15c-36.4 4.4-74.2 6.9-112.5 8.2l-.1-25.3c-6 .8-12 1.5-18 2.2l.1 23.6c-54.7 1.4-110.49.5-164.98-.3 14.72 13.6 24.36 31.5 46.67 43.8 101.81 9.9 200.41 4.6 299.21 0l22.4-46 97.9-17z" />
+      </G>
+    </Svg>
+  );
+};

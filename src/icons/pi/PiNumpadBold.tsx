@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiNumpadBold = (props: IconProps) => {
+export const PiNumpadBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M84,48A20,20,0,1,1,64,28,20,20,0,0,1,84,48Zm44-20a20,20,0,1,0,20,20A20,20,0,0,0,128,28Zm64,40a20,20,0,1,0-20-20A20,20,0,0,0,192,68ZM64,84a20,20,0,1,0,20,20A20,20,0,0,0,64,84Zm64,0a20,20,0,1,0,20,20A20,20,0,0,0,128,84Zm64,0a20,20,0,1,0,20,20A20,20,0,0,0,192,84ZM64,140a20,20,0,1,0,20,20A20,20,0,0,0,64,140Zm64,0a20,20,0,1,0,20,20A20,20,0,0,0,128,140Zm0,56a20,20,0,1,0,20,20A20,20,0,0,0,128,196Zm64-56a20,20,0,1,0,20,20A20,20,0,0,0,192,140Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M84 48a20 20 0 1 1-20-20 20 20 0 0 1 20 20m44-20a20 20 0 1 0 20 20 20 20 0 0 0-20-20m64 40a20 20 0 1 0-20-20 20 20 0 0 0 20 20M64 84a20 20 0 1 0 20 20 20 20 0 0 0-20-20m64 0a20 20 0 1 0 20 20 20 20 0 0 0-20-20m64 0a20 20 0 1 0 20 20 20 20 0 0 0-20-20M64 140a20 20 0 1 0 20 20 20 20 0 0 0-20-20m64 0a20 20 0 1 0 20 20 20 20 0 0 0-20-20m0 56a20 20 0 1 0 20 20 20 20 0 0 0-20-20m64-56a20 20 0 1 0 20 20 20 20 0 0 0-20-20" />
+      </G>
+    </Svg>
+  );
+};

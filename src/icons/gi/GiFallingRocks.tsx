@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiFallingRocks = (props: IconProps) => {
+export const GiFallingRocks = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M156.115 34.48l-36.94.586 10.02 28.995 27.258-2.324zM18 37.727V494h297.682L304 448l-64-64-48-160-88.055-80L96 64zM219.076 98.58L160 112l16.38 30.342 17.65 5.394-1.223 19.672L244.664 144zm34.656 60.99l-19.56 21.05 27.508 12.61 12.855-20.804zm50.907 90.002l-34.38 25.012-11.766 58.662 100.53 22.97-4.163-98.218zm107.475 62.373l-20.886 3.465-15.988 20.033 4.873 21.23 40.848-15.55zm-43.62 95.996l-44.32 5.87 6.858 29.422 36.875-1.396zm37.573 59.982l-32.103 5.375L340.113 494h79.508z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m156.115 34.48-36.94.586 10.02 28.995 27.258-2.324zM18 37.727V494h297.682L304 448l-64-64-48-160-88.055-80L96 64zM219.076 98.58 160 112l16.38 30.342 17.65 5.394-1.223 19.672L244.664 144zm34.656 60.99-19.56 21.05 27.508 12.61 12.855-20.804zm50.907 90.002-34.38 25.012-11.766 58.662 100.53 22.97-4.163-98.218zm107.475 62.373-20.886 3.465-15.988 20.033 4.873 21.23 40.848-15.55zm-43.62 95.996-44.32 5.87 6.858 29.422 36.875-1.396zm37.573 59.982-32.103 5.375L340.113 494h79.508z" />
+      </G>
+    </Svg>
+  );
+};

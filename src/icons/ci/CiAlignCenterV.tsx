@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const CiAlignCenterV = (props: IconProps) => {
+export const CiAlignCenterV = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M20.446,11.5h-.51V9.07a2.5,2.5,0,0,0-2.5-2.5h-2.43a2.5,2.5,0,0,0-2.5,2.5V11.5H11.5V6.58A2.5,2.5,0,0,0,9,4.08H6.566a2.5,2.5,0,0,0-2.5,2.5V11.5h-.52a.5.5,0,0,0,0,1h.52v4.92a2.5,2.5,0,0,0,2.5,2.5H9a2.5,2.5,0,0,0,2.5-2.5V12.5h1.01v2.43a2.5,2.5,0,0,0,2.5,2.5h2.43a2.5,2.5,0,0,0,2.5-2.5V12.5h.51A.5.5,0,0,0,20.446,11.5ZM10.5,17.42A1.5,1.5,0,0,1,9,18.92H6.566a1.5,1.5,0,0,1-1.5-1.5V12.5H10.5Zm0-5.92H5.066V6.58a1.5,1.5,0,0,1,1.5-1.5H9a1.5,1.5,0,0,1,1.5,1.5Zm8.44,3.43a1.5,1.5,0,0,1-1.5,1.5h-2.43a1.5,1.5,0,0,1-1.5-1.5V12.5h5.43Zm0-3.43h-5.43V9.07a1.5,1.5,0,0,1,1.5-1.5h2.43a1.5,1.5,0,0,1,1.5,1.5Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M20.446 11.5h-.51V9.07a2.5 2.5 0 0 0-2.5-2.5h-2.43a2.5 2.5 0 0 0-2.5 2.5v2.43H11.5V6.58A2.5 2.5 0 0 0 9 4.08H6.566a2.5 2.5 0 0 0-2.5 2.5v4.92h-.52a.5.5 0 0 0 0 1h.52v4.92a2.5 2.5 0 0 0 2.5 2.5H9a2.5 2.5 0 0 0 2.5-2.5V12.5h1.01v2.43a2.5 2.5 0 0 0 2.5 2.5h2.43a2.5 2.5 0 0 0 2.5-2.5V12.5h.51a.5.5 0 0 0-.004-1M10.5 17.42a1.5 1.5 0 0 1-1.5 1.5H6.566a1.5 1.5 0 0 1-1.5-1.5V12.5H10.5Zm0-5.92H5.066V6.58a1.5 1.5 0 0 1 1.5-1.5H9a1.5 1.5 0 0 1 1.5 1.5Zm8.44 3.43a1.5 1.5 0 0 1-1.5 1.5h-2.43a1.5 1.5 0 0 1-1.5-1.5V12.5h5.43Zm0-3.43h-5.43V9.07a1.5 1.5 0 0 1 1.5-1.5h2.43a1.5 1.5 0 0 1 1.5 1.5Z" data-name="Align Center-V" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const SiClyp = (props: IconProps) => {
+export const SiClyp = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M11.9995 17.9583a1.137 1.137 0 01-1.137-1.136V7.2347a1.138 1.138 0 012.275 0v9.5896c0 .626-.51 1.134-1.138 1.134m7.4397 2.4398a1.137 1.137 0 01-1.14-1.1379V4.7958a1.138 1.138 0 012.276 0v14.4654c0 .627-.51 1.136-1.138 1.136M15.7193 24a1.137 1.137 0 01-1.138-1.136V1.138a1.138 1.138 0 012.276 0v21.726c0 .627-.509 1.136-1.138 1.136m-7.4366-3.1599a1.137 1.137 0 01-1.138-1.136V4.2979a1.138 1.138 0 012.276 0v15.4064c0 .628-.51 1.137-1.138 1.137m-3.7199-4.9889a1.137 1.137 0 01-1.138-1.135V9.2857a1.138 1.138 0 012.276 0v5.4318c0 .626-.51 1.135-1.138 1.135z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M12 17.958a1.137 1.137 0 0 1-1.138-1.136V7.235a1.138 1.138 0 0 1 2.275 0v9.59c0 .625-.51 1.133-1.138 1.133m7.44 2.44a1.137 1.137 0 0 1-1.14-1.138V4.796a1.138 1.138 0 0 1 2.276 0V19.26c0 .627-.51 1.136-1.138 1.136M15.72 24a1.137 1.137 0 0 1-1.138-1.136V1.138a1.138 1.138 0 0 1 2.276 0v21.726c0 .627-.509 1.136-1.138 1.136m-7.436-3.16a1.137 1.137 0 0 1-1.138-1.136V4.298a1.138 1.138 0 0 1 2.276 0v15.406c0 .628-.51 1.137-1.138 1.137m-3.72-4.989a1.137 1.137 0 0 1-1.138-1.135V9.286a1.138 1.138 0 0 1 2.276 0v5.432c0 .626-.51 1.135-1.138 1.135z" />
+      </G>
+    </Svg>
+  );
+};

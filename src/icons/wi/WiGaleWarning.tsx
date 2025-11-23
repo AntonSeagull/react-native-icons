@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const WiGaleWarning = (props: IconProps) => {
+export const WiGaleWarning = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 30 30"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 15, 15)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M10.67,24.6V7.45h1.03V24.6H10.67z M12.4,22.44v-7.41l8.65,3.69L12.4,22.44z M12.4,14.86V7.45l8.65,3.69L12.4,14.86z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 30 30"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 15, 15)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M10.67 24.6V7.45h1.03V24.6zm1.73-2.16v-7.41l8.65 3.69zm0-7.58V7.45l8.65 3.69z" />
+      </G>
+    </Svg>
+  );
+};

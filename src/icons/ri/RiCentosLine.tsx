@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const RiCentosLine = (props: IconProps) => {
+export const RiCentosLine = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M12 2L16.292 6.292L17.353 5.232L16.1207 3.99968L20 4L19.9997 7.87868L18.767 6.646L17.707 7.707L22 12L17.708 16.293L18.767 17.352L19.9997 16.1207L20 20L16.1207 19.9997L17.352 18.767L16.293 17.707L12 22L7.707 17.707L6.646 18.767L7.87868 19.9997L4 20L3.99968 16.1207L5.231 17.352L6.292 16.292L2 12L6.293 7.707L5.231 6.646L3.99968 7.87868L4 4L7.87868 3.99968L6.646 5.231L7.708 6.293L12 2ZM12 13.4128L9.12 16.292L12 19.1716L14.879 16.292L12 13.4128ZM7.707 9.121L4.82843 12L7.706 14.878L10.5858 11.9986L7.707 9.121ZM16.292 9.121L13.4149 11.9993L16.293 14.878L19.1716 12L16.292 9.121ZM12 4.82843L9.122 7.707L12.0007 10.5851L14.878 7.706L12 4.82843Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m12 2 4.292 4.292 1.061-1.06L16.121 4H20v3.879l-1.233-1.233-1.06 1.061L22 12l-4.292 4.293 1.059 1.059L20 16.121V20h-3.88l1.232-1.233-1.059-1.06L12 22l-4.293-4.293-1.061 1.06L7.879 20H4v-3.88l1.231 1.232 1.061-1.06L2 12l4.293-4.293-1.062-1.061L4 7.879V4h3.879L6.646 5.23l1.062 1.062zm0 11.413-2.88 2.879 2.88 2.88 2.879-2.88zM7.707 9.12 4.828 12l2.878 2.878 2.88-2.88zm8.585 0-2.877 2.878 2.878 2.879L19.172 12zM12 4.828 9.122 7.707l2.879 2.878 2.877-2.879z" />
+      </G>
+    </Svg>
+  );
+};

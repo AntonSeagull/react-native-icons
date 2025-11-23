@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const RiSwap3Line = (props: IconProps) => {
+export const RiSwap3Line = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M6.00008 5.91424L3.70718 8.20714L2.29297 6.79292L7.00008 2.08582L11.7072 6.79292L10.293 8.20714L8.00008 5.91424L8.00007 11H6.00008L6.00008 5.91424ZM17.0001 9.50003C18.3808 9.50003 19.5001 8.38074 19.5001 7.00003C19.5001 5.61932 18.3808 4.50003 17.0001 4.50003C15.6194 4.50003 14.5001 5.61932 14.5001 7.00003C14.5001 8.38074 15.6194 9.50003 17.0001 9.50003ZM17.0001 11.5C14.5148 11.5 12.5001 9.48531 12.5001 7.00003C12.5001 4.51475 14.5148 2.50003 17.0001 2.50003C19.4854 2.50003 21.5001 4.51475 21.5001 7.00003C21.5001 9.48531 19.4854 11.5 17.0001 11.5ZM21.7072 17.2071L20.293 15.7929L18.0001 18.0858V13H16.0001V18.0858L13.7072 15.7929L12.293 17.2071L17.0001 21.9142L21.7072 17.2071ZM5.00008 19H9.00007L9.00008 15H5.00008L5.00008 19ZM10.0001 13C10.5524 13 11.0001 13.4477 11.0001 14V20C11.0001 20.5523 10.5524 21 10.0001 21H4.00007C3.44779 21 3.00007 20.5523 3.00008 20L3.00008 14C3.00008 13.4477 3.44779 13 4.00008 13H10.0001Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M6 5.914 3.707 8.207 2.293 6.793 7 2.086l4.707 4.707-1.414 1.414L8 5.914V11H6zM17 9.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m0 2a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9m4.707 5.707-1.414-1.414L18 18.086V13h-2v5.086l-2.293-2.293-1.414 1.414L17 21.914zM5 19h4v-4H5zm5-6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1z" />
+      </G>
+    </Svg>
+  );
+};

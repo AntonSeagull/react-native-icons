@@ -1,37 +1,38 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const FcClapperboard = (props: IconProps) => {
+export const FcClapperboard = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 48 48"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 24, 24)`}
-      >
-        <G fill={color} stroke={color}>
-          <Circle  fill="#9FA8DA" cx="7.5" cy="11.5" r="1.5" />
-          <Path  fill="#3F51B5" d="M43.4,8.3L4,15l-0.3-2c-0.4-2.2,1.1-4.2,3.3-4.6l31.6-5.3c2.2-0.4,4.2,1.1,4.6,3.3L43.4,8.3z" />
-          <Path  fill="#3F51B5" d="M40,41H8c-2.2,0-4-1.8-4-4V15h40v22C44,39.2,42.2,41,40,41z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 48 48"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 24, 24)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="#3F51B5" d="M43.4 8.3 4 15l-.3-2C3.3 10.8 4.8 8.8 7 8.4l31.6-5.3c2.2-.4 4.2 1.1 4.6 3.3zM40 41H8c-2.2 0-4-1.8-4-4V15h40v22c0 2.2-1.8 4-4 4" />
+        <Path d="m18.8 6.4 4.9 5.3 4-.7-5-5.3zM10.9 7.7l4.9 5.3 4-.7-5-5.2zM26.7 5.1l4.9 5.2 3.9-.6-4.9-5.3zM34.5 3.8l5 5.2 3.9-.7-4.9-5.2z" />
+        <Circle cx={7.5} cy={11.5} r={1.5} fill="#9FA8DA" />
+        <Path d="m40 15-4 6h4l4-6zM32 15l-4 6h4l4-6zM24 15l-4 6h4l4-6zM16 15l-4 6h4l4-6zM8 15l-4 6h4l4-6z" />
+      </G>
+    </Svg>
+  );
+};

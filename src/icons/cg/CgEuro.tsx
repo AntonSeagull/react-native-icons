@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const CgEuro = (props: IconProps) => {
+export const CgEuro = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M18.5535 15.5355C17.6487 16.4404 16.3987 17 15.018 17C13.1416 17 11.5066 15.9664 10.6513 14.4374H13.0323L13.7284 12.5625H10.0493C10.0286 12.3779 10.018 12.1902 10.018 12C10.018 11.8098 10.0286 11.6221 10.0493 11.4374H14.3362L15.0324 9.5625H10.6514C11.5066 8.0336 13.1416 7 15.018 7C16.3987 7 17.6487 7.55964 18.5535 8.46447L19.9677 7.05025C18.701 5.7835 16.951 5 15.018 5C12.0092 5 9.44381 6.89827 8.45407 9.5625H6.03241L5.33624 11.4374H8.04028C8.02552 11.623 8.018 11.8106 8.018 12C8.018 12.1894 8.02552 12.3769 8.04027 12.5625H4.72845L4.03229 14.4374H8.45404C9.44377 17.1017 12.0092 19 15.018 19C16.951 19 18.701 18.2165 19.9677 16.9497L18.5535 15.5355Z" fill="currentColor" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path fill="currentColor" d="M18.554 15.536a4.999 4.999 0 0 1-7.902-1.098h2.38l.696-1.876H10.05a5 5 0 0 1 0-1.125h4.287l.696-1.874h-4.38a4.998 4.998 0 0 1 7.902-1.099l1.414-1.414A7.003 7.003 0 0 0 8.454 9.562H6.032l-.696 1.875H8.04a7 7 0 0 0 0 1.126H4.728l-.696 1.874h4.422a7.003 7.003 0 0 0 11.514 2.513z" />
+      </G>
+    </Svg>
+  );
+};

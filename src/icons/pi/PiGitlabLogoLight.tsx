@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiGitlabLogoLight = (props: IconProps) => {
+export const PiGitlabLogoLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M228.21,117.61,208.32,41.49a9.94,9.94,0,0,0-19-.93L171.17,90H84.83L66.66,40.56a9.94,9.94,0,0,0-19,.93L27.79,117.61A55.18,55.18,0,0,0,49,176.42l73.27,51.77a9.94,9.94,0,0,0,11.44,0L207,176.42A55.18,55.18,0,0,0,228.21,117.61ZM57.65,50.82,75,98.07A6,6,0,0,0,80.64,102h94.72A6,6,0,0,0,181,98.07l17.36-47.25,15,57.52L128,168.66,42.62,108.34ZM39.38,120.74,117.6,176,93.41,193.1,55.94,166.62A43.1,43.1,0,0,1,39.38,120.74ZM128,217.53l-24.19-17.09L128,183.35l24.19,17.09Zm72.06-50.91L162.59,193.1,138.4,176l78.22-55.26A43.1,43.1,0,0,1,200.06,166.62Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m228.21 117.61-19.89-76.12a9.94 9.94 0 0 0-19-.93L171.17 90H84.83L66.66 40.56a9.94 9.94 0 0 0-19 .93l-19.87 76.12A55.18 55.18 0 0 0 49 176.42l73.27 51.77a9.94 9.94 0 0 0 11.44 0L207 176.42a55.18 55.18 0 0 0 21.21-58.81M57.65 50.82 75 98.07a6 6 0 0 0 5.64 3.93h94.72a6 6 0 0 0 5.64-3.93l17.36-47.25 15 57.52L128 168.66l-85.38-60.32Zm-18.27 69.92L117.6 176l-24.19 17.1-37.47-26.48a43.1 43.1 0 0 1-16.56-45.88M128 217.53l-24.19-17.09L128 183.35l24.19 17.09Zm72.06-50.91-37.47 26.48L138.4 176l78.22-55.26a43.1 43.1 0 0 1-16.56 45.88" />
+      </G>
+    </Svg>
+  );
+};

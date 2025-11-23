@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiTruckTrailerLight = (props: IconProps) => {
+export const PiTruckTrailerLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M222,98.47V96a54.06,54.06,0,0,0-54-54h-8a14,14,0,0,0-14,14V178H126V72a6,6,0,0,0-6-6H16A14,14,0,0,0,2,80V184a30,30,0,0,0,54,18,30,30,0,0,0,53.4-12h85.2a30,30,0,0,0,59.4-6V136A38.07,38.07,0,0,0,222,98.47ZM158,56a2,2,0,0,1,2-2h8a42,42,0,0,1,42,42v8a6,6,0,0,0,6,6,26,26,0,0,1,26,26v24a30,30,0,0,0-47.4,18H158ZM16,78h98V178h-4.6A30,30,0,0,0,56,166a30,30,0,0,0-42-6V80A2,2,0,0,1,16,78ZM32,202a18,18,0,1,1,18-18A18,18,0,0,1,32,202Zm48,0a18,18,0,1,1,18-18A18,18,0,0,1,80,202Zm144,0a18,18,0,1,1,18-18A18,18,0,0,1,224,202Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M222 98.47V96a54.06 54.06 0 0 0-54-54h-8a14 14 0 0 0-14 14v122h-20V72a6 6 0 0 0-6-6H16A14 14 0 0 0 2 80v104a30 30 0 0 0 54 18 30 30 0 0 0 53.4-12h85.2a30 30 0 0 0 59.4-6v-48a38.07 38.07 0 0 0-32-37.53M158 56a2 2 0 0 1 2-2h8a42 42 0 0 1 42 42v8a6 6 0 0 0 6 6 26 26 0 0 1 26 26v24a30 30 0 0 0-47.4 18H158ZM16 78h98v100h-4.6A30 30 0 0 0 56 166a30 30 0 0 0-42-6V80a2 2 0 0 1 2-2m16 124a18 18 0 1 1 18-18 18 18 0 0 1-18 18m48 0a18 18 0 1 1 18-18 18 18 0 0 1-18 18m144 0a18 18 0 1 1 18-18 18 18 0 0 1-18 18" />
+      </G>
+    </Svg>
+  );
+};

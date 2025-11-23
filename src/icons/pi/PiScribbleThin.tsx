@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiScribbleThin = (props: IconProps) => {
+export const PiScribbleThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M202.84,186.83a18.61,18.61,0,0,0,0,26.34,4,4,0,0,1-5.66,5.66,26.63,26.63,0,0,1,0-37.66l9.38-9.37a18.63,18.63,0,1,0-26.35-26.34L113.45,212.2a26.63,26.63,0,0,1-37.66-37.66L174.55,75.8A18.63,18.63,0,1,0,148.2,49.46L81.45,116.2A26.63,26.63,0,0,1,43.79,78.54L85.17,37.17a4,4,0,1,1,5.65,5.66L49.44,84.2a18.63,18.63,0,1,0,26.35,26.34L142.55,43.8a26.63,26.63,0,0,1,37.66,37.66L81.45,180.2a18.63,18.63,0,1,0,26.35,26.34l66.75-66.74a26.63,26.63,0,0,1,37.66,37.66Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M202.84 186.83a18.61 18.61 0 0 0 0 26.34 4 4 0 0 1-5.66 5.66 26.63 26.63 0 0 1 0-37.66l9.38-9.37a18.63 18.63 0 1 0-26.35-26.34l-66.76 66.74a26.63 26.63 0 0 1-37.66-37.66l98.76-98.74a18.63 18.63 0 1 0-26.35-26.34L81.45 116.2a26.63 26.63 0 0 1-37.66-37.66l41.38-41.37a4 4 0 1 1 5.65 5.66L49.44 84.2a18.63 18.63 0 1 0 26.35 26.34l66.76-66.74a26.63 26.63 0 0 1 37.66 37.66L81.45 180.2a18.63 18.63 0 1 0 26.35 26.34l66.75-66.74a26.63 26.63 0 0 1 37.66 37.66Z" />
+      </G>
+    </Svg>
+  );
+};

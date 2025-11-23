@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiDnaThin = (props: IconProps) => {
+export const PiDnaThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M196,204.5V232a4,4,0,0,1-8,0V204.5a67.62,67.62,0,0,0-37.59-60.82L102,119.48a75.6,75.6,0,0,1-42-68V24a4,4,0,0,1,8,0V51.5a67.62,67.62,0,0,0,37.59,60.82l48.4,24.2A75.6,75.6,0,0,1,196,204.5Zm-36-.5H68a67.74,67.74,0,0,1,4.59-24h75.51a4,4,0,0,0,0-8H76.3a67.91,67.91,0,0,1,19.45-22.31A4,4,0,0,0,91,143.24,76.26,76.26,0,0,0,60,204.5V232a4,4,0,0,0,8,0V212h92a4,4,0,0,0,0-8ZM192,20a4,4,0,0,0-4,4V44H96a4,4,0,0,0,0,8h92a67.74,67.74,0,0,1-4.59,24H107.89a4,4,0,1,0,0,8H179.7a67.91,67.91,0,0,1-19.45,22.31,4,4,0,0,0,4.74,6.45A76.26,76.26,0,0,0,196,51.5V24A4,4,0,0,0,192,20Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M196 204.5V232a4 4 0 0 1-8 0v-27.5a67.62 67.62 0 0 0-37.59-60.82L102 119.48a75.6 75.6 0 0 1-42-68V24a4 4 0 0 1 8 0v27.5a67.62 67.62 0 0 0 37.59 60.82l48.4 24.2A75.6 75.6 0 0 1 196 204.5m-36-.5H68a67.7 67.7 0 0 1 4.59-24h75.51a4 4 0 0 0 0-8H76.3a67.9 67.9 0 0 1 19.45-22.31 4 4 0 0 0-4.75-6.45 76.26 76.26 0 0 0-31 61.26V232a4 4 0 0 0 8 0v-20h92a4 4 0 0 0 0-8m32-184a4 4 0 0 0-4 4v20H96a4 4 0 0 0 0 8h92a67.7 67.7 0 0 1-4.59 24h-75.52a4 4 0 1 0 0 8h71.81a67.9 67.9 0 0 1-19.45 22.31 4 4 0 0 0 4.74 6.45A76.26 76.26 0 0 0 196 51.5V24a4 4 0 0 0-4-4" />
+      </G>
+    </Svg>
+  );
+};

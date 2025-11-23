@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiCricketBold = (props: IconProps) => {
+export const PiCricketBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M246.15,78.54,193.46,25.85a20,20,0,0,0-28.28,0L57.86,133.17a20,20,0,0,0,0,28.28l17.86,17.86-44.2,44.2a12,12,0,0,0,17,17l44.2-44.21,17.86,17.86a20,20,0,0,0,28.28,0L246.15,106.82A20,20,0,0,0,246.15,78.54ZM124.69,194.34l-15-15,26.83-26.83a12,12,0,0,0-17-17L92.69,162.34l-15-15L109,116h47v47ZM180,139V104a12,12,0,0,0-12-12H133l46.34-46.34,47,47ZM60,92A32,32,0,1,0,28,60,32,32,0,0,0,60,92Zm0-40a8,8,0,1,1-8,8A8,8,0,0,1,60,52Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m246.15 78.54-52.69-52.69a20 20 0 0 0-28.28 0L57.86 133.17a20 20 0 0 0 0 28.28l17.86 17.86-44.2 44.2a12 12 0 0 0 17 17l44.2-44.21 17.86 17.86a20 20 0 0 0 28.28 0l107.29-107.34a20 20 0 0 0 0-28.28m-121.46 115.8-15-15 26.83-26.83a12 12 0 0 0-17-17l-26.83 26.83-15-15L109 116h47v47ZM180 139v-35a12 12 0 0 0-12-12h-35l46.34-46.34 47 47ZM60 92a32 32 0 1 0-32-32 32 32 0 0 0 32 32m0-40a8 8 0 1 1-8 8 8 8 0 0 1 8-8" />
+      </G>
+    </Svg>
+  );
+};

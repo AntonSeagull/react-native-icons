@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiDamagedHouse = (props: IconProps) => {
+export const GiDamagedHouse = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M87.195 53.838v79.494h44.213V53.838H87.195zm344.291 89.422c.34 7.22.677 14.441 1.014 21.662l27.861 41.004-46.379 17.504 9.409 16.57-24.334 32.486h86.273V143.26h-53.844zm-387.562 2.303v124.619H266.61l5.389-54.61-63.18-17.166 21.7-38.656-9.46-14.188H43.925zm6.709 134.802V482.076h53.316V321.408h96.614v160.668h271.152v-201.71h-83.766l-34.537 13.61-23.178 30.768-34.505-29.69-26.827-14.689H50.632z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M87.195 53.838v79.494h44.213V53.838zm344.291 89.422q.51 10.83 1.014 21.662l27.861 41.004-46.379 17.504 9.409 16.57-24.334 32.486h86.273V143.26zm-387.562 2.303v124.619H266.61l5.389-54.61-63.18-17.166 21.7-38.656-9.46-14.188zm6.709 134.802v201.711h53.316V321.408h96.614v160.668h271.152v-201.71h-83.766l-34.537 13.61-23.178 30.768-34.505-29.69-26.827-14.689z" />
+      </G>
+    </Svg>
+  );
+};

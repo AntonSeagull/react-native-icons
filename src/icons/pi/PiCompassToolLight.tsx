@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiCompassToolLight = (props: IconProps) => {
+export const PiCompassToolLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M213.34,122.73a6,6,0,1,0-10.68-5.46,81.79,81.79,0,0,1-35.81,35.36l-18.14-40.8A38,38,0,0,0,134,42.48V24a6,6,0,0,0-12,0V42.48a38,38,0,0,0-14.71,69.35L58.52,221.56a6,6,0,1,0,11,4.88l25.9-58.26A93.37,93.37,0,0,0,128,174a97,97,0,0,0,32.68-5.69l25.84,58.13a6,6,0,1,0,11-4.88l-25.77-58A93.92,93.92,0,0,0,213.34,122.73ZM128,54a26,26,0,1,1-26,26A26,26,0,0,1,128,54Zm0,108a81.51,81.51,0,0,1-27.73-4.83l18-40.45a37.85,37.85,0,0,0,19.52,0l18,40.6A85.34,85.34,0,0,1,128,162Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M213.34 122.73a6 6 0 1 0-10.68-5.46 81.8 81.8 0 0 1-35.81 35.36l-18.14-40.8A38 38 0 0 0 134 42.48V24a6 6 0 0 0-12 0v18.48a38 38 0 0 0-14.71 69.35L58.52 221.56a6 6 0 1 0 11 4.88l25.9-58.26A93.4 93.4 0 0 0 128 174a97 97 0 0 0 32.68-5.69l25.84 58.13a6 6 0 1 0 11-4.88l-25.77-58a93.92 93.92 0 0 0 41.59-40.83M128 54a26 26 0 1 1-26 26 26 26 0 0 1 26-26m0 108a81.5 81.5 0 0 1-27.73-4.83l18-40.45a37.85 37.85 0 0 0 19.52 0l18 40.6A85.3 85.3 0 0 1 128 162" />
+      </G>
+    </Svg>
+  );
+};

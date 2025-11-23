@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiSolarRoofLight = (props: IconProps) => {
+export const PiSolarRoofLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M245.37,125.32l-40-80A6,6,0,0,0,200,42H56a6,6,0,0,0-5.37,3.32l-40,80A6.07,6.07,0,0,0,10,128v56a14,14,0,0,0,14,14H232a14,14,0,0,0,14-14V128A6.07,6.07,0,0,0,245.37,125.32ZM99.71,122l-14-28h34.58l14,28Zm.58-68,14,28H79.71l-14-28Zm48,0,14,28H127.71l-14-28Zm-.58,68-14-28h34.58l14,28Zm48,0-14-28h34.58l14,28Zm14.58-40H175.71l-14-28h34.58ZM22,184V129.42l34-68,34,68V186H24A2,2,0,0,1,22,184Zm210,2H102V134H234v50A2,2,0,0,1,232,186Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="m245.37 125.32-40-80A6 6 0 0 0 200 42H56a6 6 0 0 0-5.37 3.32l-40 80A6.1 6.1 0 0 0 10 128v56a14 14 0 0 0 14 14h208a14 14 0 0 0 14-14v-56a6.1 6.1 0 0 0-.63-2.68M99.71 122l-14-28h34.58l14 28Zm.58-68 14 28H79.71l-14-28Zm48 0 14 28h-34.58l-14-28Zm-.58 68-14-28h34.58l14 28Zm48 0-14-28h34.58l14 28Zm14.58-40h-34.58l-14-28h34.58ZM22 184v-54.58l34-68 34 68V186H24a2 2 0 0 1-2-2m210 2H102v-52h132v50a2 2 0 0 1-2 2" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const SiFluxus = (props: IconProps) => {
+export const SiFluxus = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M14.348 19.35a2738.241 2738.241 0 0 0-3.926-5.741 595.98 595.98 0 0 1-1.5-2.194 433.452 433.452 0 0 0-1.646-2.396c-.493-.712-.88-1.343-.86-1.404.021-.06.944-.73 2.05-1.489 4.797-3.285 8.82-6.032 8.962-6.117.124-.075.152.287.147 1.963l-.005 2.055-2.993 2.02c-1.647 1.111-2.975 2.072-2.953 2.136.117.326 2.53 3.694 2.645 3.694.11 0 1.55-.937 3.084-2.005.224-.156.227-.125.226 1.905v2.063l-.692.446c-.38.245-.692.49-.692.544 0 .054.313.545.694 1.09l.695.993-.03 3.543-.03 3.544z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M14.348 19.35a2738 2738 0 0 0-3.926-5.741 596 596 0 0 1-1.5-2.194 434 434 0 0 0-1.646-2.396c-.493-.712-.88-1.343-.86-1.404s.944-.73 2.05-1.489c4.797-3.285 8.82-6.032 8.962-6.117.124-.075.152.287.147 1.963l-.005 2.055-2.993 2.02c-1.647 1.111-2.975 2.072-2.953 2.136.117.326 2.53 3.694 2.645 3.694.11 0 1.55-.937 3.084-2.005.224-.156.227-.125.226 1.905v2.063l-.692.446c-.38.245-.692.49-.692.544s.313.545.694 1.09l.695.993-.03 3.543-.03 3.544z" />
+      </G>
+    </Svg>
+  );
+};

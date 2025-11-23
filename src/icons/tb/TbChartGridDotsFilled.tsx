@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TbChartGridDotsFilled = (props: IconProps) => {
+export const TbChartGridDotsFilled = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M18 2a1 1 0 0 1 1 1v.171a3.008 3.008 0 0 1 1.83 1.83l.17 -.001a1 1 0 0 1 0 2h-.171a3.008 3.008 0 0 1 -1.828 1.829l-.001 2.171h2a1 1 0 0 1 0 2h-2v2.171a3.008 3.008 0 0 1 1.83 1.83l.17 -.001a1 1 0 0 1 0 2h-.171a3.008 3.008 0 0 1 -1.828 1.829l-.001 .171a1 1 0 0 1 -2 0v-.17a3.008 3.008 0 0 1 -1.829 -1.83h-2.171v2a1 1 0 0 1 -2 0v-2h-2.171a3.008 3.008 0 0 1 -1.828 1.829l-.001 .171a1 1 0 0 1 -2 0v-.17a3.008 3.008 0 0 1 -1.829 -1.83h-.171a1 1 0 0 1 0 -2h.17a3.008 3.008 0 0 1 1.83 -1.83v-.34a3.008 3.008 0 0 1 -1.829 -1.83h-.171a1 1 0 0 1 0 -2h.17a3.008 3.008 0 0 1 1.83 -1.83v-2.17h-2a1 1 0 1 1 0 -2h2v-2a1 1 0 1 1 2 0v2h4v-2a1 1 0 0 1 2 0v2h2.17a3.008 3.008 0 0 1 1.83 -1.83v-.17a1 1 0 0 1 1 -1zm-7 11h-2.171a3.008 3.008 0 0 1 -1.828 1.829v.342a3.008 3.008 0 0 1 1.828 1.829h2.171v-4zm6 0h-4v4h2.17a3.008 3.008 0 0 1 1.83 -1.83v-2.17zm-6 -6h-4v2.171a3.008 3.008 0 0 1 1.83 1.83l2.17 -.001v-4zm4.171 0h-2.171v4h4v-2.17a3.008 3.008 0 0 1 -1.829 -1.83z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M18 2a1 1 0 0 1 1 1v.171a3 3 0 0 1 1.83 1.83L21 5a1 1 0 0 1 0 2h-.171a3 3 0 0 1-1.828 1.829L19 11h2a1 1 0 0 1 0 2h-2v2.171a3 3 0 0 1 1.83 1.83L21 17a1 1 0 0 1 0 2h-.171a3 3 0 0 1-1.828 1.829L19 21a1 1 0 0 1-2 0v-.17A3 3 0 0 1 15.171 19H13v2a1 1 0 0 1-2 0v-2H8.829a3 3 0 0 1-1.828 1.829L7 21a1 1 0 0 1-2 0v-.17A3 3 0 0 1 3.171 19H3a1 1 0 0 1 0-2h.17A3 3 0 0 1 5 15.17v-.34A3 3 0 0 1 3.171 13H3a1 1 0 0 1 0-2h.17A3 3 0 0 1 5 9.17V7H3a1 1 0 1 1 0-2h2V3a1 1 0 1 1 2 0v2h4V3a1 1 0 0 1 2 0v2h2.17A3 3 0 0 1 17 3.17V3a1 1 0 0 1 1-1m-7 11H8.829a3 3 0 0 1-1.828 1.829v.342A3 3 0 0 1 8.829 17H11zm6 0h-4v4h2.17A3 3 0 0 1 17 15.17zm-6-6H7v2.171a3 3 0 0 1 1.83 1.83L11 11zm4.171 0H13v4h4V8.83A3 3 0 0 1 15.171 7" />
+      </G>
+    </Svg>
+  );
+};

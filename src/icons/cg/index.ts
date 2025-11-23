@@ -1,5 +1,5 @@
 // Auto-generated file - do not edit manually
-// Generated on 2025-10-13T08:45:16.083Z
+// Generated on 2025-11-23T17:45:48.488Z
 // Total icons: 704
 
 export { CgAbstract } from './CgAbstract';

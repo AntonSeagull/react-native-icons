@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiSpadeBold = (props: IconProps) => {
+export const PiSpadeBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M133.37,13.27a12,12,0,0,0-10.74,0C118.44,15.36,20,65.4,20,136a60,60,0,0,0,69.51,59.25l-5.28,26.4A12,12,0,0,0,96,236h64a12,12,0,0,0,11.77-14.35l-5.28-26.4A60,60,0,0,0,236,136C236,65.4,137.56,15.36,133.37,13.27ZM176,172a35.88,35.88,0,0,1-19.09-5.47,12,12,0,0,0-18.14,12.52L145.36,212H110.64l6.59-32.95a12,12,0,0,0-18.14-12.52A36,36,0,0,1,44,136c0-28.29,23.57-53.95,43.34-70.49A274.68,274.68,0,0,1,128,37.63a274.16,274.16,0,0,1,40.66,27.88C188.43,82.05,212,107.71,212,136A36,36,0,0,1,176,172Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M133.37 13.27a12 12 0 0 0-10.74 0C118.44 15.36 20 65.4 20 136a60 60 0 0 0 69.51 59.25l-5.28 26.4A12 12 0 0 0 96 236h64a12 12 0 0 0 11.77-14.35l-5.28-26.4A60 60 0 0 0 236 136c0-70.6-98.44-120.64-102.63-122.73M176 172a35.9 35.9 0 0 1-19.09-5.47 12 12 0 0 0-18.14 12.52l6.59 32.95h-34.72l6.59-32.95a12 12 0 0 0-18.14-12.52A36 36 0 0 1 44 136c0-28.29 23.57-53.95 43.34-70.49A274.7 274.7 0 0 1 128 37.63a274 274 0 0 1 40.66 27.88C188.43 82.05 212 107.71 212 136a36 36 0 0 1-36 36" />
+      </G>
+    </Svg>
+  );
+};

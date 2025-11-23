@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const LiaSketch = (props: IconProps) => {
+export const LiaSketch = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 32 32"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 16, 16)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M 16 3.9902344 L 8.4335938 5.0703125 L 2.7304688 13.056641 L 16 28.537109 L 29.267578 13.056641 L 23.564453 5.0703125 L 16 3.9902344 z M 13.470703 6.3710938 L 10.203125 10.105469 L 10.429688 6.8066406 L 13.470703 6.3710938 z M 18.529297 6.3710938 L 21.570312 6.8046875 L 21.796875 10.105469 L 18.529297 6.3710938 z M 16 6.5195312 L 20.796875 12 L 11.203125 12 L 16 6.5195312 z M 8.2949219 8.7070312 L 8.0664062 12 L 5.9433594 12 L 8.2949219 8.7070312 z M 23.705078 8.7089844 L 26.056641 12 L 23.933594 12 L 23.705078 8.7089844 z M 6.1757812 14 L 8.3828125 14 L 11.472656 20.181641 L 6.1757812 14 z M 10.619141 14 L 21.380859 14 L 16 24.763672 L 10.619141 14 z M 23.617188 14 L 25.824219 14 L 20.527344 20.181641 L 23.617188 14 z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 16, 16)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M16 3.99 8.434 5.07 2.73 13.057 16 28.537l13.268-15.48-5.704-7.987zm-2.53 2.381-3.267 3.734.227-3.298zm5.06 0 3.04.434.227 3.3zM16 6.52 20.797 12h-9.594zM8.295 8.707 8.066 12H5.943zm15.41.002L26.057 12h-2.123zM6.175 14h2.208l3.09 6.182zm4.444 0h10.762L16 24.764zm12.998 0h2.207l-5.297 6.182z" />
+      </G>
+    </Svg>
+  );
+};

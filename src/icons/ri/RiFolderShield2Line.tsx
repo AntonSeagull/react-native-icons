@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const RiFolderShield2Line = (props: IconProps) => {
+export const RiFolderShield2Line = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 24 24"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 12, 12)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M22 9H20V7H11.5858L9.58579 5H4V19H11.4469C11.8089 19.7916 12.3786 20.4853 13.1114 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H10.4142L12.4142 5H21C21.5523 5 22 5.44772 22 6V9ZM13 11H22V16.949C22 17.9397 21.4987 18.8648 20.6641 19.4144L17.5 21.4978L14.3359 19.4144C13.5013 18.8648 13 17.9397 13 16.949V11ZM15 16.949C15 17.2652 15.1616 17.5634 15.4358 17.744L17.5 19.1032L19.5642 17.744C19.8384 17.5634 20 17.2652 20 16.949V13H15V16.949Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 24 24"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 12, 12)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M22 9h-2V7h-8.414l-2-2H4v14h7.447a4.97 4.97 0 0 0 1.664 2H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h7.414l2 2H21a1 1 0 0 1 1 1zm-9 2h9v5.949c0 .99-.501 1.916-1.336 2.465L17.5 21.498l-3.164-2.084A2.95 2.95 0 0 1 13 16.95zm2 5.949c0 .316.162.614.436.795l2.064 1.36 2.064-1.36a.95.95 0 0 0 .436-.795V13h-5z" />
+      </G>
+    </Svg>
+  );
+};

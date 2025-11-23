@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const GiTunisia = (props: IconProps) => {
+export const GiTunisia = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 512 512"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 256, 256)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M165.6 81.82L244 34.67l27.4 6.02 2.6 34.98 39.9-23.06 9.6 21.28-35.7 29.01c-15.8 28.8 10 46.6 35.2 64.6-14.7 27.3-17 58.6-59.7 76.8 2.8 10.2 1 26.3 29.5 23.4 20.4 29.1 28.6 31 48.6 31.1l3.1 52.5c-23.7 34-49.5 39.7-74.9 50.6l10.6 38.4-39.9 47.4-28.4-117.4-38.9-26.9-29.9-46.2-9.5-50 37.9-38.4z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 512 512"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 256, 256)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M165.6 81.82 244 34.67l27.4 6.02 2.6 34.98 39.9-23.06 9.6 21.28-35.7 29.01c-15.8 28.8 10 46.6 35.2 64.6-14.7 27.3-17 58.6-59.7 76.8 2.8 10.2 1 26.3 29.5 23.4 20.4 29.1 28.6 31 48.6 31.1l3.1 52.5c-23.7 34-49.5 39.7-74.9 50.6l10.6 38.4-39.9 47.4-28.4-117.4-38.9-26.9-29.9-46.2-9.5-50 37.9-38.4z" />
+      </G>
+    </Svg>
+  );
+};

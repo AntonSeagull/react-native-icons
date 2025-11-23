@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TfiViewListAlt = (props: IconProps) => {
+export const TfiViewListAlt = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 17 17"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8.5, 8.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M5 0v4h12v-4h-12zM16 3h-10v-2h10v2zM5 10h12v-4h-12v4zM6 7h10v2h-10v-2zM5 16h12v-4h-12v4zM6 13h10v2h-10v-2zM0 4h4v-4h-4v4zM1 1h2v2h-2v-2zM0 10h4v-4h-4v4zM1 7h2v2h-2v-2zM0 16h4v-4h-4v4zM1 13h2v2h-2v-2z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 17 17"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8.5, 8.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M5 0v4h12V0zm11 3H6V1h10zM5 10h12V6H5zm1-3h10v2H6zm-1 9h12v-4H5zm1-3h10v2H6zM0 4h4V0H0zm1-3h2v2H1zm-1 9h4V6H0zm1-3h2v2H1zm-1 9h4v-4H0zm1-3h2v2H1z" />
+      </G>
+    </Svg>
+  );
+};

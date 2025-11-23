@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiDevToLogoLight = (props: IconProps) => {
+export const PiDevToLogoLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M232,58H24A14,14,0,0,0,10,72V184a14,14,0,0,0,14,14H232a14,14,0,0,0,14-14V72A14,14,0,0,0,232,58Zm2,126a2,2,0,0,1-2,2H24a2,2,0,0,1-2-2V72a2,2,0,0,1,2-2H232a2,2,0,0,1,2,2ZM126,102v20h10a6,6,0,0,1,0,12H126v20h18a6,6,0,0,1,0,12H120a6,6,0,0,1-6-6V96a6,6,0,0,1,6-6h24a6,6,0,0,1,0,12Zm87.78-4.38-18,64a6,6,0,0,1-11.56,0l-18-64a6,6,0,0,1,11.56-3.24L190,137.84l12.22-43.46a6,6,0,1,1,11.56,3.24ZM64,90H56a6,6,0,0,0-6,6v64a6,6,0,0,0,6,6h8a30,30,0,0,0,30-30V120A30,30,0,0,0,64,90Zm18,46a18,18,0,0,1-18,18H62V102h2a18,18,0,0,1,18,18Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M232 58H24a14 14 0 0 0-14 14v112a14 14 0 0 0 14 14h208a14 14 0 0 0 14-14V72a14 14 0 0 0-14-14m2 126a2 2 0 0 1-2 2H24a2 2 0 0 1-2-2V72a2 2 0 0 1 2-2h208a2 2 0 0 1 2 2Zm-108-82v20h10a6 6 0 0 1 0 12h-10v20h18a6 6 0 0 1 0 12h-24a6 6 0 0 1-6-6V96a6 6 0 0 1 6-6h24a6 6 0 0 1 0 12Zm87.78-4.38-18 64a6 6 0 0 1-11.56 0l-18-64a6 6 0 0 1 11.56-3.24L190 137.84l12.22-43.46a6 6 0 1 1 11.56 3.24M64 90h-8a6 6 0 0 0-6 6v64a6 6 0 0 0 6 6h8a30 30 0 0 0 30-30v-16a30 30 0 0 0-30-30m18 46a18 18 0 0 1-18 18h-2v-52h2a18 18 0 0 1 18 18Z" />
+      </G>
+    </Svg>
+  );
+};

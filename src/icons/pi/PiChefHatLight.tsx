@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiChefHatLight = (props: IconProps) => {
+export const PiChefHatLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M238,112a54.06,54.06,0,0,0-54-54,54.6,54.6,0,0,0-6.52.4,54,54,0,0,0-99,0A54.6,54.6,0,0,0,72,58,54,54,0,0,0,50,161.3V208a14,14,0,0,0,14,14H192a14,14,0,0,0,14-14V161.3A54.07,54.07,0,0,0,238,112Zm-44,96a2,2,0,0,1-2,2H64a2,2,0,0,1-2-2V165.06A54,54,0,0,0,72,166H184a54,54,0,0,0,10-.94Zm-10-54H167.69l6.13-24.54a6,6,0,1,0-11.64-2.92L155.31,154H134V128a6,6,0,0,0-12,0v26H100.69l-6.87-27.46a6,6,0,0,0-11.64,2.92L88.31,154H72a42,42,0,0,1,0-84c1,0,2,0,2.92.11A54.63,54.63,0,0,0,74,80a6,6,0,0,0,12,0,42,42,0,0,1,84,0,6,6,0,0,0,12,0,54.63,54.63,0,0,0-.92-9.89c1-.06,1.94-.11,2.92-.11a42,42,0,0,1,0,84Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M238 112a54.06 54.06 0 0 0-54-54 55 55 0 0 0-6.52.4 54 54 0 0 0-99 0A55 55 0 0 0 72 58a54 54 0 0 0-22 103.3V208a14 14 0 0 0 14 14h128a14 14 0 0 0 14-14v-46.7a54.07 54.07 0 0 0 32-49.3m-44 96a2 2 0 0 1-2 2H64a2 2 0 0 1-2-2v-42.94a54 54 0 0 0 10 .94h112a54 54 0 0 0 10-.94Zm-10-54h-16.31l6.13-24.54a6 6 0 1 0-11.64-2.92L155.31 154H134v-26a6 6 0 0 0-12 0v26h-21.31l-6.87-27.46a6 6 0 0 0-11.64 2.92L88.31 154H72a42 42 0 0 1 0-84c1 0 2 0 2.92.11A54.6 54.6 0 0 0 74 80a6 6 0 0 0 12 0 42 42 0 0 1 84 0 6 6 0 0 0 12 0 54.6 54.6 0 0 0-.92-9.89c1-.06 1.94-.11 2.92-.11a42 42 0 0 1 0 84" />
+      </G>
+    </Svg>
+  );
+};

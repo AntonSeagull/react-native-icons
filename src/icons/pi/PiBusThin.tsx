@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiBusThin = (props: IconProps) => {
+export const PiBusThin = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M184,36H72A28,28,0,0,0,44,64V208a12,12,0,0,0,12,12H80a12,12,0,0,0,12-12V188h72v20a12,12,0,0,0,12,12h24a12,12,0,0,0,12-12V64A28,28,0,0,0,184,36ZM52,180V116H204v64Zm152-72H52V76H204ZM84,208a4,4,0,0,1-4,4H56a4,4,0,0,1-4-4V188H84Zm116,4H176a4,4,0,0,1-4-4V188h32v20A4,4,0,0,1,200,212Zm4-144H52V64A20,20,0,0,1,72,44H184a20,20,0,0,1,20,20ZM100,148a8,8,0,1,1-8-8A8,8,0,0,1,100,148Zm72,0a8,8,0,1,1-8-8A8,8,0,0,1,172,148Zm72-68v24a4,4,0,0,1-8,0V80a4,4,0,0,1,8,0ZM20,80v24a4,4,0,0,1-8,0V80a4,4,0,0,1,8,0Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M184 36H72a28 28 0 0 0-28 28v144a12 12 0 0 0 12 12h24a12 12 0 0 0 12-12v-20h72v20a12 12 0 0 0 12 12h24a12 12 0 0 0 12-12V64a28 28 0 0 0-28-28M52 180v-64h152v64Zm152-72H52V76h152ZM84 208a4 4 0 0 1-4 4H56a4 4 0 0 1-4-4v-20h32Zm116 4h-24a4 4 0 0 1-4-4v-20h32v20a4 4 0 0 1-4 4m4-144H52v-4a20 20 0 0 1 20-20h112a20 20 0 0 1 20 20Zm-104 80a8 8 0 1 1-8-8 8 8 0 0 1 8 8m72 0a8 8 0 1 1-8-8 8 8 0 0 1 8 8m72-68v24a4 4 0 0 1-8 0V80a4 4 0 0 1 8 0M20 80v24a4 4 0 0 1-8 0V80a4 4 0 0 1 8 0" />
+      </G>
+    </Svg>
+  );
+};

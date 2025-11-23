@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiGoogleDriveLogoBold = (props: IconProps) => {
+export const PiGoogleDriveLogoBold = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M241,141.65,172.59,29.51l-.07-.11a19.85,19.85,0,0,0-17-9.4H100.44a19.85,19.85,0,0,0-17,9.4l-.07.11L15,141.65a20,20,0,0,0-.36,20.46L42,209.92A20,20,0,0,0,59.33,220H196.67A20,20,0,0,0,214,209.92l27.32-47.81A20,20,0,0,0,241,141.65ZM211.88,140H174.79L142,85.33l18.12-30.19ZM54.8,184,43.36,164H66.81Zm40-20h66.4l19.2,32H75.6Zm14.4-24L128,108.66,146.8,140Zm80,24h23.45L201.2,184ZM128,62,117.19,44h21.62ZM95.89,55.14,114,85.33,81.21,140H44.12Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M241 141.65 172.59 29.51l-.07-.11a19.85 19.85 0 0 0-17-9.4h-55.08a19.85 19.85 0 0 0-17 9.4l-.07.11L15 141.65a20 20 0 0 0-.36 20.46L42 209.92A20 20 0 0 0 59.33 220h137.34A20 20 0 0 0 214 209.92l27.32-47.81a20 20 0 0 0-.32-20.46M211.88 140h-37.09L142 85.33l18.12-30.19ZM54.8 184l-11.44-20h23.45Zm40-20h66.4l19.2 32H75.6Zm14.4-24 18.8-31.34L146.8 140Zm80 24h23.45l-11.45 20ZM128 62l-10.81-18h21.62Zm-32.11-6.86L114 85.33 81.21 140H44.12Z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiShieldCheckeredLight = (props: IconProps) => {
+export const PiShieldCheckeredLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M208,42H48A14,14,0,0,0,34,56v56c0,51.94,25.12,83.4,46.2,100.64,22.73,18.6,45.27,24.89,46.22,25.15a6,6,0,0,0,3.16,0c.95-.26,23.49-6.55,46.22-25.15C196.88,195.4,222,163.94,222,112V56A14,14,0,0,0,208,42Zm2,14v56c0,3.39-.12,6.72-.34,10H134V54h74A2,2,0,0,1,210,56ZM46,56a2,2,0,0,1,2-2h74v68H46.34c-.22-3.28-.34-6.61-.34-10Zm1.71,78H122v89.52a133.13,133.13,0,0,1-34.56-20.46C65.5,185,52.2,161.8,47.71,134Zm120.85,69.06A133.13,133.13,0,0,1,134,223.52V134h74.29C203.8,161.8,190.5,185,168.56,203.06Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M208 42H48a14 14 0 0 0-14 14v56c0 51.94 25.12 83.4 46.2 100.64 22.73 18.6 45.27 24.89 46.22 25.15a6 6 0 0 0 3.16 0c.95-.26 23.49-6.55 46.22-25.15C196.88 195.4 222 163.94 222 112V56a14 14 0 0 0-14-14m2 14v56c0 3.39-.12 6.72-.34 10H134V54h74a2 2 0 0 1 2 2M46 56a2 2 0 0 1 2-2h74v68H46.34c-.22-3.28-.34-6.61-.34-10Zm1.71 78H122v89.52a133.1 133.1 0 0 1-34.56-20.46C65.5 185 52.2 161.8 47.71 134m120.85 69.06A133.1 133.1 0 0 1 134 223.52V134h74.29c-4.49 27.8-17.79 51-39.73 69.06" />
+      </G>
+    </Svg>
+  );
+};

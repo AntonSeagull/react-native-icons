@@ -1,37 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const WiMoonWaningGibbous3 = (props: IconProps) => {
+export const WiMoonWaningGibbous3 = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 30 30"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 15, 15)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M3.74,14.49c0,1.22,0.19,2.4,0.56,3.54s0.91,2.17,1.6,3.09s1.5,1.72,2.42,2.42s1.95,1.23,3.09,1.6s2.32,0.56,3.54,0.56
-	c3.61-2.07,5.42-5.81,5.42-11.22c0-1.31-0.15-2.56-0.45-3.74s-0.71-2.24-1.23-3.17s-1.1-1.75-1.72-2.46s-1.3-1.33-2.02-1.86
-	c-1.52,0-2.98,0.3-4.37,0.89s-2.58,1.39-3.58,2.4s-1.8,2.2-2.39,3.59S3.74,12.96,3.74,14.49z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 30 30"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 15, 15)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M3.74 14.49c0 1.22.19 2.4.56 3.54s.91 2.17 1.6 3.09 1.5 1.72 2.42 2.42 1.95 1.23 3.09 1.6 2.32.56 3.54.56c3.61-2.07 5.42-5.81 5.42-11.22 0-1.31-.15-2.56-.45-3.74s-.71-2.24-1.23-3.17-1.1-1.75-1.72-2.46-1.3-1.33-2.02-1.86c-1.52 0-2.98.3-4.37.89S8 5.53 7 6.54s-1.8 2.2-2.39 3.59-.87 2.83-.87 4.36" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const PiBellSlashLight = (props: IconProps) => {
+export const PiBellSlashLight = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 256 256"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 128, 128)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M52.44,36A6,6,0,0,0,43.56,44L61.31,63.56A77.45,77.45,0,0,0,50,104c0,35.74-8.42,63.2-14.08,72.94A14,14,0,0,0,48,198h42.5a38,38,0,0,0,75,0h18l20,22a6,6,0,0,0,8.88-8.08ZM128,218a26,26,0,0,1-25.29-20h50.58A26,26,0,0,1,128,218ZM48,186a1.9,1.9,0,0,1-1.7-1,2,2,0,0,1,0-2C53.86,170,62,139.69,62,104a65.63,65.63,0,0,1,7.78-31.12L172.62,186Zm165.29-8.62a5.88,5.88,0,0,1-2.2.42,6,6,0,0,1-5.58-3.81c-7.2-18.31-11.49-44.48-11.49-70A66,66,0,0,0,95.45,46.57a6,6,0,1,1-5.93-10.43A78,78,0,0,1,206,104c0,35.7,8.16,59.24,10.66,65.61A6,6,0,0,1,213.27,177.38Z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 256 256"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 128, 128)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M52.44 36a6 6 0 0 0-8.88 8l17.75 19.56A77.45 77.45 0 0 0 50 104c0 35.74-8.42 63.2-14.08 72.94A14 14 0 0 0 48 198h42.5a38 38 0 0 0 75 0h18l20 22a6 6 0 0 0 8.88-8.08ZM128 218a26 26 0 0 1-25.29-20h50.58A26 26 0 0 1 128 218m-80-32a1.9 1.9 0 0 1-1.7-1 2 2 0 0 1 0-2c7.56-13 15.7-43.31 15.7-79a65.6 65.6 0 0 1 7.78-31.12L172.62 186Zm165.29-8.62a5.9 5.9 0 0 1-2.2.42 6 6 0 0 1-5.58-3.81c-7.2-18.31-11.49-44.48-11.49-70a66 66 0 0 0-98.57-57.42 6 6 0 1 1-5.93-10.43A78 78 0 0 1 206 104c0 35.7 8.16 59.24 10.66 65.61a6 6 0 0 1-3.39 7.77Z" />
+      </G>
+    </Svg>
+  );
+};

@@ -1,35 +1,35 @@
-
-
-  import {
-    G,
-    Path,
-    Svg,
-    Line,
-    Circle,
-    Polyline
+import {
+  G,
+  Path,
+  Svg,
+  Line,
+  Circle,
+  Polyline,
+  Polygon,
+  Rect,
+  Ellipse
 } from 'react-native-svg';
- import type { IconProps } from '../../types';
+import type { IconProps } from '../../types';
 
-  export const TfiBrushAlt = (props: IconProps) => {
+export const TfiBrushAlt = (props: IconProps) => {
+  const {
+    size = 24,
+    fill = 'black',
+    stroke = 'black',
+    rotate = 0,
+  } = props;
 
-   const {
-            size = 24,
-            color = 'black',
-            rotate = 0,
-        } = props;
-
-    return (
-      <Svg
-        viewBox="0 0 17 17"
-        width={size}
-        height={size}
-        fill="none"
-        transform={`rotate(${rotate}, 8.5, 8.5)`}
-      >
-        <G fill={color} stroke={color}>
-          <Path  d="M17 7.531c0-0.827-0.673-1.5-1.5-1.5h-4.808l0.285-0.914 0.023-3.617c0-0.827-0.673-1.5-1.5-1.5h-2c-0.827 0-1.5 0.673-1.5 1.5v3.452l0.31 1.080h-4.81c-0.827 0-1.5 0.673-1.5 1.5v3.486h0.932l-0.766 5.982h16.668l-0.766-5.982h0.932v-3.487zM15.698 16h-1.698v-2h-1v2h-1v-3h-1v3h-1v-4h-1v4h-5v-2h-1v2h-1.698l0.638-4.982h13.12l0.638 4.982zM1.060 10.018h-0.060v-2.487c0-0.276 0.224-0.5 0.5-0.5h6.165l-0.665-2.155v-3.376c0-0.276 0.224-0.5 0.5-0.5h2c0.276 0 0.5 0.224 0.5 0.5v3.393l-0.667 2.138h6.167c0.276 0 0.5 0.224 0.5 0.5v2.486h-14.94zM8 2h1v1h-1v-1z" />
-        </G>
-      </Svg>
-    );
-  }
-
+  return (
+    <Svg
+      viewBox="0 0 17 17"
+      width={size}
+      height={size}
+      fill="none"
+      transform={`rotate(${rotate}, 8.5, 8.5)`}
+    >
+      <G fill={fill} stroke={stroke}>
+        <Path d="M17 7.531c0-.827-.673-1.5-1.5-1.5h-4.808l.285-.914L11 1.5C11 .673 10.327 0 9.5 0h-2C6.673 0 6 .673 6 1.5v3.452l.31 1.08H1.5c-.827 0-1.5.673-1.5 1.5v3.486h.932L.166 17h16.668l-.766-5.982H17zM15.698 16H14v-2h-1v2h-1v-3h-1v3h-1v-4H9v4H4v-2H3v2H1.302l.638-4.982h13.12zM1.06 10.018H1V7.531a.5.5 0 0 1 .5-.5h6.165L7 4.876V1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v3.393l-.667 2.138H15.5a.5.5 0 0 1 .5.5v2.486zM8 2h1v1H8z" />
+      </G>
+    </Svg>
+  );
+};
